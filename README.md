@@ -51,8 +51,8 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 Create an algorithms reference, and aide-memoire
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Intoduction to algorithms MIT - part 1 / 3:
-
+## Intoduction to algorithms MIT - part 1 / 3:  
+()  
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
@@ -126,28 +126,28 @@ Create an algorithms reference, and aide-memoire
 Courses / Books Found w/ Summary:
 
 MIT 2011 course
-Prerequisite: Maths for CS: (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)
-Topics: 
+Prerequisite: Maths for CS: (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)  
+Topics: ()  
 Vids: 
-Prerequisite: Probability: 
-Assignments w solutions: 
+Prerequisite: Probability: ()  
+Assignments w solutions: ()  
 
-Intoduction to algorithms MIT (part 1 / 3): 
-Paper version: 
-How Lectures Match problem sets: 
-Problem Sets (inc code):
-
-Problem Local (inc code):/a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_problems_exams
-Final exams & mocks: 
-Play list video: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_Alogrithms_MIT_2011_vid.m3u
-Play list audio: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_mp3/_Alogrithms_MIT_2011.m3u
-Installing LaTex: 
-Latex Tutorial: 
-Maths in Latex: 
+Intoduction to algorithms MIT (part 1 / 3): ()  
+Paper version: )  
+How Lectures Match problem sets: )  
+Problem Sets (inc code):  
+)  
+Problem Local (inc code):/a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_problems_exams  
+Final exams & mocks: )  
+Play list video: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_Alogrithms_MIT_2011_vid.m3u  
+Play list audio: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_mp3/_Alogrithms_MIT_2011.m3u  
+Installing LaTex: )  
+Latex Tutorial: )  
+Maths in Latex: )  
 
 Follow up courses
 Design & Analysis of Algorithms (part 2 / 3)
-
-Advanced Algorithms 2008 (part 3 / 3) - 
- - 
- - (PDFs)
+)  
+Advanced Algorithms 2008 (part 3 / 3) - )  
+ -   
+ - (PDFs)  
