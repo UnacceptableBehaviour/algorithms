@@ -46,6 +46,10 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 13. [How Tos](#how-tos)  
 	1. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
 14. [References](#references)  
+	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
+	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
+	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
+	4. [Advanced Algorithms 2008 (part 3 / 3)](#advanced-algorithms-2008-part-3--3)  
 
 
 ## AIM:  
@@ -143,7 +147,8 @@ Topics: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/
 Prerequisite: Probability: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-spring-2006/   
 Assignments w solutions: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-spring-2006/assignments/    
 
-Intoduction to algorithms MIT (part 1 / 3): https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb  
+### Intoduction to algorithms MIT (part 1 / 3):  
+https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb  
 Paper version: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/  
 How Lectures Match problem sets:  
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/calendar/  
@@ -154,17 +159,17 @@ Final exams & mocks: https://ocw.mit.edu/courses/electrical-engineering-and-comp
 Play list video: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_Alogrithms_MIT_2011_vid.m3u  
 Play list audio: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_mp3/_Alogrithms_MIT_2011.m3u  
 
-LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths  
+### LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths  
 Installing LaTex: http://tug.org/mactex/  
 Latex Tutorial: https://www.youtube.com/watch?v=xnD4kHHvKhQ  
 Maths in Latex: https://www.youtube.com/results?search_query=maths+formula+latex  
 
 Follow up courses
-Design & Analysis of Algorithms (part 2 / 3)
+### Design & Analysis of Algorithms (part 2 / 3)  
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm  
   
-Advanced Algorithms 2008 (part 3 / 3)
+### Advanced Algorithms 2008 (part 3 / 3)  
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/  
   
  -   
- - (PDFs)  
+ 
