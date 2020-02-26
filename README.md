@@ -127,13 +127,12 @@ Courses / Books Found w/ Summary:
 
 MIT 2011 course
 Prerequisite: Maths for CS: (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)  
-Topics: ()  
-Vids: 
+Topics: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/readings/  
 Prerequisite: Probability: ()  
 Assignments w solutions: ()  
 
 Intoduction to algorithms MIT (part 1 / 3): ()  
-Paper version: )  
+Paper version: ()  
 How Lectures Match problem sets: )  
 Problem Sets (inc code):  
 )  
