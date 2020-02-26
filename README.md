@@ -43,7 +43,9 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 12. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [23	Computational complexity](#23computational-complexity)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
-13. [References](#references)  
+13. [How Tos](#how-tos)  
+	1. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
+14. [References](#references)  
 
 
 ## AIM:  
@@ -121,6 +123,15 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-in
 ### 23	Computational complexity	 
 ### 24	Algorithms research topics
 
+
+## How Tos
+### How do I autogenerate README.md file from RTF?
+```
+$ .pe						# alias .pe='. venv/bin/activate'
+$ ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
+							# also add README.md to git, commits, and pushes
+							# -p = commit & push
+```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## References
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
