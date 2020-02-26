@@ -1,7 +1,7 @@
 # Introduction to Algorithms (links below)
-file:/a_syllabus/_COURSES/ALGO_00_Intro_2_Algorithms_MIT.rtf
-REPO: [algorithms]()
-See [References](#references) for links to course content
+file:/a_syllabus/_COURSES/ALGO_00_Intro_2_Algorithms_MIT.rtf  
+REPO: [algorithms]()  
+See [References](#references) for links to course content  
 
 ## Abstract
 Work notes from Introduction to Algorithms MIT 6.006 course
