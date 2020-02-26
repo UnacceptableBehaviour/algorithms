@@ -1,6 +1,6 @@
 # Introduction to Algorithms (links below)
 file:/a_syllabus/_COURSES/ALGO_00_Intro_2_Algorithms_MIT.rtf  
-REPO: [algorithms]()  
+REPO: [algorithms](https://github.com/UnacceptableBehaviour/algorithms)  
 See [References](#references) for links to course content  
 
 ## Abstract
@@ -49,7 +49,6 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 ## AIM:  
 
 Create an algorithms reference, and aide-memoire
-
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Intoduction to algorithms MIT - part 1 / 3:
@@ -127,7 +126,7 @@ Create an algorithms reference, and aide-memoire
 Courses / Books Found w/ Summary:
 
 MIT 2011 course
-Prerequisite: Maths for CS: 
+Prerequisite: Maths for CS: (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)
 Topics: 
 Vids: 
 Prerequisite: Probability: 
