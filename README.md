@@ -52,7 +52,8 @@ Create an algorithms reference, and aide-memoire
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Intoduction to algorithms MIT - part 1 / 3:  
-()  
+https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb  
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/  
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
@@ -126,27 +127,33 @@ Create an algorithms reference, and aide-memoire
 Courses / Books Found w/ Summary:
 
 MIT 2011 course
-Prerequisite: Maths for CS: (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/)  
+Prerequisite: Maths for CS: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/  
 Topics: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/readings/  
-Prerequisite: Probability: ()  
-Assignments w solutions: ()  
+Prerequisite: Probability: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-spring-2006/   
+Assignments w solutions: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-spring-2006/assignments/    
 
-Intoduction to algorithms MIT (part 1 / 3): ()  
-Paper version: ()  
-How Lectures Match problem sets: )  
+Intoduction to algorithms MIT (part 1 / 3): https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb  
+Paper version: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/  
+How Lectures Match problem sets:  
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/calendar/  
 Problem Sets (inc code):  
-)  
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/  
 Problem Local (inc code):/a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_problems_exams  
-Final exams & mocks: )  
+Final exams & mocks: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/  
 Play list video: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_Alogrithms_MIT_2011_vid.m3u  
 Play list audio: /a_syllabus/_COURSES_03_TO_SORT/_algorithms/MIT_introduction_to_algorithms/_mp3/_Alogrithms_MIT_2011.m3u  
-Installing LaTex: )  
-Latex Tutorial: )  
-Maths in Latex: )  
+
+LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths  
+Installing LaTex: http://tug.org/mactex/  
+Latex Tutorial: https://www.youtube.com/watch?v=xnD4kHHvKhQ  
+Maths in Latex: https://www.youtube.com/results?search_query=maths+formula+latex  
 
 Follow up courses
 Design & Analysis of Algorithms (part 2 / 3)
-)  
-Advanced Algorithms 2008 (part 3 / 3) - )  
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm  
+  
+Advanced Algorithms 2008 (part 3 / 3)
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/  
+  
  -   
  - (PDFs)  
