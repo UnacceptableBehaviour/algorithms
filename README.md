@@ -62,9 +62,16 @@ https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/  
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+//*
+inside C esque comments will be removed by the create_TOC_for_md.py script. Allow tidy up of whats pushed to git
+*//
 
 ## Unit 1: Introduction
 ### 1	Algorithmic thinking, peak finding	Problem set 1 out
+yt_vid: [here](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s)
+
+
+
 ### 2	Models of computation, Python cost model, document distance	 
 
 ## Unit 2: Sorting and Trees
@@ -131,10 +138,10 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-in
 ## How Tos
 ### How do I autogenerate README.md file from RTF?
 ```
-$ .pe						# alias .pe='. venv/bin/activate'
+$ .pe				# alias .pe='. venv/bin/activate'
 $ ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
-							# also add README.md to git, commits, and pushes
-							# -p = commit & push
+				# also add README.md to git, commits, and pushes
+				# -p = commit & push
 ```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## References
