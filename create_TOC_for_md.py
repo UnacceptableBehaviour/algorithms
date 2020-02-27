@@ -117,7 +117,6 @@ def create_TOC_as_string_from_TOC_nested_list(toc_list):
 
 #DEFAULT_FILE = Path('context.md')
 DEFAULT_FILE = Path('/Users/simon/a_syllabus/_COURSES_00_WIP/ALGO_00_Intro_2_Algorithms_MIT.rtf')
-
 def get_mark_down(filename=DEFAULT_FILE):
         
     with open(filename) as f:
@@ -128,6 +127,10 @@ def get_mark_down(filename=DEFAULT_FILE):
         content = rtf_to_text(content)
     else:
         print(f"> > > > - - - - - - - - - - < < < < {Path(filename).suffix} > > > >")
+
+    replacement = ''
+    # remove anything inside 'comment' delimiters //* this is a comment *//
+    content =  re.sub(r'\/\/\*.*?\*\/\/', replacement, content, flags = re.MULTILINE | re.DOTALL)
 
     for line in iter(content.splitlines()):
         print(line)
