@@ -90,23 +90,24 @@ Greedy Ascent Algorithm
 52m30  start complexity - final solution @ 52m52
 
 #### Notes on time complexity (always worst case complexity)
-aka: Big O notation / BachmannLandau notation / asymptotic notation.
-constant time			O(1)
-linear time				O(n)
-logarithmic time			O(log n), O(log(n^2))
-polynomial time			O(n^x) where constant x > 1
+aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
+
+constant time			O(1)  
+linear time				O(n)  
+logarithmic time			O(log n), O(log(n^2))  
+polynomial time			O(n^x) where constant x > 1  
 		
-[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
+[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
 
 
 
 ### 2	Models of computation, Python cost model, document distance	 
-Algorithm: computational procedure for solving a problem
-What is time (complexity)? **O(1) = constant time**
+Algorithm: computational procedure for solving a problem  
+What is time (complexity)? **O(1) = constant time**  
 #### Model of computation:
-		operations an algorithm can perform
-		time cost of those operations
+	Operations an algorithm can perform
+	Time cost of those operations
 	Models of computation: 
 	a) random access machine RAM - word array
 		- load O(1)
@@ -119,17 +120,24 @@ What is time (complexity)? **O(1) = constant time**
 		- word or pointer / references / null or None O(1)
 
 #### Python Model
-	list[i] = list[i] + 5   is O(1)
-	obj w/ O(1) number of attributes (constant no. of attributes)
-		attribute access is O(1) - pointer/ref access
-	x = x.next is O(1)
-	list.append(x) ? python uses table doubling O(1)
-	list1 + list2 
+	list[i] = list[i] + 5   is O(1)  
+
+	obj w/ O(1) number of attributes (constant no. of attributes)  
+		attribute access is O(1) - pointer/ref access  
+
+	x = x.next is O(1)  
+
+	list.append(x) ? python uses table doubling O(1)  
+
+	list1 + list2  O(??)
 	L = []	 O(1)
 	for x in list1: L.append(x) O( len(list1) )
 	for x in list2: L.append(x) O( len(list2) )
 	total:  O(1 + len(list1) + len(list2) )
+
 	x in L  O(n) - linear time 
+		required search through list
+
 
 Document distance (problem and algorithms)
 
