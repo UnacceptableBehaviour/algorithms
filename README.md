@@ -93,9 +93,13 @@ Greedy Ascent Algorithm
 aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
 
 constant time			O(1)  
+logarithmic time			O(log n)  
 linear time				O(n)  
-logarithmic time			O(log n), O(log(n^2))  
+quasilinear time 			O(n log n)  
+quadratic time			O(n^2)  
 polynomial time			O(n^x) where constant x > 1  
+exponential time			O(2^n)  
+factorial time			O(n!)  
 		
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
@@ -143,7 +147,6 @@ Document distance (problem and algorithms)
 
 REFS
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
-
 
 
 #### Problem set 1.
