@@ -62,9 +62,7 @@ https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/  
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-//*
-inside C esque comments will be removed by the create_TOC_for_md.py script. Allow tidy up of whats pushed to git
-*//
+
 
 ## Unit 1: Introduction
 ### 1	Algorithmic thinking, peak finding	Problem set 1 out
