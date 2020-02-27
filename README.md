@@ -12,8 +12,18 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 3. [AIM:](#aim)  
 4. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit--part-1--3)  
 5. [Unit 1: Introduction](#unit-1-introduction)  
-	1. [1	Algorithmic thinking, peak finding	Problem set 1 out](#1algorithmic-thinking-peak-findingproblem-set-1-out)  
+	1. [1	Algorithmic thinking, peak finding](#1algorithmic-thinking-peak-finding)  
+		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
+		1. [Model of computation:](#model-of-computation)  
+		2. [Python Model](#python-model)  
+		3. [Problem set 1.](#problem-set-1)  
+			1. [Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
+			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-12-15-points-recurrence-relation-resolution)  
+			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-13-16-points-peakfinding-correctness)  
+			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-14-16-points-peakfinding-efficiency)  
+			5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-15-19-points-peakfinding-proof)  
+			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-16-19-points-peakfinding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
 6. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
@@ -65,18 +75,89 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-in
 
 
 ## Unit 1: Introduction
-### 1	Algorithmic thinking, peak finding	Problem set 1 out
+### 1	Algorithmic thinking, peak finding	
 yt_vid: [here](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s)
+
+Peak finding: assumin **single peak**, and   
+Initial look at 1d peak finding (an single index array)
+a) linear
+b) search by halves
+
+34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(log2n) ??
+
+Greedy Ascent Algorithm
+
+52m30  start complexity - final solution @ 52m52
+
+#### Notes on time complexity (always worst case complexity)
+aka: Big O notation / BachmannLandau notation / asymptotic notation.
+constant time			O(1)
+linear time				O(n)
+logarithmic time			O(log n), O(log(n^2))
+polynomial time			O(n^x) where constant x > 1
+		
+[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
+[Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
 
 
 
 ### 2	Models of computation, Python cost model, document distance	 
+Algorithm: computational procedure for solving a problem
+What is time (complexity)? **O(1) = constant time**
+#### Model of computation:
+		operations an algorithm can perform
+		time cost of those operations
+	Models of computation: 
+	a) random access machine RAM - word array
+		- load O(1)
+		- compute O(1)
+		- store O(1)
+		- word log(size of memory)
+	b) pointer machine (OO programming)
+		- dynamically allocated objects O(1)
+		- object has constant no of fields O(1)
+		- word or pointer / references / null or None O(1)
+
+#### Python Model
+	list[i] = list[i] + 5   is O(1)
+	obj w/ O(1) number of attributes (constant no. of attributes)
+		attribute access is O(1) - pointer/ref access
+	x = x.next is O(1)
+	list.append(x) ? python uses table doubling O(1)
+	list1 + list2 
+	L = []	 O(1)
+	for x in list1: L.append(x) O( len(list1) )
+	for x in list2: L.append(x) O( len(list2) )
+	total:  O(1 + len(list1) + len(list2) )
+	x in L  O(n) - linear time 
+
+Document distance (problem and algorithms)
+
+REFS
+[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
+
+
+
+#### Problem set 1.
+##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)
+##### Problem 1-2. [15 points] Recurrence Relation Resolution
+	asymptotic complexity of an algorithm with runtime T (n, n) 
+##### Problem 1-3. [16 points] Peak-Finding Correctness 
+##### Problem 1-4. [16 points] Peak-Finding Efficiency 
+	Look at 4 alorithms in algorithms.py 
+	Assess correctness, efficiency
+##### Problem 1-5. [19 points] Peak-Finding Proof 
+	proof for one of the algorithms
+##### Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail
+
+
+
+
 
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
 
-		Problem set 1 due
-		Problem set 2 out
+		Problem set 2 out - Event simulation
 
 ### 4	Heaps and heap sort	 
 ### 5	Binary search trees, BST sort	 
@@ -147,7 +228,15 @@ $ ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course no
 Courses / Books Found w/ Summary:
 
 MIT 2011 course
-Prerequisite: Maths for CS: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/  
+Prerequisite: Maths for CS: 
+2015 https://www.youtube.com/watch?v=wIq4CssPoO0&list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ  
+	[L3.2.1 Asymptotic Notation] (https://www.youtube.com/watch?v=CWkh5kb4TGc&list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ&index=72)  
+	[L 3.2.3 Asymptotic Properties] (https://www.youtube.com/watch?v=HeyEK0TWiBw&list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ&index=73)  
+	[L 3.2.6 Asymptotic Blunder inc Big O] (https://www.youtube.com/watch?v=Y9Blo_G-Mvg&list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ&index=74)  
+2010 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/  
+	[L12 Sums] (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-12-sums/)  
+	[L12 Sums and Asymptotics] (https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/video-lectures/lecture-13-sums-and-asymptotics/)  
+
 Topics: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/readings/  
 Prerequisite: Probability: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-spring-2006/   
 Assignments w solutions: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-spring-2006/assignments/    
