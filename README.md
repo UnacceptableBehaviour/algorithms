@@ -172,11 +172,11 @@ x*y    **O((|x| + |y|)^lg3)**		NOTE lg  used instead of log base 2 (log_2)
 heapq		[4	Heaps and heap sort](#4heaps-and-heap-sort)  
 
 #### Document distance (problem and algorithms)  
-d(D1, D2)		# sounds like a correlation function
+d(D1, D2)		# sounds like a correlation function
 
-idea is looking for shared words
-[uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
-D1.D2 - Sum of all word D[w].D2[w]
+idea is looking for shared words  
+
+![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
 
 ```math
 \begin{equation}
