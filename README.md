@@ -172,6 +172,23 @@ x*y    **O((|x| + |y|)^lg3)**		NOTE lg  used instead of log base 2 (log_2)
 heapq		[4	Heaps and heap sort](#4heaps-and-heap-sort)  
 
 #### Document distance (problem and algorithms)  
+d(D1, D2)		# sounds like a correlation function
+
+idea is looking for shared words
+Uses dot product of the vector of each document.
+D1.D2 - Sum of all word D[w].D2[w]
+
+```math
+\begin{equation}
+  D_1.D2_2\\
+\end{equation}
+\begin{equation}
+  \sum_{w}D[w].D2[w]
+  \label{sum}  
+\end{equation}
+```
+
+
 
 
 REFS
