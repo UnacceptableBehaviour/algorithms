@@ -175,15 +175,15 @@ heapq		[4	Heaps and heap sort](#4heaps-and-heap-sort)
 d(D1, D2)		# sounds like a correlation function
 
 idea is looking for shared words
-Uses dot product of the vector of each document.
+[uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
 D1.D2 - Sum of all word D[w].D2[w]
 
 ```math
 \begin{equation}
-  D_1.D2_2\\
+  D_1.D_2\\
 \end{equation}
 \begin{equation}
-  \sum_{w}D[w].D2[w]
+  \sum_{w}D_1[w].D_2[w]
   \label{sum}  
 \end{equation}
 ```
