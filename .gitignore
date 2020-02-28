@@ -6,6 +6,7 @@
 *.log
 *.out
 *.synctex.gz
+*.RHistory
   
 # ignore directory and contents
 /__pycache__
