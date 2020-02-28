@@ -17,7 +17,8 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
 		2. [Python Model](#python-model)  
-		3. [Problem set 1.](#problem-set-1)  
+		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
+		4. [Problem set 1.](#problem-set-1)  
 			1. [Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
 			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-12-15-points-recurrence-relation-resolution)  
 			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-13-16-points-peakfinding-correctness)  
@@ -122,55 +123,56 @@ add to Latex
 Algorithm: computational procedure for solving a problem  
 What is time (complexity)? **O(1) = constant time**  
 #### Model of computation:
-	Operations an algorithm can perform
-	Time cost of those operations
-	Models of computation: 
-	a) random access machine RAM - word array
-		- load O(1)
-		- compute O(1)
-		- store O(1)
-		- word log(size of memory)
-	b) pointer machine (OO programming)
-		- dynamically allocated objects O(1)
-		- object has constant no of fields O(1)
-		- word or pointer / references / null or None O(1)
+Operations an algorithm can perform
+Time cost of those operations
+Models of computation:  
+a) random access machine RAM - word array  
+	- load O(1)  
+	- compute O(1)  
+	- store O(1)  
+	- word log(size of memory)  
+b) pointer machine (OO programming)  
+	- dynamically allocated objects O(1)  
+	- object has constant no of fields O(1)  
+	- word or pointer / references / null or None O(1)  
 
-#### Python Model
-	list[i] = list[i] + 5   is **O(1)**  
+#### Python Model  
+list[i] = list[i] + 5   is **O(1)**  
 
-	obj w/ O(1) number of attributes (constant no. of attributes)  
-		attribute access is **O(1)** - pointer/ref access  
+obj w/ O(1) number of attributes (constant no. of attributes)  
+	attribute access is **O(1)** - pointer/ref access  
 
-	x = x.next is **O(1)**  
+x = x.next is **O(1)**  
 
-	list.append(x) ? python uses table doubling **O(1)**  
+list.append(x) ? python uses table doubling **O(1)**  
 
-	list1 + list2  O(??)
-	L = []	 O(1)
-	for x in list1: L.append(x) O( len(list1) )     # for list L - len(L) also written | L |
-	for x in list2: L.append(x) O( len(list2) )     # len, length, size, no of elements  
-	total:  **O(1 + len(list1) + len(list2) )**  
+list1 + list2  O(??)  
+L = []	 O(1)  
+for x in list1: L.append(x) O( len(list1) )     # for list L - len(L) also written | L |  
+for x in list2: L.append(x) O( len(list2) )     # len, length, size, no of elements  
+total:  **O(1 + len(list1) + len(list2) )**  
 
-	x in L  **O(n)** - linear time 
-		from python check to see if x is in list L
-		required search through list
+x in L  **O(n)** - linear time  
+	from python check to see if x is in list L  
+	required search through list  
 	
-	L.sort()   **O(| L | log | L |)**					# ie O(n log n)
-		Covered [Lecture 3	Insertion sort, merge sort](#3insertion-sort-merge-sort)
+L.sort()   **O(| L | log | L |)**					# ie O(n log n)  
+Covered [Lecture 3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 
-	retrieve dict[key]	  **O(1) constant time**	# uses lookup hash
-		Covered [L8-10 Hashing with chaining](#8hashing-with-chaining)
+retrieve dict[key]	  **O(1) constant time**	# uses lookup hash  
+Covered [L8-10 Hashing with chaining](#8hashing-with-chaining)  
 
-	long (biig numbers)
-	add two number of x words & y words:
-	x+y    **O(|x| + |y|)**
-	x*y    **O((|x| + |y|)^lg3)**		NOTE lg  used instead of log base 2 (log_2)
-								lg3 = 1.6 so better than quatdratic
-								
+long (biig numbers)  
+add two number of x words & y words:  
+x+y    **O(|x| + |y|)**  
+x*y    **O((|x| + |y|)^lg3)**		NOTE lg  used instead of log base 2 (log_2)  
+							lg3 = 1.6 so better than quatdratic  
+[11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
 
+heapq		[4	Heaps and heap sort](#4heaps-and-heap-sort)  
 
+#### Document distance (problem and algorithms)  
 
-Document distance (problem and algorithms)
 
 REFS
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
