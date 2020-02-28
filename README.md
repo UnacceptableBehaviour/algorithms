@@ -28,14 +28,14 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
-	4. [6	AVL trees, AVL sort	Problem set 2 due](#6avl-trees-avl-sortproblem-set-2-due)  
+	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
 	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 7. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [8	Hashing with chaining](#8hashing-with-chaining)  
 	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karprabin)  
 	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
 8. [Unit 4: Numerics](#unit-4-numerics)  
-	1. [11	Integer arithmetic, Karatsuba multiplication	Problem set 5 out](#11integer-arithmetic-karatsuba-multiplicationproblem-set-5-out)  
+	1. [11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
 	2. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
 9. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [13	Breadth-first search (BFS)](#13breadthfirst-search-bfs)  
@@ -100,9 +100,21 @@ quadratic time			O(n^2)
 polynomial time			O(n^x) where constant x > 1  
 exponential time			O(2^n)  
 factorial time			O(n!)  
+
+Symbols:
+Θ 
+O
+Ω 
+o 
+ω
+add to Latex
+
 		
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
+[Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/) 
+[Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
+[Setting yAxis logarithmic](https://matplotlib.org/3.1.1/gallery/scales/scales.html)  
 
 
 
@@ -124,23 +136,38 @@ What is time (complexity)? **O(1) = constant time**
 		- word or pointer / references / null or None O(1)
 
 #### Python Model
-	list[i] = list[i] + 5   is O(1)  
+	list[i] = list[i] + 5   is **O(1)**  
 
 	obj w/ O(1) number of attributes (constant no. of attributes)  
-		attribute access is O(1) - pointer/ref access  
+		attribute access is **O(1)** - pointer/ref access  
 
-	x = x.next is O(1)  
+	x = x.next is **O(1)**  
 
-	list.append(x) ? python uses table doubling O(1)  
+	list.append(x) ? python uses table doubling **O(1)**  
 
 	list1 + list2  O(??)
 	L = []	 O(1)
-	for x in list1: L.append(x) O( len(list1) )
-	for x in list2: L.append(x) O( len(list2) )
-	total:  O(1 + len(list1) + len(list2) )
+	for x in list1: L.append(x) O( len(list1) )     # for list L - len(L) also written | L |
+	for x in list2: L.append(x) O( len(list2) )     # len, length, size, no of elements  
+	total:  **O(1 + len(list1) + len(list2) )**  
 
-	x in L  O(n) - linear time 
+	x in L  **O(n)** - linear time 
+		from python check to see if x is in list L
 		required search through list
+	
+	L.sort()   **O(| L | log | L |)**					# ie O(n log n)
+		Covered [Lecture 3	Insertion sort, merge sort](#3insertion-sort-merge-sort)
+
+	retrieve dict[key]	  **O(1) constant time**	# uses lookup hash
+		Covered [L8-10 Hashing with chaining](#8hashing-with-chaining)
+
+	long (biig numbers)
+	add two number of x words & y words:
+	x+y    **O(|x| + |y|)**
+	x*y    **O((|x| + |y|)^lg3)**		NOTE lg  used instead of log base 2 (log_2)
+								lg3 = 1.6 so better than quatdratic
+								
+
 
 
 Document distance (problem and algorithms)
@@ -148,6 +175,8 @@ Document distance (problem and algorithms)
 REFS
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
 
+Watch vids - add refs - from math text
+Add big O symbols
 
 #### Problem set 1.
 ##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)
@@ -162,9 +191,6 @@ REFS
 ##### Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail
 
 
-
-
-
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
 
@@ -172,7 +198,10 @@ REFS
 
 ### 4	Heaps and heap sort	 
 ### 5	Binary search trees, BST sort	 
-### 6	AVL trees, AVL sort	Problem set 2 due
+### 6	AVL trees, AVL sort	
+	
+		Problem set 2 due
+
 ### 7	Counting sort, radix sort, lower bounds for sorting and searching
 
 		Problem set 3 out
@@ -190,7 +219,10 @@ REFS
 	 	Quiz 1	 
 
 ## Unit 4: Numerics
-### 11	Integer arithmetic, Karatsuba multiplication	Problem set 5 out
+### 11	Integer arithmetic, Karatsuba multiplication	
+		
+		Problem set 5 out
+
 ### 12	Square roots, Newton's method	 
 
 ## Unit 5: Graphs
