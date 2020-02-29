@@ -289,8 +289,8 @@ Add big O symbols
 ## How Tos
 ### How do I autogenerate README.md file from RTF?
 ```
-$ .pe				# alias .pe='. venv/bin/activate'
-$ ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
+> .pe				# alias .pe='. venv/bin/activate'
+> ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
 				# also add README.md to git, commits, and pushes
 				# -p = commit & push
 ```
@@ -307,7 +307,7 @@ Note the ! before opening [ denotes image
 ```
 #### Solution 2 install texify.
 [Find texify here](https://github.com/agurodriguez/github-texify)  
-Use LaTeXit to check formula correctness then past it into doc surrounded by $$ like so
+Use LaTeXit to check formula correctness then past it into doc surrounded by $$ like so
 ```
 $$
 \begin{equation}
@@ -318,7 +318,8 @@ $$
   \label{sum}  
 \end{equation}
 $$
-```
+```  
+
 #### How can I get rid of ref numbers, or get them to increment at least?
 open problem . .
 
