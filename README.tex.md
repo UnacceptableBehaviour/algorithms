@@ -97,25 +97,39 @@ Greedy Ascent Algorithm
 #### Notes on time complexity (always worst case complexity)
 aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
 
-constant time			O(1)  
-logarithmic time			O(log n)  
-linear time				O(n)  
-quasilinear time 			O(n log n)  
-quadratic time			O(n^2)  
-polynomial time			O(n^x) where constant x > 1  
-exponential time			O(2^n)  
-factorial time			O(n!)  
+See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
+Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf)  
+LOW
+constant time - O(1)  
+logarithmic time - O(log n)  
+linear time - O(n)  
+quasilinear time  - O(n log n)  
+polylogarithmic time  - O((log n) ^ c)  
+quadratic time - O(n^2)  
+polynomial time - O(n^x) where constant x > 1  
+exponential time - O(2^n)  
+factorial time - O(n!)  
+HIGH
 
-Symbols:
-Θ 
-O
-Ω 
-o 
-ω
+If a function is made up of multiple components, (nearly always) the highest order is used:
+(this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)
+Egs
+$$
+\begin{align}
+f(n) = 10log(n) + 5(log(n))^3 + 7n + 3n^2 + 6n^3,  then f(n) = O(n^3)
+\end{align}
+$$
+
+
+**Symbols:**
+Θ - -    
+O - - Landaus Symbol
+Ω - -   
+o - -   
+ω - -   
 add to Latex
 
 		
-[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
 [Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/) 
 [Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
