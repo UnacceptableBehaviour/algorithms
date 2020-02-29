@@ -307,7 +307,7 @@ Note the ! before opening [ denotes image
 ```
 #### Solution 2 install texify.
 [Find texify here](https://github.com/agurodriguez/github-texify)  
-Use LaTeXit to check formula correctness then past it into doc surrounded by $$ like so
+Use LaTeXit to check formula correctness then past it into doc surrounded by consecutive $ symbols like so
 ```
 $$
 \begin{equation}
