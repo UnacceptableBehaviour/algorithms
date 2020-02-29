@@ -179,14 +179,16 @@ idea is looking for shared words
 ![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
 
 ```math
-\begin{equation}
-  D_1.D_2\\
-\end{equation}
-\begin{equation}
-  \sum_{w}D_1[w].D_2[w]
-  \label{sum}  
-\end{equation}
+<p align="center"><img src="/tex/750a329f8e021f0db6322010cdd59966.svg?invert_in_darkmode&sanitize=true" align=middle width=373.40413605pt height=16.438356pt/></p>
+<p align="center"><img src="/tex/92ec0cb31d3b1ca35c8a83a86d519fb8.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=36.16460595pt/></p>
 ```
+[Look into this Latex insertion solution](https://stackoverflow.com/questions/35498525/latex-rendering-in-readme-md-on-github)  
+[using pdfLatex may work](https://tex.stackexchange.com/questions/885/how-can-i-use-latex-from-python)  
+Or use LaTeXiT from the command line to parse and auto generate equations
+Or [readme2tex](https://github.com/leegao/readme2tex)  
+
+<p align="center"><img src="/tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
+
 
 
 
@@ -279,8 +281,7 @@ Add big O symbols
 ## How Tos
 ### How do I autogenerate README.md file from RTF?
 ```
-$ .pe				# alias .pe='. venv/bin/activate'
-$ ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
+<img src="/tex/39a0cfcaf524ffaaadbfef55320f4462.svg?invert_in_darkmode&sanitize=true" align=middle width=243.7424352pt height=24.7161288pt/> ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
 				# also add README.md to git, commits, and pushes
 				# -p = commit & push
 ```
