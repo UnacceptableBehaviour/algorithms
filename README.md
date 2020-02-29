@@ -97,25 +97,35 @@ Greedy Ascent Algorithm
 #### Notes on time complexity (always worst case complexity)
 aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
 
-constant time			O(1)  
-logarithmic time			O(log n)  
-linear time				O(n)  
-quasilinear time 			O(n log n)  
-quadratic time			O(n^2)  
-polynomial time			O(n^x) where constant x > 1  
-exponential time			O(2^n)  
-factorial time			O(n!)  
+See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
+Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf)  
+LOW
+constant time - O(1)  
+logarithmic time - O(log n)  
+linear time - O(n)  
+quasilinear time  - O(n log n)  
+polylogarithmic time  - O((log n) ^ c)  
+quadratic time - O(n^2)  
+polynomial time - O(n^x) where constant x > 1  
+exponential time - O(2^n)  
+factorial time - O(n!)  
+HIGH
 
-Symbols:
-Θ 
-O
-Ω 
-o 
-ω
+If a function is made up of multiple components, (nearly always) the highest order is used:
+(this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)
+Egs
+<p align="center"><img src="/tex/f1ebe4d3468c6d3f2f6243ce83e00dad.svg?invert_in_darkmode&sanitize=true" align=middle width=474.77859989999996pt height=18.312383099999998pt/></p>
+
+
+**Symbols:**
+Θ - -    
+O - - Landaus Symbol
+Ω - -   
+o - -   
+ω - -   
 add to Latex
 
 		
-[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
 [Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/) 
 [Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
@@ -281,7 +291,8 @@ Add big O symbols
 ## How Tos
 ### How do I autogenerate README.md file from RTF?
 ```
-<img src="/tex/39a0cfcaf524ffaaadbfef55320f4462.svg?invert_in_darkmode&sanitize=true" align=middle width=243.7424352pt height=24.7161288pt/> ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
+> .pe				# alias .pe='. venv/bin/activate'
+> ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
 				# also add README.md to git, commits, and pushes
 				# -p = commit & push
 ```
@@ -298,11 +309,9 @@ Note the ! before opening [ denotes image
 ```
 #### Solution 2 install texify.
 [Find texify here](https://github.com/agurodriguez/github-texify)  
-Use LaTeXit to check formula correctness then past it into doc surrounded by <p align="center"><img src="/tex/c2b9fc378db86e2625e330054886d2af.svg?invert_in_darkmode&sanitize=true" align=middle width=56.080035pt height=11.4155283pt/></p>
-<p align="center"><img src="/tex/750a329f8e021f0db6322010cdd59966.svg?invert_in_darkmode&sanitize=true" align=middle width=373.40413605pt height=16.438356pt/></p>
-<p align="center"><img src="/tex/92ec0cb31d3b1ca35c8a83a86d519fb8.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=36.16460595pt/></p>
-$$
-```
+Use LaTeXit to check formula correctness then past it into doc surrounded by consecutive <img src="/tex/1cc306e4b3483bf26509c6f574a08d15.svg?invert_in_darkmode&sanitize=true" align=middle width=114.82449329999997pt height=22.831056599999986pt/><img src="/tex/75c81d786f957473c8dffc3d8864f491.svg?invert_in_darkmode&sanitize=true" align=middle width=700.2739854pt height=123.28807259999998pt/>$
+```  
+
 #### How can I get rid of ref numbers, or get them to increment at least?
 open problem . .
 
