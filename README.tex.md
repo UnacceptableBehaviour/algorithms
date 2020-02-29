@@ -16,7 +16,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
-		2. [Python Model](#python-model)  
+		2. [Python Model  - Computational Steps](#python-model---computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 		4. [Problem set 1.](#problem-set-1)  
 			1. [Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
@@ -99,7 +99,7 @@ aka: Big O notation / Bachmann-Landau notation / asymptotic notation.
 
 See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf)  
-LOW
+**LOW**  
 constant time - O(1)  
 logarithmic time - O(log n)  
 linear time - O(n)  
@@ -109,7 +109,7 @@ quadratic time - O(n^2)
 polynomial time - O(n^x) where constant x > 1  
 exponential time - O(2^n)  
 factorial time - O(n!)  
-HIGH
+**HIGH**  
 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)
@@ -121,13 +121,12 @@ f(n) = 10log(n) + 5(log(n))^3 + 7n + 3n^2 + 6n^3,  then f(n) = O(n^3)
 $$
 
 
-**Symbols:**
+**Symbols:**  
 Θ - -    
-O - - Landaus Symbol
+O - - Landaus Symbol  
 Ω - -   
 o - -   
 ω - -   
-add to Latex
 
 		
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
@@ -154,46 +153,62 @@ b) pointer machine (OO programming)
 	- object has constant no of fields O(1)  
 	- word or pointer / references / null or None O(1)  
 
-#### Python Model  
-list[i] = list[i] + 5   is **O(1)**  
+#### Python Model  - Computational Steps
 
-obj w/ O(1) number of attributes (constant no. of attributes)  
+Increment array item:
+	list[i] = list[i] + 5    is **O(1)**  
+
+Object attribute access:
+	obj w/ O(1) number of attributes (constant no. of attributes)  
 	attribute access is **O(1)** - pointer/ref access  
 
-x = x.next is **O(1)**  
+Access next item in linked list:
+	x = x.next is **O(1)**  
 
-list.append(x) ? python uses table doubling **O(1)**  
+Add item to liked list:	
+	list.append(x) ? python uses table doubling **O(1)**  
 
-list1 + list2  O(??)  
-L = []	 O(1)  
-for x in list1: L.append(x) O( len(list1) )     # for list L - len(L) also written | L |  
-for x in list2: L.append(x) O( len(list2) )     # len, length, size, no of elements  
-total:  **O(1 + len(list1) + len(list2) )**  
+Adding two linked lists together
+	list1 + list2  **O(n)**  
+	Code steps:  
+	L = []	 O(1)    
+	for x in list1: L.append(x) O( len(list1) )     - for list L - len(L) also written | L |  
+	for x in list2: L.append(x) O( len(list2) )     - len, length, size, no of elements  
+	total:  **O(1 + len(list1) + len(list2) ) = O(n) **  
 
-x in L  **O(n)** - linear time  
-	from python check to see if x is in list L  
-	required search through list  
-	
-L.sort()   **O(| L | log | L |)**					# ie O(n log n)  
-Covered [Lecture 3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
+Checking existence of item in list:
+	x in L  **O(n)** - linear time  
+		from python check to see if x is in list L  
+		required search through whole list (worst case)
 
-retrieve dict[key]	  **O(1) constant time**	# uses lookup hash  
-Covered [L8-10 Hashing with chaining](#8hashing-with-chaining)  
+Sorting a list:	
+	L.sort()   **O(| L | log | L |)**					- ie **O(n log n)**  
+	Covered [Lecture 3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 
-long (biig numbers)  
-add two number of x words & y words:  
-x+y    **O(|x| + |y|)**  
-x*y    **O((|x| + |y|)^lg3)**		NOTE lg  used instead of log base 2 (log_2)  
-							lg3 = 1.6 so better than quatdratic  
-[11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
+Retrieving item from hash w/ key:
+	retrieve dict[key]	  **O(1)** constant time (uses lookup hash)  
+	Covered in [Lectures 8-10 Hashing with chaining](#8hashing-with-chaining)  
 
-heapq		[4	Heaps and heap sort](#4heaps-and-heap-sort)  
+Adding two longs (many word numbers)  
+	add two number of x words & y words:  
+	x+y    **O(|x| + |y|)**  
+	x*y    **O((|x| + |y|)^lg3)**  
+	NOTE lg  used instead of log base 2 (log_2)  
+	lg3 = 1.6 so better than quadratic time 
+  	Covered in [Lecture 11 - Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
+
+**heapq** covered in lecture [4 - Heaps and heap sort](#4heaps-and-heap-sort)  
+
 
 #### Document distance (problem and algorithms)  
-d(D1, D2)		# sounds like a correlation function
+d(D1, D2)  like a correlation function, similarity of two documents
 
-idea is looking for shared words  
-
+The idea is to look for shared words:  
+Start by creating the vector of a document, hash of words (key = word) with a count of each one as value.  
+Create a vector common words, it contains only the word in both doc vectors  
+Sum them up to give a value.  
+The larger the value the more correlated they are.  
+Obviously bigger documents will naturally give bigger numbers do the value is normalised by dividing by the size of the original vectors.  
 
 $$
 \begin{equation}
@@ -204,8 +219,6 @@ $$
   \label{sum}  
 \end{equation}
 $$
-
-
 
 
 
