@@ -56,6 +56,10 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
 13. [How Tos](#how-tos)  
 	1. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
+	2. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
+		1. [Generate math image and embed it.](#generate-math-image-and-embed-it)  
+		2. [Solution 2 install texify.](#solution-2-install-texify)  
+		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
 14. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
@@ -176,16 +180,6 @@ d(D1, D2)		# sounds like a correlation function
 
 idea is looking for shared words  
 
-![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
-
-```math
-<p align="center"><img src="/tex/750a329f8e021f0db6322010cdd59966.svg?invert_in_darkmode&sanitize=true" align=middle width=373.40413605pt height=16.438356pt/></p>
-<p align="center"><img src="/tex/92ec0cb31d3b1ca35c8a83a86d519fb8.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=36.16460595pt/></p>
-```
-[Look into this Latex insertion solution](https://stackoverflow.com/questions/35498525/latex-rendering-in-readme-md-on-github)  
-[using pdfLatex may work](https://tex.stackexchange.com/questions/885/how-can-i-use-latex-from-python)  
-Or use LaTeXiT from the command line to parse and auto generate equations
-Or [readme2tex](https://github.com/leegao/readme2tex)  
 
 <p align="center"><img src="/tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
 
@@ -195,6 +189,12 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 REFS
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
+[Look into this Latex insertion solution](https://stackoverflow.com/questions/35498525/latex-rendering-in-readme-md-on-github)  
+[using pdfLatex may work](https://tex.stackexchange.com/questions/885/how-can-i-use-latex-from-python)  
+Or use LaTeXiT from the command line to parse and auto generate equations
+Or [readme2tex](https://github.com/leegao/readme2tex)  
+
+
 
 Watch vids - add refs - from math text
 Add big O symbols
@@ -285,6 +285,27 @@ Add big O symbols
 				# also add README.md to git, commits, and pushes
 				# -p = commit & push
 ```
+
+### How can I add maths formulas to README.md?
+#### Generate math image and embed it.
+Install Latex tools [notes here](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/context.md)  
+Open LaTeXit edit equation click text and hit the LaTeXit button to check its good.
+Export as png and upload it to git (need to do this so the URL and be used to embed the image)
+Embed image with 
+```
+![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
+Note the ! before opening [ denotes image
+```
+#### Solution 2 install texify.
+[Find texify here](https://github.com/agurodriguez/github-texify)  
+Use LaTeXit to check formula correctness then past it into doc surrounded by <p align="center"><img src="/tex/c2b9fc378db86e2625e330054886d2af.svg?invert_in_darkmode&sanitize=true" align=middle width=56.080035pt height=11.4155283pt/></p>
+<p align="center"><img src="/tex/750a329f8e021f0db6322010cdd59966.svg?invert_in_darkmode&sanitize=true" align=middle width=373.40413605pt height=16.438356pt/></p>
+<p align="center"><img src="/tex/92ec0cb31d3b1ca35c8a83a86d519fb8.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=36.16460595pt/></p>
+$$
+```
+#### How can I get rid of ref numbers, or get them to increment at least?
+open problem . .
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## References
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
