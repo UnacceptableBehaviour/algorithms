@@ -224,6 +224,9 @@ Add big O symbols
 
 #### Problem set 1.
 ##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)
+![Big O graphs](https://en.wikipedia.org/wiki/Big_O_notation#/media/File:Comparison_computational_complexity.svg)  
+<p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
+
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
 	asymptotic complexity of an algorithm with runtime T (n, n) 
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
