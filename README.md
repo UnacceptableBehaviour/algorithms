@@ -237,12 +237,22 @@ Problem 1.1a
 Problem 1.1b
 <p align="center"><img src="/tex/1affca5b71aab0a59d325f07e32648bc.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18582949999995pt height=122.87297219999999pt/></p>
 
-Problem 1.c
+
+
+Problem 1.1c
 <p align="center"><img src="/tex/35b229607a85cdc5b8e9ad420b171c2c.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.97228825pt/></p>
 
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
 	asymptotic complexity of an algorithm with runtime T (n, n) 
+
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
+Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.
+Python code notes:
+Its python2 so run with
+> cd /Users/simon/a_syllabus/lang/algorithms/algorithms/problems/MIT6_006F11_ps1
+> python ./main.py 
+
+
 ##### Problem 1-4. [16 points] Peak-Finding Efficiency 
 	Look at 4 alorithms in algorithms.py 
 	Assess correctness, efficiency
