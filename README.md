@@ -106,7 +106,7 @@ linear time - O(n)
 quasilinear time  - O(n log n)  
 polylogarithmic time  - O((log n) ^ c)  
 quadratic time - O(n^2)  
-polynomial time - O(n^x) where constant x > 1  
+polynomial time - O(n^c) where constant c > 1  
 exponential time - O(2^n)  
 factorial time - O(n!)  
 **HIGH**  
@@ -123,6 +123,8 @@ O - - Landaus Symbol
 Ω - -   
 o - -   
 ω - -   
+
+
 
 		
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
@@ -226,8 +228,17 @@ Add big O symbols
 ##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)  
 
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
+Image source:
+Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 
+Problem 1.1a
 <p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
+
+Problem 1.1b
+<p align="center"><img src="/tex/1affca5b71aab0a59d325f07e32648bc.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18582949999995pt height=122.87297219999999pt/></p>
+
+Problem 1.c
+<p align="center"><img src="/tex/35b229607a85cdc5b8e9ad420b171c2c.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.97228825pt/></p>
 
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
 	asymptotic complexity of an algorithm with runtime T (n, n) 
