@@ -236,6 +236,16 @@ Add big O symbols
 
 #### Problem set 1.
 ##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)
+![Big O graphs](https://en.wikipedia.org/wiki/Big_O_notation#/media/File:Comparison_computational_complexity.svg)  
+$$
+\begin{align}
+f2(n) = 10000000n = O(n) = linear\\
+f1(n) = n^{0.999999}log n = O(n log n) = quasilinear \\
+f4(n) = n^2 = O(n^2) = quadratic\\
+f3(n) = 1.000001^n = O(c^n) = exponential
+\end{align}
+$$
+
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
 	asymptotic complexity of an algorithm with runtime T (n, n) 
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
