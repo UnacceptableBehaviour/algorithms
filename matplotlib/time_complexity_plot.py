@@ -27,15 +27,15 @@ nsqrd = []
 facto = []
 
 
-for i in range(1, 1500):
-    elements.append(i)
-    linear.append(i)
-    #cos.append(math.cos(np.rad2deg(i)) * linear[i-1])
-    cos.append(math.cos(np.deg2rad(i)) * linear[i-1])
-    logn.append(np.log(i))
-    nlogn.append(i * np.log(i))
-    quadratic.append(i*i)
-    #facto.append(math.factorial(i))
+for n in range(1, 1500):
+    elements.append(n)
+    linear.append(n)
+    #cos.append(math.cos(np.rad2deg(n)) * linear[n-1])
+    cos.append(math.cos(np.deg2rad(n)) * linear[n-1])
+    logn.append(np.log(n))
+    nlogn.append(n * np.log(n))
+    quadratic.append(n*n)
+    #facto.append(math.factorial(n))
 
 
 plt.xlabel('elements') 
