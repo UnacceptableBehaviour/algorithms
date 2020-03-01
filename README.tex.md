@@ -106,7 +106,7 @@ linear time - O(n)
 quasilinear time  - O(n log n)  
 polylogarithmic time  - O((log n) ^ c)  
 quadratic time - O(n^2)  
-polynomial time - O(n^x) where constant x > 1  
+polynomial time - O(n^c) where constant c > 1  
 exponential time - O(2^n)  
 factorial time - O(n!)  
 **HIGH**  
@@ -127,6 +127,8 @@ O - - Landaus Symbol
 Ω - -   
 o - -   
 ω - -   
+
+
 
 		
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
@@ -238,13 +240,40 @@ Add big O symbols
 ##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)  
 
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
+Image source:
+Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 
+Problem 1.1a
 $$
 \begin{align}
 f2(n) = 10000000n = O(n) = linear\\
 f1(n) = n^{0.999999}log n = O(n log n) = quasilinear \\
 f4(n) = n^2 = O(n^2) = quadratic\\
 f3(n) = 1.000001^n = O(c^n) = exponential
+\end{align}
+$$
+
+Problem 1.1b
+$$
+\begin{align}
+f1(n) = 2^{2^{1000000}} = O(1) = constant\\
+f3(n) = 
+  \begin{bmatrix}
+  n\\
+  2\\  
+  \end{bmatrix} = O(n) = linear ? notation?\\
+f4(n) = n \sqrt{n} = n^1{n^\frac{1}{2}} = n^{1.5} = O(n^c) = polynomial\\
+f2(n) = 2^{2100000n} = O(c^n) = exponential
+\end{align}
+$$
+
+Problem 1.c
+$$
+\begin{align}
+f2(n) = 2^n = O(c^n) = constant.exponential\\
+f1(n) = n^{\sqrt{n}} = n^{n^{\frac{1}{2}}} = O(n^n) = linear . exponential\\
+f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
+f4(n) = \sum_{i=1}^{n}(i+1) = ? = O(?)
 \end{align}
 $$
 
