@@ -267,7 +267,9 @@ f2(n) = 2^{2100000n} = O(c^n) = exponential
 \end{align}
 $$
 
-Problem 1.c
+
+
+Problem 1.1c
 $$
 \begin{align}
 f2(n) = 2^n = O(c^n) = constant.exponential\\
@@ -279,7 +281,15 @@ $$
 
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
 	asymptotic complexity of an algorithm with runtime T (n, n) 
+
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
+Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.
+Python code notes:
+Its python2 so run with
+> cd /Users/simon/a_syllabus/lang/algorithms/algorithms/problems/MIT6_006F11_ps1
+> python ./main.py 
+
+
 ##### Problem 1-4. [16 points] Peak-Finding Efficiency 
 	Look at 4 alorithms in algorithms.py 
 	Assess correctness, efficiency
