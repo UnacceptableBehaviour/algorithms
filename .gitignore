@@ -7,9 +7,13 @@
 *.out
 *.synctex.gz
 *.RHistory
+*.jsonp
+*.pyc
+*.pyo
   
 # ignore directory and contents
 /__pycache__
 /venv
 /scratch
 /problems/MIT6_006F11_ps1/venv
+problems/MIT6_006F11_ps1/__pycache__
