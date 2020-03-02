@@ -30,9 +30,11 @@ def algorithm5(problem, trace = None):
             if val > peak_val:
                 peak_val = val
                 problem_peak = (r,c)                
+                if not trace is None: trace.setBestSeen(problem_peak)
             print( (str(val) + ' ').rjust(3) ),
         print('\n')
 
+    if not trace is None: trace.foundPeak(problem_peak)
     return problem_peak
     
 
