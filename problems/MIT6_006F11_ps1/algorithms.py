@@ -1,9 +1,41 @@
 import peak
 import trace
+from collections import Counter
 
 ################################################################################
 ################################## Algorithms ##################################
 ################################################################################
+def algorithm5(problem, trace = None):
+    # if it's empty, we're done 
+    if problem.numRow <= 0 or problem.numCol <= 0:
+        return None
+    
+    histogram = Counter()
+    
+    print("COLS", problem.numCol)
+    print("ROWS", problem.numRow)
+    print("SIZE", peak.getDimensions(problem.array))
+    (row,col) = peak.getDimensions(problem.array)
+    
+    # startRow
+    # startCol
+    # numRow
+    # numCol
+    problem_peak = None
+    peak_val = 0
+    
+    for r in range(problem.startRow + problem.numRow):
+        for c in range(problem.startCol + problem.numCol):
+            val = problem.get((r,c))
+            if val > peak_val:
+                peak_val = val
+                problem_peak = (r,c)                
+            print( (str(val) + ' ').rjust(3) ),
+        print('\n')
+
+    return problem_peak
+    
+
 
 def algorithm1(problem, trace = None):
     # if it's empty, we're done 
@@ -55,6 +87,7 @@ def algorithm2(problem, location = (0, 0), trace = None):
     if nextLocation == location:
         # there is no better neighbor, so return this peak
         if not trace is None: trace.foundPeak(location)
+        print("algorithm2", location)
         return location
     else:
         # there is a better neighbor, so move to the neighbor and recurse

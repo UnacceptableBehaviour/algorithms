@@ -9,7 +9,8 @@ import utils
 ################################ The Main Method ###############################
 ################################################################################
 
-def loadProblem(file = "problem.py", variable = "problemMatrix"):
+#def loadProblem(file = "problem.py", variable = "problemMatrix"):
+def loadProblem(file = "problem.py", variable = "problemMatrix4"):
     """
     Loads a matrix from a python file, and constructs a PeakProblem from it.
     """
@@ -30,7 +31,8 @@ def main():
     algorithmList = [("Algorithm 1", algorithms.algorithm1),
                      ("Algorithm 2", algorithms.algorithm2),
                      ("Algorithm 3", algorithms.algorithm3),
-                     ("Algorithm 4", algorithms.algorithm4)]
+                     ("Algorithm 4", algorithms.algorithm4),
+                     ("Algorithm 5", algorithms.algorithm5)]
 
     steps = []
     
