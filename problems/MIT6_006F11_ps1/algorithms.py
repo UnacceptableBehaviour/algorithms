@@ -40,7 +40,7 @@ def algorithm5(problem, trace = None):
     # trace it
     for r in range(problem.startRow + problem.numRow):
         row_locs = crossProduct([r],range(problem.numCol))
-        bestLoc = problem.getMaximum(row_locs, trace)
+        bestLoc = problem.getMaximum(row_locs, trace)        
         # print("bestLoc", bestLoc)
         # pprint(row_locs)
         # print("^^^^")        
