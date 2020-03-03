@@ -1,10 +1,12 @@
 import peak
 import trace
 from collections import Counter
+from pprint import pprint
 
 ################################################################################
 ################################## Algorithms ##################################
 ################################################################################
+
 def algorithm5(problem, trace = None):
     # if it's empty, we're done 
     if problem.numRow <= 0 or problem.numCol <= 0:
@@ -21,21 +23,35 @@ def algorithm5(problem, trace = None):
     # startCol
     # numRow
     # numCol
-    problem_peak = None
+    peak_loc = None
     peak_val = 0
     
-    for r in range(problem.startRow + problem.numRow):
+    # print problem set    
+    for r in range(problem.startRow + problem.numRow): 
         for c in range(problem.startCol + problem.numCol):
             val = problem.get((r,c))
-            if val > peak_val:
-                peak_val = val
-                problem_peak = (r,c)                
-                if not trace is None: trace.setBestSeen(problem_peak)
+            # if val > peak_val:
+            #     peak_val = val
+            #     peak_loc = (r,c)                
+            #     if not trace is None: trace.setBestSeen(peak_loc)
             print( (str(val) + ' ').rjust(3) ),
         print('\n')
+    
+    # trace it
+    for r in range(problem.startRow + problem.numRow):
+        row_locs = crossProduct([r],range(problem.numCol))
+        bestLoc = problem.getMaximum(row_locs, trace)
+        # print("bestLoc", bestLoc)
+        # pprint(row_locs)
+        # print("^^^^")        
+        val = problem.get(bestLoc)
+        if val > peak_val:
+            (peak_loc, peak_val) = (bestLoc, val)
+            if not trace is None: trace.setBestSeen(bestLoc)        
 
-    if not trace is None: trace.foundPeak(problem_peak)
-    return problem_peak
+
+    if not trace is None: trace.foundPeak(peak_loc)
+    return peak_loc
     
 
 
@@ -154,17 +170,19 @@ def algorithm4(problem, bestSeen = None, rowSplit = True, trace = None):
 
     if rowSplit:
         # the recursive subproblem will involve half the number of rows
-        mid = problem.numRow // 2
+        mid = problem.numRow // 2   # // floor division 4//3 = 1  11//3 = 3
+             # 11//2 = 5   of rows 0-10
 
         # information about the two subproblems
-        (subStartR1, subNumR1) = (0, mid)
-        (subStartR2, subNumR2) = (mid + 1, problem.numRow - (mid + 1))
-        (subStartC, subNumC) = (0, problem.numCol)
+        (subStartR1, subNumR1) = (0, mid)                                   # R1 - top half
+        (subStartR2, subNumR2) = (mid + 1, problem.numRow - (mid + 1))      # R2 - bottom half
+        (subStartC, subNumC) = (0, problem.numCol)                          # startCol to endCol
 
-        subproblems.append((subStartR1, subStartC, subNumR1, subNumC))
-        subproblems.append((subStartR2, subStartC, subNumR2, subNumC))
+        subproblems.append((subStartR1, subStartC, subNumR1, subNumC))      # top       horizontal rectangle
+        subproblems.append((subStartR2, subStartC, subNumR2, subNumC))      # bottom  
 
         # get a list of all locations in the dividing column
+        # EG row 2 cols 0-4 [(2, 0), (2, 1), (2, 2), (2, 3), (2, 4)]
         divider = crossProduct([mid], range(problem.numCol))
     else:
         # the recursive subproblem will involve half the number of columns
@@ -225,3 +243,27 @@ def crossProduct(list1, list2):
         for b in list2:
             answer.append ((a, b))
     return answer
+
+# o/p from crossProduct
+# [5]                                     list1
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]      list2
+# [(5, 0),                                return list of tuples
+#  (5, 1),
+#  (5, 2),
+#  (5, 3),
+#  (5, 4),
+#  (5, 5),
+#  (5, 6),
+#  (5, 7),
+#  (5, 8),
+#  (5, 9),
+#  (5, 10)]
+# 
+# [2]                                      list1
+# [0, 1, 2, 3, 4]                          list2
+# [(2, 0), (2, 1), (2, 2), (2, 3), (2, 4)] return list of tuples
+# 
+# [1]                                      list1
+# [0, 1]                                   list2
+# [(1, 0), (1, 1)]                         return list of tuples
+
