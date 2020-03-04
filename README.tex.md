@@ -19,7 +19,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 		2. [Python Model  - Computational Steps](#python-model---computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 		4. [Problem set 1.](#problem-set-1)  
-			1. [Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
+			1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
 			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-12-15-points-recurrence-relation-resolution)  
 			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-13-16-points-peakfinding-correctness)  
 			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-14-16-points-peakfinding-efficiency)  
@@ -238,11 +238,14 @@ Watch vids - add refs - from math text
 Add big O symbols
 
 #### Problem set 1.
-##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)  
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
 
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
 Image source:
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
+
+##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation) 
+For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
 
 Problem 1.1a
 $$
@@ -281,14 +284,18 @@ f4(n) = \sum_{i=1}^{n}(i+1) = ? = O(?)
 $$
 
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
-	asymptotic complexity of an algorithm with runtime T (n, n) 
+For each of the following recurrence relations, pick the correct asymptotic runtime:
+asymptotic complexity of an algorithm with runtime T (n, n) 
+(a)
+(b)
+(c)
 
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
 Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.  
 Python code notes:  
-Its python2 so run with  
+Its python2 so run with  
 ```
-> cd /Users/simon/a_syllabus/lang/algorithms/algorithms/problems/MIT6_006F11_ps1
+> cd /algorithms/problems/MIT6_006F11_ps1				# source unzip directory
 > python ./main.py 
 Enter a file name to load from (default: problem.py): 
 Algorithm 1 : (4, 4) => is a peak
@@ -305,10 +312,10 @@ main.py
 	iterate through list and call each algo w problem, tracee and default args
 	print results
 
-Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)
-
-	
+Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)	
 ```
+
+
 
 
 ##### Problem 1-4. [16 points] Peak-Finding Efficiency 
