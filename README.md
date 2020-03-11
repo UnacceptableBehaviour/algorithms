@@ -27,6 +27,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-16-19-points-peakfinding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
 6. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
+			1. [Insertion sort](#insertion-sort)  
 	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
 	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
@@ -246,11 +247,31 @@ Problem 1.1c
 	asymptotic complexity of an algorithm with runtime T (n, n) 
 
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
-Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.
-Python code notes:
-Its python2 so run with
+Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.  
+Python code notes:  
+Its python2 so run with  
+```
 > cd /Users/simon/a_syllabus/lang/algorithms/algorithms/problems/MIT6_006F11_ps1
 > python ./main.py 
+Enter a file name to load from (default: problem.py): 
+Algorithm 1 : (4, 4) => is a peak
+Algorithm 2 : (4, 4) => is a peak
+Algorithm 3 : (4, 4) => is a peak
+Algorithm 4 : (4, 4) => is a peak
+```
+
+OK so whats going on here?  
+```
+main.py
+	load problem(matrix) from problem.py(or pas file name via CLI arg)
+	create list of algos, tuples of (name, algo_no_func)
+	iterate through list and call each algo w problem, tracee and default args
+	print results
+
+Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)
+
+	
+```
 
 
 ##### Problem 1-4. [16 points] Peak-Finding Efficiency 
@@ -263,6 +284,15 @@ Its python2 so run with
 
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
+##### Insertion sort
+How is this better than bubble sort?
+
+[Merge sort in 3mins](https://www.youtube.com/watch?v=4VqmGXwpLqc)
+Pseudocode @ 2m32
+
+[Difference between theta, omega complexity and big O](https://www.youtube.com/watch?v=6Ol2JbwoJp0)  
+
+  
 
 		Problem set 2 out - Event simulation
 
