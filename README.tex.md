@@ -140,6 +140,9 @@ o - -
 
 
 ### 2	Models of computation, Python cost model, document distance	 
+[yt_vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2)
+[lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)
+
 Algorithm: computational procedure for solving a problem  
 What is time (complexity)? **O(1) = constant time**  
 #### Model of computation:
@@ -223,6 +226,9 @@ $$
 \end{equation}
 $$
 
+Examples Document distance code:
+[this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
+or [on web](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lec02_code.zip)
 
 
 REFS
