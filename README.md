@@ -19,7 +19,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 		2. [Python Model  - Computational Steps](#python-model---computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 		4. [Problem set 1.](#problem-set-1)  
-			1. [Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
+			1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
 			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-12-15-points-recurrence-relation-resolution)  
 			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-13-16-points-peakfinding-correctness)  
 			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-14-16-points-peakfinding-efficiency)  
@@ -135,7 +135,10 @@ o - -
 
 
 
-### 2	Models of computation, Python cost model, document distance	 
+### 2	Models of computation, Python cost model, document distance	   
+Online lecture video: [yt_vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2)  
+Lecture notes: [here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
+
 Algorithm: computational procedure for solving a problem  
 What is time (complexity)? **O(1) = constant time**  
 #### Model of computation:
@@ -211,6 +214,9 @@ Obviously bigger documents will naturally give bigger numbers do the value is no
 
 <p align="center"><img src="/tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
 
+Examples Document distance code:
+[this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
+or [on web](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lec02_code.zip)
 
 
 REFS
@@ -226,11 +232,14 @@ Watch vids - add refs - from math text
 Add big O symbols
 
 #### Problem set 1.
-##### Problem 1-1. [15 points] Asymptotic Practice 	Calculating asymptotic complexity (Big O notation)  
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
 
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
 Image source:
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
+
+##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation) 
+For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
 
 Problem 1.1a
 <p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
@@ -244,14 +253,18 @@ Problem 1.1c
 <p align="center"><img src="/tex/35b229607a85cdc5b8e9ad420b171c2c.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.97228825pt/></p>
 
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
-	asymptotic complexity of an algorithm with runtime T (n, n) 
+For each of the following recurrence relations, pick the correct asymptotic runtime:
+asymptotic complexity of an algorithm with runtime T (n, n) 
+(a)
+(b)
+(c)
 
 ##### Problem 1-3. [16 points] Peak-Finding Correctness 
 Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.  
 Python code notes:  
-Its python2 so run with  
+Its python2 so run with  
 ```
-> cd /Users/simon/a_syllabus/lang/algorithms/algorithms/problems/MIT6_006F11_ps1
+> cd /algorithms/problems/MIT6_006F11_ps1				# source unzip directory
 > python ./main.py 
 Enter a file name to load from (default: problem.py): 
 Algorithm 1 : (4, 4) => is a peak
@@ -268,10 +281,10 @@ main.py
 	iterate through list and call each algo w problem, tracee and default args
 	print results
 
-Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)
-
-	
+Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)	
 ```
+
+
 
 
 ##### Problem 1-4. [16 points] Peak-Finding Efficiency 
