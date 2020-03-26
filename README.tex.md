@@ -28,6 +28,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 6. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 			1. [Insertion sort](#insertion-sort)  
+			2. [Merge Sort](#merge-sort)  
 	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
 	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
@@ -335,12 +336,38 @@ Once run the results can be visualised with visualizer.html which loads data cre
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
 ##### Insertion sort
-How is this better than bubble sort?
+Sorted list have various properties:   
+	simple to find median (constant time)  
+	find item:  
+		scan to find O(n) in sorted & unsorted list  
+		binary search O(log n) (halves the list at each step)
+
+Application: compression (frequency counting), graphic z-order etc
+
+Insertion sort - also in doc distance python files (/algorithms/lecture_code/L2_doc_distance)
+
+**Bubble sort** (scan list swap values in the wrong order, repeat) O(n^2)  
+
+**Insertion Sort**  
+	Vanilla insertion sort (L2_doc_distance)  
+	a) Move 1st item to new list, move next item to new list **scan** until correct place found, insert, repeat  
+		n^2		- n for number of items n for search & insert  
+
+	Binary insertion sort  
+	b) Move 1st item to new list, move next item to new list **binary search** until correct place found, insert, repeat  
+		n log n	- n for number of items log n for binary search & insert  
+
+##### Merge Sort  
+ 
+
+
 
 [Merge sort in 3mins](https://www.youtube.com/watch?v=4VqmGXwpLqc)
 Pseudocode @ 2m32
 
 [Difference between theta, omega complexity and big O](https://www.youtube.com/watch?v=6Ol2JbwoJp0)  
+
+
 
   
 
