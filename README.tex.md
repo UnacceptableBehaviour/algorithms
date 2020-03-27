@@ -404,7 +404,7 @@ counting on like that [see page 4](https://ocw.mit.edu/courses/electrical-engine
 
 ##### Heap as a tree navigation
 [see page 5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
-**Using array to implement the heap**
+**Using array to implement the heap**  
 root i=1  
 parent = i/2  
 left = 2i  
@@ -414,15 +414,16 @@ No pointers required.
 
 ##### Heap as a tree properties
 **Max heap property:**  
-the key of a node >=  keys of its children  
+the key of a node >=  keys of its children  
 (the key being the value in the circle)  
 
 **Min heap property:**  
-the key of a node <=  keys of its parent  
+the key of a node <=  keys of its parent  
 
-##### Max_heapify
+##### Max_heapify  
+[Python source exesize here](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)
 
-
+Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 ### 5	Binary search trees, BST sort	 
