@@ -81,6 +81,9 @@ def max_heapify(A, node):
 # display_heap(unsorted)
 # print('\n\n')
 
+def build_max_heap(A):
+    for i = t=range(len(A)/2,0,-1):
+        print(i)
 
 
-
+build_max_heap(unsorted)
