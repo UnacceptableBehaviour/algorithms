@@ -349,31 +349,38 @@ Insertion sort - also in doc distance python files (/algorithms/lecture_code/L2_
 **Bubble sort** (scan list swap values in the wrong order, repeat) O(n^2)  
 
 **Insertion Sort**  
-	Vanilla insertion sort (L2_doc_distance)  
-	a) Move 1st item to new list, move next item to new list **scan** until correct place found, insert, repeat  
-		n^2		- n for number of items n for search & insert  
+a) Vanilla insertion sort (L2_doc_distance)  
+Move 1st item to new list, move next item to new list **scan** until correct place found, insert, repeat  
+**n^2** - breaks down as: (n for number of items) * (n for search & insert )
 
-	Binary insertion sort  
-	b) Move 1st item to new list, move next item to new list **binary search** until correct place found, insert, repeat  
-		n log n	- n for number of items log n for binary search & insert  
+b) Binary insertion sort  
+Move 1st item to new list, move next item to new list **binary search** until correct place found, insert, repeat  
+**n log n** - breaks down as: (n for number of items) *  (log n for binary search & insert )
 
 ##### Merge Sort  
- 
+[] (https://www.youtube.com/watch?v=4VqmGXwpLqc) (Pseudocode @ 2m32)
+
+Long story short: Split array into 2, repeat until only 2 items in each leaf, sort those two items, go up a layer and merge leaves  
+
+[Python implementation here] (https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/merge_sort.py) likely naive.  
+
+**Concept of auxiliary space**, in the above python code that would be stack I assume.
 
 
-
-[Merge sort in 3mins](https://www.youtube.com/watch?v=4VqmGXwpLqc)
-Pseudocode @ 2m32
+Instrument the merge sort code
 
 [Difference between theta, omega complexity and big O](https://www.youtube.com/watch?v=6Ol2JbwoJp0)  
-
-
-
   
 
 		Problem set 2 out - Event simulation
 
 ### 4	Heaps and heap sort	 
+4 vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort) - [Lecture notes - 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)[Lecture   
+Local: /algorithms/scratch/lectures/MIT6_006F11_lec04.pdf  
+
+
+
+
 ### 5	Binary search trees, BST sort	 
 ### 6	AVL trees, AVL sort	
 	
