@@ -379,7 +379,7 @@ Instrument the merge sort code
 
 		Problem set 2 out - Event simulation
 
-### 4	Heaps and heap sort	 
+### 4	Heaps and heap sort  
 [Lecture 4 vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)   [Lecture notes - 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
 Lecture Local: /algorithms/scratch/lectures/MIT6_006F11_lec04.pdf  
 ADT - Abstract Data Type  
@@ -418,7 +418,7 @@ the key of a node >=  keys of its children
 (the key being the value in the circle)  
 
 **Min heap property:**  
-the key of a node <=  keys of its children  
+the key of a node <=  keys of its parent  
 
 ##### Max_heapify
 
