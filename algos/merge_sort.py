@@ -38,6 +38,7 @@ def merge(left,right):
     
 
 # Q1 what's the stack limit? - how big a list can recursive approach be used for?
+#   - auxiliary space
 def merge_sort(items_to_sort, n=0):
     print('\n- - - -' + (' -' * n) ,n)
     print(items_to_sort)
