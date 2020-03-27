@@ -27,9 +27,14 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-16-19-points-peakfinding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
 6. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
-			1. [Insertion sort](#insertion-sort)  
-			2. [Merge Sort](#merge-sort)  
+		1. [Insertion sort](#insertion-sort)  
+		2. [Merge Sort](#merge-sort)  
 	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
+		1. [Priority Queue](#priority-queue)  
+		2. [Heap](#heap)  
+			1. [Heap as a tree navigation](#heap-as-a-tree-navigation)  
+			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
+			3. [Max_heapify](#maxheapify)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
 	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
 	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
@@ -188,11 +193,11 @@ Checking existence of item in list:
 		from python check to see if x is in list L  
 		required search through whole list (worst case)
 
-Sorting a list:	
+Sorting a list:  
 	L.sort()   **O(| L | log | L |)**					- ie **O(n log n)**  
 	Covered [Lecture 3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 
-Retrieving item from hash w/ key:
+Retrieving item from hash w/ key:  
 	retrieve dict[key]	  **O(1)** constant time (uses lookup hash)  
 	Covered in [Lectures 8-10 Hashing with chaining](#8hashing-with-chaining)  
 
@@ -232,11 +237,11 @@ Examples Document distance code:
 or [on web](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lec02_code.zip)
 
 
-REFS
-[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)
+REFS  
+[Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 [Look into this Latex insertion solution](https://stackoverflow.com/questions/35498525/latex-rendering-in-readme-md-on-github)  
 [using pdfLatex may work](https://tex.stackexchange.com/questions/885/how-can-i-use-latex-from-python)  
-Or use LaTeXiT from the command line to parse and auto generate equations
+Or use LaTeXiT from the command line to parse and auto generate equations  
 Or [readme2tex](https://github.com/leegao/readme2tex)  
 
 
@@ -335,7 +340,7 @@ Once run the results can be visualised with visualizer.html which loads data cre
 
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
-##### Insertion sort
+#### Insertion sort
 Sorted list have various properties:   
 	simple to find median (constant time)  
 	find item:  
@@ -357,7 +362,7 @@ b) Binary insertion sort
 Move 1st item to new list, move next item to new list **binary search** until correct place found, insert, repeat  
 **n log n** - breaks down as: (n for number of items) *  (log n for binary search & insert )
 
-##### Merge Sort  
+#### Merge Sort  
 [] (https://www.youtube.com/watch?v=4VqmGXwpLqc) (Pseudocode @ 2m32)
 
 Long story short: Split array into 2, repeat until only 2 items in each leaf, sort those two items, go up a layer and merge leaves  
@@ -375,8 +380,47 @@ Instrument the merge sort code
 		Problem set 2 out - Event simulation
 
 ### 4	Heaps and heap sort	 
-4 vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort) - [Lecture notes - 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)[Lecture   
-Local: /algorithms/scratch/lectures/MIT6_006F11_lec04.pdf  
+[Lecture 4 vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)   [Lecture notes - 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
+Lecture Local: /algorithms/scratch/lectures/MIT6_006F11_lec04.pdf  
+ADT - Abstract Data Type  
+
+#### Priority Queue
+Implements a set of elements associated with a key - methods:
+insert(x, into set S),  
+get max priority (of set S),  
+extract_max (of set S),  			get max and remove it!
+inc_key(in set S, increas element xs key, to value k)
+and  
+get min priority (of set S),  
+delete, change priority in Q.  
+
+#### Heap
+Is an implementation of a priority Q, array structure visualised as a nearly complete binary tree - p4  
+
+Root of tree is array index 0, (tree node i=1)  
+1,2 are LEFT & RIGHT split  
+3,4 - 5,6 are next layer LEFT & RIGHT split  
+counting on like that [see page 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
+
+##### Heap as a tree navigation
+[see page 5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
+**Using array to implement the heap**
+root i=1  
+parent = i/2  
+left = 2i  
+right = 2i+1  
+
+No pointers required.
+
+##### Heap as a tree properties
+**Max heap property:**  
+the key of a node >=  keys of its children  
+(the key being the value in the circle)  
+
+**Min heap property:**  
+the key of a node <=  keys of its children  
+
+##### Max_heapify
 
 
 
