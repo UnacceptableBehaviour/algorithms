@@ -20,23 +20,29 @@ print('\n\n')
 
 # A being an array implemnted heap
 SPACER = 6
-SPACE_TAB = ' ' * SPACER
+VERTICAL_SPACE = 0
 def display_heap(A):
     depth = math.floor(math.log(len(A),2))  # math.log2(len(A))
-    print('depth:',depth)
+    heap_width = 2**(depth-1) * SPACER
+    print('depth:',depth, 'heap_width:', 2**(depth-1),  heap_width)
+    
     
     for row in range(0,depth):
-        #print((SPACE_TAB * (ro) )
         lbnd = 2**row
         rbnd = 2**(row+1)
         build_row = ''
-        print(f"lbnd:{lbnd} - rbnd{rbnd}")
+        row_spacer = int(heap_width / (2**row))  # spread nodes evenly
+        #print(f"lbnd:{lbnd} - rbnd{rbnd}")
         
+        print('\n' * VERTICAL_SPACE)
         for node in range(lbnd, rbnd):
-            print(node)
-            build_row = build_row + str(A[node]).center(SPACER)
+            #print(node)
+            build_row = build_row + str(A[node]).center(row_spacer)
         
-        print(f"{row} - {build_row}")
+       
+        build_row = build_row.center( heap_width )
+        
+        print(f"{build_row}        - {row}:{depth} - {heap_width}")
     
     return depth
     
