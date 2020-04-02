@@ -14,6 +14,8 @@ SIZE_N = 21
 for i in range(0, SIZE_N +1):               # using array positions 1-SIZE_N+1
     unsorted.append(randint(SIZE_N * 10))   # make algorith code more readable
                                             # easier to understand
+SIZE_OF_HEAP = 0
+unsorted[SIZE_OF_HEAP] = SIZE_N    # maintain heap size in apex
 
 for i in range(0,10):
     lbnd = 2**i
@@ -107,4 +109,23 @@ build_max_heap(unsorted)
 print('\n\n')
 display_heap(unsorted)
 print('\n\n')
+
+# From L4 - Priority Queue
+# Implements a set of elements associated with a key - methods:
+# insert(x, into set S),  
+# get max priority (of set S),  
+# extract_max (of set S),  			get max and remove it!
+# inc_key(in set S, increase element x?s key, to value k)
+# and  
+# get min priority (of set S),  
+# delete, change priority in Q.
+
+def heap_size:
+    return unsorted[SIZE_OF_HEAP]
+
+def insert(value):
+    unsorted.append(value)
+    max_heapify(unsorted, 1)
+    
+    
 
