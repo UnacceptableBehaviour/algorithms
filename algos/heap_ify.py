@@ -7,9 +7,13 @@ import math
 
 unsorted = []
 SIZE_N = 19
+#SIZE_N = 32
+SIZE_N = 21
 
-for i in range(0, SIZE_N):
-    unsorted.append(randint(SIZE_N * 10))
+# check maths
+for i in range(0, SIZE_N +1):               # using array positions 1-SIZE_N+1
+    unsorted.append(randint(SIZE_N * 10))   # make algorith code more readable
+                                            # easier to understand
 
 for i in range(0,10):
     lbnd = 2**i
@@ -19,15 +23,15 @@ for i in range(0,10):
 print('\n\n')
 
 # A being an array implemnted heap
-SPACER = 10
+SPACER = 10                             # padding around node number
 VERTICAL_SPACE = 0
 def display_heap(A):
-    depth = math.floor(math.log(len(A),2))  # math.log2(len(A))
-    heap_width = 2**(depth) * SPACER      #heap_width = 2**(depth-1) * SPACER
+    depth = math.floor(math.log(len(A)-1,2)) +1 # math.log2(len(A))
+    heap_width = 2**(depth-1) * SPACER      #heap_width = 2**(depth-1) * SPACER
     print('\ndepth:',depth, 'heap_width:', 2**(depth-1),  heap_width, 'len(A):',len(A))
     
     
-    for row in range(0,depth+1):
+    for row in range(0,depth):
         lbnd = 2**row
         rbnd = 2**(row+1)
         build_row = ''
@@ -51,8 +55,17 @@ def display_heap(A):
 
 display_heap(unsorted)
 
-print('\n\n')
+#print('\n\n')
 
+# pre-condition of this is that both the left and right children of node are max heaps
+# which is why the build_max_heap start with the first node above the leaves since
+# the leaves are by definintion sorted max_heaps
+#
+# navigating heap
+# root i=1  
+# parent = i/2  
+# left = 2i  
+# right = 2i+1  
 def max_heapify(A, node):
     try:
         lc = A[node*2]    # left child
@@ -81,9 +94,17 @@ def max_heapify(A, node):
 # display_heap(unsorted)
 # print('\n\n')
 
+# start at deepest(lowest) non-leaf node
+# for a 16 node tree that would be 8
 def build_max_heap(A):
-    for i = t=range(len(A)/2,0,-1):
-        print(i)
-
+    # Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves! 
+    for i in range(int(len(A)/2),0,-1):   # len(A)/2 first non leaf node
+        #print(i)
+        max_heapify(A,i)
 
 build_max_heap(unsorted)
+
+print('\n\n')
+display_heap(unsorted)
+print('\n\n')
+
