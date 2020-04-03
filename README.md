@@ -351,9 +351,9 @@ ADT - Abstract Data Type
 Implements a set of elements associated with a key - methods:
 insert(x, into set S),  
 get max priority (of set S),  
-extract_max (of set S),  			get max and remove it!
-inc_key(in set S, increas element xs key, to value k)
-and  
+extract_max (of set S)  -  get max and remove it!  
+inc_key (in set S, increase element xs key, to value k)  
+plus  
 get min priority (of set S),  
 delete, change priority in Q.  
 
@@ -363,11 +363,11 @@ Is an implementation of a priority Q, array structure visualised as a nearly com
 Root of tree is array index 0, (tree node i=1)  
 1,2 are LEFT & RIGHT split  
 3,4 - 5,6 are next layer LEFT & RIGHT split  
-counting on like that [see page 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
+counting on like that [see page 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
 
 ##### Heap as a tree navigation
 [see page 5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
-**Using array to implement the heap**
+**Using array to implement the heap**  
 root i=1  
 parent = i/2  
 left = 2i  
@@ -377,15 +377,16 @@ No pointers required.
 
 ##### Heap as a tree properties
 **Max heap property:**  
-the key of a node >=  keys of its children  
+the key of a node >=  keys of its children  
 (the key being the value in the circle)  
 
 **Min heap property:**  
-the key of a node <=  keys of its parent  
+the key of a node <=  keys of its parent  
 
-##### Max_heapify
+##### Max_heapify  
+[Python source exesize here](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)
 
-
+Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 ### 5	Binary search trees, BST sort	 
