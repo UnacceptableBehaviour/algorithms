@@ -1,25 +1,36 @@
 #! /usr/bin/env python
 # 3.7
 
+import sys
 from numpy.random import randint
 from pprint import pprint
 import math
 
-unsorted = []
+heap_array = []
 #SIZE_N = 32
 SIZE_N = 21
 SIZE_N = 15
 
 # check maths
 for i in range(0, SIZE_N +1):               # using array positions 1-SIZE_N+1
-    unsorted.append(randint(SIZE_N * 10))   # make algorith code more readable
+    heap_array.append(randint(SIZE_N * 10))   # make algorith code more readable
                                             # easier to understand
 ROOT_NODE = 1
 SIZE_OF_HEAP = 0
-unsorted[SIZE_OF_HEAP] = SIZE_N    # maintain heap size in apex
+heap_array[SIZE_OF_HEAP] = SIZE_N    # maintain heap size in apex
 
 def heap_size():
-    return unsorted[SIZE_OF_HEAP]
+    return heap_array[SIZE_OF_HEAP]
+
+def inc_heap_size():
+    heap_array[SIZE_OF_HEAP] += 1
+    return heap_array[SIZE_OF_HEAP]
+
+def dec_heap_size():    
+    if heap_array[SIZE_OF_HEAP] > 0:
+        heap_array[SIZE_OF_HEAP] =- 1
+            
+    return heap_array[SIZE_OF_HEAP]
 
 # lbnd - left bound: start of treee row
 # rbnd - right bound: end item of the row
@@ -72,7 +83,7 @@ def display_heap(A):
     return depth
     
 
-display_heap(unsorted)
+display_heap(heap_array)
 # depth: 4 heap_width: 8 80 heap_size: 15 len(A): 16
 # 
 #                                      1: 143                                         - 0:4 - 80
@@ -129,10 +140,10 @@ def build_max_heap(A):
         #print(i)
         max_heapify(A,i)
 
-build_max_heap(unsorted)
+build_max_heap(heap_array)
 
 print('\n\n')
-display_heap(unsorted)
+display_heap(heap_array)
 print('\n\n')
 # depth: 4 heap_width: 8 80 heap_size: 15 len(A): 16
 # 
@@ -158,53 +169,68 @@ print('\n\n')
 # delete, change priority in Q.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+# test against lecture notes - FAILS because a value promoted to a parent coul eb smaller than the oposite child
 # bubble value up through the tree
 def swap_with_smaller_parent(node):
     # if parent lower value swap nodes    
-    parent = int(node/2)
-    
-    #print(f"swap_with_smaller_parent node:{node} parent:{parent}")
-    
-    if unsorted[parent] < unsorted[node]:
-        unsorted[parent], unsorted[node] = unsorted[node], unsorted[parent]     # swap nodes
-        if parent > 1:
+    parent = int(node/2)    
+    print(f"swap_with_smaller_parent node:{node} parent:{parent}")
+
+    if parent >= 1:    
+        if heap_array[parent] < heap_array[node]:
+            heap_array[parent], heap_array[node] = heap_array[node], heap_array[parent]     # swap nodes    
             swap_with_smaller_parent(parent)
+
+
+def swap_with_smaller_parent_max_heap(node):
+    # if parent lower value swap nodes    
+    parent = int(node/2)
+    print(f"swap_with_smaller_parent_MAX_HEAP node:{node} parent:{parent}")
+    
+    if parent >= 1:
+        max_heapify(heap_array, parent)
+        swap_with_smaller_parent_max_heap(parent)
+
+
 
 # isert value into correct position
 # insert in 1st available leaf and bubble up
 def insert(value):
-    # if there are empty (0) leave insert there first
+    # insert value add end of heap ()
+    try:                                    # no memory management so may have already allocated array space
+        heap_array[heap_size()+1] = value   # try and see if assigning value works
+    except IndexError:
+        heap_array.append(value)            # if not append it
 
-    found_empty_leaf = False
-    # Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves! 
-    for i in range(int(len(unsorted)/2)+1,len(unsorted)):   # len(A)/2 first non leaf node
-        if unsorted[i] == 0:
-            unsorted[i] = value
-            found_empty_leaf = True
-            swap_from = i
+    inc_heap_size()
     
-    unsorted[SIZE_OF_HEAP] += 1 # or unsorted[SIZE_OF_HEAP] = len(unsorted) - 1   # since unsorted[SIZE_OF_HEAP] holde the heap size!
-                
-    if found_empty_leaf == False:
-        unsorted.append(value)
-        swap_from = unsorted[SIZE_OF_HEAP]        
-    
-    # print('\n\n')
-    # display_heap(unsorted)    
-    # print(f"unsorted[SIZE_OF_HEAP] {unsorted[SIZE_OF_HEAP]}")
-    swap_with_smaller_parent(swap_from)
-        
-insert(494)
-print('\n\n')
-display_heap(unsorted)
+    #swap_with_smaller_parent_max_heap(heap_size())
+    swap_with_smaller_parent(heap_size())
 
-insert(999)
+
 print('\n\n')
-display_heap(unsorted)
+iv = 49
+print(f"insert({iv})")
+insert(iv)
+display_heap(heap_array)
+
+print('\n\n')
+iv = 294        
+print(f"insert({iv})")
+insert(iv)
+display_heap(heap_array)
+
+print('\n\n')
+iv = 599
+print(f"insert({iv})")
+insert(iv)
+display_heap(heap_array)
+
+sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
 
 
 def get_max_priority():
-    return unsorted[ROOT_NODE]
+    return heap_array[ROOT_NODE]
 
 print('\n\nget_max_priority:', get_max_priority())
 
@@ -216,31 +242,31 @@ print('\n\nget_max_priority:', get_max_priority())
 # extract_max
 def pop_max():
     try:
-        return_node = unsorted[ROOT_NODE]
-        unsorted[SIZE_OF_HEAP] -= 1
+        return_node = heap_array[ROOT_NODE]
+        heap_array[SIZE_OF_HEAP] -= 1
     except IndexError: 
         return 0
     
-    unsorted[ROOT_NODE] = 0
-    max_heapify(unsorted, ROOT_NODE)
+    heap_array[ROOT_NODE] = 0
+    max_heapify(heap_array, ROOT_NODE)
     
-    # print('\n\nHEAP ARRAY - LEAVES FIRST - size:', len(unsorted), ROOT_NODE, -1)
-    # for i in range(ROOT_NODE, len(unsorted)-1):
-    #     print(unsorted[i])    
+    # print('\n\nHEAP ARRAY - LEAVES FIRST - size:', len(heap_array), ROOT_NODE, -1)
+    # for i in range(ROOT_NODE, len(heap_array)-1):
+    #     print(heap_array[i])    
     # print(' - - - ')
     
     return return_node
 
 max_node = pop_max()
 while max_node != 0:
-    # display_heap(unsorted)
+    # display_heap(heap_array)
     print('popped max:', max_node)
     max_node = pop_max()
 
 # for i in range(0, 19):          
 #     insert(randint(SIZE_N * 100))
 # 
-# display_heap(unsorted)
+# display_heap(heap_array)
 # 
 # max_node = pop_max()
 # while max_node != 0:
