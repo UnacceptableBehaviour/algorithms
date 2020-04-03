@@ -2,6 +2,8 @@
 # 3.7
 
 import sys
+import traceback            # traceback.print_stack(file=sys.stdout) to dump stack trace
+
 from numpy.random import randint
 from pprint import pprint
 import math
@@ -26,10 +28,9 @@ def inc_heap_size():
     heap_array[SIZE_OF_HEAP] += 1
     return heap_array[SIZE_OF_HEAP]
 
-def dec_heap_size():    
+def dec_heap_size():
     if heap_array[SIZE_OF_HEAP] > 0:
-        heap_array[SIZE_OF_HEAP] =- 1
-            
+        heap_array[SIZE_OF_HEAP] -= 1
     return heap_array[SIZE_OF_HEAP]
 
 # lbnd - left bound: start of treee row
@@ -106,7 +107,11 @@ display_heap(heap_array)
 # left child = 2i  
 # right child = 2i+1  
 def max_heapify(A, node):
-    #print(f"max_heapify node:{node}")
+    #print(f"max_heapify node:{node} - heap_size:{heap_size()}")
+    if node <= 0:
+        traceback.print_stack(file=sys.stdout)
+        return
+    
     try:
         left_child = A[node*2]          # left child
     except IndexError:                  # out of range - node has no children => leaf
@@ -169,8 +174,8 @@ print('\n\n')
 # delete, change priority in Q.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# test against lecture notes - FAILS because a value promoted to a parent coul eb smaller than the oposite child
-# bubble value up through the tree
+# test against lecture notes - SEEMS to work well PROOF?
+# bubble value up through the tree - initial idea
 def swap_with_smaller_parent(node):
     # if parent lower value swap nodes    
     parent = int(node/2)    
@@ -181,7 +186,7 @@ def swap_with_smaller_parent(node):
             heap_array[parent], heap_array[node] = heap_array[node], heap_array[parent]     # swap nodes    
             swap_with_smaller_parent(parent)
 
-
+# from lecture notes
 def swap_with_smaller_parent_max_heap(node):
     # if parent lower value swap nodes    
     parent = int(node/2)
@@ -204,8 +209,8 @@ def insert(value):
 
     inc_heap_size()
     
-    #swap_with_smaller_parent_max_heap(heap_size())
-    swap_with_smaller_parent(heap_size())
+    swap_with_smaller_parent_max_heap(heap_size())         # O(n Log n)
+    #swap_with_smaller_parent(heap_size())                 # O(n)   # just swap no max_heapify -
 
 
 print('\n\n')
@@ -226,7 +231,7 @@ print(f"insert({iv})")
 insert(iv)
 display_heap(heap_array)
 
-sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
+print("\n\n\nextracting max - - - - - - - - - < <")
 
 
 def get_max_priority():
@@ -234,34 +239,32 @@ def get_max_priority():
 
 print('\n\nget_max_priority:', get_max_priority())
 
-#def back_fill_to_node(node=1):  # default back fill to root
-    # pick highest node from children
     
     
-
 # extract_max
+# swap ROOT_NODE with last LEAF
+# reduce size of heap (remove last LEAF)
+# max_heapify(ROOT_NODE) to reposition leaf inserted at ROOT_NODE
 def pop_max():
-    try:
-        return_node = heap_array[ROOT_NODE]
-        heap_array[SIZE_OF_HEAP] -= 1
-    except IndexError: 
-        return 0
+    return_node = 0
     
-    heap_array[ROOT_NODE] = 0
-    max_heapify(heap_array, ROOT_NODE)
-    
-    # print('\n\nHEAP ARRAY - LEAVES FIRST - size:', len(heap_array), ROOT_NODE, -1)
-    # for i in range(ROOT_NODE, len(heap_array)-1):
-    #     print(heap_array[i])    
-    # print(' - - - ')
-    
+    if heap_size() >= 1:        
+        return_node = heap_array[ROOT_NODE]                 # get max
+        heap_array[ROOT_NODE] = heap_array[heap_size()]     # replace with last LEAF
+        heap_array[heap_size()] = 0                         # 'remove' leaf
+        dec_heap_size()
+        max_heapify(heap_array, ROOT_NODE)                  # sort
+        
     return return_node
 
 max_node = pop_max()
+print('popped max:', max_node)
 while max_node != 0:
-    # display_heap(heap_array)
-    print('popped max:', max_node)
+    #display_heap(heap_array)    
     max_node = pop_max()
+    print('popped max:', max_node)
+
+display_heap(heap_array)
 
 # for i in range(0, 19):          
 #     insert(randint(SIZE_N * 100))
@@ -274,3 +277,4 @@ while max_node != 0:
 #     max_node = pop_max()
 #                                 
 
+sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
