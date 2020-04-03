@@ -165,9 +165,9 @@ print('\n\n')
 # From L4 - Priority Queue
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Implements a set of elements associated with a key - methods:
-# insert(x, into set S),  
-# get max priority (of set S),  
-# extract_max (of set S),  			get max and remove it!
+# insert(x, into set S),                                        DONE
+# get max priority (of set S),                                  DONE
+# extract_max (of set S),  			get max and remove it!      DONE
 # inc_key(in set S, increase element x's key, to value k)
 # and  
 # get min priority (of set S),  
@@ -231,7 +231,7 @@ print(f"insert({iv})")
 insert(iv)
 display_heap(heap_array)
 
-print("\n\n\nextracting max - - - - - - - - - < <")
+print("\n\n\n - - - - extracting max - - - - - - - - - < <")
 
 
 def get_max_priority():
@@ -266,15 +266,19 @@ while max_node != 0:
 
 display_heap(heap_array)
 
-# for i in range(0, 19):          
-#     insert(randint(SIZE_N * 100))
-# 
-# display_heap(heap_array)
-# 
-# max_node = pop_max()
-# while max_node != 0:
-#     print(':', max_node, )
-#     max_node = pop_max()
-#                                 
+print("\n\n\n - - - - build using insert - - - - - - - - - < <")
+
+for i in range(0, 19):          
+    insert(randint(SIZE_N * 100))
+
+display_heap(heap_array)
+
+max_node = pop_max()
+print('popped max:', max_node)
+while max_node != 0:
+    #display_heap(heap_array)    
+    max_node = pop_max()
+    print('popped max:', max_node)
+                                
 
 sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
