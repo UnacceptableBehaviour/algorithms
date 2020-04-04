@@ -8,15 +8,42 @@ from numpy.random import randint
 from pprint import pprint
 import math
 
+# heap_array = []
+# #SIZE_N = 32
+# SIZE_N = 15
+# 
+# 
+# # using array positions 1-SIZE_N+1
+# # make algorith code more readable
+# # easier to understand
+# # maintain heap size in apex (position 0 in array)
+# ROOT_NODE = 1
+# SIZE_OF_HEAP = 0
+# # initialize / __init__
+# def build_rnd_heap(size):
+#     # heap_array = [0] * SIZE_N                     # create list of SIZE_N init to 0
+#     for i in range(0, len(heap_array)):             # in case we're reusing large heap
+#         heap_array[i] = 0
+#     
+#     for i in range(ROOT_NODE, size+1):
+#         try:
+#             heap_array[i] = randint(SIZE_N * 10)
+#         except IndexError:
+#             heap_array.append(randint(SIZE_N * 10))
+#                                                     
+#     heap_array[SIZE_OF_HEAP] = size                 
+#     
+# build_rnd_heap(SIZE_N)
+
+
 heap_array = []
 #SIZE_N = 32
 SIZE_N = 21
 SIZE_N = 15
 
-# check maths
-for i in range(0, SIZE_N +1):               # using array positions 1-SIZE_N+1
-    heap_array.append(randint(SIZE_N * 10))   # make algorith code more readable
-                                            # easier to understand
+for i in range(0, SIZE_N +1):                  # using array positions 1-SIZE_N+1
+    heap_array.append(randint(SIZE_N * 10))    # make algorith code more readable
+                                               # easier to understand
 ROOT_NODE = 1
 SIZE_OF_HEAP = 0
 heap_array[SIZE_OF_HEAP] = SIZE_N    # maintain heap size in apex
@@ -33,6 +60,7 @@ def dec_heap_size():
         heap_array[SIZE_OF_HEAP] -= 1
     return heap_array[SIZE_OF_HEAP]
 
+# check maths
 # lbnd - left bound: start of treee row
 # rbnd - right bound: end item of the row
 for i in range(0,10):
@@ -168,7 +196,7 @@ print('\n\n')
 # insert(x, into set S),                                        DONE
 # get max priority (of set S),                                  DONE
 # extract_max (of set S),  			get max and remove it!      DONE
-# inc_key(in set S, increase element x's key, to value k)
+# inc_key(in set S, increase element x's key, to value k)       DONE
 # and  
 # get min priority (of set S),  
 # delete, change priority in Q.
@@ -177,25 +205,32 @@ print('\n\n')
 # test against lecture notes - SEEMS to work well PROOF?
 # bubble value up through the tree - initial idea
 def swap_with_smaller_parent(node):
-    # if parent lower value swap nodes    
+    final_position = node
+    # if parent lower value swap nodes
     parent = int(node/2)    
     print(f"swap_with_smaller_parent node:{node} parent:{parent}")
 
     if parent >= 1:    
         if heap_array[parent] < heap_array[node]:
             heap_array[parent], heap_array[node] = heap_array[node], heap_array[parent]     # swap nodes    
-            swap_with_smaller_parent(parent)
+            final_position = swap_with_smaller_parent(parent)
+            print(f'swap_with_smaller_parent: {final_position}')
+    
+    return final_position
 
 # from lecture notes
 def swap_with_smaller_parent_max_heap(node):
+    final_position = node
+    
     # if parent lower value swap nodes    
     parent = int(node/2)
     print(f"swap_with_smaller_parent_MAX_HEAP node:{node} parent:{parent}")
     
     if parent >= 1:
         max_heapify(heap_array, parent)
-        swap_with_smaller_parent_max_heap(parent)
-
+        final_position = swap_with_smaller_parent_max_heap(parent)
+    
+    return final_position
 
 
 # isert value into correct position
@@ -280,5 +315,41 @@ while max_node != 0:
     max_node = pop_max()
     print('popped max:', max_node)
                                 
+                                
+print("\n\n\n - - - - increase a node key - - - - - - - - - < <")                                
+
+def inc_key(node, value):
+    final_position = -1
+    
+    if value > 0:
+        if node >= 1 and node <= heap_size():
+            heap_array[node] = value
+            
+            # correct - doesn't stop after finding correct position keeps going to top - returns 1 as final position
+            # a lot of extra work! :/
+            #final_position = swap_with_smaller_parent_max_heap(node)
+            
+            # correct - stops after finding correct position - returns tt position            
+            final_position = swap_with_smaller_parent(node)
+            
+    return final_position
+
+# rebuild fresh heap
+heap_array = []
+for i in range(0, SIZE_N +1):              
+    heap_array.append(randint(SIZE_N * 10))
+heap_array[SIZE_OF_HEAP] = SIZE_N
+build_max_heap(heap_array)
+display_heap(heap_array)
+
+target_node = 11
+new_value = 99
+print(f'\ninc_key({target_node}, {new_value})')
+
+fin_pos = inc_key(target_node, new_value)
+
+display_heap(heap_array)
+
+print(f'\ninc_key({target_node}, {new_value}) final position = {fin_pos}')
 
 sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
