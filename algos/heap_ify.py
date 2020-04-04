@@ -323,14 +323,15 @@ def inc_key(node, value):
     
     if value > 0:
         if node >= 1 and node <= heap_size():
-            heap_array[node] = value
-            
-            # correct - doesn't stop after finding correct position keeps going to top - returns 1 as final position
-            # a lot of extra work! :/
-            #final_position = swap_with_smaller_parent_max_heap(node)
-            
-            # correct - stops after finding correct position - returns tt position            
-            final_position = swap_with_smaller_parent(node)
+            if heap_array[node] < value:        # it's called inc_key after all!
+                heap_array[node] = value
+                
+                # correct - doesn't stop after finding correct position keeps going to top - returns 1 as final position
+                # a lot of extra work! :/
+                #final_position = swap_with_smaller_parent_max_heap(node)
+                
+                # correct - stops after finding correct position - returns tt position            
+                final_position = swap_with_smaller_parent(node)
             
     return final_position
 
@@ -351,5 +352,25 @@ fin_pos = inc_key(target_node, new_value)
 display_heap(heap_array)
 
 print(f'\ninc_key({target_node}, {new_value}) final position = {fin_pos}')
+
+
+print("\n\n\n - - - - find min in heap - - - - - - - - - < <")                                
+
+# min must be in a leaf node
+# Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves! 
+
+def find_min():
+    min_val = heap_array[ROOT_NODE]
+    
+    for i in range(math.ceil(heap_size()/2),heap_size()+1):
+        print(f"leaf: {i} - {heap_array[i]}")
+        if min_val > heap_array[i]:
+            min_val = heap_array[i]
+
+    return min_val
+
+print(f"find_min: {find_min()} - heap_size: {heap_size()}")
+
+
 
 sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
