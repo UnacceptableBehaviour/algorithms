@@ -389,7 +389,31 @@ the key of a node <=  keys of its parent
 Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
+
 ### 5	Binary search trees, BST sort	 
+Invariant: 
+
+Runway scheduling problem. Insert aircraft landing  at least k minutes (3 min in this case) away from any other scheduled landings.  
+Plane landing @:	2  5  37  44  99
+**Steps**
+Find position
+Check if theres 3min space either side
+Insert new landing
+
+Implemented as **sorted array**  
+Find insertion point: use binary search - O(logn)  logarithmic time
+Check space to land (3minutes) - O(1) constant time
+Insert (requires shifting each element to make space for insertion - worst case front of array) O(n) - linear time  
+
+Implemented as **sorted (linked) list**
+Insert is pointer manipulation - O(1) constant time - better
+No binary search on a list! - so brute force O(n)
+
+Implemented as **heap**
+Check for element n1 <= k <= n2 requires searching whole tree - O(n)
+
+
+
 ### 6	AVL trees, AVL sort	
 	
 		Problem set 2 due
