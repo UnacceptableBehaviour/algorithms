@@ -428,7 +428,8 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 ### 5	Binary search trees, BST sort	 
-Invariant: 
+Invariant: All children to left are smaller, all children to the right are larger. 
+Each mode has 3 pointers: parent, lchild, rchild
 
 Runway scheduling problem. Insert aircraft landing  at least k minutes (3 min in this case) away from any other scheduled landings.  
 Plane landing @:	2  5  37  44  99
@@ -448,6 +449,19 @@ No binary search on a list! - so brute force O(n)
 
 Implemented as **heap**
 Check for element n1 <= k <= n2 requires searching whole tree - O(n)
+
+
+Implemented as **binary search tree (BST)**
+Find, navigate tree left if looking for an earlier time, right if larger. worst case from root of tree to leaf - ie height O(h)
+Check do check at each node O(1)
+Insert pointer manipulation O(1)
+
+**Other O(h) operations**
+Min - far left leaf
+Max - far right leaf
+Next largest value - Up a node?
+
+
 
 
 
