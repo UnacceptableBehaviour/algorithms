@@ -465,12 +465,14 @@ NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0
 information local to node has low (constant time) maintenance over head  
 
 
-Method of maintaining balanced tree AVL tree.  
+Method of maintaining balanced tree AVL tree.  << WHOLE LECTURE ABOUT THIS!
 
 
 20-28m - recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
 revise fibonacci sequence and related maths
 For problem Set 3
+
+28m + 
 
 
 
