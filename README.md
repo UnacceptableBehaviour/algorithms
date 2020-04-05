@@ -470,6 +470,7 @@ Method of maintaining balanced tree AVL tree.
 
 20-28m - recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
 revise fibonacci sequence and related maths
+For problem Set 3
 
 
 
