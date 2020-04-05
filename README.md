@@ -393,6 +393,11 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 ### 5	Binary search trees, BST sort	 
 Invariant: All children to left are smaller, all children to the right are larger. 
 Each mode has 3 pointers: parent, lchild, rchild
+```
+      x
+    /   \
+  <=x   >=x
+```
 
 Runway scheduling problem. Insert aircraft landing  at least k minutes (3 min in this case) away from any other scheduled landings.  
 Plane landing @:	2  5  37  44  99
@@ -424,12 +429,51 @@ Min - far left leaf
 Max - far right leaf
 Next largest value - Up a node?
 
+Augmented BST add subtree size to the data in the node. Includes the node and its children
+Maintained by incrementing the tree size by one as theyre traversed to an insertion
 
-
+To find how many planes scheduled to land before time t?
+Find highest node that is smaller than t return tree size to the left of the node including it.
+Which is node subtree size - rchild subtree size (since al these nodes are higher) - **ALMOST**
+To the left of the tree including back up the tree! Work through example!
+```
+              80
+      40               120
+  20       30     *100       140  
+10   15  25  35  90   110  130  150
+```
+```
+              o
+      o               o
+  o       o       *       o  
+o   o   o   o   o   o   o   o
+```
 
 
 ### 6	AVL trees, AVL sort	
-	
+TERMS
+AVL - inventors Adelson-Velsky and Landis   
+[Visualisation of AVL tree](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)  
+**In order traversal** - process nodes by key order  
+Next larger - **successor**  
+Next smaller - **predecessor**  
+Importance of a balanced tree - height being log n   
+Unbalance tree worst case height - n average n/2  << V.BAD!  
+**height** of a node - longest path to a leaf from node  
+height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  
+NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
+information local to node has low (constant time) maintenance over head  
+
+
+Method of maintaining balanced tree AVL tree.  
+
+
+20-28m - recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
+revise fibonacci sequence and related maths
+
+
+
+ 	
 		Problem set 2 due
 
 ### 7	Counting sort, radix sort, lower bounds for sorting and searching
