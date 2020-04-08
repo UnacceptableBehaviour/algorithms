@@ -32,6 +32,7 @@ def inc_heap_size():
 
 def dec_heap_size():
     if heap_array[SIZE_OF_HEAP] > 0:
+        heap_array[heap_array[SIZE_OF_HEAP]] = 0    # erase content
         heap_array[SIZE_OF_HEAP] -= 1
     return heap_array[SIZE_OF_HEAP]
 
@@ -371,7 +372,42 @@ def find_val(value):
 display_heap(heap_array)
 print(f"find: {find_val(heap_array[3])}:{heap_array[3]} - heap_size: {heap_size()}")
 
+# swap node with last leaf
+# reduce heap size (delete last leaf)
+# max_heapify at node
+def delete_node(del_n):
+    ret_deleted = None
+    try:
+        ret_deleted = heap_array[del_n]
+    except IndexError:
+        return ret_deleted
+    
+    last_leaf = heap_size()                     # O(1)
+    heap_array[del_n] = heap_array[last_leaf]   # O(1)
+    dec_heap_size()                             # O(1)
+    max_heapify(heap_array, del_n)              # O(logn)
+    
+    return ret_deleted
 
+
+DEL_NODE = 2 # 3
+
+print(f"\n\ndelete_node({DEL_NODE}): {delete_node(DEL_NODE)} - heap_size: {heap_size()}")
+display_heap(heap_array)
+
+print(f"\n\ndelete_node({DEL_NODE}): {delete_node(DEL_NODE)} - heap_size: {heap_size()}")
+display_heap(heap_array)
+
+print(f"\n\ndelete_node({DEL_NODE}): {delete_node(DEL_NODE)} - heap_size: {heap_size()}")
+display_heap(heap_array)
+
+
+# def delete_val(value):    
+#     found_node = None
+#     node = heap_size()          # start at bottom
+#         
+#     while (heap_array[node] != value):
+#         if 
 
 
 sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
