@@ -407,7 +407,7 @@ display_heap(heap_array)
 # reduce heap size (delete last leaf)
 # max_heapify at node
 def delete_val(value):    
-    found_node = find_val(value)            # O(n)   << terrible - but struct
+    found_node = find_val(value)            # O(n)   << terrible - but structure not designed for this!
     if found_node:
         delete_node(found_node)
         return found_node
