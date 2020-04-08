@@ -8,32 +8,7 @@ from numpy.random import randint
 from pprint import pprint
 import math
 
-# heap_array = []
-# #SIZE_N = 32
-# SIZE_N = 15
-# 
-# 
-# # using array positions 1-SIZE_N+1
-# # make algorith code more readable
-# # easier to understand
-# # maintain heap size in apex (position 0 in array)
-# ROOT_NODE = 1
-# SIZE_OF_HEAP = 0
-# # initialize / __init__
-# def build_rnd_heap(size):
-#     # heap_array = [0] * SIZE_N                     # create list of SIZE_N init to 0
-#     for i in range(0, len(heap_array)):             # in case we're reusing large heap
-#         heap_array[i] = 0
-#     
-#     for i in range(ROOT_NODE, size+1):
-#         try:
-#             heap_array[i] = randint(SIZE_N * 10)
-#         except IndexError:
-#             heap_array.append(randint(SIZE_N * 10))
-#                                                     
-#     heap_array[SIZE_OF_HEAP] = size                 
-#     
-# build_rnd_heap(SIZE_N)
+
 
 
 heap_array = []
@@ -198,7 +173,7 @@ print('\n\n')
 # extract_max (of set S),  			get max and remove it!      DONE
 # inc_key(in set S, increase element x's key, to value k)       DONE
 # and  
-# get min priority (of set S),  
+# get min priority (of set S),                                  DONE
 # delete, change priority in Q.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -361,15 +336,41 @@ print("\n\n\n - - - - find min in heap - - - - - - - - - < <")
 
 def find_min():
     min_val = heap_array[ROOT_NODE]
+    leaf = ROOT_NODE
+    
     
     for i in range(math.ceil(heap_size()/2),heap_size()+1):
         print(f"leaf: {i} - {heap_array[i]}")
         if min_val > heap_array[i]:
             min_val = heap_array[i]
+            leaf = i
 
-    return min_val
+    return (leaf, min_val)
 
 print(f"find_min: {find_min()} - heap_size: {heap_size()}")
+
+# Initial Approach
+# find node (scan would be O(n) better way?)
+#   start at leaf bubble up until node > search val - must be below this depth
+#   
+# swap with last leaf
+# max_heapify
+
+# Faster to maintain an ordered delete list
+# check list whe
+
+# brute for to check correctness
+def find_val(value):    
+    found_node = None
+        
+    for node in range(heap_size(), ROOT_NODE, -1):
+        if (heap_array[node] == value):
+            return node
+        
+        
+display_heap(heap_array)
+print(f"find: {find_val(heap_array[3])}:{heap_array[3]} - heap_size: {heap_size()}")
+
 
 
 
