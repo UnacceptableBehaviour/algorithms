@@ -11,13 +11,13 @@ import math
 class Node(object):     # sub classing (object) not required in 3.x
     
     def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
-        self.parent = parent
-        self.lc = lc
-        self.rc = rc
-        self.key = key
+        self.parent = parent        # parent node
+        self.lc = lc                # left child
+        self.rc = rc                # right child
+        self.key = key              # sorting criteria
         self.val = val              # object
-        self.depth = None
-        self.n = None
+        self.depth = None           # depth of node in tree
+        self.n = None               # position of node in tree (null nodes are counted)
         
     def __str__(self):
         return f"{self.key}:{self.depth}"
