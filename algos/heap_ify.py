@@ -361,13 +361,13 @@ print(f"find_min: {find_min()} - heap_size: {heap_size()}")
 # check list whe
 
 # brute for to check correctness
-def find_val(value):    
-    found_node = None
-        
+def find_val(value):
+    
     for node in range(heap_size(), ROOT_NODE, -1):
         if (heap_array[node] == value):
             return node
-        
+    
+    return None # not found
         
 display_heap(heap_array)
 print(f"find: {find_val(heap_array[3])}:{heap_array[3]} - heap_size: {heap_size()}")
@@ -402,12 +402,28 @@ print(f"\n\ndelete_node({DEL_NODE}): {delete_node(DEL_NODE)} - heap_size: {heap_
 display_heap(heap_array)
 
 
-# def delete_val(value):    
-#     found_node = None
-#     node = heap_size()          # start at bottom
-#         
-#     while (heap_array[node] != value):
-#         if 
+# find node with value - this is expensive
+# swap node with last leaf
+# reduce heap size (delete last leaf)
+# max_heapify at node
+def delete_val(value):    
+    found_node = find_val(value)            # O(n)   << terrible - but struct
+    if found_node:
+        delete_node(found_node)
+        return found_node
+    
+    return None
+
+
+del_value = heap_array[2] # its randomly filled so ref with node number
+
+print(f"\n\n\n\ndelete_val({del_value}): found at:{delete_val(del_value)} - heap_size: {heap_size()}")
+display_heap(heap_array)
+
+# del_value = heap_array[3] # its randomly filled so ref with node number
+# 
+# print(f"\n\ndelete_val({del_value}): found at:{delete_val(del_value)} - heap_size: {heap_size()}")
+# display_heap(heap_array)
 
 
 sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
