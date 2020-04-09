@@ -37,7 +37,9 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 			3. [Max_heapify](#maxheapify)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
 	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
+		1. [TERMS](#terms)  
 	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
+		1. [Sorting in Linear-Time](#sorting-in-lineartime)  
 7. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [8	Hashing with chaining](#8hashing-with-chaining)  
 	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karprabin)  
@@ -80,8 +82,8 @@ Create an algorithms reference, and aide-memoire
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Intoduction to algorithms MIT - part 1 / 3:  
-https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb  
-https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/  
+[LECTURE PLAYLIST on YOUTUBE](https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)  
+[COURSE INFO @ MIT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/)  
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
@@ -106,6 +108,7 @@ aka: Big O notation / Bachmann-Landau notation / asymptotic notation.
 
 See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
 Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf)  
+[Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
 **LOW**  
 constant time - O(1)  
 logarithmic time - O(log n)  
@@ -117,6 +120,7 @@ polynomial time - O(n^c) where constant c > 1
 exponential time - O(2^n)  
 factorial time - O(n!)  
 **HIGH**  
+
 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)
@@ -303,6 +307,8 @@ Once run the results can be visualised with visualizer.html which loads data cre
 
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
+[vid]()  
+[lect notes]()  
 #### Insertion sort
 Sorted list have various properties:   
 	simple to find median (constant time)  
@@ -394,6 +400,9 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 ### 5	Binary search trees, BST sort	 
+[vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf)  
+
 Invariant: All children to left are smaller, all children to the right are larger. 
 Each mode has 3 pointers: parent, lchild, rchild
 ```
@@ -454,7 +463,10 @@ o   o   o   o   o   o   o   o
 
 
 ### 6	AVL trees, AVL sort	
-TERMS
+[vid](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf)  
+
+#### TERMS  
 AVL - inventors Adelson-Velsky and Landis   
 [Visualisation of AVL tree](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)  
 **In order traversal** - process nodes by key order  
@@ -492,20 +504,24 @@ left & right rotate
 		Problem set 2 due
 
 ### 7	Counting sort, radix sort, lower bounds for sorting and searching
-Sorting in Linear-Time 
+[vid](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=0s)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec07.pdf)  
+
+#### Sorting in Linear-Time  
 - **comparison model**   (computation model)  
 - lower bounds  
-. . - searching: Ω(lg n) - binary search is optimal  
-. . - sorting: Ω(n lg n) - merge sort is optimal  
+. . searching: Ω(lg n) - binary search is optimal  
+. . sorting: Ω(n lg n) - merge sort is optimal  
   
 - **ram model**   (computation model)  
 - O(n) sorting algorithms  
-. . - counting sort  
-. . - radix sort  
+. . counting sort  
+. . radix sort  
 
+CONCEPTS: Models of computation: 
 
-CONCEPTS:
-Models of computation: 
+Proofs up to 32m  upt to here all comparison model.
+
 
 
 
@@ -513,53 +529,96 @@ Models of computation:
 
 ## Unit 3: Hashing
 ### 8	Hashing with chaining	 
+[vid]()  
+[lect notes]()  
+
 ### 9	Table doubling, Karp-Rabin
+[vid]()  
+[lect notes]()  
 
 		Problem set 3 due
 		Problem set 4 out
 
 ### 10	Open addressing, cryptographic hashing
+[vid]()  
+[lect notes]()  
 
 		Problem set 4 due
 	 	Quiz 1	 
 
 ## Unit 4: Numerics
 ### 11	Integer arithmetic, Karatsuba multiplication	
-		
+[vid]()  
+[lect notes]()  
+
 		Problem set 5 out
 
 ### 12	Square roots, Newton's method	 
+[vid]()  
+[lect notes]()  
 
 ## Unit 5: Graphs
 ### 13	Breadth-first search (BFS)	 
+[vid]()  
+[lect notes]()  
+
 ### 14	Depth-first search (DFS), topological sorting
+[vid]()  
+[lect notes]()  
 
 		Problem set 5 due
 		Problem set 6 out
 
 ## Unit 6: Shortest Paths
 ### 15	Single-source shortest paths problem	 
+[vid]()  
+[lect notes]()  
+
 ### 16	Dijkstra	 
+[vid]()  
+[lect notes]()  
+
 ### 17	Bellman-Ford	 
+[vid]()  
+[lect notes]()  
+
 ### 18	Speeding up Dijkstra
+[vid]()  
+[lect notes]()  
 
 		Problem set 6 due
 	 	Quiz 2	 
 
 ## Unit 7: Dynamic Programming
 ### 19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
+[vid]()  
+[lect notes]()  
 
 		Problem set 7 out
 
 ### 20	Parent pointers; text justification, perfect-information blackjack	 
-### 21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack	 
+[vid]()  
+[lect notes]()  
+
+### 21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
+[vid]()  
+[lect notes]()  
+
 ### 22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.	
+[vid]()  
+[lect notes]()  
 
 		Problem set 7 due
 
 ## Unit 8: Advanced Topics
 ### 23	Computational complexity	 
+[vid]()  
+[lect notes]()  
+
 ### 24	Algorithms research topics
+[vid]()  
+[lect notes]()  
+
 
 
 ## How Tos
