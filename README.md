@@ -90,7 +90,8 @@ Create an algorithms reference, and aide-memoire
 
 ## Unit 1: Introduction
 ### 1	Algorithmic thinking, peak finding	
-yt_vid: [here](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s)
+[vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
 Peak finding: assumin **single peak**, and   
 Initial look at 1d peak finding (an single index array)
@@ -146,8 +147,8 @@ o - -
 
 
 ### 2	Models of computation, Python cost model, document distance	   
-Online lecture video: [yt_vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2)  
-Lecture notes: [here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
+[vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
 
 Algorithm: computational procedure for solving a problem  
 What is time (complexity)? **O(1) = constant time**  
@@ -177,7 +178,7 @@ Object attribute access:
 Access next item in linked list:
 	x = x.next is **O(1)**  
 
-Add item to liked list:	
+Add item to linked list:	
 	list.append(x) ? python uses table doubling **O(1)**  
 
 Adding two linked lists together
@@ -307,8 +308,9 @@ Once run the results can be visualised with visualizer.html which loads data cre
 
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
-[vid]()  
-[lect notes]()  
+[vid](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec03.pdf)  
+
 #### Insertion sort
 Sorted list have various properties:   
 	simple to find median (constant time)  
@@ -352,9 +354,10 @@ Instrument the merge sort code
 		Problem set 2 out - Event simulation
 
 ### 4	Heaps and heap sort  
-[Lecture 4 vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)   [Lecture notes - 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
-Lecture Local: /algorithms/scratch/lectures/MIT6_006F11_lec04.pdf  
-ADT - Abstract Data Type  
+[vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
+
+Concept: ADT - Abstract Data Type  
 
 #### Priority Queue
 Implements a set of elements associated with a key - methods:
