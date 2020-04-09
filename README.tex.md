@@ -131,7 +131,7 @@ $$
 **Symbols:**  
 Θ - -    
 O - - Landaus Symbol  
-Ω - -   
+Ω - - Lower bounds  
 o - -   
 ω - -   
 
@@ -363,9 +363,12 @@ Move 1st item to new list, move next item to new list **binary search** until co
 **n log n** - breaks down as: (n for number of items) *  (log n for binary search & insert )
 
 #### Merge Sort  
-[] (https://www.youtube.com/watch?v=4VqmGXwpLqc) (Pseudocode @ 2m32)
-
-Long story short: Split array into 2, repeat until only 2 items in each leaf, sort those two items, go up a layer and merge leaves  
+[Merge sort in 3mins](https://www.youtube.com/watch?v=4VqmGXwpLqc)  
+Pseudocode: (@ 2m32 in above link)
+Split array into 2,  
+repeat until only 2 items in each leaf,  
+sort those two items,  
+go up a layer and merge leaves   
 
 [Python implementation here] (https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/merge_sort.py) likely naive.  
 
@@ -496,27 +499,51 @@ Next larger - **successor**
 Next smaller - **predecessor**  
 Importance of a balanced tree - height being log n   
 Unbalance tree worst case height - n average n/2  << V.BAD!  
-**height** of a node - longest path to a leaf from node  
+**height** of a node - longest path to a leaf from node  including itself (the +1 below)
 height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  
 NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
 information local to node has low (constant time) maintenance over head  
 
 
-Method of maintaining balanced tree AVL tree.  << WHOLE LECTURE ABOUT THIS!
+Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
 
 
 20-28m - recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
 revise fibonacci sequence and related maths
 For problem Set 3
+latex practice symbol for phi - golden ration or fibbonacci  < check
+
 
 28m + 
 
+
+33m50
+search
+rotation - tree manipulation
+left & right rotate 
+
+50m good summary of heap / bst AVL reasons for use
 
 
  	
 		Problem set 2 due
 
 ### 7	Counting sort, radix sort, lower bounds for sorting and searching
+Sorting in Linear-Time 
+- **comparison model**   (computation model)
+- lower bounds
+. . - searching: Ω(lg n) - binary search is optimal
+. . - sorting: Ω(n lg n) - merge sort is optimal
+
+- **ram model**   (computation model)
+- O(n) sorting algorithms
+. . - counting sort 
+. . - radix sort
+
+CONCEPTS:
+Models of computation: 
+
+
 
 		Problem set 3 out
 
