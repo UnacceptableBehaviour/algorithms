@@ -530,15 +530,16 @@ left & right rotate
 
 ### 7	Counting sort, radix sort, lower bounds for sorting and searching
 Sorting in Linear-Time 
-- **comparison model**   (computation model)
-- lower bounds
-. . - searching: Ω(lg n) - binary search is optimal
-. . - sorting: Ω(n lg n) - merge sort is optimal
+- **comparison model**   (computation model)  
+- lower bounds  
+. . - searching: Ω(lg n) - binary search is optimal  
+. . - sorting: Ω(n lg n) - merge sort is optimal  
+  
+- **ram model**   (computation model)  
+- O(n) sorting algorithms  
+. . - counting sort  
+. . - radix sort  
 
-- **ram model**   (computation model)
-- O(n) sorting algorithms
-. . - counting sort 
-. . - radix sort
 
 CONCEPTS:
 Models of computation: 
