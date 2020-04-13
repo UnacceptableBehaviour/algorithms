@@ -406,12 +406,13 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 [vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf)  
 
-Invariant: All children to left are smaller, all children to the right are larger. 
-Each mode has 3 pointers: parent, lchild, rchild
+Concept: Representation Invariant - property of the data structure
+Invariant (RI): All children to left are smaller, all children to the right are larger.  
+Each mode has 3 pointers: parent, lchild, rchild  
 ```
       x
-    /   \
-  <=x   >=x
+     / \
+   <x   >x
 ```
 
 Runway scheduling problem. Insert aircraft landing  at least k minutes (3 min in this case) away from any other scheduled landings.  
@@ -419,20 +420,19 @@ Plane landing @:	2  5  37  44  99
 **Steps**
 Find position
 Check if theres 3min space either side
-Insert new landing
+Insert new landing  
 
 Implemented as **sorted array**  
-Find insertion point: use binary search - O(logn)  logarithmic time
-Check space to land (3minutes) - O(1) constant time
+Find insertion point: use binary search - O(logn)  logarithmic time  
+Check space to land (3minutes) - O(1) constant time  
 Insert (requires shifting each element to make space for insertion - worst case front of array) O(n) - linear time  
 
-Implemented as **sorted (linked) list**
-Insert is pointer manipulation - O(1) constant time - better
-No binary search on a list! - so brute force O(n)
+Implemented as **sorted (linked) list**  
+Insert is pointer manipulation - O(1) constant time - better  
+No binary search on a list! - so brute force O(n)  
 
-Implemented as **heap**
-Check for element n1 <= k <= n2 requires searching whole tree - O(n)
-
+Implemented as **heap**  
+Check for element n1 <= k <= n2 requires searching whole tree - O(n)  
 
 Implemented as **binary search tree (BST)**
 Find, navigate tree left if looking for an earlier time, right if larger. worst case from root of tree to leaf - ie height O(h)
@@ -468,6 +468,7 @@ o   o   o   o   o   o   o   o
 ### 6	AVL trees, AVL sort	
 [vid](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf)  
+[guess implementation code]
 
 #### TERMS  
 AVL - inventors Adelson-Velsky and Landis   
@@ -477,19 +478,35 @@ Next larger - **successor**
 Next smaller - **predecessor**  
 Importance of a balanced tree - height being log n   
 Unbalance tree worst case height - n average n/2  << V.BAD!  
-**height** of a node - longest path to a leaf from node  including itself (the +1 below)
-height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  
-NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
-information local to node has low (constant time) maintenance over head  
+**height** of a node - longest path to a leaf from node  including itself (the +1 below)  
+height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintined in each node)  
+NOTE:  NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
+information local to node has low (constant time) maintenance over head   
+largest_height also store which height is larger +1 left,  0 equal, -1 right
+**balanced** tree - height of left child = height of right child  +/-1 
+
+
+Maths behind the AVL tree - 20-28m
+recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
+revise fibonacci sequence and related maths
+For problem Set 3
+latex practice symbol for phi - golden ration or fibbonacci  < check
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
 
+Insert(23)	- steps to do an insert
+insert as normal for BST
+update each nodes height while parsing tree (and largest_height L M R - left middle right)
+largest_height = hL - hR 
+from inserted node walk up the tree checking largest_height if abs(largest_height) > 2
+	if largest_height > 2 rotate	(left height too large)
+	if largest_height < -2 anti-rotate	(right height too large)
 
-20-28m - recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
-revise fibonacci sequence and related maths
-For problem Set 3
-latex practice symbol for phi - golden ration or fibbonacci  < check
+	
+Rotation
+
+
 
 
 28m + 
