@@ -12,45 +12,37 @@ from binary_search_tree import Node, BST
     
 
 class AVL(BST):
-    ROOT_NODE = 1
     
     def __init__(self, node):
-        self.root = node            # check type Node - raise if not
-        self.root.depth = 1
-        self.root.n = BST.ROOT_NODE
+        super().__init__(node)        # call baseclass ctor
 
-        self.tree_size = 1
-        self.tree_depth = 1
+
+
+if __name__ == '__main__':
+
+    SIZE_N = 9
+    
+    rnd_key = randint(SIZE_N * 10)                                           
+    unbalance = rnd_key            # use this to make all nodes larger than unbalance
+    
+    avl = AVL( Node(key=rnd_key) )
+    
+    for i in range(0, SIZE_N +1):
+        rnd_key = randint(SIZE_N * 10)
         
-        # for display purposes
-        self.node_enum = []                     # create an array of objects
-        #self.node_enum[BST.ROOT_NODE] = node
-
-
-      
-        
-
-
-
-SIZE_N = 9
-# for i in range(0, SIZE_N +1):              
-#     print( str(Node(key=randint(SIZE_N * 10))) )
-                                           
-bst = BST( Node(key=randint(SIZE_N * 10)) )
-
-for i in range(0, SIZE_N +1):              
-    print( bst.add_node(Node(key=randint(SIZE_N * 10))) )
-
-
-pprint(bst)
-print(f"Nodes:{bst.numNodes}")
-print(f"Nodes:{bst.numNodes()}")
-print(f"Depth:{bst.tree_depth}")
-print(bst)
-
-
-
-sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
+        print( avl.add_node(Node(key=(unbalance + rnd_key))) )
+    
+    
+    pprint(avl)
+    print(f"Nodes:{avl.numNodes}")
+    print(f"Nodes:{avl.numNodes()}")
+    print(f"Depth:{avl.tree_depth}")
+    print(avl)
+    print(f"VALID BST?:{avl.is_valid_bst()}")
+    
+    
+    
+    sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
 
 
 

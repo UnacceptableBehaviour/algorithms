@@ -19,13 +19,13 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.depth = None           # depth of node in tree
         self.n = None               # position of node in tree (null nodes are counted)
         
-    def __str__(self):
+    def __str__(self):                      # print
         return f"{self.key}:{self.depth}"
 
-    def __unicode__(self):
-        return f"{u'{val}'}"
+    # def __unicode__(self):                # pythons 2.x - not needed? for 3.x
+    #     return f"{u'{val}'}"
 
-    def __repr__(self):                     # pprint
+    def __repr__(self):                     # pprint repr()
         #return f"({self.n},{self.depth},{self.key})"
         return f"{self.n}:{self.key}"
     
@@ -50,7 +50,7 @@ class BST:
     # if smaller than this node add to the left child (lc),
     # if larger than this node add to right child
     def insert_node(self, node_to_add, node=None,  depth=1):
-        if node == None: node = self.root        
+        if node == None: node = self.root   
         final_depth = depth+1
         
         if node_to_add.key <= node.key:     # go left
@@ -70,12 +70,30 @@ class BST:
         if final_depth > self.tree_depth: self.tree_depth = final_depth
         
         return final_depth
+
+    def is_valid_bst(self, node=None):        
+        if node == None: node = self.root
+        valid = True
+
+        if node.lc:        
+            if node.lc.key <= node.key:     # valid
+                valid = self.is_valid_bst(node.lc)
+            else:
+                valid = False
+        
+        if node.rc:
+            if node.rc.key > node.key:
+                valid = self.is_valid_bst(node.rc)
+            else:
+                valid = False
+        
+        return valid
         
         
     def add_node(self, node_to_add, node=None,  depth=1):
         final_depth = self.insert_node(node_to_add, node, depth)
         self.tree_size += 1
-        return (final_depth, self.tree_size)
+        return (final_depth, self.tree_size, node_to_add.key)
 
 
     # used to display tree
@@ -130,7 +148,7 @@ class BST:
         tree_as_string = f"\ndepth: {depth} - tree_width: {tree_width} - tree_size: {self.tree_size}"
         
         print("__str__")
-        pprint(self.node_enum)
+        #pprint(self.node_enum)             # < < - see nodes & blanks in array
         
         for row in range(0,depth):
             lbnd = 2**row
@@ -155,27 +173,28 @@ class BST:
         return tree_as_string        
         
 
+if __name__ == '__main__':
 
-
-SIZE_N = 9
-# for i in range(0, SIZE_N +1):              
-#     print( str(Node(key=randint(SIZE_N * 10))) )
-                                           
-bst = BST( Node(key=randint(SIZE_N * 10)) )
-
-for i in range(0, SIZE_N +1):              
-    print( bst.add_node(Node(key=randint(SIZE_N * 10))) )
-
-
-pprint(bst)
-print(f"Nodes:{bst.numNodes}")
-print(f"Nodes:{bst.numNodes()}")
-print(f"Depth:{bst.tree_depth}")
-print(bst)
-
-
-
-sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
-
+    SIZE_N = 9
+    # for i in range(0, SIZE_N +1):              
+    #     print( str(Node(key=randint(SIZE_N * 10))) )
+                                               
+    bst = BST( Node(key=randint(SIZE_N * 10)) )
+    
+    for i in range(0, SIZE_N +1):              
+        print( bst.add_node(Node(key=randint(SIZE_N * 10))) )
+    
+    
+    pprint(bst)
+    print(f"Nodes:{bst.numNodes}")
+    print(f"Nodes:{bst.numNodes()}")
+    print(f"Depth:{bst.tree_depth}")
+    print(bst)
+    print(f"VALID BST?:{bst.is_valid_bst()}")
+    
+    
+    
+    sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
+    
 
 
