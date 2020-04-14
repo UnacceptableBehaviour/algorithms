@@ -49,20 +49,22 @@ class BST:
     # compare keys
     # if smaller than this node add to the left child (lc),
     # if larger than this node add to right child
-    def insert_node(self, node_to_add, node=None,  depth=1):
+    # use add_node to insert a node into tree
+    # add_node - calls this which then recurses
+    def __insert_node(self, node_to_add, node=None,  depth=1):
         if node == None: node = self.root   
         final_depth = depth+1
         
         if node_to_add.key <= node.key:     # go left
             if node.lc:                     # left child exists continue check
-                final_depth = self.insert_node(node_to_add, node.lc, final_depth)
+                final_depth = self.__insert_node(node_to_add, node.lc, final_depth)
             else:                
                 node.lc = node_to_add
                 node.lc.depth = final_depth                
 
         if node_to_add.key > node.key:      # go right
             if node.rc:                     # right child exists continue check
-                final_depth = self.insert_node(node_to_add, node.rc, final_depth)
+                final_depth = self.__insert_node(node_to_add, node.rc, final_depth)
             else:                
                 node.rc = node_to_add
                 node.rc.depth = final_depth
@@ -91,7 +93,7 @@ class BST:
         
         
     def add_node(self, node_to_add, node=None,  depth=1):
-        final_depth = self.insert_node(node_to_add, node, depth)
+        final_depth = self.__insert_node(node_to_add, node, depth)
         self.tree_size += 1
         return (final_depth, self.tree_size, node_to_add.key)
 
