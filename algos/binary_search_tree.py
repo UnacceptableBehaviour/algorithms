@@ -19,7 +19,7 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.depth = None           # depth of node in tree
         self.height = 1             # height of subtree inc node
         self.n = None               # position of node in tree (null nodes are counted)
-
+        self.balance = 0
                 
     def set_tree_height(self):
         hl = -1
@@ -32,16 +32,18 @@ class Node(object):     # sub classing (object) not required in 3.x
             hr = self.rc.height
         
         self.height = max(hl,hr) + 1
-        print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height}")
+        self.balance = hl - hr      # if abs(hl - hr) >= 2 unbalance - rotation required
+        
+        print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height},{self.balance}")
         
         if self.parent != None:
             self.parent.set_tree_height()
         
-        return self.height
+        return self.balance
 
         
     def __str__(self):                      # print
-        return f"{self.key}:{self.depth}:{self.height}"
+        return f"{self.key}:{self.depth}:{self.height},{self.balance}"
 
     # def __unicode__(self):                # pythons 2.x - not needed? for 3.x
     #     return f"{u'{val}'}"
