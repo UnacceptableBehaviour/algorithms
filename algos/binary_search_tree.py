@@ -20,10 +20,67 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.height = 1             # height of subtree inc node
         self.n = None               # position of node in tree (null nodes are counted)
         self.balance = 0
+
+    # important to remember pointers ALWAYS IN PAIRS!    parent>child   AND   child>parent!!
+    def rotate_left(self):
+        # right child move up into current node position
+        # point parent to right child 
+        self.parent.rc = self.rc
+        # and vice versa
+        self.rc.parent = self.parent
+
+        # temp        
+        new_parent = self.rc        
+        # remove link to right_child from self
+        self.rc = None  # check
+        
+        # make it parent
+        self.parent = new_parent
+        new_parent.lc = self
+        
+        # rot_rp = self.parent
+        # print(f"rot_RP: {id(rot_rp.parent)}:{id(rot_rp)}-{id(rot_rp.lc)}-{id(rot_rp.rc)} {rot_rp.key}-({rot_rp.height},{rot_rp.balance})")
+        # print(f"rot_RT: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({self.height},{self.balance})")
+        # rot_rr = self.rc
+        # print(f"rot_RR: {id(rot_rr.parent)}:{id(rot_rr)}-{id(rot_rr.lc)}-{id(rot_rr.rc)} {rot_rr.key}-({rot_rr.height},{rot_rr.balance})")        
+
+    def rotate_right(self):
+        # right child move up into current node position
+        # point parent to right child 
+        self.parent.lc = self.lc
+        # and vice versa
+        self.lc.parent = self.parent
+
+        # temp        
+        new_parent = self.lc        
+        # remove link to right_child from self
+        self.lc = None  # check
+        
+        # make it parent
+        self.parent = new_parent
+        new_parent.rc = self
+
+     # X
+     #  \
+     #   X
+     #    \
+     #     X
+     # 
+     # X
+     #  \
+     #   X
+     #  /
+     # X
+
+
+    def is_right_strainght(self): # or right_zig_zag?    rotate_right     
+        pass
+
                 
     def set_tree_height(self):
         hl = -1
         hr = -1
+        first_unbalanced_node = None
         
         if self.lc:
             hl = self.lc.height
@@ -33,17 +90,22 @@ class Node(object):     # sub classing (object) not required in 3.x
         
         self.height = max(hl,hr) + 1
         self.balance = hl - hr      # if abs(hl - hr) >= 2 unbalance - rotation required
+        if abs(self.balance) >= 2:
+            first_unbalanced_node = self
         
         print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height},{self.balance}")
         
-        if self.parent != None:
-            self.parent.set_tree_height()
+        # propagate tree height - check balace on the way
+        if self.parent != None:            
+            unbalance_upstream = self.parent.set_tree_height()
+            if first_unbalanced_node == None:
+                first_unbalanced_node = unbalance_upstream
         
-        return self.balance
+        return first_unbalanced_node
 
         
     def __str__(self):                      # print
-        return f"{self.key}:{self.depth}:{self.height},{self.balance}"
+        return f"{self.key}:{self.depth}:{self.height},{self.balance}<"
 
     # def __unicode__(self):                # pythons 2.x - not needed? for 3.x
     #     return f"{u'{val}'}"
@@ -144,20 +206,28 @@ class BST:
     RIGHT = 1
     def enum_nodes(self, node, previous_n, left_or_right=LEFT):
         previous_n = previous_n << 1    # next row 1 deeper
-        
-        if node.lc:                     # left child exists continue numbering
-            node.lc.n = previous_n + BST.LEFT
-            self.node_enum[node.lc.n] = node.lc
-            self.enum_nodes(node.lc, node.lc.n)
 
-        if node.rc:                     # right child exists continue numbering
-            node.rc.n = previous_n + BST.RIGHT
-            self.node_enum[node.rc.n] = node.rc
-            self.enum_nodes(node.rc, node.rc.n)
-        
+        try:
+            if node.lc:                     # left child exists continue numbering
+                node.lc.n = previous_n + BST.LEFT
+                self.node_enum[node.lc.n] = node.lc
+                self.enum_nodes(node.lc, node.lc.n)
+    
+            if node.rc:                     # right child exists continue numbering
+                node.rc.n = previous_n + BST.RIGHT
+                self.node_enum[node.rc.n] = node.rc
+                self.enum_nodes(node.rc, node.rc.n)
+        except IndexError as e:
+            print(f"idx------:{node.rc}<")
+        finally:
+            print('> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<S')
+            for i in self.node_enum:
+                print(f"node_enum[{i}] ")
+                #print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height},{self.balance}")
+            print('> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<E') 
 
     def init_node_enum(self):
-        self.node_enum = [None] * (2 ** self.tree_depth)    # allocate storage,  even for blanks        
+        self.node_enum = [None] * ((2 ** self.tree_depth) *2)   # allocate storage,  even for blanks        
         self.node_enum[BST.ROOT_NODE] = self.root           # inserts root node        
         self.enum_nodes(self.root, self.root.n, BST.LEFT)   # insert node refs in appropriate pos [n]
 

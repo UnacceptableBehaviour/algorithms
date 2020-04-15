@@ -19,8 +19,24 @@ class AVL(BST):
 
     def add_node(self, node):
         super().add_node(node)
-        node.set_tree_height()
+        
+        unbalanced_node = node.set_tree_height()
+        
+        # if unbalanced_node:
+        #     if unbalanced_node.balance <= -2:
+        #         unbalanced_node.rotate_right()
 
+        while unbalanced_node:
+            if unbalanced_node.balance <= -2:
+                unbalanced_node.rotate_left()
+                unbalanced_node = unbalanced_node.set_tree_height()
+
+            elif unbalanced_node.balance >= 2:
+                unbalanced_node.rotate_right()
+                unbalanced_node = unbalanced_node.set_tree_height()
+
+        
+        
 
 if __name__ == '__main__':
 
@@ -29,15 +45,40 @@ if __name__ == '__main__':
     rnd_key = randint(SIZE_N * 10)                                           
     unbalance = rnd_key            # use this to make all nodes larger than unbalance
     
-    avl = AVL( Node(key=rnd_key) )
+    # avl = AVL( Node(key=rnd_key) )    
+    # for i in range(0, SIZE_N +1):
+    #     rnd_key = randint(SIZE_N * 10)        
+    #     print( avl.add_node(Node(key=(unbalance + rnd_key))) )
     
-    for i in range(0, SIZE_N +1):
-        rnd_key = randint(SIZE_N * 10)
+    build_data = [100, 50, 150, 200, 250] #  requires right rotate
+    avl = AVL( Node(key=build_data.pop(0)) )    
+    pprint(build_data)
+    
+    for i in build_data:                
+        print( avl.add_node(Node(key=i)) )
         
-        print( avl.add_node(Node(key=(unbalance + rnd_key))) )
-    
-    
     pprint(avl)
+    
+    build_data = [100, 50, 125, 50, 30] #  requires left rotate
+    avl = AVL( Node(key=build_data.pop(0)) )    
+    pprint(build_data)
+    
+    for i in build_data:                
+        print( avl.add_node(Node(key=i)) )
+        
+    pprint(avl)
+
+
+    # build_data = [100, 50, 150, 200, 175] #, requires 2 rotations
+    # avl = AVL( Node(key=build_data.pop(0)) )    
+    # pprint(build_data)
+    # 
+    # for i in build_data:                
+    #     print( avl.add_node(Node(key=i)) )
+    #     
+    # pprint(avl)
+    
+    
     print(f"Nodes:{avl.numNodes}")
     print(f"Nodes:{avl.numNodes()}")
     print(f"Depth:{avl.tree_depth}")
