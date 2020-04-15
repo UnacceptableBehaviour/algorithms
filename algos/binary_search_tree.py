@@ -17,17 +17,38 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.key = key              # sorting criteria
         self.val = val              # object
         self.depth = None           # depth of node in tree
+        self.height = 1             # height of subtree inc node
         self.n = None               # position of node in tree (null nodes are counted)
+
+                
+    def set_tree_height(self):
+        hl = -1
+        hr = -1
+        
+        if self.lc:
+            hl = self.lc.height
+        
+        if self.rc:
+            hr = self.rc.height
+        
+        self.height = max(hl,hr) + 1
+        print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height}")
+        
+        if self.parent != None:
+            self.parent.set_tree_height()
+        
+        return self.height
+
         
     def __str__(self):                      # print
-        return f"{self.key}:{self.depth}"
+        return f"{self.key}:{self.depth}:{self.height}"
 
     # def __unicode__(self):                # pythons 2.x - not needed? for 3.x
     #     return f"{u'{val}'}"
 
     def __repr__(self):                     # pprint repr()
         #return f"({self.n},{self.depth},{self.key})"
-        return f"{self.n}:{self.key}"
+        return f"{id(self)}:{self.n}:{self.key}"
     
 
 class BST:
@@ -35,6 +56,8 @@ class BST:
     
     def __init__(self, node):
         self.root = node            # check type Node - raise if not
+        self.parent = None
+        self.root.height = 1
         self.root.depth = 1
         self.root.n = BST.ROOT_NODE
 
@@ -60,6 +83,7 @@ class BST:
                 final_depth = self.__insert_node(node_to_add, node.lc, final_depth)
             else:                
                 node.lc = node_to_add
+                node.lc.parent = node
                 node.lc.depth = final_depth                
 
         if node_to_add.key > node.key:      # go right
@@ -67,11 +91,19 @@ class BST:
                 final_depth = self.__insert_node(node_to_add, node.rc, final_depth)
             else:                
                 node.rc = node_to_add
+                node.rc.parent = node
                 node.rc.depth = final_depth
         
         if final_depth > self.tree_depth: self.tree_depth = final_depth
         
         return final_depth
+                
+
+    def add_node(self, node_to_add, node=None,  depth=1):
+        final_depth = self.__insert_node(node_to_add, node, depth)
+        self.tree_size += 1
+        return (final_depth, self.tree_size, node_to_add.key, node_to_add)
+
 
     def is_valid_bst(self, node=None):        
         if node == None: node = self.root
@@ -90,14 +122,7 @@ class BST:
                 valid = False
         
         return valid
-        
-        
-    def add_node(self, node_to_add, node=None,  depth=1):
-        final_depth = self.__insert_node(node_to_add, node, depth)
-        self.tree_size += 1
-        return (final_depth, self.tree_size, node_to_add.key)
-
-
+    
     # used to display tree
     #
     # this builds an array locating the nodes in the array as in heap numbering

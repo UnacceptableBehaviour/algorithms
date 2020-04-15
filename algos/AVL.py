@@ -17,6 +17,10 @@ class AVL(BST):
         super().__init__(node)        # call baseclass ctor
 
 
+    def add_node(self, node):
+        super().add_node(node)
+        node.set_tree_height()
+
 
 if __name__ == '__main__':
 
@@ -39,6 +43,11 @@ if __name__ == '__main__':
     print(f"Depth:{avl.tree_depth}")
     print(avl)
     print(f"VALID BST?:{avl.is_valid_bst()}")
+    a_node = Node(key=5)
+    print(type(Node))
+    print(Node.__class__.__name__)
+    print(Node.__class__)
+    print(isinstance(a_node,Node))
     
     
     
