@@ -22,20 +22,26 @@ class AVL(BST):
         
         unbalanced_node = node.set_tree_height()
         
-        # if unbalanced_node:
-        #     if unbalanced_node.balance <= -2:
-        #         unbalanced_node.rotate_right()
+        print(self)
 
         while unbalanced_node:
             if unbalanced_node.balance <= -2:
-                unbalanced_node.rotate_left()
-                unbalanced_node = unbalanced_node.set_tree_height()
-
+                if unbalanced_node.is_right_straight():
+                    unbalanced_node.rotate_left()
+                else:
+                    unbalanced_node.rotate_right_dog_leg()
+                            
             elif unbalanced_node.balance >= 2:
-                unbalanced_node.rotate_right()
-                unbalanced_node = unbalanced_node.set_tree_height()
+                if unbalanced_node.is_left_straight():                    
+                    unbalanced_node.rotate_right()
+                else:
+                    unbalanced_node.rotate_left_dog_leg()                             
+                                
+            unbalanced_node = unbalanced_node.set_tree_height()
 
-        
+    def __repr__(self):
+        print(f"__repr__AVL:{id(self)}")
+        return super().__repr__()
         
 
 if __name__ == '__main__':
@@ -50,8 +56,14 @@ if __name__ == '__main__':
     #     rnd_key = randint(SIZE_N * 10)        
     #     print( avl.add_node(Node(key=(unbalance + rnd_key))) )
     
-    build_data = [100, 50, 150, 200, 250] #  requires right rotate
-    avl = AVL( Node(key=build_data.pop(0)) )    
+    #  requires right rotate
+    build_data = [100, 50, 150, 200, 250]
+    first_node = Node(key=build_data.pop(0))
+    print("First Node \ ")
+    print(repr(first_node))
+    print("First Node / ")
+    avl = AVL( first_node )    
+    print(f"AVL:{id(avl)}")
     pprint(build_data)
     
     for i in build_data:                
@@ -59,16 +71,19 @@ if __name__ == '__main__':
         
     pprint(avl)
     
-    build_data = [100, 50, 125, 50, 30] #  requires left rotate
-    avl = AVL( Node(key=build_data.pop(0)) )    
-    pprint(build_data)
+    # avl.add_node(Node(key=300))
+    # pprint(avl)
     
-    for i in build_data:                
-        print( avl.add_node(Node(key=i)) )
-        
-    pprint(avl)
-
-
+    # build_data = [100, 50, 125, 40, 30] #  requires left rotate
+    # avl = AVL( Node(key=build_data.pop(0)) )    
+    # pprint(build_data)
+    # 
+    # for i in build_data:                
+    #     print( avl.add_node(Node(key=i)) )
+    #     
+    # pprint(avl)
+                           #2   #1
+                           #RL  #RR
     # build_data = [100, 50, 150, 200, 175] #, requires 2 rotations
     # avl = AVL( Node(key=build_data.pop(0)) )    
     # pprint(build_data)
@@ -77,7 +92,7 @@ if __name__ == '__main__':
     #     print( avl.add_node(Node(key=i)) )
     #     
     # pprint(avl)
-    
+    # 
     
     print(f"Nodes:{avl.numNodes}")
     print(f"Nodes:{avl.numNodes()}")
@@ -90,7 +105,8 @@ if __name__ == '__main__':
     print(Node.__class__)
     print(isinstance(a_node,Node))
     
-    
+    print(a_node)
+    pprint(a_node)
     
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
 

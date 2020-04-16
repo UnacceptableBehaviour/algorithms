@@ -10,10 +10,21 @@ import math
 
 class Node(object):     # sub classing (object) not required in 3.x
     
-    def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
-        self.parent = parent        # parent node
-        self.lc = lc                # left child
-        self.rc = rc                # right child
+    # def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
+    #     self.parent = parent        # parent node
+    #     self.lc = lc                # left child
+    #     self.rc = rc                # right child
+    #     self.key = key              # sorting criteria
+    #     self.val = val              # object
+    #     self.depth = None           # depth of node in tree
+    #     self.height = 1             # height of subtree inc node
+    #     self.n = None               # position of node in tree (null nodes are counted)
+    #     self.balance = 0
+
+    def __init__(self, key=None, val=None):
+        self.parent = None        # parent node
+        self.lc = None                # left child
+        self.rc = None                # right child
         self.key = key              # sorting criteria
         self.val = val              # object
         self.depth = None           # depth of node in tree
@@ -46,7 +57,8 @@ class Node(object):     # sub classing (object) not required in 3.x
 
     def rotate_right(self):
         # right child move up into current node position
-        # point parent to right child 
+        # point parent to right child
+        print(f"RR- P>{self.parent.lc} - PLC>{self.parent.lc} - L>{self.lc} R>{self.rc}")
         self.parent.lc = self.lc
         # and vice versa
         self.lc.parent = self.parent
@@ -60,21 +72,39 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.parent = new_parent
         new_parent.rc = self
 
-     # X
-     #  \
-     #   X
-     #    \
-     #     X
-     # 
-     # X
-     #  \
-     #   X
-     #  /
-     # X
 
+    def rotate_right_dog_leg(self):         # X -2  right dogleg
+        print(f"RR_DL-{self} - L>{self.lc} R>{self.rc}")
+        # rotate rc right                   #  \
+        self.rc.rotate_right()              #   Y 1
+                                            #  /
+        # rotate self left                  # Z 0
+        self.rotate_left()
+        
 
-    def is_right_strainght(self): # or right_zig_zag?    rotate_right     
-        pass
+    def is_right_straight(self): # or right_zig_zag?     # X -2   right_straight
+        right_is_straight = False                        #  \
+                                                         #   Y -1
+        if self.balance == -2 and self.rc.balance == -1: #    \
+            right_is_straight = True                     #     Z 0
+        
+        return right_is_straight
+
+    def rotate_left_dog_leg(self):         #   X 2  right dogleg
+        # rotate lc left                   #  /
+        self.lc.rotate_left()              # Y -1
+                                           #  \
+        # rotate self right                #   Z 0
+        self.rotate_right()
+        
+
+    def is_left_straight(self): # or right_zig_zag?     #     X 2   left_straight
+        left_is_straight = False                         #    /
+                                                         #   Y 1
+        if self.balance == 2 and self.lc.balance == 1:   #  /  
+            left_is_straight = True                      # Z 0
+        
+        return left_is_straight
 
                 
     def set_tree_height(self):
@@ -92,8 +122,8 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.balance = hl - hr      # if abs(hl - hr) >= 2 unbalance - rotation required
         if abs(self.balance) >= 2:
             first_unbalanced_node = self
-        
-        print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height},{self.balance}")
+                
+        print(f"set_hgt: {repr(self)}")
         
         # propagate tree height - check balace on the way
         if self.parent != None:            
@@ -105,14 +135,24 @@ class Node(object):     # sub classing (object) not required in 3.x
 
         
     def __str__(self):                      # print
-        return f"{self.key}:{self.depth}:{self.height},{self.balance}<"
+        return f"[{self.key}:{self.depth}:{self.height},{self.balance}]"
 
     # def __unicode__(self):                # pythons 2.x - not needed? for 3.x
     #     return f"{u'{val}'}"
 
     def __repr__(self):                     # pprint repr()
         #return f"({self.n},{self.depth},{self.key})"
-        return f"{id(self)}:{self.n}:{self.key}"
+        hl = -1
+        hr = -1
+        
+        if self.lc:
+            hl = self.lc.height
+        
+        if self.rc:
+            hr = self.rc.height
+            
+        #return f"{self.__class__} P:{id(self.parent)} N:{id(self)} LC:{id(self.lc)} RC:{id(self.rc)} K:{self.key} CBal:L-R({hl},{hr}) = H:{self.height},B:{self.balance}"
+        return f"{self.__class__} P:{self.parent} N:{self} LC:{self.lc} RC:{self.rc} K:{self.key} CBal:L-R({hl},{hr}) = H:{self.height},B:{self.balance}"
     
 
 class BST:
@@ -220,11 +260,12 @@ class BST:
         except IndexError as e:
             print(f"idx------:{node.rc}<")
         finally:
-            print('> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<S')
-            for i in self.node_enum:
-                print(f"node_enum[{i}] ")
-                #print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height},{self.balance}")
-            print('> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<E') 
+            # print('> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<S')
+            # for i in self.node_enum:
+            #     print(f"node_enum[{i}] ")
+            #     #print(f"set_hgt: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({hl},{hr})={self.height},{self.balance}")
+            # print('> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<E') 
+            pass
 
     def init_node_enum(self):
         self.node_enum = [None] * ((2 ** self.tree_depth) *2)   # allocate storage,  even for blanks        
@@ -246,7 +287,8 @@ class BST:
         tree_width = 2**(depth-1) * BST.SPACER      
         tree_as_string = f"\ndepth: {depth} - tree_width: {tree_width} - tree_size: {self.tree_size}"
         
-        print("__str__")
+        print("__str__ TREE representation ascii art")
+        print("NODE: " + "[key:depth:height,balance] -ve balance RIGHT Heavy")
         #pprint(self.node_enum)             # < < - see nodes & blanks in array
         
         for row in range(0,depth):
