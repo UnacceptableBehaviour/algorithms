@@ -10,27 +10,46 @@ import math
 
 class Node(object):     # sub classing (object) not required in 3.x
     
-    # def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
-    #     self.parent = parent        # parent node
-    #     self.lc = lc                # left child
-    #     self.rc = rc                # right child
-    #     self.key = key              # sorting criteria
-    #     self.val = val              # object
-    #     self.depth = None           # depth of node in tree
-    #     self.height = 1             # height of subtree inc node
-    #     self.n = None               # position of node in tree (null nodes are counted)
-    #     self.balance = 0
-
-    def __init__(self, key=None, val=None):
-        self.parent = None        # parent node
-        self.lc = None                # left child
-        self.rc = None                # right child
+    def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
+        self.parent = parent        # parent node
+        self.lc = lc                # left child
+        self.rc = rc                # right child
         self.key = key              # sorting criteria
         self.val = val              # object
         self.depth = None           # depth of node in tree
         self.height = 1             # height of subtree inc node
         self.n = None               # position of node in tree (null nodes are counted)
         self.balance = 0
+        
+
+    def rotate_root_left(self):
+        new_root =  self.rc            
+        move_node_to_left_tree = self.rc.lc
+        
+        move_node_to_left_tree.parent = self
+        self.rc = move_node_to_left_tree
+        
+        # make rc new root
+        self.parent = new_root
+        new_root.lc = self          
+        new_root.parent = None
+        
+        return new_root
+
+
+    def rotate_root_right(self):
+        new_root =  self.lc            
+        move_node_to_right_tree = self.lc.rc
+        
+        move_node_to_right_tree.parent = self
+        self.lc = move_node_to_right_tree
+        
+        # make rc new root
+        self.parent = new_root
+        new_root.rc = self          
+        new_root.parent = None
+        
+        return new_root
 
     # important to remember pointers ALWAYS IN PAIRS!    parent>child   AND   child>parent!!
     def rotate_left(self):
@@ -49,11 +68,6 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.parent = new_parent
         new_parent.lc = self
         
-        # rot_rp = self.parent
-        # print(f"rot_RP: {id(rot_rp.parent)}:{id(rot_rp)}-{id(rot_rp.lc)}-{id(rot_rp.rc)} {rot_rp.key}-({rot_rp.height},{rot_rp.balance})")
-        # print(f"rot_RT: {id(self.parent)}:{id(self)}-{id(self.lc)}-{id(self.rc)} {self.key}-({self.height},{self.balance})")
-        # rot_rr = self.rc
-        # print(f"rot_RR: {id(rot_rr.parent)}:{id(rot_rr)}-{id(rot_rr.lc)}-{id(rot_rr.rc)} {rot_rr.key}-({rot_rr.height},{rot_rr.balance})")        
 
     def rotate_right(self):
         # right child move up into current node position
@@ -135,7 +149,8 @@ class Node(object):     # sub classing (object) not required in 3.x
 
         
     def __str__(self):                      # print
-        return f"[{self.key}:{self.depth}:{self.height},{self.balance}]"
+        #return f"[{self.key}:{self.depth}:{self.height},{self.balance}]"
+        return f"[{self.key}:{self.n}:{self.height},{self.balance}]"
 
     # def __unicode__(self):                # pythons 2.x - not needed? for 3.x
     #     return f"{u'{val}'}"
@@ -160,7 +175,7 @@ class BST:
     
     def __init__(self, node):
         self.root = node            # check type Node - raise if not
-        self.parent = None
+        self.root.parent = None
         self.root.height = 1
         self.root.depth = 1
         self.root.n = BST.ROOT_NODE
@@ -268,15 +283,15 @@ class BST:
             pass
 
     def init_node_enum(self):
-        self.node_enum = [None] * ((2 ** self.tree_depth) *2)   # allocate storage,  even for blanks        
+        self.node_enum = [None] * (2 ** self.tree_depth)    # allocate storage,  even for blanks        
         self.node_enum[BST.ROOT_NODE] = self.root           # inserts root node        
-        self.enum_nodes(self.root, self.root.n, BST.LEFT)   # insert node refs in appropriate pos [n]
+        self.enum_nodes(self.root, 1, BST.LEFT)             # insert node refs in appropriate pos [n]
 
     # tree_size can be accessed directly - dislpay binding uing print
     def numNodes(self):
         return self.tree_size
                         
-    SPACER = 5                             # padding around node number
+    SPACER = 8                             # padding around node number
     VERTICAL_SPACE = 0
     def __str__(self):
         tree_as_string =''
@@ -288,7 +303,7 @@ class BST:
         tree_as_string = f"\ndepth: {depth} - tree_width: {tree_width} - tree_size: {self.tree_size}"
         
         print("__str__ TREE representation ascii art")
-        print("NODE: " + "[key:depth:height,balance] -ve balance RIGHT Heavy")
+        print("NODE: " + "[key:tree_n:height,balance] -ve balance RIGHT Heavy")
         #pprint(self.node_enum)             # < < - see nodes & blanks in array
         
         for row in range(0,depth):
@@ -310,6 +325,11 @@ class BST:
             
             #print(f"{build_row}    - {row}:{depth} - {tree_width}")
             print(f"{build_row}")
+        
+        # print("Raw node_enum:")
+        # for i in self.node_enum:
+        #     print(i, repr(i))
+        print("Tree END _ _ ___________________________________________________________")
         
         return tree_as_string        
         

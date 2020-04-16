@@ -21,23 +21,37 @@ class AVL(BST):
         super().add_node(node)
         
         unbalanced_node = node.set_tree_height()
+        print(f">-----> unbalanced_node: {repr(unbalanced_node)}")
         
         print(self)
 
         while unbalanced_node:
+            
             if unbalanced_node.balance <= -2:
-                if unbalanced_node.is_right_straight():
+                
+                if unbalanced_node.parent == None:
+                    self.root = unbalanced_node.rotate_root_left()
+                    
+                elif unbalanced_node.is_right_straight():
                     unbalanced_node.rotate_left()
+                    
                 else:
                     unbalanced_node.rotate_right_dog_leg()
                             
             elif unbalanced_node.balance >= 2:
-                if unbalanced_node.is_left_straight():                    
+                
+                if unbalanced_node.parent == None:
+                    self.root = unbalanced_node.rotate_root_right()
+                    
+                elif unbalanced_node.is_left_straight():                    
                     unbalanced_node.rotate_right()
+
                 else:
                     unbalanced_node.rotate_left_dog_leg()                             
                                 
             unbalanced_node = unbalanced_node.set_tree_height()
+            print(f"w>-----> unbalanced_node: {repr(unbalanced_node)}")
+            
 
     def __repr__(self):
         print(f"__repr__AVL:{id(self)}")
@@ -71,17 +85,20 @@ if __name__ == '__main__':
         
     pprint(avl)
     
-    # avl.add_node(Node(key=300))
-    # pprint(avl)
+    avl.add_node(Node(key=300))
+    pprint(avl)
     
-    # build_data = [100, 50, 125, 40, 30] #  requires left rotate
-    # avl = AVL( Node(key=build_data.pop(0)) )    
-    # pprint(build_data)
-    # 
-    # for i in build_data:                
-    #     print( avl.add_node(Node(key=i)) )
-    #     
-    # pprint(avl)
+    build_data = [100, 50, 125, 40, 30] #  requires left rotate
+    avl = AVL( Node(key=build_data.pop(0)) )    
+    pprint(build_data)
+    
+    for i in build_data:                
+        print( avl.add_node(Node(key=i)) )
+        
+    pprint(avl)
+    avl.add_node(Node(key=20))
+    avl.add_node(Node(key=10))
+    
                            #2   #1
                            #RL  #RR
     # build_data = [100, 50, 150, 200, 175] #, requires 2 rotations
