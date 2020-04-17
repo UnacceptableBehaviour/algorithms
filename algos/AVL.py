@@ -9,6 +9,136 @@ from pprint import pprint
 import math
 
 from binary_search_tree import Node, BST
+
+class AVL_Node(Node):
+    
+    def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
+        super().__init__(parent, lc, rc, key, val)
+    
+    def rotate_root_left(self):
+        new_root =  self.rc            
+        move_node_to_left_tree = self.rc.lc
+        
+        move_node_to_left_tree.parent = self
+        self.rc = move_node_to_left_tree
+        
+        # make rc new root
+        self.parent = new_root
+        new_root.lc = self          
+        new_root.parent = None
+        
+        return new_root
+
+
+    def rotate_root_right(self):
+        new_root =  self.lc            
+        move_node_to_right_tree = self.lc.rc
+        
+        move_node_to_right_tree.parent = self
+        self.lc = move_node_to_right_tree
+        
+        # make rc new root
+        self.parent = new_root
+        new_root.rc = self          
+        new_root.parent = None
+        
+        return new_root
+
+    # important to remember pointers ALWAYS IN PAIRS!    parent>child   AND   child>parent!!
+    def rotate_left(self):
+        # right child move up into current node position
+        # point parent to right child 
+        self.parent.rc = self.rc
+        # and vice versa
+        self.rc.parent = self.parent
+
+        # temp        
+        new_parent = self.rc        
+        # remove link to right_child from self
+        self.rc = None  # check
+        
+        # make it parent
+        self.parent = new_parent
+        new_parent.lc = self
+        
+
+    def rotate_right(self):
+        # right child move up into current node position
+        # point parent to right child
+        print(f"RR- P>{self.parent.lc} - PLC>{self.parent.lc} - L>{self.lc} R>{self.rc}")
+        self.parent.lc = self.lc
+        # and vice versa
+        self.lc.parent = self.parent
+
+        # temp        
+        new_parent = self.lc        
+        # remove link to right_child from self
+        self.lc = None  # check
+        
+        # make it parent
+        self.parent = new_parent
+        new_parent.rc = self
+
+
+    def rotate_right_dog_leg(self):         # X -2  right dogleg
+        print(f"RR_DL-{self} - L>{self.lc} R>{self.rc}")
+        # rotate rc right                   #  \
+        self.rc.rotate_right()              #   Y 1
+                                            #  /
+        # rotate self left                  # Z 0
+        self.rotate_left()
+        
+
+    def is_right_straight(self): # or right_zig_zag?     # X -2   right_straight
+        right_is_straight = False                        #  \
+                                                         #   Y -1
+        if self.balance == -2 and self.rc.balance == -1: #    \
+            right_is_straight = True                     #     Z 0
+        
+        return right_is_straight
+
+    def rotate_left_dog_leg(self):         #   X 2  right dogleg
+        # rotate lc left                   #  /
+        self.lc.rotate_left()              # Y -1
+                                           #  \
+        # rotate self right                #   Z 0
+        self.rotate_right()
+        
+
+    def is_left_straight(self): # or right_zig_zag?     #     X 2   left_straight
+        left_is_straight = False                         #    /
+                                                         #   Y 1
+        if self.balance == 2 and self.lc.balance == 1:   #  /  
+            left_is_straight = True                      # Z 0
+        
+        return left_is_straight
+
+                
+    def set_tree_height(self):
+        hl = -1
+        hr = -1
+        first_unbalanced_node = None
+        
+        if self.lc:
+            hl = self.lc.height
+        
+        if self.rc:
+            hr = self.rc.height
+        
+        self.height = max(hl,hr) + 1
+        self.balance = hl - hr      # if abs(hl - hr) >= 2 unbalance - rotation required
+        if abs(self.balance) >= 2:
+            first_unbalanced_node = self
+                
+        print(f"set_hgt: {repr(self)}")
+        
+        # propagate tree height - check balace on the way
+        if self.parent != None:            
+            unbalance_upstream = self.parent.set_tree_height()
+            if first_unbalanced_node == None:
+                first_unbalanced_node = unbalance_upstream
+        
+        return first_unbalanced_node
     
 
 class AVL(BST):
@@ -65,62 +195,62 @@ if __name__ == '__main__':
     rnd_key = randint(SIZE_N * 10)                                           
     unbalance = rnd_key            # use this to make all nodes larger than unbalance
     
-    # avl = AVL( Node(key=rnd_key) )    
+    # avl = AVL( AVL_Node(key=rnd_key) )    
     # for i in range(0, SIZE_N +1):
     #     rnd_key = randint(SIZE_N * 10)        
-    #     print( avl.add_node(Node(key=(unbalance + rnd_key))) )
+    #     print( avl.add_node(AVL_Node(key=(unbalance + rnd_key))) )
     
     #  requires right rotate
     build_data = [100, 50, 150, 200, 250]
-    first_node = Node(key=build_data.pop(0))
-    print("First Node \ ")
+    first_node = AVL_Node(key=build_data.pop(0))
+    print("First AVL_Node \ ")
     print(repr(first_node))
-    print("First Node / ")
+    print("First AVL_Node / ")
     avl = AVL( first_node )    
     print(f"AVL:{id(avl)}")
     pprint(build_data)
     
     for i in build_data:                
-        print( avl.add_node(Node(key=i)) )
+        print( avl.add_node(AVL_Node(key=i)) )
         
     pprint(avl)
     
-    avl.add_node(Node(key=300))
+    avl.add_node(AVL_Node(key=300))
     pprint(avl)
     
     build_data = [100, 50, 125, 40, 30] #  requires left rotate
-    avl = AVL( Node(key=build_data.pop(0)) )    
+    avl = AVL( AVL_Node(key=build_data.pop(0)) )    
     pprint(build_data)
     
     for i in build_data:                
-        print( avl.add_node(Node(key=i)) )
+        print( avl.add_node(AVL_Node(key=i)) )
         
     pprint(avl)
-    avl.add_node(Node(key=20))
-    avl.add_node(Node(key=10))
+    avl.add_node(AVL_Node(key=20))
+    avl.add_node(AVL_Node(key=10))
     
                            #2   #1
                            #RL  #RR
-    # build_data = [100, 50, 150, 200, 175] #, requires 2 rotations
-    # avl = AVL( Node(key=build_data.pop(0)) )    
-    # pprint(build_data)
-    # 
-    # for i in build_data:                
-    #     print( avl.add_node(Node(key=i)) )
-    #     
-    # pprint(avl)
-    # 
+    build_data = [100, 50, 150, 200, 175] #, requires 2 rotations
+    avl = AVL( AVL_Node(key=build_data.pop(0)) )    
+    pprint(build_data)
     
-    print(f"Nodes:{avl.numNodes}")
-    print(f"Nodes:{avl.numNodes()}")
+    for i in build_data:                
+        print( avl.add_node(AVL_Node(key=i)) )
+        
+    pprint(avl)
+    
+    
+    print(f"AVL_Nodes:{avl.numNodes}")
+    print(f"AVL_Nodes:{avl.numNodes()}")
     print(f"Depth:{avl.tree_depth}")
     print(avl)
     print(f"VALID BST?:{avl.is_valid_bst()}")
-    a_node = Node(key=5)
-    print(type(Node))
-    print(Node.__class__.__name__)
-    print(Node.__class__)
-    print(isinstance(a_node,Node))
+    a_node = AVL_Node(key=5)
+    print(type(AVL_Node))
+    print(AVL_Node.__class__.__name__)
+    print(AVL_Node.__class__)
+    print(isinstance(a_node,AVL_Node))
     
     print(a_node)
     pprint(a_node)
