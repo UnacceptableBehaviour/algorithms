@@ -22,8 +22,8 @@ class Collision_Chain:
     def __init__(self, key, value):
         self.collisions = [(key, value)]
 
-    # assign_or_append: replace a value @ key
-    def assign_or_append(self, key, value=None):
+    # assign_or_append: replace a value @ key    
+    def assign_or_append(self, key, value=None):    # def insert
         if value == None and key.__class__ == tuple:    
             key, value = key                    # allow passing in a tuple instead of key, value
             
@@ -31,7 +31,7 @@ class Collision_Chain:
         # else: append kv pair                  < allocate mem        
         for i,kv_pair in enumerate(self.collisions):
             if kv_pair[Collision_Chain.KEY] == key:
-                kv_pair[Collision_Chain.VALUE] = value
+                self.collisions[i] = (key, value)
                 return                          # found and assign_or_appended
         
         self.collisions.append((key, value))    # not found append
@@ -74,19 +74,23 @@ class Assoc_Array:
         self.store = [None] * self.size_mk
 
 
+    # in place
+    # tuple w different key (collision)
+    # tuple w sam key (overwrite)
+    # chain (colliison possible overwrite)
     # insert: value at key location 
     def insert(self, key, value):
         success = False
         index = self.aa_hash(key)
         
-        if self.store[index] == None:      # most likely case if well designed
+        if self.store[index] == None:           # most likely case if well designed
             self.store[index] = (key, value)
+
+        elif self.store[index].__class__ == tuple and self.store[index][0] == key:
+            self.store[index] = (key, value)    # overwrite
             
-        else:                       # overwrite or collision(with a tuple or a chain)
-            if self.store[index].__class__ == tuple and self.store[index][0] == key:
-                self.store[index][1] == value
-                
-            elif self.store[index].__class__ == Collision_Chain:
+        else:                                   # collision(with a tuple or a chain)
+            if self.store[index].__class__ == Collision_Chain:
                 self.store[index].assign_or_append(key, value)
                 
             else:
@@ -263,6 +267,16 @@ if __name__ == '__main__':
     find = 'kiwi fruit'
     print(f"{find} = ", aa.get(find))
     find = 'lamb chop'
+    print(f"{find} = ", aa.get(find))
+
+    aa.insert('kiwi fruit','ALARM')
+    pprint(aa)
+    find = 'kiwi fruit'
+    print(f"{find} = ", aa.get(find))
+
+    aa.insert('bay leaf','ALARM')
+    pprint(aa)
+    find = 'bay leaf'
     print(f"{find} = ", aa.get(find))
 
     
