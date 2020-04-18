@@ -45,9 +45,7 @@ class Collision_Chain:
     # lookup: serach for and retrieve value based on key
     def get(self, get_key):
         for key,value in self.collisions:       # scan
-            print(f"get: {key},{value} [{key},{get_key} {key==get_key}]")
             if key == get_key:
-                print(f"get FOUND: {key},{value}")
                 return value
         return None
         
@@ -57,8 +55,8 @@ class Collision_Chain:
     def __repr__(self):
         rp = f"<{self.__class__} id({id(self)})> "
         for key,value in self.collisions:
-            rp = rp + f"({key}: '{value}') "
-        return rp # + "\n - - - - - / "   #return ("__repr__")
+            rp = rp + f"('{key}', '{value}') "
+        return rp
     
     def __len__(self):
         return len(self.collisions)
@@ -67,10 +65,10 @@ class Collision_Chain:
 class Assoc_Array:
     INITIAL_BUCKETS = 11
         
-    def __init__(self):
+    def __init__(self): # ('lamb chop', 'butcher') ('smoothie', 'drink') ('chocolate', 'confectionary') ('jelly beans', 'confectionary')
         self.entries_n = 0
-        self.size_mk = INITIAL_BUCKETS
-        store = [None] * self.size_mk
+        self.size_mk = Assoc_Array.INITIAL_BUCKETS
+        self.store = [None] * self.size_mk
 
 
     # insert: value at key location 
@@ -97,7 +95,11 @@ class Assoc_Array:
         return ("__str__")
 
     def __repr__(self):
-        return ("__repr__")
+        rp = f"<{self.__class__} id({id(self)})>\n"
+        for i,kv_pair in enumerate(self.store):
+            rp = rp + f"[{i}]{repr(kv_pair)}\n"
+        
+        return rp 
     
     def __len__(self):
         return self.size_mk
@@ -135,6 +137,7 @@ class Entry:
 
 if __name__ == '__main__':
 
+    # Collision_Chain tests
     collisions = Collision_Chain('banana', 'fruit')
     pprint(collisions)
     
@@ -159,15 +162,11 @@ if __name__ == '__main__':
     print(f"get('banana') - {collisions.get('banana')}")
     print(f"get('jelly beans') - {collisions.get('jelly beans')}")
     
+    # Assoc_Array
     
+    aa = Assoc_Array()
     
-    
-    # collisions.append(('banana', 'fruit'))
-    # collisions.append(('lamb chop', 'butcher'))
-    # collisions.append(('cabbage', 'veg'))
-    # collisions.append(('smoothie', 'drink'))
-
-    
+    pprint(aa)
     
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
 
