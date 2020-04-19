@@ -37,8 +37,8 @@ class Collision_Chain:
         self.collisions.append((key, value))    # not found append
                         
             
-    # delete: remove a key value pair           # EXPENSIVE scan to find, and shift remining by one!
-    def delete(self, del_key):
+    # delete: remove a key value pair           # EXPENSIVE scan to find, 
+    def delete(self, del_key):                  # and shift all remining element by one!
         for i,kv_pair in enumerate(self.collisions):
             if kv_pair[Collision_Chain.KEY] == del_key:
                 self.collisions.pop(i)
@@ -113,7 +113,20 @@ class Assoc_Array:
     def delete(self, key):
         success = False
         
-        success = True
+        index = self.aa_hash(key)               # hash for index
+        
+        if self.store[index] == None:           # key not present
+            return success
+                                                # check index - tuple & match? delete = None
+        elif self.store[index].__class__ == tuple and self.store[index][0] == key:
+            self.store[index] = None            # overwrite
+            success = True
+            
+        elif self.store[index].__class__ == Collision_Chain: # chain? - chain.delete
+                success = self.store[index].delete(key)
+        else:
+            raise f"Unknown Error trying to delete key '{key}'"
+        
         self.entries_n -= 1
         
         return success
@@ -279,6 +292,16 @@ if __name__ == '__main__':
     find = 'bay leaf'
     print(f"{find} = ", aa.get(find))
 
+    
+    test delete
+    
+    # next steps
+    # delete
+    # resize_up   (double allocation)
+    # resize_down (entries (n) below 1/4 or allocation (m or k))
+    # demonstrate better hashing algo < metrics - data?
+    
+    
     
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
 
