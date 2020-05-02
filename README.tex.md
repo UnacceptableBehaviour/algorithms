@@ -41,7 +41,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [Sorting in Linear-Time](#sorting-in-lineartime)  
 7. [Unit 3: Hashing](#unit-3-hashing)  
-	1. [8	Hashing with chaining](#8hashing-with-chaining)  
+	1. [8	Hashing with chaining - (dictionary / associative array)](#8hashing-with-chaining--dictionary--associative-array)  
 	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karprabin)  
 	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
 8. [Unit 4: Numerics](#unit-4-numerics)  
@@ -63,11 +63,12 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 12. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [23	Computational complexity](#23computational-complexity)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
-13. [How Tos](#how-tos)  
-	1. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
-	2. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
-		1. [Generate math image and embed it.](#generate-math-image-and-embed-it)  
-		2. [Solution 2 install texify.](#solution-2-install-texify)  
+13. [How To s](#how-to-s)  
+	1. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
+	2. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
+	3. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
+		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
+		2. [Automagically - install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
 14. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
@@ -147,6 +148,7 @@ o - -
 [Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/) 
 [Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
 [Setting yAxis logarithmic](https://matplotlib.org/3.1.1/gallery/scales/scales.html)  
+
 
 
 
@@ -254,6 +256,7 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 Watch vids - add refs - from math text
 Add big O symbols
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #### Problem set 1.
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
 
@@ -342,7 +345,14 @@ Once run the results can be visualised with visualizer.html which loads data cre
 	proof for one of the algorithms
 ##### Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail
 
+REFERENCES:
+[Correctness - various proofs](https://www.youtube.com/user/intrigano/search?query=correctness)  
+[Reccurence relation by Induction](https://www.youtube.com/watch?v=t_3ACuzEe_8)  
 
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
 [vid](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3)  
@@ -537,12 +547,42 @@ insert as normal for BST
 update each nodes height while parsing tree (and largest_height L M R - left middle right)
 largest_height = hL - hR 
 from inserted node walk up the tree checking largest_height if abs(largest_height) > 2
-	if largest_height > 2 rotate	(left height too large)
+	if largest_height > 2 right-rotate	(left height too large)
 	if largest_height < -2 anti-rotate	(right height too large)
 
+What the above is saying is - if the difference in height between to children is more than +/-1 then tree need rebalancing
 	
-Rotation
+Rotation Cases (@ 23m)
+```
+      29
+     /
+   26
+  /
+23					# left height too large 
+      
+   26				# right-rotate 29
+  /  \
+23	   29
+```
+2nd case
+```
+      65
+     /
+   50
+     \
+  		55			# zig zag requires 2 rotations:
+					
+      65			# left-rotate 50
+     /
+   55
+  /
+50					# right-rotate 65:
 
+   55
+  /  \
+50	   65
+
+```
 
 
 
@@ -583,15 +623,58 @@ Proofs up to 32m  upt to here all comparison model.
 
 
 		Problem set 3 out
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 3: Hashing
-### 8	Hashing with chaining	 
-[vid]()  
-[lect notes]()  
+### 8	Hashing with chaining - (dictionary / associative array)	 
+[vid](https://www.youtube.com/watch?v=0M_kIqhwbFo&t=758s)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf)  
+[succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q)  
+
+Python built in hash() - should be called prehash - but basically return and integer based on the input. (to use as a key for dict for example)
+```
+Python dunder function __hash__ is called when built in hash(object) is called.
+if you dont implement hash hash(obj) used id(obj) to create hash
+```
+
+Methods for dealing with collisions (Chaining @ 30m & open addressing (next week) )
+  one type of open addressing is linear probing
+
+
+I you have a space of keys, run those through hash function to generate indexes (ideally they should be equally distributed through the target array)
+The ratio of number of indexes (entries) (n) : number of array spaces (m)  is the load factor 
+Check understanding here!
+See L9 1m-
+Sunccict sunopsis of last lecture!!  Including above
+note the n may end up in a linked list for chaining
+
+LAST 10m re-watch 
+
 
 ### 9	Table doubling, Karp-Rabin
-[vid]()  
-[lect notes]()  
+[vid](https://www.youtube.com/watch?v=BRO7mVIFt08)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec09.pdf)  
+
+How to choose m (table size)  - (on overflow double it)
+
+Amortisation 15m
+
+When array becomes full n=m,  double in size m*2
+When shrinking shrink when n gets to m/4 shrink m to m/2
+
+** Invariant property: n <= m <= 4n ***
+n has to be smaller than m (size of structure) or entries wont fit in the data structure
+If n falls to m/4 halve structure size m = m/2
+
+27m - listen to concept
+Term: constant amortised - note on python lists
+Means  amortized time
+
+
+Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
+	use choosing size using random prime 
+
+
+
 
 		Problem set 3 due
 		Problem set 4 out
@@ -603,6 +686,7 @@ Proofs up to 32m  upt to here all comparison model.
 		Problem set 4 due
 	 	Quiz 1	 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 4: Numerics
 ### 11	Integer arithmetic, Karatsuba multiplication	
 [vid]()  
@@ -614,6 +698,7 @@ Proofs up to 32m  upt to here all comparison model.
 [vid]()  
 [lect notes]()  
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 5: Graphs
 ### 13	Breadth-first search (BFS)	 
 [vid]()  
@@ -626,6 +711,7 @@ Proofs up to 32m  upt to here all comparison model.
 		Problem set 5 due
 		Problem set 6 out
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 6: Shortest Paths
 ### 15	Single-source shortest paths problem	 
 [vid]()  
@@ -645,7 +731,7 @@ Proofs up to 32m  upt to here all comparison model.
 
 		Problem set 6 due
 	 	Quiz 2	 
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 7: Dynamic Programming
 ### 19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
 [vid]()  
@@ -666,7 +752,7 @@ Proofs up to 32m  upt to here all comparison model.
 [lect notes]()  
 
 		Problem set 7 due
-
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 8: Advanced Topics
 ### 23	Computational complexity	 
 [vid]()  
@@ -678,29 +764,41 @@ Proofs up to 32m  upt to here all comparison model.
 
 
 
-## How Tos
+## How To s
+### How to setup autogenerate README.md file from RTF notes?
+```
+> python --version			# Python 2.7.16
+> python3 -m venv venv
+> .pe					# alias .pe='. venv/bin/activate'
+> python --version			# Python 3.7.5
+> pip install --upgrade pip
+> pip install striprtf			# for rtf processing
+```
+
 ### How do I autogenerate README.md file from RTF?
 ```
 > .pe				# alias .pe='. venv/bin/activate'
-> ./create_TOC_for_md.py -p	# takes ALGO_00_Intro_2_Algorithms_MIT.rtf course notes and add TOC > README.md
+> ./create_TOC_for_md.py -p	# takes MATHS_00_MIT_6.042.rtf course notes and add TOC > README.md
 				# also add README.md to git, commits, and pushes
 				# -p = commit & push
 ```
 
 ### How can I add maths formulas to README.md?
-#### Generate math image and embed it.
+#### Manually: Generate math image and embed it.
 Install Latex tools [notes here](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/context.md)  
-Open LaTeXit edit equation click text and hit the LaTeXit button to check its good.
-Export as png and upload it to git (need to do this so the URL and be used to embed the image)
-Embed image with 
+Open LaTeXit edit equation click text and hit the LaTeXit button to check its good.  
+Export as png and upload it to git (need to do this so the URL and be used to embed the image)  
+Embed image with  
 ```
 ![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
 Note the ! before opening [ denotes image
 ```
-#### Solution 2 install texify.
+#### Automagically - install texify.
 [Find texify here](https://github.com/agurodriguez/github-texify)  
-Use LaTeXit to check formula correctness then past it into doc surrounded by consecutive $ symbols like so
-```
+Use LaTeXit to check formula correctness then past it into doc surrounded by consecutive \$ symbols like so
+![latex script](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/images/latex_example.png)  
+
+Will display the following document distance equation  
 $$
 \begin{equation}
   D_1.D_2\\
@@ -710,7 +808,6 @@ $$
   \label{sum}  
 \end{equation}
 $$
-```  
 
 #### How can I get rid of ref numbers, or get them to increment at least?
 open problem . .
