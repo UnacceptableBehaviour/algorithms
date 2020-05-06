@@ -68,7 +68,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 	2. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
 	3. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
-		2. [Automagically - install texify.](#automagically--install-texify)  
+		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
 14. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
@@ -793,7 +793,7 @@ Embed image with
 ![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
 Note the ! before opening [ denotes image
 ```
-#### Automagically - install texify.
+#### Automagically:  Install texify.
 [Find texify here](https://github.com/agurodriguez/github-texify)  
 Use LaTeXit to check formula correctness then past it into doc surrounded by consecutive \$ symbols like so
 ![latex script](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/images/latex_example.png)  
