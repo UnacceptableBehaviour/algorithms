@@ -91,8 +91,7 @@ Create an algorithms reference, and aide-memoire
 
 ## Unit 1: Introduction
 ### 1	Algorithmic thinking, peak finding	
-[vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s)  
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
+[vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
 Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
@@ -111,9 +110,9 @@ aka: Big O notation / Bachmann-Landau notation / asymptotic notation.
 See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/) great summary of array sorting algorithm complexity and data structure operations   
 
 **Symbols:**  
-Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of BachmannLandau notations    
+Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of Bachmann-Landau notations    
 Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf) p3 - from wikipedia?  
-Maths Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
+Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
 
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.
 O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in CompSci)  
@@ -125,7 +124,8 @@ T(n) - function defining the exact Time or number of steps to complete an algori
 
 The rate of growth of a function is also known as its **order**.  
 
-[Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
+Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
+
 Where c is a constant and n is the number of steps:  
 **LOW**  
 constant time - O(1)  
@@ -150,7 +150,7 @@ Egs
 Simplified set theory? Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the sloppier equality notation is more common at present.  
 		
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
-[Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/) 
+[Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/)  
 [Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
 [Setting yAxis logarithmic](https://matplotlib.org/3.1.1/gallery/scales/scales.html)  
 
@@ -158,8 +158,7 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 
 
 ### 2	Models of computation, Python cost model, document distance	   
-[vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2)  
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
+[vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2) [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
 
 Algorithm: computational procedure for solving a problem  
 What is time (complexity)? **O(1) = constant time**  
