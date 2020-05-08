@@ -94,7 +94,7 @@ Create an algorithms reference, and aide-memoire
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-Peak finding: assumin **single peak**, and   
+Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
 a) linear
 b) search by halves
@@ -108,9 +108,25 @@ Greedy Ascent Algorithm
 #### Notes on time complexity (always worst case complexity)
 aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
 
-See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
-Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf)  
+See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/) great summary of array sorting algorithm complexity and data structure operations   
+
+**Symbols:**  
+Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of BachmannLandau notations    
+Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf) p3 - from wikipedia?  
+Maths Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
+
+The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.
+O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in CompSci)  
+Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in CompSci)  
+Ω - big Omega - LOWER bound (common in CompSci)  
+o - little O - loose upper bound (common in Maths rare in CompSci)  
+ω - little omega - rough estimate of the order of the growth (rarely used)  
+T(n) - function defining the exact Time or number of steps to complete an algorithm for n items  
+
+The rate of growth of a function is also known as its **order**.  
+
 [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
+Where c is a constant and n is the number of steps:  
 **LOW**  
 constant time - O(1)  
 logarithmic time - O(log n)  
@@ -122,10 +138,12 @@ polynomial time - O(n^c) where constant c > 1
 exponential time - O(2^n)  
 factorial time - O(n!)  
 **HIGH**  
+See [Problem set 1.](#problem-set-1) for graphical representation  
 
+The above list is useful because of the following fact: if a function f(n) is a sum of functions, one of which grows faster than the others, then the faster growing one determines the order of f(n).
 
 If a function is made up of multiple components, (nearly always) the highest order is used:
-(this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)
+(this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
 Egs
 $$
 \begin{align}
@@ -133,16 +151,7 @@ f(n) = 10log(n) + 5(log(n))^3 + 7n + 3n^2 + 6n^3,  then f(n) = O(n^3)
 \end{align}
 $$
 
-
-**Symbols:**  
-Θ - -    
-O - - Landaus Symbol  
-Ω - - Lower bounds  
-o - -   
-ω - -   
-
-
-
+Simplified set theory? Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the sloppier equality notation is more common at present.  
 		
 [Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
 [Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/) 
