@@ -6,12 +6,30 @@ See [References](#references) for links to course content
 ## Abstract
 Work notes from Introduction to Algorithms MIT 6.006 course
 
+## Progress
+
+| Lectures                                                           | Recitations                                               | Problem Sets | Solutions                                                                  | Emoji              | Example Code | Implementation                                                                                | Other |
+|--------------------------------------------------------------------|-----------------------------------------------------------|--------------|----------------------------------------------------------------------------|--------------------|--------------|-----------------------------------------------------------------------------------------------|-------|
+| 01. Algorithmic Thinking, Peak Finding                             | R01. Asymptotic Complexity, Peak Finding                  |              |                                                                            | :star:             |              |                                                                                               |       |
+| 02. Models of Computation, Document Distance {set:cellbgcolor:red} | R02. Python Cost Model, Document Distance :hocho:         |              | [Set 1](https://github.com/UnacceptableBehaviour/algorithms#problem-set-1) | :zzz:              |              | [Python](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/merge_sort.py) |       |
+| 03. Insertion Sort,  Merge Sort                                    | R03. Document Distance, Insertion and Merge Sort :lizard: |              |                                                                            | :exclamation:      |              |                                                                                               |       |
+| 04. Heaps and Heap Sort                                            | R05. Recursion Trees, Binary Search Trees                 |              |                                                                            | :question:         |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :flashlight:       |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :mag:              |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :bulb:             |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :lemon:            |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :x:                |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :red_circle:       |              |                                                                                               |       |
+|                                                                    |                                                           |              |                                                                            | :white_check_mark: |              |                                                                                               |       |
+
+
 ## Contents  
 1. [Abstract](#abstract)  
-2. [Contents](#contents)  
-3. [AIM:](#aim)  
-4. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit--part-1--3)  
-5. [Unit 1: Introduction](#unit-1-introduction)  
+2. [Progress](#progress)  
+3. [Contents](#contents)  
+4. [AIM:](#aim)  
+5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit--part-1--3)  
+6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [1	Algorithmic thinking, peak finding](#1algorithmic-thinking-peak-finding)  
 		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
@@ -25,7 +43,7 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-14-16-points-peakfinding-efficiency)  
 			5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-15-19-points-peakfinding-proof)  
 			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-16-19-points-peakfinding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
-6. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
+7. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 		1. [Insertion sort](#insertion-sort)  
 		2. [Merge Sort](#merge-sort)  
@@ -40,37 +58,37 @@ Work notes from Introduction to Algorithms MIT 6.006 course
 		1. [TERMS](#terms)  
 	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [Sorting in Linear-Time](#sorting-in-lineartime)  
-7. [Unit 3: Hashing](#unit-3-hashing)  
+8. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [8	Hashing with chaining - (dictionary / associative array)](#8hashing-with-chaining--dictionary--associative-array)  
 	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karprabin)  
 	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
-8. [Unit 4: Numerics](#unit-4-numerics)  
+9. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
 	2. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
-9. [Unit 5: Graphs](#unit-5-graphs)  
+10. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [13	Breadth-first search (BFS)](#13breadthfirst-search-bfs)  
 	2. [14	Depth-first search (DFS), topological sorting](#14depthfirst-search-dfs-topological-sorting)  
-10. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
+11. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [15	Single-source shortest paths problem](#15singlesource-shortest-paths-problem)  
 	2. [16	Dijkstra](#16dijkstra)  
 	3. [17	Bellman-Ford](#17bellmanford)  
 	4. [18	Speeding up Dijkstra](#18speeding-up-dijkstra)  
-11. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
+12. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#19memoization-subproblems-guessing-bottomup-fibonacci-shortest-paths)  
 	2. [20	Parent pointers; text justification, perfect-information blackjack](#20parent-pointers-text-justification-perfectinformation-blackjack)  
 	3. [21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#21string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 	4. [22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.](#22two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-bros)  
-12. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
+13. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [23	Computational complexity](#23computational-complexity)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
-13. [How To s](#how-to-s)  
+14. [How To s](#how-to-s)  
 	1. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
 	2. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
 	3. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-14. [References](#references)  
+15. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
 	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
