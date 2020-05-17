@@ -7,6 +7,8 @@ See [References](#references) for links to course content
 Work notes from Introduction to Algorithms MIT 6.006 course
 
 ## Progress
+KEY: :white_check_mark: watched, :mag: rewatch, :flashlight: unseen / to watch, :question: problem / open question
+CODE: :seedling: code complete, :lemon: code smells, :cactus: needs more work
 
 | Lectures                                                           | Recitations                                               | Problem Sets | Solutions                                                                  | Emoji              | Example Code | Implementation                                                                                | Other |
 |--------------------------------------------------------------------|-----------------------------------------------------------|--------------|----------------------------------------------------------------------------|--------------------|--------------|-----------------------------------------------------------------------------------------------|-------|
