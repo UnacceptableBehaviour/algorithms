@@ -49,6 +49,8 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [1	Algorithmic thinking, peak finding](#1algorithmic-thinking-peak-finding)  
 		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
+		2. [**Symbols:**](#symbols)  
+		3. [Useful maths equations](#useful-maths-equations)  
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
 		2. [Python Model  - Computational Steps](#python-model---computational-steps)  
@@ -144,15 +146,15 @@ aka: Big O notation / Bachmann-Landau notation / asymptotic notation.
 
 See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/) great summary of array sorting algorithm complexity and data structure operations   
 
-**Symbols:**  
+#### **Symbols:**  
 Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of Bachmann-Landau notations    
 Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf) p3 - from wikipedia?  
 Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
 
-The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.
+The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
 O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in CompSci)  
 Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in CompSci)  
-Ω - big Omega - LOWER bound (common in CompSci)  
+Ω - big Omega - BEST case or LOWER bound (common in CompSci)  
 o - little O - loose upper bound (common in Maths rare in CompSci)  
 ω - little omega - rough estimate of the order of the growth (rarely used)  
 T(n) - function defining the exact Time or number of steps to complete an algorithm for n items  
@@ -188,6 +190,13 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 [Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/)  
 [Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
 [Setting yAxis logarithmic](https://matplotlib.org/3.1.1/gallery/scales/scales.html)  
+
+#### Useful maths equations
+
+From recitation 1 (26m) [Stirlings approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
+<p align="center"><img src="/tex/17789aec953e515f4d4dbbcbe79c0588.svg?invert_in_darkmode&sanitize=true" align=middle width=411.75196425pt height=31.070567549999996pt/></p>
+<p align="center"><img src="/tex/8182cc03706f858356e39b08f4cc0a9d.svg?invert_in_darkmode&sanitize=true" align=middle width=409.5568059pt height=44.89738935pt/></p>
+
 
 
 
