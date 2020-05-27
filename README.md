@@ -50,7 +50,8 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 	1. [1	Algorithmic thinking, peak finding](#1algorithmic-thinking-peak-finding)  
 		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		2. [**Symbols:**](#symbols)  
-		3. [Useful maths equations](#useful-maths-equations)  
+		3. [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
+		4. [Useful maths equations](#useful-maths-equations)  
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
 		2. [Python Model  - Computational Steps](#python-model---computational-steps)  
@@ -101,9 +102,10 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 	1. [23	Computational complexity](#23computational-complexity)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
 14. [How To s](#how-to-s)  
-	1. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
-	2. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
-	3. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
+	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
+	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
+	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
+	4. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
@@ -119,8 +121,8 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 Create an algorithms reference, and aide-memoire  
 
 In the mean time here are two great resources:  
-Big O Cheat Sheet:   
-Open data structures:   
+Big O Cheat Sheet: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)  
+Open data structures: [http://opendatastructures.org/](http://opendatastructures.org/)  
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -168,6 +170,7 @@ The rate of growth of a function is also known as its **order**.
 
 Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
 
+#### **Time Complexity - Order Severity**
 Where c is a constant and n is the number of steps:  
 **LOW**  
 constant time - O(1)  
@@ -182,7 +185,7 @@ factorial time - O(n!)
 **HIGH**  
 
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
-Image source:
+Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 
 
@@ -311,14 +314,18 @@ Add big O symbols
 
 ##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation) 
 For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
+Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity) 
+Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)  
+Comment in/out or add custom!  
 
 Problem 1.1a
 <p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
 
 Problem 1.1b
-<p align="center"><img src="/tex/1affca5b71aab0a59d325f07e32648bc.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18582949999995pt height=122.87297219999999pt/></p>
-
-
+<p align="center"><img src="/tex/cbde0d11ea8f1ebd27ab4ac5526ed78a.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18578164999997pt height=122.87297219999999pt/></p>
+Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg):
+<p align="center"><img src="/tex/c25acae12157db0472ada055c7a1f07d.svg?invert_in_darkmode&sanitize=true" align=middle width=588.0255678pt height=32.990165999999995pt/></p>
+with the left dominating the right give nlog(n)  
 
 Problem 1.1c
 <p align="center"><img src="/tex/35b229607a85cdc5b8e9ad420b171c2c.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.97228825pt/></p>
@@ -785,6 +792,15 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 
 
 ## How To s
+### How so I plot a chart with python?
+```
+> .pe						# alias .pe='. venv/bin/activate'
+> pip install matplotlib			# plotting lib
+> pip install numpy				# math sci lib 
+> ./matplotlib/plot.py				# super basic 2d plot example - in maths repo
+```
+[./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)  
+
 ### How to setup autogenerate README.md file from RTF notes?
 ```
 > python --version			# Python 2.7.16
