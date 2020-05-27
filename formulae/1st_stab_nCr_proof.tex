@@ -1,0 +1,55 @@
+\begin{equation}
+     \binom{n}{2} \text{ notation is combinatorics}
+\end{equation}
+\begin{equation}
+     {set\choose combination} \text{ } {S\choose k}
+\end{equation}
+\begin{equation}
+     \binom{n}{k} = \frac{n!}{k!(n-k)!} = nCr
+\end{equation}
+\begin{equation}
+  n! \approx \sqrt{2 \pi n}\left(\frac{n}{e}\right)^n
+\end{equation}
+\begin{equation}
+     \binom{n}{2} = \frac{\sqrt{2 \pi n}\left(\frac{n}{e}\right)^n}{2!(n-2)!} 
+\end{equation}
+\begin{equation}
+    (n-2)! = \sqrt{2 \pi n-2}\left(\frac{n-2}{e}\right)^{n-2}
+\end{equation}
+\begin{equation}
+    \frac{\sqrt{2 \pi n}\left(\frac{n}{e}\right)^n}{2\sqrt{2 \pi (n-2)}\left(\frac{n-2}{e}\right)^{n-2}} 
+\end{equation}
+\begin{equation}
+    \frac{\sqrt{n}\left(\frac{n}{e}\right)^n}{2\sqrt{(n-2)}\left(\frac{n-2}{e}\right)^{n-2}} 
+\end{equation}
+\begin{equation}
+  \left(\frac{n-2}{e}\right)^{n-2}  = \frac{\left(\frac{n-2}{e}\right)^n}{\left(\frac{n-2}{e}\right)^2}
+\end{equation}
+\begin{equation}
+    \frac{\sqrt{n}\left(\frac{n}{e}\right)^n{\left(\frac{n-2}{e}\right)^2}}{2\sqrt{(n-2)}\left(\frac{n-2}{e}\right)^n} 
+\end{equation}
+\begin{equation}
+  \left(\frac{n}{e}\right)^n = \left(\frac{1}{e}\right)^n n^n \text{ and } \left(\frac{n-2}{e}\right)^n = \left(\frac{1}{e}\right)^n (n-2)^n
+\end{equation}
+\begin{equation}
+    \frac{\sqrt{n}n^n{\left(\frac{n-2}{e}\right)^2}}{2\sqrt{(n-2)}(n-2)^n} 
+\end{equation}
+\begin{equation}
+    \left(\frac{n-2}{e}\right)^2 = \left(\frac{1}{e}\right)^2 (n-2)^2 \text{ and } 2 \text{ and } \left(\frac{1}{e}\right)^2 \text{are constants}
+\end{equation}
+\begin{equation}
+    \frac{\sqrt{n}n^n{(n-2)^2}}{\sqrt{(n-2)}(n-2)^n} 
+\end{equation}
+\begin{equation}
+    \frac{\sqrt{n}n^n}{(n-2)^{n-\frac{2}{3}}} 
+\end{equation}
+\begin{equation}
+    \frac{n^{n+\frac{1}{2}}}{(n-2)^{n-\frac{2}{3}}} 
+\end{equation}
+\begin{equation}
+    \frac{log(n^{n+\frac{1}{2}})}{log((n-2)^{n-\frac{2}{3}})} 
+\end{equation}
+\begin{equation}
+    log(n^{n+\frac{1}{2}}) - log((n-2)^{n-\frac{2}{3}}) =     (n+\frac{1}{2})log(n) - (n-\frac{2}{3})log(n-2)
+\end{equation}
+\text{with the left dominating the right give nlog(n)}

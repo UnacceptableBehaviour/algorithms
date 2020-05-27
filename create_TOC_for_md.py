@@ -198,3 +198,4 @@ if __name__ == '__main__':
         print(f"\n\n{return_code}\n")
     
     print(f"\n\n{report}")
+    print(f"\n\n{toc_string}")
