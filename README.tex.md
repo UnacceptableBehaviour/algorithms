@@ -116,7 +116,12 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 
 ## AIM:  
 
-Create an algorithms reference, and aide-memoire
+Create an algorithms reference, and aide-memoire  
+
+In the mean time here are two great resources:  
+Big O Cheat Sheet:   
+Open data structures:   
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Intoduction to algorithms MIT - part 1 / 3:  
@@ -152,9 +157,9 @@ Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf
 Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
 
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
-O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in CompSci)  
-Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in CompSci)  
-Ω - big Omega - BEST case or LOWER bound (common in CompSci)  
+O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
+Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in **CompSci**)  
+Ω - big Omega - BEST case or LOWER bound (common in **CompSci**)  
 o - little O - loose upper bound (common in Maths rare in CompSci)  
 ω - little omega - rough estimate of the order of the growth (rarely used)  
 T(n) - function defining the exact Time or number of steps to complete an algorithm for n items  
@@ -175,7 +180,11 @@ polynomial time - O(n^c) where constant c > 1
 exponential time - O(2^n)  
 factorial time - O(n!)  
 **HIGH**  
-See [Problem set 1.](#problem-set-1) for graphical representation  
+
+![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
+Image source:
+Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
+
 
 The above list is useful because of the following fact: if a function f(n) is a sum of functions, one of which grows faster than the others, then the faster growing one determines the order of f(n).
 
@@ -319,10 +328,6 @@ Add big O symbols
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #### Problem set 1.
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
-
-![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
-Image source:
-Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 
 ##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation) 
 For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
