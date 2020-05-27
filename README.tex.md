@@ -357,13 +357,14 @@ f4(n) = n \sqrt{n} = n^1{n^\frac{1}{2}} = n^{1.5} = O(n^c) = polynomial\\
 f2(n) = 2^{2100000n} = O(c^n) = exponential
 \end{align}
 $$
-Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg):
+Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
 \begin{equation}
     log(n^{n+\frac{1}{2}}) - log((n-2)^{n-\frac{2}{3}}) =     (n+\frac{1}{2})log(n) - (n-\frac{2}{3})log(n-2)
 \end{equation}
 with the left dominating the right give nlog(n)  
 
-Problem 1.1c
+
+Problem 1.1c  
 $$
 \begin{align}
 f2(n) = 2^n = O(c^n) = constant.exponential\\
