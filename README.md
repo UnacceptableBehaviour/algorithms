@@ -323,12 +323,13 @@ Problem 1.1a
 
 Problem 1.1b
 <p align="center"><img src="/tex/cbde0d11ea8f1ebd27ab4ac5526ed78a.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18578164999997pt height=122.87297219999999pt/></p>
-Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg):
+Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
 <p align="center"><img src="/tex/c25acae12157db0472ada055c7a1f07d.svg?invert_in_darkmode&sanitize=true" align=middle width=588.0255678pt height=32.990165999999995pt/></p>
 with the left dominating the right give nlog(n)  
 
-Problem 1.1c
-<p align="center"><img src="/tex/35b229607a85cdc5b8e9ad420b171c2c.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.97228825pt/></p>
+
+Problem 1.1c  
+<p align="center"><img src="/tex/ead0e3753b23a641f6e42c4f3e27c3af.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.8078443pt/></p>
 
 ##### Problem 1-2. [15 points] Recurrence Relation Resolution
 For each of the following recurrence relations, pick the correct asymptotic runtime:
