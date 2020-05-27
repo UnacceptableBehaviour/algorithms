@@ -367,9 +367,9 @@ Problem 1.1c
 $$
 \begin{align}
 f2(n) = 2^n = O(c^n) = constant.exponential\\
-f1(n) = n^{\sqrt{n}} = n^{n^{\frac{1}{2}}} = O(n^n) = linear . exponential\\
+f4(n) = \sum_{i=1}^{n}(i+1) = \frac{n(n+1)}{2} = O(n^2) = quadratic\\
+f1(n) = n^{\sqrt{n}} = n^{n^{\frac{1}{2}}} = O(n^n) = linear.exponential\\
 f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
-f4(n) = \sum_{i=1}^{n}(i+1) = ? = O(?)
 \end{align}
 $$
 
