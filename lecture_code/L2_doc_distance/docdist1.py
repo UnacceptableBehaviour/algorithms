@@ -172,7 +172,7 @@ def vector_angle(L1,L2):
     """
     numerator = inner_product(L1,L2)
     denominator = math.sqrt(inner_product(L1,L1)*inner_product(L2,L2))
-    return math.acos(numerator/denominator)
+     
 
 def main():
     if len(sys.argv) != 3:
