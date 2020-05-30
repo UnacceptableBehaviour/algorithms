@@ -172,6 +172,7 @@ def vector_angle(L1,L2):
     """
     numerator = inner_product(L1,L2)
     denominator = math.sqrt(inner_product(L1,L1)*inner_product(L2,L2))
+    return math.acos(numerator/denominator)
      
 
 def main():
@@ -182,6 +183,8 @@ def main():
         filename_2 = sys.argv[2]
         sorted_word_list_1 = word_frequencies_for_file(filename_1)
         sorted_word_list_2 = word_frequencies_for_file(filename_2)
+        print repr(sorted_word_list_1)
+        print repr(sorted_word_list_2)
         distance = vector_angle(sorted_word_list_1,sorted_word_list_2)
         print "The distance between the documents is: %0.6f (radians)"%distance
 
