@@ -312,11 +312,11 @@ Add big O symbols
 #### Problem set 1.
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
 
-##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation) 
+##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)  
 For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
-Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity) 
-Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)  
-Comment in/out or add custom!  
+Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
+Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)   
+Comment functions in/out of the source or add custom functions!   
 
 Problem 1.1a
 <p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
