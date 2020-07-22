@@ -57,12 +57,12 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		2. [Python Model  - Computational Steps](#python-model----computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 7. [Problem set 1.](#problem-set-1)  
-			1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
-			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
-			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-1-3-16-points-peak-finding-correctness)  
-			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-1-4-16-points-peak-finding-efficiency)  
-			5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-1-5-19-points-peak-finding-proof)  
-			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-1-6-19-points-peak-finding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
+	1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
+	2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
+	3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-1-3-16-points-peak-finding-correctness)  
+	4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-1-4-16-points-peak-finding-efficiency)  
+	5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-1-5-19-points-peak-finding-proof)  
+	6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-1-6-19-points-peak-finding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
 8. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 		1. [Insertion sort](#insertion-sort)  
@@ -332,7 +332,10 @@ Add big O symbols
 ## Problem set 1.
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
 
-##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)  
+
+
+
+### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)  
 For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
 Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
 Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)   
@@ -374,14 +377,14 @@ f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
 \end{align}
 $$
 
-##### Problem 1-2. [15 points] Recurrence Relation Resolution
+### Problem 1-2. [15 points] Recurrence Relation Resolution
 For each of the following recurrence relations, pick the correct asymptotic runtime:
 asymptotic complexity of an algorithm with runtime T (n, n) 
 (a)
 (b)
 (c)
 
-##### Problem 1-3. [16 points] Peak-Finding Correctness 
+### Problem 1-3. [16 points] Peak-Finding Correctness 
 Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.  
 Python code notes:  
 Its python2 so run with  
@@ -454,12 +457,12 @@ e) algo 5 brute force scan - CORRECT
 
 
 
-##### Problem 1-4. [16 points] Peak-Finding Efficiency 
+### Problem 1-4. [16 points] Peak-Finding Efficiency 
 	Look at 4 alorithms in algorithms.py 
 	Assess correctness, efficiency
-##### Problem 1-5. [19 points] Peak-Finding Proof 
+### Problem 1-5. [19 points] Peak-Finding Proof 
 	proof for one of the algorithms
-##### Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail
+### Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail
 
 REFERENCES:
 [Correctness - various proofs](https://www.youtube.com/user/intrigano/search?query=correctness)  
