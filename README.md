@@ -45,25 +45,25 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 2. [Progress](#progress)  
 3. [Contents](#contents)  
 4. [AIM:](#aim)  
-5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit--part-1--3)  
+5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [1	Algorithmic thinking, peak finding](#1algorithmic-thinking-peak-finding)  
 		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		2. [**Symbols:**](#symbols)  
-		3. [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
+		3. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		4. [Useful maths equations](#useful-maths-equations)  
 	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
-		2. [Python Model  - Computational Steps](#python-model---computational-steps)  
+		2. [Python Model  - Computational Steps](#python-model----computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
-		4. [Problem set 1.](#problem-set-1)  
-			1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-11-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
-			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-12-15-points-recurrence-relation-resolution)  
-			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-13-16-points-peakfinding-correctness)  
-			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-14-16-points-peakfinding-efficiency)  
-			5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-15-19-points-peakfinding-proof)  
-			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-16-19-points-peakfinding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
-7. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
+7. [Problem set 1.](#problem-set-1)  
+			1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
+			2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
+			3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-1-3-16-points-peak-finding-correctness)  
+			4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-1-4-16-points-peak-finding-efficiency)  
+			5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-1-5-19-points-peak-finding-proof)  
+			6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-1-6-19-points-peak-finding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
+8. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
 	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
 		1. [Insertion sort](#insertion-sort)  
 		2. [Merge Sort](#merge-sort)  
@@ -77,31 +77,31 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
 		1. [TERMS](#terms)  
 	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
-		1. [Sorting in Linear-Time](#sorting-in-lineartime)  
-8. [Unit 3: Hashing](#unit-3-hashing)  
-	1. [8	Hashing with chaining - (dictionary / associative array)](#8hashing-with-chaining--dictionary--associative-array)  
-	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karprabin)  
+		1. [Sorting in Linear-Time](#sorting-in-linear-time)  
+9. [Unit 3: Hashing](#unit-3-hashing)  
+	1. [8	Hashing with chaining - (dictionary / associative array)](#8hashing-with-chaining---dictionary--associative-array)  
+	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karp-rabin)  
 	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
-9. [Unit 4: Numerics](#unit-4-numerics)  
+10. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
 	2. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
-10. [Unit 5: Graphs](#unit-5-graphs)  
-	1. [13	Breadth-first search (BFS)](#13breadthfirst-search-bfs)  
-	2. [14	Depth-first search (DFS), topological sorting](#14depthfirst-search-dfs-topological-sorting)  
-11. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
-	1. [15	Single-source shortest paths problem](#15singlesource-shortest-paths-problem)  
+11. [Unit 5: Graphs](#unit-5-graphs)  
+	1. [13	Breadth-first search (BFS)](#13breadth-first-search-bfs)  
+	2. [14	Depth-first search (DFS), topological sorting](#14depth-first-search-dfs-topological-sorting)  
+12. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
+	1. [15	Single-source shortest paths problem](#15single-source-shortest-paths-problem)  
 	2. [16	Dijkstra](#16dijkstra)  
-	3. [17	Bellman-Ford](#17bellmanford)  
+	3. [17	Bellman-Ford](#17bellman-ford)  
 	4. [18	Speeding up Dijkstra](#18speeding-up-dijkstra)  
-12. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
-	1. [19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#19memoization-subproblems-guessing-bottomup-fibonacci-shortest-paths)  
-	2. [20	Parent pointers; text justification, perfect-information blackjack](#20parent-pointers-text-justification-perfectinformation-blackjack)  
+13. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
+	1. [19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#19memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
+	2. [20	Parent pointers; text justification, perfect-information blackjack](#20parent-pointers-text-justification-perfect-information-blackjack)  
 	3. [21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#21string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 	4. [22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.](#22two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-bros)  
-13. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
+14. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [23	Computational complexity](#23computational-complexity)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
-14. [How To s](#how-to-s)  
+15. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
 	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
 	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
@@ -109,7 +109,7 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-15. [References](#references)  
+16. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
 	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
@@ -309,7 +309,7 @@ Watch vids - add refs - from math text
 Add big O symbols
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#### Problem set 1.
+## Problem set 1.
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
 
 ##### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)  
@@ -357,11 +357,56 @@ OK so whats going on here?
 main.py
 	load problem(matrix) from problem.py(or pas file name via CLI arg)
 	create list of algos, tuples of (name, algo_no_func)
-	iterate through list and call each algo w problem, tracee and default args
+	iterate through list and call each algo w problem, trace
+		trace object is a list of dictionaries, each method appends a result of each step in the algorithm as a dict
+		the list of dicts is coverted into json file (trace.jsonp) 
 	print results
 
-Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)	
+Once run the results can be visualised with visualizer.html which loads data created by the tracer (in trace.jsonp)
+	json file loaded by visualiser: <script type="text/javascript" src="./trace.jsonp"></script>	
 ```
+Asses each algorithm to see if it is correct, and if it is efficient:  
+a)  algo 1 correct? r x c    
+  p1 (4,4) yes  
+  p2 (2,7) yes  
+  p3 (3,5) no - 11 surrounded by 3 11s finds peak right there  
+  p4 (3,4) yes    
+  p5 (3,8) no - stops on consecutive same values
+  
+     efficient?   
+b) algo 2 correct? r x c  
+  p1 (4,4) yes  
+  p2 (4,3) no - stops on consecutive same values - CHANGE TEST   
+  p3 (4,3) no - stops on consecutive same values - CHANGE TEST     
+  p4 (4,4) yes    
+  p5 (4,5) no - 
+  
+
+     efficient?   
+c) algo 3 correct? r x c     
+  p1 (4,4) yes  
+  p2 (5,4) no - goes left - stops on consecutive same values - CHANGE? TEST - recursion required    
+  p3 (6,5) no - stops on consecutive same values - > test
+  p4 (4,4) yes    
+  p5 (5,8) no - 
+  
+
+     efficient?   
+d) algo4 correct? r x c     
+  p1 (4,4) yes  
+  p2 (5,4) no - goes left - stops on consecutive same values - CHANGE? TEST - recursion required
+  p3 (6,5) no - stops on consecutive same values - > test
+  p4 (4,4) yes    
+  p5 (5,8) no - 
+     efficient?   
+ 
+e) algo 5 brute force scan - CORRECT
+  p1 (4,4) yes  
+  p2 (2,7) yes  
+  p3 (4,6) yes  
+  p4 (4,4) yes    
+  p5 (6,6) yes    
+
 
 
 
