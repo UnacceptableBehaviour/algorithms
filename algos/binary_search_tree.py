@@ -97,13 +97,23 @@ class BST:
         self.tree_size += 1
         return (final_depth, self.tree_size, node_to_add.key, node_to_add)
 
+    # see R5 35m-42m
+    def successor(self, key)
+        pass
+
+    def predecessor(self, key)
+        pass
+
+    # see R5 42m - 3 cases to be aware of 
+    def delete(self, key)
+        pass
 
     def is_valid_bst(self, node=None):        
         if node == None: node = self.root
         valid = True
 
         if node.lc:        
-            if node.lc.key <= node.key:     # valid
+            if node.lc.key < node.key:     # valid
                 valid = self.is_valid_bst(node.lc)
             else:
                 valid = False
