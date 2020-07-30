@@ -46,12 +46,14 @@ class Node(object):     # sub classing (object) not required in 3.x
     
     def min(self, dbg=''):
         node = self
-        #dbg = dbg + f"{node.key} - "
         if self.lc != None:
-            node = self.lc.min()
-            #dbg = dbg + f"{node.key}"
-            
-        #print(f"min: {dbg}")
+            node = self.lc.min()            
+        return node
+
+    def max(self, dbg=''):
+        node = self
+        if self.rc != None:
+            node = self.rc.max()            
         return node
 
 
@@ -167,20 +169,24 @@ class BST:
             return node.parent
         
         current = node
-        while current.parent is not None and current is current.parent.rc:        # looking for 1st rp to return that isnt root
+        while current.parent is not None and current is current.parent.rc:        # looking for 1st rp to return
             current = current.parent
         
-        current = current.parent
-                
-        # next_larger = None
-        # if current != self.root:
-        #     next_larger = current
-        # 
-        # return next_larger
-        return current
+        return current.parent
+    
 
     def predecessor(self, node):
-        pass
+        if node.lc != None:
+            return node.lc.max()
+        
+        if node.parent == node.parent.lc:       # has lp
+            return node.parent
+        
+        current = node
+        while current.parent is not None and current is current.parent.lc:        # looking for 1st lp to return
+            current = current.parent
+                        
+        return current.parent
 
     # see R5 42m - 3 cases to be aware of 
     def delete(self, key):
@@ -332,7 +338,10 @@ if __name__ == '__main__':
     for key in node_vals:
         node = bst.find_node(key)
         print(node.key)
-        print(f"successor of {node} - {bst.successor(node)}")
+        # successor test
+        # print(f"successor of {node} - {bst.successor(node)}")
+        # predecessor test
+        print(f"predecessor of {node} - {bst.predecessor(node)}")
     
     
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
