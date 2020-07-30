@@ -20,7 +20,8 @@ class Node(object):     # sub classing (object) not required in 3.x
         self.height = 1             # height of subtree inc node
         self.n = None               # position of node in tree (null nodes are counted)
         self.balance = 0
-        
+        self.duplicate_key = None   # allow insert of node with same key
+                                    # point to duplicate node if needed - linked list
         
     def __str__(self):                      # print
         #return f"[{self.key}:{self.depth}:{self.height},{self.balance}]"
@@ -43,6 +44,16 @@ class Node(object):     # sub classing (object) not required in 3.x
         #return f"{self.__class__} P:{id(self.parent)} N:{id(self)} LC:{id(self.lc)} RC:{id(self.rc)} K:{self.key} CBal:L-R({hl},{hr}) = H:{self.height},B:{self.balance}"
         return f"{self.__class__} P:{self.parent} N:{self} LC:{self.lc} RC:{self.rc} K:{self.key} CBal:L-R({hl},{hr}) = H:{self.height},B:{self.balance}"
     
+    def min(self, dbg=''):
+        node = self
+        #dbg = dbg + f"{node.key} - "
+        if self.lc != None:
+            node = self.lc.min()
+            #dbg = dbg + f"{node.key}"
+            
+        #print(f"min: {dbg}")
+        return node
+
 
 class BST:
     ROOT_NODE = 1
@@ -59,6 +70,7 @@ class BST:
         
         # for display purposes
         self.node_enum = []                     # create an array of objects
+        self.narrow_tree = True # False
         #self.node_enum[BST.ROOT_NODE] = node
 
 
@@ -71,7 +83,7 @@ class BST:
         if node == None: node = self.root   
         final_depth = depth+1
         
-        if node_to_add.key <= node.key:     # go left
+        if node_to_add.key < node.key:      # go left
             if node.lc:                     # left child exists continue check
                 final_depth = self.__insert_node(node_to_add, node.lc, final_depth)
             else:                
@@ -87,6 +99,20 @@ class BST:
                 node.rc.parent = node
                 node.rc.depth = final_depth
         
+        if node_to_add.key == node.key:      # store in node.duplicate_key
+            node_to_add.parent = node.parent
+            node_to_add.rc = node.rc
+            node_to_add.lc = node.lc
+            node_to_add.depth = node.depth
+            # find last node in duplicates list - and insert there
+            if node.duplicate_key == None:
+                node.duplicate_key = node_to_add
+            else:
+                next_duplicate_node = node.duplicate_key
+                while (type(next_duplicate_node) == Node) and (type(next_duplicate_node.duplicate_key) == Node):
+                    next_duplicate_node = next_duplicate_node.duplicate_key
+                next_duplicate_node.duplicate_key = node_to_add
+        
         if final_depth > self.tree_depth: self.tree_depth = final_depth
         
         return final_depth
@@ -97,15 +123,67 @@ class BST:
         self.tree_size += 1
         return (final_depth, self.tree_size, node_to_add.key, node_to_add)
 
-    # see R5 35m-42m
-    def successor(self, key)
-        pass
+    def find_node(self, node_to_find, node=None):
+        if node == None: node = self.root 
+        
+        if node_to_find.key < node.key:      # go left
+            if node.lc:                     # left child exists continue check
+                node = self.find_node(node_to_find, node.lc)
+            else:                
+                return None
 
-    def predecessor(self, key)
+        if node_to_find.key > node.key:      # go right
+            if node.rc:                     # right child exists continue check
+                node = self.find_node(node_to_find, node.rc)
+            else:                
+                return None
+            
+        if node_to_find.key == node.key: 
+            return node
+        
+        return None
+
+    # successor - next_larger - next in thr right direction
+    # case 1 - node has rc
+    # return rc.min
+        
+    # case 2 - node has no rc (dont care about lc always smaller)
+    #        - has rp (left of parent : node == node.parent.left)
+    # return parent    
+    
+    # case 3 - node has no rc or rp
+    #        - right of parent : node == node.parent.right
+    # go up parent until one has a right parent
+    # return that
+
+    # case 3 covers case 2 since the first
+
+    # see R5 35m-42m
+    def successor(self, node):
+        if node.rc != None:
+            return node.rc.min()
+        
+        if node.parent == node.parent.lc:       # has rp
+            return node.parent
+        
+        current = node
+        while current.parent is not None and current is current.parent.rc:        # looking for 1st rp to return that isnt root
+            current = current.parent
+        
+        current = current.parent
+                
+        # next_larger = None
+        # if current != self.root:
+        #     next_larger = current
+        # 
+        # return next_larger
+        return current
+
+    def predecessor(self, node):
         pass
 
     # see R5 42m - 3 cases to be aware of 
-    def delete(self, key)
+    def delete(self, key):
         pass
 
     def is_valid_bst(self, node=None):        
@@ -183,7 +261,11 @@ class BST:
         self.init_node_enum()        
 
         depth = self.tree_depth
-        tree_width = 2**(depth-1) * BST.SPACER      
+        if self.narrow_tree:
+            tree_width = 2**(depth-1) * 3
+        else:
+            tree_width = 2**(depth-1) * BST.SPACER
+            
         tree_as_string = f"\ndepth: {depth} - tree_width: {tree_width} - tree_size: {self.tree_size}"
         
         print("__str__ TREE representation ascii art")
@@ -201,7 +283,10 @@ class BST:
             for node in range(lbnd, rbnd):
                 #print('n:',node)
                 if self.node_enum[node]:
-                    build_row = build_row + (f"{self.node_enum[node]}").center(row_spacer)
+                    if self.narrow_tree:
+                        build_row = build_row + (f"{self.node_enum[node].key}").center(row_spacer)
+                    else:
+                        build_row = build_row + (f"{self.node_enum[node]}").center(row_spacer)
                 else:
                     build_row = build_row + (f"-").center(row_spacer)
            
@@ -220,14 +305,20 @@ class BST:
 
 if __name__ == '__main__':
 
-    SIZE_N = 9
+    SIZE_N = 20
     # for i in range(0, SIZE_N +1):              
     #     print( str(Node(key=randint(SIZE_N * 10))) )
                                                
-    bst = BST( Node(key=randint(SIZE_N * 10)) )
+    #bst = BST( Node(key=randint(SIZE_N * 10)) )
+    bst = BST( Node(key=randint(99)) )
     
-    for i in range(0, SIZE_N +1):              
-        print( bst.add_node(Node(key=randint(SIZE_N * 10))) )
+    node_vals = []
+    for i in range(0, SIZE_N +1):
+        #new_node = Node(key=randint(SIZE_N * 10))
+        new_node = Node(key=randint(99))
+        node_vals.append(new_node)
+        print( bst.add_node(new_node) )
+        print(bst.root.min())
     
     
     pprint(bst)
@@ -235,8 +326,13 @@ if __name__ == '__main__':
     print(f"Nodes:{bst.numNodes()}")
     print(f"Depth:{bst.tree_depth}")
     print(bst)
+    #bst.narrow_tree = False
+    #print(bst)
     print(f"VALID BST?:{bst.is_valid_bst()}")
-    
+    for key in node_vals:
+        node = bst.find_node(key)
+        print(node.key)
+        print(f"successor of {node} - {bst.successor(node)}")
     
     
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
