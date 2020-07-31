@@ -74,7 +74,7 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
-	4. [R5	Recursion Trees, Binary Search Trees - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r5recursion-trees-binary-search-trees--------------------------------------------------------------------------------------------------------)  
+	4. [R5	Recursion Trees, Binary Search Trees](#r5recursion-trees-binary-search-trees)  
 	5. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
 		1. [DATA STRUCTURE](#data-structure)  
 		2. [TERMS](#terms)  
@@ -682,7 +682,7 @@ To the left of the tree including back up the tree! Work through example!
 o   o   o   o   o   o   o   o
 ```
 
-### R5	Recursion Trees, Binary Search Trees - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+### R5	Recursion Trees, Binary Search Trees
 
 
 
@@ -717,17 +717,22 @@ largest_height also store which height is larger +1 left,  0 equal, -1 right
 **balanced** tree - height of left child = height of right child  +/-1 - height h = logn
 
 
+
 #### Maths notes - AVL tree (20-28m)
 Min number of nodes in a balanced tree
 $$
 \begin{equation}
-  V = \sum_{i=0}^{n-1} \frac{m}{{(1+p)}^i}
+  N_h = minimum\;number\;of\;nodes\;in\;an\;AVL\;tree\;of\;height\;h
 \end{equation}
 \begin{equation}
-    = m\sum_{i=0}^{n-1} x^i  \;\;where\;x=\frac{1}{(1+p)}
+  N_{O(1)} = O(1)\;\;base\;case
+\end{equation}
+\begin{equation}
+  N_h = 1 + N_{h-1} + N_{h-2}
 \end{equation}
 $$
-
+That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:  
+![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
