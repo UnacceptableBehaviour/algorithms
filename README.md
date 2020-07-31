@@ -74,7 +74,7 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
-	4. [R5	Recursion Trees, Binary Search Trees - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r5recursion-trees-binary-search-trees--------------------------------------------------------------------------------------------------------)  
+	4. [R5	Recursion Trees, Binary Search Trees](#r5recursion-trees-binary-search-trees)  
 	5. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
 		1. [DATA STRUCTURE](#data-structure)  
 		2. [TERMS](#terms)  
@@ -639,7 +639,7 @@ To the left of the tree including back up the tree! Work through example!
 o   o   o   o   o   o   o   o
 ```
 
-### R5	Recursion Trees, Binary Search Trees - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+### R5	Recursion Trees, Binary Search Trees
 
 
 
@@ -674,10 +674,12 @@ largest_height also store which height is larger +1 left,  0 equal, -1 right
 **balanced** tree - height of left child = height of right child  +/-1 - height h = logn
 
 
+
 #### Maths notes - AVL tree (20-28m)
 Min number of nodes in a balanced tree
-<p align="center"><img src="/tex/177f113e0b6e80337d8c1599c855a813.svg?invert_in_darkmode&sanitize=true" align=middle width=460.27190385pt height=109.51167315pt/></p>
-
+<p align="center"><img src="/tex/383c5c1963e50e762b29e138eb72d9e5.svg?invert_in_darkmode&sanitize=true" align=middle width=576.5765841pt height=75.6164376pt/></p>
+That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:  
+![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
@@ -698,11 +700,11 @@ Rotation Cases (@ 23m)
      /
    26
   /
-23					# left height too large 
+23              # left height too large 
       
-   26				# right-rotate 29
+   26           # right-rotate 29
   /  \
-23	   29
+23    29
 ```
 2nd case
 ```
@@ -710,13 +712,13 @@ Rotation Cases (@ 23m)
      /
    50
      \
-  		55			# zig zag requires 2 rotations:
+      55        # zig zag requires 2 rotations:
 					
-      65			# left-rotate 50
+      65        # left-rotate 50
      /
    55
   /
-50					# right-rotate 65:
+50              # right-rotate 65:
 
    55
   /  \
