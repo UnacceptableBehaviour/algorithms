@@ -753,11 +753,11 @@ Rotation Cases (@ 23m)
      /
    26
   /
-23					# left height too large 
+23              # left height too large 
       
-   26				# right-rotate 29
+   26           # right-rotate 29
   /  \
-23	   29
+23    29
 ```
 2nd case
 ```
@@ -765,13 +765,13 @@ Rotation Cases (@ 23m)
      /
    50
      \
-  		55			# zig zag requires 2 rotations:
+      55        # zig zag requires 2 rotations:
 					
-      65			# left-rotate 50
+      65        # left-rotate 50
      /
    55
   /
-50					# right-rotate 65:
+50              # right-rotate 65:
 
    55
   /  \
