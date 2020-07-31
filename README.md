@@ -676,6 +676,7 @@ largest_height also store which height is larger +1 left,  0 equal, -1 right
 
 #### Maths notes - AVL tree (20-28m)
 Min number of nodes in a balanced tree
+<p align="center"><img src="/tex/177f113e0b6e80337d8c1599c855a813.svg?invert_in_darkmode&sanitize=true" align=middle width=460.27190385pt height=109.51167315pt/></p>
 
 
 
