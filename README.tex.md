@@ -57,7 +57,7 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		2. [Python Model  - Computational Steps](#python-model----computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 7. [Problem set 1.](#problem-set-1)  
-	1. [Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practicecalculating-asymptotic-complexity-big-o-notation)  
+	1. [Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practice--calculating-asymptotic-complexity-big-o-notation)  
 	2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
 	3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-1-3-16-points-peak-finding-correctness)  
 	4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-1-4-16-points-peak-finding-efficiency)  
@@ -74,34 +74,71 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
-	4. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
-		1. [TERMS](#terms)  
-	5. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
+	4. [R5	Recursion Trees, Binary Search Trees - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r5recursion-trees-binary-search-trees--------------------------------------------------------------------------------------------------------)  
+	5. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [TERMS](#terms)  
+		3. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
+	6. [Problem set 2 (due)](#problem-set-2-due)  
+		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
+		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
+	7. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [Sorting in Linear-Time](#sorting-in-linear-time)  
 9. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [8	Hashing with chaining - (dictionary / associative array)](#8hashing-with-chaining---dictionary--associative-array)  
 	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karp-rabin)  
 	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 10. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	2. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 11. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [13	Breadth-first search (BFS)](#13breadth-first-search-bfs)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	2. [14	Depth-first search (DFS), topological sorting](#14depth-first-search-dfs-topological-sorting)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 12. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [15	Single-source shortest paths problem](#15single-source-shortest-paths-problem)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	2. [16	Dijkstra](#16dijkstra)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	3. [17	Bellman-Ford](#17bellman-ford)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	4. [18	Speeding up Dijkstra](#18speeding-up-dijkstra)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 13. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#19memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	2. [20	Parent pointers; text justification, perfect-information blackjack](#20parent-pointers-text-justification-perfect-information-blackjack)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	3. [21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#21string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
-	4. [22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.](#22two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-bros)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
+	4. [22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#22two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 14. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [23	Computational complexity](#23computational-complexity)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
-15. [How To s](#how-to-s)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Maths notes](#maths-notes)  
+15. [Glossary of terms](#glossary-of-terms)  
+16. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
 	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
 	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
@@ -109,7 +146,7 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-16. [References](#references)  
+17. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
 	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
@@ -187,7 +224,6 @@ factorial time - O(n!)
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
 Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
-
 
 The above list is useful because of the following fact: if a function f(n) is a sum of functions, one of which grows faster than the others, then the faster growing one determines the order of f(n).
 
@@ -335,7 +371,7 @@ Add big O symbols
 
 
 
-### Problem 1-1. [15 points] Asymptotic Practice Calculating asymptotic complexity (Big O notation)  
+### Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)  
 For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
 Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
 Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)   
@@ -378,11 +414,14 @@ f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
 $$
 
 ### Problem 1-2. [15 points] Recurrence Relation Resolution
-For each of the following recurrence relations, pick the correct asymptotic runtime:
-asymptotic complexity of an algorithm with runtime T (n, n) 
-(a)
-(b)
-(c)
+For each of the following recurrence relations, pick the correct asymptotic runtime:  
+asymptotic complexity of an algorithm with runtime T (n, n)  
+(a)  
+(b)  
+(c)  
+Maths course: 
+
+[Lots of resources for recurrence relations]()
 
 ### Problem 1-3. [16 points] Peak-Finding Correctness 
 Double click /problems/MIT6_006F11_ps1/visualizer.html to see algorithms in operation.  
@@ -474,7 +513,8 @@ REFERENCES:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 2: Sorting and Trees
 ### 3	Insertion sort, merge sort
-[vid](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3)  
+[vid](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3)
+[recitation]()  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec03.pdf)  
 
 #### Insertion sort
@@ -512,6 +552,7 @@ go up a layer and merge leaves
 **Concept of auxiliary space**, in the above python code that would be stack I assume.
 
 
+
 Instrument the merge sort code
 
 [Difference between theta, omega complexity and big O](https://www.youtube.com/watch?v=6Ol2JbwoJp0)  
@@ -522,6 +563,15 @@ Instrument the merge sort code
 ### 4	Heaps and heap sort  
 [vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
+
+type:  / PRIORITY QUEUE (maxheap or minheap)  
+use cases: priority queue, finding min or max value in sorted set (not both)  
+queries: max (or min)  
+updates: insert (logn), delete, extract max (logn), replace  
+representation invariant (RI) max heap: Node is larger than or equal child nodes, complete binary tree  
+representation invariant (RI) min heap: Node is less than or equal child nodes, complete binary tree  
+properties: root conatins max/min value, node positions in array - root i=1, parent = i/2, lc_i = 2i, rc_i = 2i+1  
+![array implementation allocation](https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg)  
 
 Concept: ADT - Abstract Data Type  
 
@@ -565,6 +615,8 @@ the key of a node <=  keys of its parent
 [Python source exesize here](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)
 
 Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
+
+
 
 
 
@@ -630,11 +682,23 @@ To the left of the tree including back up the tree! Work through example!
 o   o   o   o   o   o   o   o
 ```
 
+### R5	Recursion Trees, Binary Search Trees - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
 
 ### 6	AVL trees, AVL sort	
 [vid](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf)  
 [guess implementation code]
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
 
 #### TERMS  
 AVL - inventors Adelson-Velsky and Landis   
@@ -645,18 +709,17 @@ Next smaller - **predecessor**
 Importance of a balanced tree - height being log n   
 Unbalance tree worst case height - n average n/2  << V.BAD!  
 **height** of a node - longest path to a leaf from node  including itself (the +1 below)  
+**depth** of a node - node in path from root to node
 height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintined in each node)  
 NOTE:  NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
 information local to node has low (constant time) maintenance over head   
 largest_height also store which height is larger +1 left,  0 equal, -1 right
-**balanced** tree - height of left child = height of right child  +/-1 
+**balanced** tree - height of left child = height of right child  +/-1 - height h = logn
 
 
-Maths behind the AVL tree - 20-28m
-recurrence for calculating the Nh - Minimum number of nodes in AVL tree of height h
-revise fibonacci sequence and related maths
-For problem Set 3
-latex practice symbol for phi - golden ration or fibbonacci  < check
+#### Maths notes - AVL tree (20-28m)
+Min number of nodes in a balanced tree
+
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
@@ -717,7 +780,128 @@ left & right rotate
 
 
  	
-		Problem set 2 due
+### Problem set 2 (due)
+#### 2-1 Fractal rendering [40pts]
+Koch snowflake rendering: computational requirements of 4 ways of rendering LoD n (Level of Detail 0-n)
+	Recitation 5 (0m - 13m) explains how to do this - dont be scared if you costs at each level arent the same sum them up and youll get the right answer
+	Recursion tree - forrest of trees in this case
+	Run example code fractal.html (/algorithms/problems/MIT6_006F11_ps2/fractal)
+First - 3D hardware accelerated rendering . .
+Surface > triangles > CPU co-ords list > GPU renders
+a) [1pt] height of recursion tree for rendering snowflake of LoD n?
+b) [1pt] how many node in the tree at level n
+c) [1pt] whats the rendering time (triangle count) for a node at depth i
+d) [1pt] whats the rendering time (triangle count) at each level i (all nodes on that level)
+e) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)
+
+Second - 2D accelerated rendering . .
+Surface oulines > open/closed paths > CPU co-ords list > GPU renders (used in laser cutters & plotters)
+Properties of a koch snowflake 
+f) [1pt] height of recursion tree for rendering snowflake of LoD n?
+g) [1pt] how many node in the tree at level n
+h) [1pt] whats the rendering time (line segment count) for a node at depth i
+i) [1pt] whats the asymptotic rendering time (line segment count) for a node in the last level n
+j) [1pt] whats asymptotic rendering time (line segment count) at each level of the tree
+k) [1pt] whats the asymptotic rendering time (line segment count) at the last level n	
+l) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)
+
+Third - 2D unaccelerated rendering . . aka software rendering (CPU only) (used in laser cutters & plotters)
+Surface oulines > open/closed paths > CPU co-ords list > CPU rasterises co-ords 
+NOTE the rasterised pixels represent the ink required to print or the the power required for laser to cut the image!!
+m) [1pt] height of recursion tree for rendering snowflake of LoD n?
+n) [1pt] how many node in the tree at level n
+o) [1pt] whats the rendering time (line segment length) for a node at depth i (assume original triangle side length = 1)
+p) [1pt] whats the asymptotic rendering time (line segment length) for a node in the last level n
+q) [1pt] whats asymptotic rendering time (line segment length) at each level of the tree
+r) [1pt] whats the asymptotic rendering time (line segment length) at the last level n	
+s) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)
+
+Fourth - 3D unaccelerated rendering . . (CPU only)
+Surface > triangles > CPU co-ords list > CPU rasterises
+t) [4pt] total asymptotic cost for the CPU to render LoD n (using this method - assume initial triangle side length = 1)
+u) [15pt] prove using recursion tree method
+
+#### 2-2 Digital Circuit Simulation [60pt]
+
+a) What name of method w highest CPU usage? _find_min part of class
+
+Profiler Qs
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     15/6    0.000    0.000    0.001    0.000 sre_parse.py:414(_parse)
+Whats the 15/6 mean under ncalls? Recursive call here: 6 primitive call 15 in total
+
+Profiler column meanings: https://docs.python.org/3/library/profile.html
+```
+ncalls
+    for the number of calls.
+tottime
+    for the total time spent in the given function (and excluding time made in calls to sub-functions)
+percall
+    is the quotient of tottime divided by ncalls
+cumtime
+    is the cumulative time spent in this and all subfunctions (from invocation till exit). This figure is accurate even for recursive functions.
+percall
+    is the quotient of cumtime divided by primitive calls
+filename:lineno(function)
+    provides the respective data of each function
+```
+
+Full result of profiler in: circuit/profiler_output.txt
+```
+        628290079 function calls (628095620 primitive calls) in 474.045 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   259964  275.241    0.001  471.218    0.002 circuit.py:381(_find_min)         ** CULPRIT
+625762426  195.969    0.000  195.969    0.000 circuit.py:286(__lt__)            # less than dunder function
+    64400    0.788    0.000  473.659    0.007 circuit.py:423(step)		# simulation time step > _find_min > __lt__
+828936/634537    0.264    0.000    0.340    0.000 {len}
+    65554    0.233    0.000    0.421    0.000 circuit.py:163(transition_output)
+   194381    0.216    0.000  471.437    0.002 circuit.py:361(min)
+        1    0.173    0.173  473.948  473.948 circuit.py:456(run)
+        1    0.001    0.001  474.045  474.045 circuit.py:3(<module>)
+```
+
+To run tests:
+```
+> python circuit_test.py                                               # whole suite - 6min
+
+> python circuit.py  < tests/1gate.in > out                            # run single test write results out
+
+> diff out tests/1gate.gold                                            # compare result to verified result
+
+> python -m cProfile -s time circuit.py < tests/5devadas13.in          # profile test - take nearly 8min!
+
+> TRACE=jsonp python circuit.py < tests/1gate.in > circuit.jsonp		# create a trace for visualiser
+> TRACE=jsonp python circuit.py < tests/2gates.in > circuit.jsonp		# create a trace for visualiser
+> TRACE=jsonp python circuit.py < tests/3xor.in > circuit.jsonp
+> TRACE=jsonp python circuit.py < tests/4sort.in > circuit.jsonp
+
+EG
+> python circuit_test.py 
+Testing correctness:
+Testing 1gate.in ...... OK
+Testing 2gates.in ...... OK
+Testing 3xor.in ...... OK
+Testing 4sort.in ...... OK
+Testing 5devadas13.in ...... OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 360.847s
+OK
+
+> python circuit.py  < tests/1gate.in 
+19 axb 1
+29 axb 0
+
+```
+
+b) How many time is this method called? 259964
+c) What tightest asymptotic bound of the worst case running time of the method with the bottleneck?
+d) If implemented optimally whats the tightest asymptotic bound of the re-implemented method?
+e) Re-write the data structure using the most efficient method from class (no lib imports)
+
 
 ### 7	Counting sort, radix sort, lower bounds for sorting and searching
 [vid](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=0s)  
@@ -798,9 +982,21 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 		Problem set 3 due
 		Problem set 4 out
 
-### 10	Open addressing, cryptographic hashing
+### 10	Open addressing, cryptographic hashing  
 [vid]()  
 [lect notes]()  
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
 
 		Problem set 4 due
 	 	Quiz 1	 
@@ -811,11 +1007,37 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 		Problem set 5 out
 
 ### 12	Square roots, Newton's method	 
 [vid]()  
 [lect notes]()  
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 5: Graphs
@@ -823,9 +1045,35 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 ### 14	Depth-first search (DFS), topological sorting
 [vid]()  
 [lect notes]()  
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 		Problem set 5 due
 		Problem set 6 out
@@ -836,17 +1084,69 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 ### 16	Dijkstra	 
 [vid]()  
 [lect notes]()  
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 ### 17	Bellman-Ford	 
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 ### 18	Speeding up Dijkstra
 [vid]()  
 [lect notes]()  
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 		Problem set 6 due
 	 	Quiz 2	 
@@ -856,19 +1156,70 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 		Problem set 7 out
 
 ### 20	Parent pointers; text justification, perfect-information blackjack	 
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 ### 21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
 [vid]()  
 [lect notes]()  
 
-### 22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.	
-[vid]()  
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+### 22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
 [lect notes]()  
+
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 		Problem set 7 due
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -877,10 +1228,54 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 ### 24	Algorithms research topics
 [vid]()  
 [lect notes]()  
 
+#### DATA STRUCTURE  
+type:  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+
+## Glossary of terms
+
+The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
+O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
+Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in **CompSci**)  
+Ω - big Omega - BEST case or LOWER bound (common in **CompSci**)  
+o - little O - loose upper bound (common in Maths rare in CompSci)  
+ω - little omega - rough estimate of the order of the growth (rarely used)  
+T(n) - function defining the exact Time or number of steps to complete an algorithm for n items  
+
+Binary tree types:  
+Full			All nodes have 2 children or 0 children (one child not allowed)  
+Complete	Filled top to bottom left to right (and removed in reverse, data position likely re-ordered to preserve RI - EG Heap)  
+Perfect		All layers have all their nodes  
+
+
+Note for array of **any** size tree: element A[n/2+1 . . n] are ALL leaves! 
 
 
 ## How To s
