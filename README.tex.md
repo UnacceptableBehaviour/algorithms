@@ -719,6 +719,14 @@ largest_height also store which height is larger +1 left,  0 equal, -1 right
 
 #### Maths notes - AVL tree (20-28m)
 Min number of nodes in a balanced tree
+$$
+\begin{equation}
+  V = \sum_{i=0}^{n-1} \frac{m}{{(1+p)}^i}
+\end{equation}
+\begin{equation}
+    = m\sum_{i=0}^{n-1} x^i  \;\;where\;x=\frac{1}{(1+p)}
+\end{equation}
+$$
 
 
 
