@@ -52,10 +52,16 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		2. [**Symbols:**](#symbols)  
 		3. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		4. [Useful maths equations](#useful-maths-equations)  
-	2. [L2	Models of computation, Python cost model, document distance](#l2models-of-computation-python-cost-model-document-distance)  
+	2. [R1 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r1---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+	3. [L2	Models of computation, Python cost model, document distance](#l2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
 		2. [Python Model  - Computational Steps](#python-model----computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
+	4. [R2 - doc distance optimisation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r2---doc-distance-optimisation------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
 7. [Problem set 1.](#problem-set-1)  
 	1. [Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practice--calculating-asymptotic-complexity-big-o-notation)  
 	2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
@@ -221,7 +227,8 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 
 ## Unit 1: Introduction
 ### L1	Algorithmic thinking, peak finding	
-[vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
+[vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
 Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
@@ -307,6 +314,17 @@ $$
 $$
 
 
+
+### R1 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid](https://www.youtube.com/watch?v=P7frcB_-g4w&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
+[Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
+Reading: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
 
 
 
@@ -412,6 +430,22 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 Watch vids - add refs - from math text
 Add big O symbols
+
+### R2 - doc distance optimisation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid](https://www.youtube.com/watch?v=j0upQLUrpM8) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
+[Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
+Reading: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+[Doc Distance 7 stages optimisaton](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance)
+https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf  
+
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 1.
@@ -678,10 +712,8 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 ### L5	Binary search trees, BST sort	 
 [vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf)  
-[vid]()  
-[lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type: BST - binary search tree  
@@ -810,7 +842,7 @@ until reach base case
 
 #### DATA STRUCTURE - AVL tree - R6 50m  
 type:  tree  
-use cases: sort & retrieve data set  
+use cases: sort & retrieve data set, prefered in search intensive application, insert more costly  
 queries: search - Θ(logn), in-order traversal - Θ(n), successor, predecessor  
 updates: insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn)    
 RI: height left/right trees only every differ by 1 - balanced tree   
@@ -926,8 +958,8 @@ left & right rotate
 ### R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1082,8 +1114,8 @@ Proofs up to 32m  upt to here all comparison model.
 ### R7 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1123,8 +1155,8 @@ LAST 10m re-watch
 ### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1134,8 +1166,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1145,8 +1177,10 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ### 9	Table doubling, Karp-Rabin
-[vid](https://www.youtube.com/watch?v=BRO7mVIFt08)  
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec09.pdf)  
+[vid](https://www.youtube.com/watch?v=BRO7mVIFt08) ~ [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec09.pdf)  
+Code:
+Reading:
+
 
 How to choose m (table size)  - (on overflow double it)
 
@@ -1170,8 +1204,8 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 ### R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1187,8 +1221,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 10	Open addressing, cryptographic hashing  
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1206,8 +1240,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1224,8 +1258,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 11	Integer arithmetic, Karatsuba multiplication	
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1244,8 +1278,8 @@ Any equation identities / topics for this lecture include context and uses for l
 COPY RECITATION TEMPLATE into further lectures
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Reading:
-Code: 
+Code:
+Reading: 
 
 #### Vid contents
 
@@ -1259,8 +1293,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 12	Square roots, Newton's method	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1282,8 +1316,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 13	Breadth-first search (BFS)	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1303,8 +1337,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 14	Depth-first search (DFS), topological sorting
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1329,8 +1363,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 15	Single-source shortest paths problem	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1350,8 +1384,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 16	Dijkstra	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1371,8 +1405,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 17	Bellman-Ford	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1392,8 +1426,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 18	Speeding up Dijkstra
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1417,8 +1451,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1440,8 +1474,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 20	Parent pointers; text justification, perfect-information blackjack	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1462,8 +1496,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1483,8 +1517,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1508,8 +1542,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 23	Computational complexity	 
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
@@ -1529,8 +1563,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 24	Algorithms research topics
 [vid]()  
 [lect notes]()  
-Reading:
 Code:
+Reading:
 
 #### DATA STRUCTURE  
 type:  
