@@ -47,12 +47,12 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 4. [AIM:](#aim)  
 5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
 6. [Unit 1: Introduction](#unit-1-introduction)  
-	1. [1	Algorithmic thinking, peak finding](#1algorithmic-thinking-peak-finding)  
+	1. [L1	Algorithmic thinking, peak finding](#l1algorithmic-thinking-peak-finding)  
 		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		2. [**Symbols:**](#symbols)  
 		3. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		4. [Useful maths equations](#useful-maths-equations)  
-	2. [2	Models of computation, Python cost model, document distance](#2models-of-computation-python-cost-model-document-distance)  
+	2. [L2	Models of computation, Python cost model, document distance](#l2models-of-computation-python-cost-model-document-distance)  
 		1. [Model of computation:](#model-of-computation)  
 		2. [Python Model  - Computational Steps](#python-model----computational-steps)  
 		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
@@ -64,34 +64,57 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 	5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-1-5-19-points-peak-finding-proof)  
 	6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-1-6-19-points-peak-finding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
 8. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
-	1. [3	Insertion sort, merge sort](#3insertion-sort-merge-sort)  
+	1. [L3	Insertion sort, merge sort](#l3insertion-sort-merge-sort)  
 		1. [Insertion sort](#insertion-sort)  
 		2. [Merge Sort](#merge-sort)  
-	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
-		1. [DATA STRUCTURE - Priority Q - L4](#data-structure---priority-q---l4)  
+	2. [L4	Heaps and heap sort](#l4heaps-and-heap-sort)  
+		1. [DATA STRUCTURE - Priority Q - L4 3m33](#data-structure---priority-q---l4-3m33)  
 		2. [Priority Queue](#priority-queue)  
 		3. [Heap](#heap)  
 			1. [Heap as a tree navigation](#heap-as-a-tree-navigation)  
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
-	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
-	4. [R5	Recursion Trees, Binary Search Trees](#r5recursion-trees-binary-search-trees)  
-	5. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
-		1. [DATA STRUCTURE - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
-		2. [TERMS](#terms)  
-		3. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
-	6. [Problem set 2 (due)](#problem-set-2-due)  
-		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
-		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
-	7. [7	Counting sort, radix sort, lower bounds for sorting and searching](#7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
-		1. [Sorting in Linear-Time](#sorting-in-linear-time)  
-9. [Unit 3: Hashing](#unit-3-hashing)  
-	1. [8	Hashing with chaining - (dictionary / associative array)](#8hashing-with-chaining---dictionary--associative-array)  
-	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karp-rabin)  
-	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
+	3. [L5	Binary search trees, BST sort](#l5binary-search-trees-bst-sort)  
 		1. [DATA STRUCTURE](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
+	4. [R5	Recursion Trees, Binary Search Trees](#r5recursion-trees-binary-search-trees)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+	5. [L6	AVL trees, AVL sort](#l6avl-trees-avl-sort)  
+		1. [DATA STRUCTURE - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
+		2. [TERMS](#terms)  
+		3. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
+	6. [R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r6---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+	7. [Problem set 2 (due)](#problem-set-2-due)  
+		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
+		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
+	8. [L7	Counting sort, radix sort, lower bounds for sorting and searching](#l7counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
+		1. [Sorting in Linear-Time](#sorting-in-linear-time)  
+	9. [R7 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r7---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+9. [Unit 3: Hashing](#unit-3-hashing)  
+	1. [L8	Hashing with chaining - (dictionary / associative array)](#l8hashing-with-chaining---dictionary--associative-array)  
+	2. [R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r8---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+	3. [R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r8---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+	4. [9	Table doubling, Karp-Rabin](#9table-doubling-karp-rabin)  
+	5. [R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r9---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
+	6. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
+		1. [DATA STRUCTURE](#data-structure)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+	7. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
 10. [Problem set 4 due](#problem-set-4-due)  
 11. [Quiz 1](#quiz-1)  
 12. [Unit 4: Numerics](#unit-4-numerics)  
@@ -99,6 +122,9 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		1. [DATA STRUCTURE](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
+	2. [R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r11---maths--code------------------------------------------------------------)  
+		1. [Vid contents](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
 13. [Problem set 5 out](#problem-set-5-out)  
 	1. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
 		1. [DATA STRUCTURE](#data-structure)  
@@ -194,7 +220,7 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 
 
 ## Unit 1: Introduction
-### 1	Algorithmic thinking, peak finding	
+### L1	Algorithmic thinking, peak finding	
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
 Peak finding: assuming **single peak**, and   
@@ -284,7 +310,7 @@ $$
 
 
 
-### 2	Models of computation, Python cost model, document distance	   
+### L2	Models of computation, Python cost model, document distance	   
 [vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2) [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
 
 Algorithm: computational procedure for solving a problem  
@@ -535,7 +561,7 @@ REFERENCES:
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 2: Sorting and Trees
-### 3	Insertion sort, merge sort
+### L3	Insertion sort, merge sort
 [vid](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3)
 [recitation]()  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec03.pdf)  
@@ -583,26 +609,26 @@ Instrument the merge sort code
 
 		Problem set 2 out - Event simulation
 
-### 4	Heaps and heap sort  
-[vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
+### L4	Heaps and heap sort  
+[vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
-Reading:
-Code:
+Reading: none listed  
+Code: [Python](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)  
 
 
-#### DATA STRUCTURE - Priority Q - L4  
+#### DATA STRUCTURE - Priority Q - L4 3m33  
 type:  -  (maxheap or minheap) - prefered implementation ?  
 use cases: finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
 queries: min/max  
 updates: pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
 RI max heap: Node is larger than or equal child nodes, complete binary tree  
 RI min heap: Node is less than or equal child nodes, complete binary tree  
-properties: root contins max/min value, node positions in array - root i=1, parent = i/2, lc_i = 2i, rc_i = 2i+1     
+properties: root contains max/min value, node positions in array - root i=1, parent = i/2, lc_i = 2i, rc_i = 2i+1     
 ![array implementation allocation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/Heap-as-array.svg.png)  
-Credit: https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg
+Credit: https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg  
 RI - representation invariant  
 
-Concept: ADT - Abstract Data Type  
+
 
 #### Priority Queue
 Implements a set of elements associated with a key - methods:
@@ -641,7 +667,7 @@ the key of a node >=  keys of its children
 the key of a node <=  keys of its parent  
 
 ##### Max_heapify  
-[Python source exesize here](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)
+[Python source exercise here](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)
 
 Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
@@ -649,9 +675,30 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 
-### 5	Binary search trees, BST sort	 
+### L5	Binary search trees, BST sort	 
 [vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf)  
+[vid]()  
+[lect notes]()  
+Reading:
+Code:
+
+#### DATA STRUCTURE  
+type: BST - binary search tree  
+use cases: good for bla  
+queries:  
+updates:  
+representation invariant (RI):   
+properties:  
+
+#### Vid contents
+0-6m define problem - runway scheduling - to demonstrate BST ADT
+6m-21m   EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)
+21m-   intro to BSTs
+24m BST RI
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
 
 Concept: Representation Invariant - property of the data structure
 Invariant (RI): All children to left are smaller, all children to the right are larger.  
@@ -712,41 +759,84 @@ o   o   o   o   o   o   o   o
 ```
 
 ### R5	Recursion Trees, Binary Search Trees
+[vid](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28)  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec05.pdf)
+[Code]() 
+
+#### Vid contents
+3m-14m 	Solving Recurrence for merge sort. (PS2 problem 1)
+14m-26m	Data structures, HEAP
+26m-35m	Data structures, BST, (unbalanced)
+35m-42m 	BST find successor/predecessor
+42m-54m 	BST delete, 3 cases O(h) height of tree
+54m-end	BST augmentation - Uses example min - needed for problem set
+
+#### Maths notes  
+Solving Recurrence for merge sort:
+```
+def merge_sort(unsorted_array)						# n elements
+    bisect unsorted_array into aL & aR
+	while aL elements > 1: left = merge_sort(aL)	# keep going if more than one element
+	while aR elements > 1: right = merge_sort(aR)	
+	return merge(left, right)						# nulls removed in merge
+```
+
+1st term: merge_sort calls itself twice with n/2 elements 2T(n/2)
+2nd term: merge take O(n)? but n=1 in final node so O(1) constant time
+
+T(n) = 2T(n/2) + O(n)             # recurrence
+T(1) = Θ(1)                       # base case - merge (1 element)
+
+```
+merge_sort call with number of elements
+              n
+       n/2            n/2
+  n/4      n/4    n/4      n/4             # each recursion
+	|
+until reach base case
+	|
+1   1   1   1  . . .  1   1   1   1        # base case
+```
 
 
 
 
-### 6	AVL trees, AVL sort	
-[vid](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6)  
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf)  
-[guess implementation code]
-
+### L6	AVL trees, AVL sort	
+[vid](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6) - 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf) - 
+[MIT EG code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/avl.py) - 
+[guess implementation code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)  
 
 
 #### DATA STRUCTURE - AVL tree - R6 50m  
 type:  tree  
-use cases: good for bla  
+use cases: sort & retrieve data set  
 queries: search - Θ(logn), in-order traversal - Θ(n), successor, predecessor  
-updates: insert item - Θ(logn),insert m items - Θ(mlogn),delete item - Θ(logn)    
+updates: insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn)    
 RI: height left/right trees only every differ by 1 - balanced tree   
-properties:   
+properties: height & balance maintained in each node   
 RI - representation invariant  
 
 #### TERMS  
 AVL - inventors Adelson-Velsky and Landis   
 [Visualisation of AVL tree](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)  
+
 **In order traversal** - process nodes by key order  
-Next larger - **successor**  
-Next smaller - **predecessor**  
-Importance of a balanced tree - height being log n   
-Unbalance tree worst case height - n average n/2  << V.BAD!  
+**successor** - Next larger  
+**predecessor** - next smaller  
 **height** of a node - longest path to a leaf from node  including itself (the +1 below)  
 **depth** of a node - node in path from root to node
-height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintined in each node)  
+**balanced** tree - height of left child = height of right child  +/-1 - height h = logn
+
+IMPORTANCE OF A BALANCED TREE - height being log n   
+Unbalance tree worst case height - n average n/2  << V.BAD!  
+
+height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintained in each node)  
+
 NOTE:  NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
 information local to node has low (constant time) maintenance over head   
 largest_height also store which height is larger +1 left,  0 equal, -1 right
-**balanced** tree - height of left child = height of right child  +/-1 - height h = logn
+
 
 
 
@@ -830,6 +920,20 @@ rotation - tree manipulation
 left & right rotate 
 
 50m good summary of heap / bst AVL reasons for use
+
+
+
+### R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
  	
@@ -956,7 +1060,7 @@ d) If implemented optimally whats the tightest asymptotic bound of the re-impl
 e) Re-write the data structure using the most efficient method from class (no lib imports)
 
 
-### 7	Counting sort, radix sort, lower bounds for sorting and searching
+### L7	Counting sort, radix sort, lower bounds for sorting and searching
 [vid](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=0s)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec07.pdf)  
 
@@ -975,13 +1079,24 @@ CONCEPTS: Models of computation:
 
 Proofs up to 32m  upt to here all comparison model.
 
+### R7 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 
 		Problem set 3 out
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 3: Hashing
-### 8	Hashing with chaining - (dictionary / associative array)	 
+### L8	Hashing with chaining - (dictionary / associative array)	 
 [vid](https://www.youtube.com/watch?v=0M_kIqhwbFo&t=758s)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf)  
 [succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q)  
@@ -1004,6 +1119,29 @@ Sunccict sunopsis of last lecture!!  Including above
 note the n may end up in a linked list for chaining
 
 LAST 10m re-watch 
+
+### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 9	Table doubling, Karp-Rabin
@@ -1028,6 +1166,17 @@ Means  amortized time
 
 Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 	use choosing size using random prime 
+
+### R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
 
 
 
@@ -1054,6 +1203,19 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+
 ## Problem set 4 due
 ## Quiz 1	 
 
@@ -1077,6 +1239,19 @@ properties:
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Reading:
+Code: 
+
+#### Vid contents
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ## Problem set 5 out
@@ -1390,7 +1565,8 @@ Complete	Filled top to bottom left to right (and removed in reverse, data positi
 Perfect		All layers have all their nodes  
 Balanced	Usually refers to weight height balance leaf depths differ by no more than 1 (can also be weight balanced)
 
-ADT - Abstract Data Type  
+ADT - Abstract Data Type (interface definition, methods & properties)  
+DS - Data Structure (actual implementation of the ADT)  
 RI - representation invariant  
 
 Note for array of **any** size tree: element A[n/2+1 . . n] are ALL leaves! 
