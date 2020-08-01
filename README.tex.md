@@ -731,7 +731,9 @@ $$
   N_h = 1 + N_{h-1} + N_{h-2}
 \end{equation}
 $$
-That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:  
+
+That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:   
+
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
 
@@ -775,7 +777,7 @@ Rotation Cases (@ 23m)
 
    55
   /  \
-50	   65
+50    65
 
 ```
 
