@@ -68,15 +68,16 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		1. [Insertion sort](#insertion-sort)  
 		2. [Merge Sort](#merge-sort)  
 	2. [4	Heaps and heap sort](#4heaps-and-heap-sort)  
-		1. [Priority Queue](#priority-queue)  
-		2. [Heap](#heap)  
+		1. [DATA STRUCTURE - Priority Q - L4](#data-structure---priority-q---l4)  
+		2. [Priority Queue](#priority-queue)  
+		3. [Heap](#heap)  
 			1. [Heap as a tree navigation](#heap-as-a-tree-navigation)  
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [5	Binary search trees, BST sort](#5binary-search-trees-bst-sort)  
 	4. [R5	Recursion Trees, Binary Search Trees](#r5recursion-trees-binary-search-trees)  
 	5. [6	AVL trees, AVL sort](#6avl-trees-avl-sort)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [DATA STRUCTURE - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
 		2. [TERMS](#terms)  
 		3. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
 	6. [Problem set 2 (due)](#problem-set-2-due)  
@@ -89,56 +90,78 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 	2. [9	Table doubling, Karp-Rabin](#9table-doubling-karp-rabin)  
 	3. [10	Open addressing, cryptographic hashing](#10open-addressing-cryptographic-hashing)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-10. [Unit 4: Numerics](#unit-4-numerics)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+10. [Problem set 4 due](#problem-set-4-due)  
+11. [Quiz 1](#quiz-1)  
+12. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [11	Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-	2. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+13. [Problem set 5 out](#problem-set-5-out)  
+	1. [12	Square roots, Newton's method](#12square-roots-newtons-method)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-11. [Unit 5: Graphs](#unit-5-graphs)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+14. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [13	Breadth-first search (BFS)](#13breadth-first-search-bfs)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
 	2. [14	Depth-first search (DFS), topological sorting](#14depth-first-search-dfs-topological-sorting)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-12. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+15. [Problem set 5 due](#problem-set-5-due)  
+16. [Problem set 6 out](#problem-set-6-out)  
+17. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [15	Single-source shortest paths problem](#15single-source-shortest-paths-problem)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
 	2. [16	Dijkstra](#16dijkstra)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
 	3. [17	Bellman-Ford](#17bellman-ford)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
 	4. [18	Speeding up Dijkstra](#18speeding-up-dijkstra)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-13. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+18. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#19memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-	2. [20	Parent pointers; text justification, perfect-information blackjack](#20parent-pointers-text-justification-perfect-information-blackjack)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+19. [Problem set 7 out](#problem-set-7-out)  
+	1. [20	Parent pointers; text justification, perfect-information blackjack](#20parent-pointers-text-justification-perfect-information-blackjack)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-	3. [21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#21string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+	2. [21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#21string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-	4. [22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#22two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+	3. [22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#22two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-14. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+20. [Problem set 7 due](#problem-set-7-due)  
+21. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [23	Computational complexity](#23computational-complexity)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
 	2. [24	Algorithms research topics](#24algorithms-research-topics)  
 		1. [DATA STRUCTURE](#data-structure)  
-		2. [Maths notes](#maths-notes)  
-15. [Glossary of terms](#glossary-of-terms)  
-16. [How To s](#how-to-s)  
+		2. [Vid contents](#vid-contents)  
+		3. [Maths notes](#maths-notes)  
+22. [Glossary of terms](#glossary-of-terms)  
+23. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
 	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
 	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
@@ -146,7 +169,7 @@ CODE: (:seedling:) code complete, (:cactus:) imcomplete / needs work, (:lemon:) 
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-17. [References](#references)  
+24. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
 	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
@@ -563,15 +586,21 @@ Instrument the merge sort code
 ### 4	Heaps and heap sort  
 [vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
+Reading:
+Code:
 
-type:  / PRIORITY QUEUE (maxheap or minheap)  
-use cases: priority queue, finding min or max value in sorted set (not both)  
-queries: max (or min)  
-updates: insert (logn), delete, extract max (logn), replace  
-representation invariant (RI) max heap: Node is larger than or equal child nodes, complete binary tree  
-representation invariant (RI) min heap: Node is less than or equal child nodes, complete binary tree  
-properties: root conatins max/min value, node positions in array - root i=1, parent = i/2, lc_i = 2i, rc_i = 2i+1  
-![array implementation allocation](https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg)  
+
+#### DATA STRUCTURE - Priority Q - L4  
+type:  -  (maxheap or minheap) - prefered implementation ?  
+use cases: finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
+queries: min/max  
+updates: pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
+RI max heap: Node is larger than or equal child nodes, complete binary tree  
+RI min heap: Node is less than or equal child nodes, complete binary tree  
+properties: root contins max/min value, node positions in array - root i=1, parent = i/2, lc_i = 2i, rc_i = 2i+1     
+![array implementation allocation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/Heap-as-array.svg.png)  
+Credit: https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg
+RI - representation invariant  
 
 Concept: ADT - Abstract Data Type  
 
@@ -692,13 +721,16 @@ o   o   o   o   o   o   o   o
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf)  
 [guess implementation code]
 
-#### DATA STRUCTURE  
-type:  
+
+
+#### DATA STRUCTURE - AVL tree - R6 50m  
+type:  tree  
 use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
+queries: search - Θ(logn), in-order traversal - Θ(n), successor, predecessor  
+updates: insert item - Θ(logn),insert m items - Θ(mlogn),delete item - Θ(logn)    
+RI: height left/right trees only every differ by 1 - balanced tree   
+properties:   
+RI - representation invariant  
 
 #### TERMS  
 AVL - inventors Adelson-Velsky and Landis   
@@ -735,6 +767,12 @@ $$
 That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:   
 
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
+
+![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
+
+![Big O graphs](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
+
+
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
@@ -1000,6 +1038,8 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 ### 10	Open addressing, cryptographic hashing  
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1009,18 +1049,21 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-		Problem set 4 due
-	 	Quiz 1	 
+## Problem set 4 due
+## Quiz 1	 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 4: Numerics
 ### 11	Integer arithmetic, Karatsuba multiplication	
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1030,16 +1073,19 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
-		Problem set 5 out
+## Problem set 5 out
 
 ### 12	Square roots, Newton's method	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1049,9 +1095,11 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1059,6 +1107,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 13	Breadth-first search (BFS)	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1068,14 +1118,18 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 14	Depth-first search (DFS), topological sorting
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1085,19 +1139,23 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
-		Problem set 5 due
-		Problem set 6 out
+
+## Problem set 5 due
+## Problem set 6 out
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 6: Shortest Paths
 ### 15	Single-source shortest paths problem	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1107,14 +1165,18 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 16	Dijkstra	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1124,14 +1186,18 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 17	Bellman-Ford	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1141,14 +1207,18 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 18	Speeding up Dijkstra
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1158,9 +1228,11 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 		Problem set 6 due
@@ -1170,6 +1242,8 @@ Any equation identities / topics for this lecture include context and uses for l
 ### 19	Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1179,16 +1253,20 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
-		Problem set 7 out
+
+## Problem set 7 out
 
 ### 20	Parent pointers; text justification, perfect-information blackjack	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1198,14 +1276,19 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 
 
 ### 21	String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1215,13 +1298,18 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 22	Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
+[vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1231,17 +1319,22 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
-		Problem set 7 due
+
+## Problem set 7 due
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 8: Advanced Topics
 ### 23	Computational complexity	 
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1251,14 +1344,18 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### 24	Algorithms research topics
 [vid]()  
 [lect notes]()  
+Reading:
+Code:
 
 #### DATA STRUCTURE  
 type:  
@@ -1268,9 +1365,12 @@ updates:
 representation invariant (RI):   
 properties:  
 
+#### Vid contents
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 
 
 
@@ -1288,7 +1388,10 @@ Binary tree types:
 Full			All nodes have 2 children or 0 children (one child not allowed)  
 Complete	Filled top to bottom left to right (and removed in reverse, data position likely re-ordered to preserve RI - EG Heap)  
 Perfect		All layers have all their nodes  
+Balanced	Usually refers to weight height balance leaf depths differ by no more than 1 (can also be weight balanced)
 
+ADT - Abstract Data Type  
+RI - representation invariant  
 
 Note for array of **any** size tree: element A[n/2+1 . . n] are ALL leaves! 
 
