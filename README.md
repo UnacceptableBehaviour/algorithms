@@ -678,7 +678,9 @@ largest_height also store which height is larger +1 left,  0 equal, -1 right
 #### Maths notes - AVL tree (20-28m)
 Min number of nodes in a balanced tree
 <p align="center"><img src="/tex/383c5c1963e50e762b29e138eb72d9e5.svg?invert_in_darkmode&sanitize=true" align=middle width=576.5765841pt height=75.6164376pt/></p>
-That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:  
+
+That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:   
+
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
 
@@ -722,7 +724,7 @@ Rotation Cases (@ 23m)
 
    55
   /  \
-50	   65
+50    65
 
 ```
 
