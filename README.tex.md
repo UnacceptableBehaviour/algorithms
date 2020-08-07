@@ -230,20 +230,50 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-Video contents
-
-
+**Video contents:**
+0m - 15m45  Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042
+15m45 - 36m20 Peak finding 1D
+17m50 defining the solution to 1D algorithm
+27m40 Divide & conquer (binary search)
+32m30 Recurence relation overview
+36m20 -  Peak finding 2D
+37m13 defining the solution to 2D algorithm - note a >= b - means 
+38m Greedy ascent algorithm - find highest neighbour, go in that direction, loop
+40m43 Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!
+43m 2D binary search
+46m EG 1 - incorrect search
+47m45 EG2 - working version
+51m25 Recurrence for 2D algorithm
+54m15 Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)
 
 Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
 a) linear
-b) search by halves
+b) search by halves - height of a binary tree is logn (log base 2)
 
-34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(log2n) ??
+34m50	T(n) = Θ(1) + . . . Θ(1) = Θ($$log_2n$$)  
+Binary search tree is formed by the search by halves algorithm and the number of **steps to find the target is the height of the tree.**
 
-Greedy Ascent Algorithm
+51m48  
+$$
+\begin{equation}
+  binary\;tree\;height\;h = log_2n
+\end{equation}
+\begin{equation}
+  T(n,m) = T(n, \frac{m}{2}) + \Theta(n)
+\end{equation}
+\begin{equation}
+  T(n,m) = \Theta(n)\;.\;.\;\Theta(n)\;(log_2m\;times\;for\;m\;columns)
+\end{equation}
+\begin{equation}
+  T(n,m) = \Theta(nlogm) = \Theta(nlogn)\;\text{where n=m}
+\end{equation}
+$$
+m = columns  
+n = rows  
+That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.  
+Swapping 14 & 20 would result in a fail, maybe itll make sense later!
 
-52m30  start complexity - final solution @ 52m52
 
 #### Notes on time complexity (always worst case complexity)
 aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
@@ -257,7 +287,7 @@ Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_sy
 
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
 O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
-Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in **CompSci**)  
+Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case - lowerbound & upper bound (common in **CompSci**)  
 Ω - big Omega - BEST case or LOWER bound (common in **CompSci**)  
 o - little O - loose upper bound (common in Maths rare in CompSci)  
 ω - little omega - rough estimate of the order of the growth (rarely used)  
@@ -304,6 +334,12 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 [Setting yAxis logarithmic](https://matplotlib.org/3.1.1/gallery/scales/scales.html)  
 
 #### Useful maths equations
+Fundamental to binary tree algorithms:
+$$
+\begin{equation}
+  binary\;tree\;height\;h = logn
+\end{equation}
+$$
 
 From recitation 1 (26m) [Stirlings approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
 $$
