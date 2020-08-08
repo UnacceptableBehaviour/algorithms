@@ -231,35 +231,36 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
 **Video contents:**
-0m - 15m45  Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042
-15m45 - 36m20 Peak finding 1D
-17m50 defining the solution to 1D algorithm
-27m40 Divide & conquer (binary search)
-32m30 Recurence relation overview
-36m20 -  Peak finding 2D
-37m13 defining the solution to 2D algorithm - note a >= b - means 
-38m Greedy ascent algorithm - find highest neighbour, go in that direction, loop
-40m43 Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!
-43m 2D binary search
-46m EG 1 - incorrect search
-47m45 EG2 - working version
-51m25 Recurrence for 2D algorithm
-54m15 Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)
-
+0m - 15m45  Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
+15m45 - 36m20 Peak finding 1D  
+17m50 defining the solution to 1D algorithm  
+27m40 Divide & conquer (binary search)  
+32m30 Recurence relation overview  
+36m20 -  Peak finding 2D  
+37m13 defining the solution to 2D algorithm - note a >= b - means   
+38m Greedy ascent algorithm - find highest neighbour, go in that direction, loop  
+40m43 Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!  
+43m 2D binary search  
+46m EG 1 - incorrect search  
+47m45 EG2 - working version  
+51m25 Recurrence for 2D algorithm  
+54m15 Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)  
+  
 Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
 a) linear
 b) search by halves - height of a binary tree is logn (log base 2)
 
-34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(<p align="center"><img src="/tex/5fbe862212b167bac707b3175a7e4e39.svg?invert_in_darkmode&sanitize=true" align=middle width=38.2783137pt height=14.611878599999999pt/></p>)  
+34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(logn)  
 Binary search tree is formed by the search by halves algorithm and the number of **steps to find the target is the height of the tree.**
+Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
 
 51m48  
 <p align="center"><img src="/tex/345071e71619869b5189c43f93597997.svg?invert_in_darkmode&sanitize=true" align=middle width=546.9241338pt height=114.95363879999998pt/></p>
 m = columns  
 n = rows  
 That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.  
-Swapping 14 & 20 would result in a fail, maybe itll make sense later!
+Swapping 14 & 20 would result in a fail, maybe itll make sense later!  
 
 
 #### Notes on time complexity (always worst case complexity)
