@@ -51,10 +51,11 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
-		1. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
-		2. [**Symbols:**](#symbols)  
-		3. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
-		4. [Useful maths equations](#useful-maths-equations)  
+		1. [Vid contents](#vid-contents)  
+		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
+		3. [**Symbols:**](#symbols)  
+		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
+		5. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r1---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -230,7 +231,7 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-**Video contents:**
+#### Vid contents
 0m - 15m45  Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
 15m45 - 36m20 Peak finding 1D  
 17m50 defining the solution to 1D algorithm  
@@ -252,14 +253,16 @@ a) linear
 b) search by halves - height of a binary tree is logn (log base 2)
 
 34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(logn)  
-Binary search tree is formed by the search by halves algorithm and the number of **steps to find the target is the height of the tree.**
+Binary search tree is formed by the search by halves algorithm and the number of **steps to find the target is the height of the tree.**  
+See R1 31m & 43m
+
 Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
 
 51m48  
 <p align="center"><img src="/tex/345071e71619869b5189c43f93597997.svg?invert_in_darkmode&sanitize=true" align=middle width=546.9241338pt height=114.95363879999998pt/></p>
 m = columns  
 n = rows  
-That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.  
+**That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.**  
 Swapping 14 & 20 would result in a fail, maybe itll make sense later!  
 
 
@@ -275,7 +278,8 @@ Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_sy
 
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
 O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
-Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case - lowerbound & upper bound (common in **CompSci**)  
+Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case - LOWER BOUND & UPPER BOUND (common in **CompSci**)  
+(note the upper and lower bounds are the same function that only differs by a constant)
 Ω - big Omega - BEST case or LOWER bound (common in **CompSci**)  
 o - little O - loose upper bound (common in Maths rare in CompSci)  
 ω - little omega - rough estimate of the order of the growth (rarely used)  
@@ -321,9 +325,6 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 Fundamental to binary tree algorithms:
 <p align="center"><img src="/tex/4cd8fa5dbdeb7a9567601dd345719d75.svg?invert_in_darkmode&sanitize=true" align=middle width=450.19701375pt height=16.438356pt/></p>
 
-From recitation 1 (26m) [Stirlings approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-<p align="center"><img src="/tex/17789aec953e515f4d4dbbcbe79c0588.svg?invert_in_darkmode&sanitize=true" align=middle width=411.75196425pt height=31.070567549999996pt/></p>
-<p align="center"><img src="/tex/8182cc03706f858356e39b08f4cc0a9d.svg?invert_in_darkmode&sanitize=true" align=middle width=409.5568059pt height=44.89738935pt/></p>
 
 
 
@@ -334,10 +335,33 @@ From recitation 1 (26m) [Stirlings approximation](https://en.wikipedia.org/wiki/
 Reading: 
 
 #### Vid contents
+2m - 13m40 Asymptotic complexity Ω, Θ, O  
+13m40 - common worst case runtimes  
+16m - example asymptotic notation  
+23m - log(log(n))  
+25m - log ( N choose N/2 ) = Θ(n)    
+31m - 43m peak finding 1d - running time T(n)
+43m - 53m peak finding - running time T(n)
+
+NOTE
+g(x) = O(f(x)) - UPPER bound - O - big O
+g(x) = Θ(f(x)) - UPPER & LOWER bound - Θ - big Theta
+g(x) = Ω(f(x)) - LOWER bound - Ω - big Omega
+
+but in this course where big O is written it usually mean big Θ 13m - thanks for the confusion
+
+31m 1d Peak finding - running timeT(n)
+WRITE OUT
+
+43m 2d Peak finding - running timeT(n)
+WRITE OUT
+
 
 #### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
+(26m) [Stirlings approximation - equation for n!](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
+<p align="center"><img src="/tex/17789aec953e515f4d4dbbcbe79c0588.svg?invert_in_darkmode&sanitize=true" align=middle width=411.75196425pt height=31.070567549999996pt/></p>
+(26m) [Equation for Series - summation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
+<p align="center"><img src="/tex/8182cc03706f858356e39b08f4cc0a9d.svg?invert_in_darkmode&sanitize=true" align=middle width=409.5568059pt height=44.89738935pt/></p>
 
 
 ### L2 - Models of computation, Python cost model, document distance	   
