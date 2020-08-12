@@ -56,16 +56,20 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [**Symbols:**](#symbols)  
 		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		5. [Useful maths equations](#useful-maths-equations)  
-	2. [R1 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r1---maths--code------------------------------------------------------------)  
+	2. [R1 - maths & code](#r1---maths--code)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
 	3. [L2 - Models of computation, Python cost model, document distance](#l2---models-of-computation-python-cost-model-document-distance)  
-		1. [Model of computation:](#model-of-computation)  
-		2. [Python Model  - Computational Steps](#python-model----computational-steps)  
-		3. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
+		1. [Vid contents](#vid-contents)  
+		2. [Model of computation:](#model-of-computation)  
+		3. [Python Model  - Computational Steps](#python-model----computational-steps)  
+		4. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
+		5. [Examples Document distance code:](#examples-document-distance-code)  
+		6. [Maths notes](#maths-notes)  
 	4. [R2 - doc distance optimisation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r2---doc-distance-optimisation------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
+		2. [Setting up for profiling](#setting-up-for-profiling)  
+		3. [Maths notes](#maths-notes)  
 7. [Problem set 1.](#problem-set-1)  
 	1. [Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practice--calculating-asymptotic-complexity-big-o-notation)  
 	2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
@@ -328,7 +332,7 @@ Fundamental to binary tree algorithms:
 
 
 
-### R1 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### R1 - maths & code
 [vid](https://www.youtube.com/watch?v=P7frcB_-g4w&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
@@ -351,10 +355,12 @@ g(x) = Ω(f(x)) - LOWER bound - Ω - big Omega
 but in this course where big O is written it usually mean big Θ 13m - thanks for the confusion
 
 31m 1d Peak finding - running timeT(n)
-WRITE OUT
+WRITE OUT - in hand written notes L1
 
 43m 2d Peak finding - running timeT(n)
-WRITE OUT
+WRITE OUT - in hand written notes L1
+
+Finish R1 notes from - Recurrence Traps & 2-D Peak Finding: Algorithm 5
 
 
 #### Maths notes  
@@ -365,13 +371,27 @@ WRITE OUT
 
 
 ### L2 - Models of computation, Python cost model, document distance	   
-[vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2) [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf)  
+[vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf) ~ 
+DocDistance 8 versions Code see R2 ~ 
+[DocDistance 8 versions R2 notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf)  
+
+#### Vid contents
+0-6m - Whats an algorithm  
+6m - model of computation  
+7m50 - Random access machine (model of computation)  
+13m40 - Pointer machine (model of computation)  
+19m - 32m - Python model
+32m -  44m - Document distance
+44m - 8 version of doc distance and optimisations
+
 
 Algorithm: computational procedure for solving a problem  
 What is time (complexity)? **O(1) = constant time**  
-#### Model of computation:
-Operations an algorithm can perform
-Time cost of those operations
+
+#### Model of computation:  
+Operations an algorithm can perform  
+Time cost of those operations  
 Models of computation:  
 a) random access machine RAM - word array  
 	- load O(1)  
@@ -383,33 +403,33 @@ b) pointer machine (OO programming)
 	- object has constant no of fields O(1)  
 	- word or pointer / references / null or None O(1)  
 
-#### Python Model  - Computational Steps
+#### Python Model  - Computational Steps  
 
-Increment array item:
+Increment array item:  
 	list[i] = list[i] + 5    is **O(1)**  
 
-Object attribute access:
+Object attribute access:  
 	obj w/ O(1) number of attributes (constant no. of attributes)  
 	attribute access is **O(1)** - pointer/ref access  
 
-Access next item in linked list:
+Access next item in linked list:  
 	x = x.next is **O(1)**  
 
-Add item to linked list:	
+Add item to linked list:  
 	list.append(x) ? python uses table doubling **O(1)**  
 
-Adding two linked lists together
+Adding two linked lists together  
 	list1 + list2  **O(n)**  
 	Code steps:  
-	L = []	 O(1)    
+	L = []	 O(1)  
 	for x in list1: L.append(x) O( len(list1) )     - for list L - len(L) also written | L |  
 	for x in list2: L.append(x) O( len(list2) )     - len, length, size, no of elements  
 	total:  **O(1 + len(list1) + len(list2) ) = O(n) **  
 
-Checking existence of item in list:
+Checking existence of item in list:  
 	x in L  **O(n)** - linear time  
 		from python check to see if x is in list L  
-		required search through whole list (worst case)
+		required search through whole list (worst case)  
 
 Sorting a list:  
 	L.sort()   **O(| L | log | L |)**					- ie **O(n log n)**  
@@ -424,11 +444,10 @@ Adding two longs (many word numbers)
 	x+y    **O(|x| + |y|)**  
 	x*y    **O((|x| + |y|)^lg3)**  
 	NOTE lg  used instead of log base 2 (log_2)  
-	lg3 = 1.6 so better than quadratic time 
+	lg3 = 1.6 so better than quadratic time  
   	Covered in [Lecture 11 - Integer arithmetic, Karatsuba multiplication](#11integer-arithmetic-karatsuba-multiplication)  
 
 **heapq** covered in lecture [4 - Heaps and heap sort](#4heaps-and-heap-sort)  
-
 
 #### Document distance (problem and algorithms)  
 d(D1, D2)  like a correlation function, similarity of two documents
@@ -442,10 +461,13 @@ Obviously bigger documents will naturally give bigger numbers do the value is no
 
 <p align="center"><img src="/tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
 
-Examples Document distance code:
+#### Examples Document distance code:
 [this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
-or [on web](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lec02_code.zip)
+or [on web](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lec02_code.zip)  
 
+#### Maths notes  
+41m angle of two vectors  
+more detail? 
 
 REFS  
 [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/)  
@@ -456,45 +478,21 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 
 
-Watch vids - add refs - from math text
-Add big O symbols
-
 ### R2 - doc distance optimisation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid](https://www.youtube.com/watch?v=j0upQLUrpM8) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
+[lect notes - code handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf) ~ 
+[python cost model 8 sources compared](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf) ~ 
+[Doc Distance 7 stages optimisation local code](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
-Reading: 
 
 #### Vid contents
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-[Doc Distance 7 stages optimisaton](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance)
-https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf  
 
 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Problem set 1.
-[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
-
-
-
-
-### Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)  
-For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
-Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
-Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)   
-Comment functions in/out of the source or add custom functions!   
-
-Problem 1.1a
-<p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
-
-Problem 1.1b
-<p align="center"><img src="/tex/cbde0d11ea8f1ebd27ab4ac5526ed78a.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18578164999997pt height=122.87297219999999pt/></p>
-Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
-<p align="center"><img src="/tex/c25acae12157db0472ada055c7a1f07d.svg?invert_in_darkmode&sanitize=true" align=middle width=588.0255678pt height=32.990165999999995pt/></p>
+#### Setting up for profiling
+```
+\end{equation}
+<p align="center"><img src="/tex/e2ca576ae12241d18da8e24d0bb37698.svg?invert_in_darkmode&sanitize=true" align=middle width=1185.2532087pt height=562.4528909999999pt/></p>
 with the left dominating the right give nlog(n)  
 
 
