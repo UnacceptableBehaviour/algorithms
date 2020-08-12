@@ -66,10 +66,12 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		4. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 		5. [Examples Document distance code:](#examples-document-distance-code)  
 		6. [Maths notes](#maths-notes)  
-	4. [R2 - doc distance optimisation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r2---doc-distance-optimisation------------------------------------------------------------)  
+	4. [R2 - doc distance optimisation - python cost model](#r2---doc-distance-optimisation---python-cost-model)  
 		1. [Vid contents](#vid-contents)  
 		2. [Setting up for profiling](#setting-up-for-profiling)  
-		3. [Maths notes](#maths-notes)  
+		3. [Code of code](#code-of-code)  
+		4. [Comparing versions](#comparing-versions)  
+		5. [Maths notes](#maths-notes)  
 7. [Problem set 1.](#problem-set-1)  
 	1. [Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practice--calculating-asymptotic-complexity-big-o-notation)  
 	2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
@@ -478,21 +480,26 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 
 
-### R2 - doc distance optimisation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### R2 - doc distance optimisation - python cost model
 [vid](https://www.youtube.com/watch?v=j0upQLUrpM8) ~ 
-[lect notes - code handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf) ~ 
+[lect notes - CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf) ~ 
 [python cost model 8 sources compared](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf) ~ 
 [Doc Distance 7 stages optimisation local code](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 
 #### Vid contents
+0-7m - inner product  
+7m - got through docdist1  
+13m - cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
+ One line, N = characters, w = word size, number of word = N / w + 1 (1 for each space)  
+ 
 
 
 
 #### Setting up for profiling
 ```
 \end{equation}
-<p align="center"><img src="/tex/e2ca576ae12241d18da8e24d0bb37698.svg?invert_in_darkmode&sanitize=true" align=middle width=1185.2532087pt height=562.4528909999999pt/></p>
+<p align="center"><img src="/tex/fd230542acfe34ab1d60373b78e5f23e.svg?invert_in_darkmode&sanitize=true" align=middle width=1185.2532087pt height=600.99170175pt/></p>
 with the left dominating the right give nlog(n)  
 
 
