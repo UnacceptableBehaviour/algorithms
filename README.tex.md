@@ -535,11 +535,6 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 #### Setting up for profiling
 ```
-\end{equation}
-\begin{equation}
-  \sum_{w}D_1[w].D_2[w]
-  \label{sum}  
-\end{equation
 ```
 
 #### Code of code
