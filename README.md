@@ -498,8 +498,51 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 #### Setting up for profiling
 ```
-\end{equation}
-<p align="center"><img src="/tex/fd230542acfe34ab1d60373b78e5f23e.svg?invert_in_darkmode&sanitize=true" align=middle width=1185.2532087pt height=600.99170175pt/></p>
+```
+
+#### Code of code
+```
+9
+10
+11
+12
+13
+14 
+```
+
+#### Comparing versions
+Compare dd1 vs dd2
+optimisation 
+
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## Problem set 1.
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)  
+
+
+
+
+### Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)  
+For each group of functions, sort the functions in increasing order of asymptotic (big-O) complexity:  
+Order of complexity here [**Time Complexity - Order Severity**](#time-complexity--order-severity)  
+Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)   
+Comment functions in/out of the source or add custom functions!   
+
+Problem 1.1a
+<p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
+
+Problem 1.1b
+<p align="center"><img src="/tex/cbde0d11ea8f1ebd27ab4ac5526ed78a.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18578164999997pt height=122.87297219999999pt/></p>
+Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
+<p align="center"><img src="/tex/c25acae12157db0472ada055c7a1f07d.svg?invert_in_darkmode&sanitize=true" align=middle width=588.0255678pt height=32.990165999999995pt/></p>
 with the left dominating the right give nlog(n)  
 
 
