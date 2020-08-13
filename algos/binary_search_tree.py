@@ -55,6 +55,9 @@ class Node(object):     # sub classing (object) not required in 3.x
         if self.rc != None:
             node = self.rc.max()            
         return node
+    
+    def is_leaf(self):
+        return (self.rc is None and self.lc is None)
 
 
 class BST:
@@ -72,7 +75,7 @@ class BST:
         
         # for display purposes
         self.node_enum = []                     # create an array of objects
-        self.narrow_tree = True # False
+        self.narrow_tree = True # False         # narrow tree shows less node info
         #self.node_enum[BST.ROOT_NODE] = node
 
 
@@ -188,9 +191,80 @@ class BST:
                         
         return current.parent
 
-    # see R5 42m - 3 cases to be aware of 
-    def delete(self, key):
-        pass
+    # delete(key) see R5 42m - 3 cases to be aware of
+    # case 1: leaf
+    # 	simply delete
+    # 
+    # case 2: delete single node with only one sub-tree
+    # 	replace parent pointer to node to point at subtree
+    # 	straight or zig/zag its the same
+    # 
+    # case 3: deleting a node that has 2 subtrees
+    # 	replace node with successor - smallest element in right subtree
+    # 	successor may have a subtree so need to call delete on it first
+    # 	replace original deleted node with it
+    # 	(from R5-44m50)
+    # 
+    # 
+    # 	running time 
+    # 		find key O(h) +
+    # 		delete - possible 2 subtrees O(h)
+    # 		link swaps constant time O(1)
+    # 		= O(h) + O(h) + O(1) = 2 * O(h) + O(1) = O(h)
+    
+    # find key
+    # if leaf? delete - done
+    # has one subtree - repoint parent to tree
+    # has two subtrees - find successor, call delete on it, insert into tree    
+    def delete(self, del_node):
+        print(f"- - -delete({del_node.key})")
+        node = self.find_node(del_node)                         # O(h) = O(logn)
+        print(f"- - -delete found({repr(node)})")
+        print(f"- - -       parent:({repr(node.parent)}) PRE")
+        
+        
+        if node.is_leaf():                                      # O(1)
+            # has rp (left of parent : node == node.parent.left)            
+            if node == node.parent.lc:
+                node.parent.lc = None                
+            else:
+                node.parent.rc = None
+            node.parent = None
+            print(f"- - -       parent:({repr(node.parent)}) LEAF")
+            return node
+
+        # single subtree - point parent at subtree & vice versa
+        if node.lc == None or node.rc == None:            
+            if node == node.parent.lc:              # this is a left child
+                if node.rc == None:
+                    node.parent.lc = node.lc        # w/ a left branch
+                    node.lc.parent = node.parent
+                else:
+                    node.parent.lc = node.rc        # w/ a right branch
+                    node.rc.parent = node.parent
+                    
+            else:                                   # this is a right child
+                if node.rc == None:
+                    node.parent.rc = node.lc        # w/ a left branch
+                    node.lc.parent = node.parent
+                else:
+                    node.parent.rc = node.rc        # w/ a right branch
+                    node.rc.parent = node.parent
+            
+            print(f"- - -       parent:({repr(node.parent)}) 1 SUBTREE")
+            return node
+        
+        # two subtrees - substitute successor for deleted node
+        else:
+            successor = self.successor(node)
+            print(f"- - -       successor:({repr(successor)}) PRE - 2 SUBTREEs")
+            node.key, successor.key = successor.key, node.key
+            print(f"- - -       successor:({repr(node.parent)}) POST - 2 SUBTREEs")
+            node = self.delete(successor.key)                        
+            return node
+            
+        
+                        
 
     def is_valid_bst(self, node=None):        
         if node == None: node = self.root
@@ -327,6 +401,7 @@ if __name__ == '__main__':
         print(bst.root.min())
     
     
+    # successor predecesor test
     pprint(bst)
     print(f"Nodes:{bst.numNodes}")
     print(f"Nodes:{bst.numNodes()}")
@@ -335,15 +410,86 @@ if __name__ == '__main__':
     #bst.narrow_tree = False
     #print(bst)
     print(f"VALID BST?:{bst.is_valid_bst()}")
-    for key in node_vals:
-        node = bst.find_node(key)
+    for k in node_vals:
+        node = bst.find_node(k)
         print(node.key)
         # successor test
-        # print(f"successor of {node} - {bst.successor(node)}")
+        print(f"successor of {node} - {bst.successor(node)}")
         # predecessor test
         print(f"predecessor of {node} - {bst.predecessor(node)}")
+
+ #                                               67                                               
+ # 
+ #                       45                                             129                       
+ # 
+ #           15                      57                     104                     158           
+ # 
+ #     -           29          -           66          82         116         138         184     
+ # 
+ #  -     -     17    35    -     -     -     -     77   103    -     -    134   141   175    -   
+ # 
+ # -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  90 -  -  -  -  -  -  -  -  -  -  -  -  - 
+    def reset_bst():
+        key_set = [67,45,129,15,57,104,158,29,66,82,116,138,184,17,35,77,103,134,141,175,90]
+        
+        bst = BST( Node(key=key_set.pop(0)) )
+        
+        for i in key_set:
+            new_node = Node(key=i)
+            print( bst.add_node(new_node) )
+        
+        return bst
+
+    bst = reset_bst()
+    print("*** NON random node allocation DELETE test ***")
+    print(bst)
+
+    def find_n_show(k):
+        node = bst.find_node(Node(key=k))
+        print(f"{node}, is_leaf:{node.is_leaf()}")
+        print(repr(node))
+    
+    # is_leaf check
+    find_n_show(17)
+    find_n_show(35)
+    find_n_show(66)
+    find_n_show(67)
+    find_n_show(57)
+    find_n_show(82)
+    find_n_show(15)
+    
+    # delete leaf
+    bst.delete(Node(key=17))
+    bst.delete(Node(key=35))
+    bst.delete(Node(key=29))
+    print(bst)
+    bst = reset_bst()
+    print(bst)
+    
+    # delete node w single sub-tree
+    bst.delete(Node(key=15))        
+    print(bst)
+    
+    bst.delete(Node(key=184))
+    print(bst)
+    bst.delete(Node(key=175))
+    print(bst)    
+    bst.delete(Node(key=158))
+    print(bst)
     
     
+    # delete three leaves
+
+    #bst.delete(Node(key=17))
+    #bst.delete(Node(key=17))
+ 
+    # diagram_bst = BST( Node(key=0) )
+    # for i in range(0, 27):        
+    #     new_node = Node(key=i)
+    #     diagram_bst.add_node(new_node)
+    # 
+    # print(diagram_bst)
+        
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
     
 
