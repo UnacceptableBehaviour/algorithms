@@ -257,11 +257,11 @@ class BST:
         # two subtrees - substitute successor for deleted node
         else:
             successor = self.successor(node)
-            print(f"- - -       successor:({repr(successor)}) PRE - 2 SUBTREEs")
+            print(f"- - -       successor:({repr(successor)}) PRE - 2 SUBTREEs")            
+            self.delete(successor)
             node.key, successor.key = successor.key, node.key
-            print(f"- - -       successor:({repr(node.parent)}) POST - 2 SUBTREEs")
-            node = self.delete(successor.key)                        
-            return node
+            print(f"- - -       node:({repr(node)}) POST - 2 SUBTREEs")            
+            return successor
             
         
                         
@@ -475,6 +475,10 @@ if __name__ == '__main__':
     bst.delete(Node(key=175))
     print(bst)    
     bst.delete(Node(key=158))
+    print(bst)
+    bst.delete(Node(key=129))
+    print(bst)
+    bst.delete(Node(key=67))
     print(bst)
     
     
