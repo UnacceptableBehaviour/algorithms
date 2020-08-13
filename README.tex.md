@@ -748,8 +748,7 @@ go up a layer and merge leaves
 **Concept of auxiliary space**, in the above python code that would be stack I assume.
 
 
-
-Instrument the merge sort code
+Instrument the merge sort code - s
 
 [Difference between theta, omega complexity and big O](https://www.youtube.com/watch?v=6Ol2JbwoJp0)  
   
@@ -764,13 +763,13 @@ Code: [Python](https://github.com/UnacceptableBehaviour/algorithms/blob/master/a
 
 
 #### DATA STRUCTURE - Priority Q - L4 3m33  
-type:  -  (maxheap or minheap) - prefered implementation ?  
-use cases: finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
-queries: min/max  
-updates: pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
-RI max heap: Node is larger than or equal child nodes, complete binary tree  
-RI min heap: Node is less than or equal child nodes, complete binary tree  
-properties: root contains max/min value, node positions in array - root i=1, parent = i/2, lc_i = 2i, rc_i = 2i+1     
+**type:**  -  (maxheap or minheap) - prefered implementation ?  
+**use cases:** finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
+**queries:** min/max  
+**updates:** pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
+**RI max heap:** Node is larger than or equal child nodes, complete binary tree  
+**RI min heap:** Node is less than or equal child nodes, complete binary tree  
+**properties:** root contains max/min value,  node positions in array:  root i=1,  parent = i/2,  lc_i = 2i,  rc_i = 2i+1     
 ![array implementation allocation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/Heap-as-array.svg.png)  
 Credit: https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg  
 RI - representation invariant  
