@@ -84,21 +84,21 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Insertion sort](#insertion-sort)  
 		2. [Merge Sort](#merge-sort)  
 	2. [L4 - Heaps and heap sort](#l4---heaps-and-heap-sort)  
-		1. [DATA STRUCTURE - Priority Q - L4 3m33](#data-structure---priority-q---l4-3m33)  
+		1. [**DATA STRUCTURE - Priority Q - L4 3m33**](#data-structure---priority-q---l4-3m33)  
 		2. [Priority Queue](#priority-queue)  
 		3. [Heap](#heap)  
 			1. [Heap as a tree navigation](#heap-as-a-tree-navigation)  
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
-		1. [DATA STRUCTURE - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
+		1. [**DATA STRUCTURE** - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
 		2. [TERMS](#terms)  
 		3. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
 	6. [R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r6---maths--code------------------------------------------------------------)  
@@ -122,7 +122,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
 	5. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	6. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
@@ -132,7 +132,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 11. [Quiz 1](#quiz-1)  
 12. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	2. [R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r11---maths--code------------------------------------------------------------)  
@@ -140,63 +140,63 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Maths notes](#maths-notes)  
 13. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 14. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	2. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 15. [Problem set 5 due](#problem-set-5-due)  
 16. [Problem set 6 out](#problem-set-6-out)  
 17. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [L15 - Single-source shortest paths problem](#l15---single-source-shortest-paths-problem)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	2. [L16 - Dijkstra](#l16---dijkstra)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	3. [L17 - Bellman-Ford](#l17---bellman-ford)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	4. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 18. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 19. [Problem set 7 out](#problem-set-7-out)  
 	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	2. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	3. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 20. [Problem set 7 due](#problem-set-7-due)  
 21. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 	2. [24 - Algorithms research topics](#24---algorithms-research-topics)  
-		1. [DATA STRUCTURE](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Maths notes](#maths-notes)  
 22. [Glossary of terms](#glossary-of-terms)  
@@ -762,14 +762,19 @@ Reading: none listed
 Code: [Python](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)  
 
 
-#### DATA STRUCTURE - Priority Q - L4 3m33  
+#### **DATA STRUCTURE - Priority Q - L4 3m33**  
 **type:**  -  (maxheap or minheap) - prefered implementation ?  
 **use cases:** finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
 **queries:** min/max  
 **updates:** pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
 **RI max heap:** Node is larger than or equal child nodes, complete binary tree  
 **RI min heap:** Node is less than or equal child nodes, complete binary tree  
-**properties:** root contains max/min value,  node positions in array:  root i=1,  parent = i/2,  lc_i = 2i,  rc_i = 2i+1     
+**properties:** root contains max/min value  
+node positions in array:  
+root i=1  
+parent = i/2  
+lc_i = 2i  
+rc_i = 2i+1     
 ![array implementation allocation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/Heap-as-array.svg.png)  
 Credit: https://en.wikipedia.org/wiki/Heap_(data_structure)#/media/File:Heap-as-array.svg  
 RI - representation invariant  
@@ -827,7 +832,7 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type: BST - binary search tree  
 use cases: good for bla  
 queries:  
@@ -952,7 +957,7 @@ until reach base case
 [guess implementation code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)  
 
 
-#### DATA STRUCTURE - AVL tree - R6 50m  
+#### **DATA STRUCTURE** - AVL tree - R6 50m  
 type:  tree  
 use cases: sort & retrieve data set, prefered in search intensive application, insert more costly  
 queries: search - Θ(logn), in-order traversal - Θ(n), successor, predecessor  
@@ -1325,7 +1330,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1362,7 +1367,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1397,7 +1402,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1420,7 +1425,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1441,7 +1446,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1467,7 +1472,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1488,7 +1493,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1509,7 +1514,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1530,7 +1535,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1555,7 +1560,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1578,7 +1583,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1600,7 +1605,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1621,7 +1626,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1646,7 +1651,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
@@ -1667,7 +1672,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### DATA STRUCTURE  
+#### **DATA STRUCTURE**  
 type:  
 use cases: good for bla  
 queries:  
