@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 # 3.7
 
+# TODO - move functionality into Node fro BST
+
 import sys
 import traceback            # traceback.print_stack(file=sys.stdout) to dump stack trace
 
