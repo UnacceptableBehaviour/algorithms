@@ -847,33 +847,33 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 ### L5 - Binary search trees, BST sort	 
-[vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5)  
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf)  
+[vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf) ~ 
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
 [Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
-Reading:
+Reading: CLRS Chapter 10, 12.1-3
 
 #### **DATA STRUCTURE** - BST - Binary search trees  
-type: BST -   
-use cases: sorted data, priority queue 
-queries: search/find, min, max, node_count_before  
-updates: insert, delete  
-representation invariant (RI): All children to left are smaller, all children to the right are larger.  
-properties: sorted data  
+**type:** BST  - [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)  
+**use cases:** sorted data, priority queue 
+**queries:** search/find, min, max, node_count_before  
+**updates:** insert, delete  
+**representation invariant (RI):** All children to left are smaller, all children to the right are larger.  
+**properties:** sorted data  
 See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
 #### Vid contents
-0-6m	define problem - runway scheduling - to demonstrate BST ADT
-6m-21m	EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)
-21m	intro to BSTs
-24m	BST RI
-26m	insert() - O(h) - height of tree - **O(logn)** - n=number of nodes
-35m	min() - O(h) - go farthest left  
-36m	max() - O(h) - go farthest right
-37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?
- - Add number of nodes below node to it. (number includes node itself)
-43m	Rank k - algorithm code 
-AUGMENTATION - k minute check
+0-6m	define problem - runway scheduling - to demonstrate BST ADT  
+6m-21m	EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)  
+21m	intro to BSTs  
+24m	BST RI  
+26m	insert() - O(h) - height of tree - **O(logn)** - n=number of nodes  
+35m	min() - O(h) - go farthest left   
+36m	max() - O(h) - go farthest right  
+37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?  
+ - Add number of nodes below node to it. (number includes node itself)  
+43m	AUGMENTATION - Rank k - algorithm code   
+
 
 
 Concept: Representation Invariant - property of the data structure  
