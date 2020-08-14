@@ -103,8 +103,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		4. [delete()](#delete)  
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
 		1. [**DATA STRUCTURE** - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
-		2. [TERMS](#terms)  
-		3. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
+		2. [Vid contents](#vid-contents)  
+		3. [Example problem](#example-problem)  
+		4. [TERMS](#terms)  
+		5. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
 	6. [R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r6---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -935,9 +937,9 @@ To the left of the tree including back up the tree! Work through example!
 
 For t=138 number planes scheduled before are - 43m  
 All of left subtree: left_child.tree_size = 1  
-+   
+plus  
 (find first **parent** node less than 138) = 129.left_child.tree_size + 1(node 129) = 6  
-=  
+gives  
 total: 7  
 
 **Algorithm:**
@@ -1075,15 +1077,30 @@ case 2: deleting a node that has 2 subtrees
 [MIT EG code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/avl.py) - 
 [guess implementation code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)  
 
-
 #### **DATA STRUCTURE** - AVL tree - R6 50m  
 type:  tree  
 use cases: sort & retrieve data set, prefered in search intensive application, insert more costly  
 queries: search - Θ(logn), in-order traversal - Θ(n), successor, predecessor  
 updates: insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn)    
 RI: height left/right trees only every differ by 1 - balanced tree   
-properties: height & balance maintained in each node   
+properties: height = logn => tree balanced - height & balance maintained in each node   
 RI - representation invariant  
+
+#### Vid contents  
+0-2m - BST summary - in-order traversal using recursion
+2m-11m - importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation
+11m - AVL trees definition and balance
+18m - showing height is logn
+10-28m - height of balanced tree maths
+Rotations
+Insert
+Other balanced trees
+Data structures in general
+Lower bounds
+
+
+#### Example problem
+
 
 #### TERMS  
 AVL - inventors Adelson-Velsky and Landis   
@@ -1092,14 +1109,16 @@ AVL - inventors Adelson-Velsky and Landis
 **In order traversal** - process nodes by key order  
 **successor** - Next larger  
 **predecessor** - next smaller  
-**height** of a node - longest path to a leaf from node  including itself (the +1 below)  
+**height** of a node - longest path down to a leaf from node  including itself (the +1 below)  
 **depth** of a node - node in path from root to node
-**balanced** tree - height of left child = height of right child  +/-1 - height h = logn
+**balanced** tree - height of left child = height of right child  +/-1 - height h = **logn**
 
 IMPORTANCE OF A BALANCED TREE - height being log n   
 Unbalance tree worst case height - n average n/2  << V.BAD!  
 
+```
 height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintained in each node)  
+```
 
 NOTE:  NULL child node have a height of -1 so cal works - max(-1,-1)+1 = 0  
 information local to node has low (constant time) maintenance over head   
@@ -1110,6 +1129,9 @@ largest_height also store which height is larger +1 left,  0 equal, -1 right
 
 #### Maths notes - AVL tree (20-28m)
 Min number of nodes in a balanced tree
+
+![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
+
 $$
 \begin{equation}
   N_h = minimum\;number\;of\;nodes\;in\;an\;AVL\;tree\;of\;height\;h
@@ -1122,13 +1144,19 @@ $$
 \end{equation}
 $$
 
-That's to say number of nodes in a tree of height h is the sum of the root + the two sub trees that differ in height by 1:   
+IE In a tree of height h, number of nodes n,  is the sum of: the root + the two sub trees (that differ in height by 1).   
 
-![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
+The above recurrence is similar to the Fibonacci sequence, defined as:
+\begin{equation}
+  F_n = F_{n-1} + F_{n-2}
+\end{equation}
 
-![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
+an approximation for which is  (Fibonacci number = nearest integer . . .
+\begin{equation}
+  F_n =  \frac{\phi^n}{\sqrt5},\; n \ge 0,\; (phi)\;\phi=\frac{1+\sqrt5}{2},\;\phi\approx1.618
+\end{equation}
 
-![Big O graphs](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
+[paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
 
 
