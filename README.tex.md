@@ -10,6 +10,8 @@ Work notes from Introduction to [Algorithms MIT 6.006](https://ocw.mit.edu/cours
 [Resources - Python / Latex](http://courses.csail.mit.edu/6.006/fall11/resources.shtml) ~ 
 [Quizzes/Exams](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/)  
 
+
+
 ## Progress
 KEY: (:white_check_mark:) watched, (:mag:) rewatch, (:flashlight:) unseen / to watch, (:question:) problem / open question  
 CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) not happy / code smells,  
@@ -91,12 +93,14 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
-		1. [**DATA STRUCTURE**](#data-structure)  
+		1. [**DATA STRUCTURE** - BST - Binary search trees](#data-structure---bst---binary-search-trees)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Augmented BST - 37m - node_count_before](#augmented-bst---37m---nodecountbefore)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
+		3. [get_successor()](#getsuccessor)  
+		4. [delete()](#delete)  
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
 		1. [**DATA STRUCTURE** - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
 		2. [TERMS](#terms)  
@@ -124,81 +128,98 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	5. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	6. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 10. [Problem set 4 due](#problem-set-4-due)  
 11. [Quiz 1](#quiz-1)  
 12. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	2. [R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r11---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 13. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 14. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	2. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 15. [Problem set 5 due](#problem-set-5-due)  
 16. [Problem set 6 out](#problem-set-6-out)  
 17. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [L15 - Single-source shortest paths problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	2. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	3. [L17 - Bellman-Ford](#l17---bellman-ford)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	4. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 18. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 19. [Problem set 7 out](#problem-set-7-out)  
 	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	2. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	3. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 20. [Problem set 7 due](#problem-set-7-due)  
 21. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	2. [24 - Algorithms research topics](#24---algorithms-research-topics)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
-		3. [Maths notes](#maths-notes)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 22. [Glossary of terms](#glossary-of-terms)  
 23. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
@@ -787,7 +808,6 @@ insert(x, into set S),
 get max priority (of set S),  
 extract_max (of set S)  -  get max and remove it!  
 inc_key (in set S, increase element xs key, to value k)  
-plus  
 get min priority (of set S),  
 delete, change priority in Q.  
 
@@ -829,29 +849,36 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 ### L5 - Binary search trees, BST sort	 
 [vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf)  
-Code:
+[Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
+[Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 Reading:
 
-#### **DATA STRUCTURE**  
-type: BST - binary search tree  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
+#### **DATA STRUCTURE** - BST - Binary search trees  
+type: BST -   
+use cases: sorted data, priority queue 
+queries: search/find, min, max, node_count_before  
+updates: insert, delete  
+representation invariant (RI): All children to left are smaller, all children to the right are larger.  
+properties: sorted data  
+See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
 #### Vid contents
-0-6m define problem - runway scheduling - to demonstrate BST ADT
-6m-21m   EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)
-21m-   intro to BSTs
-24m BST RI
+0-6m	define problem - runway scheduling - to demonstrate BST ADT
+6m-21m	EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)
+21m	intro to BSTs
+24m	BST RI
+26m	insert() - O(h) - height of tree - **O(logn)** - n=number of nodes
+35m	min() - O(h) - go farthest left  
+36m	max() - O(h) - go farthest right
+37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?
+ - Add number of nodes below node to it. (number includes node itself)
+43m	Rank k - algorithm code 
+AUGMENTATION - k minute check
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
 
-Concept: Representation Invariant - property of the data structure
+Concept: Representation Invariant - property of the data structure  
 Invariant (RI): All children to left are smaller, all children to the right are larger.  
-Each mode has 3 pointers: parent, lchild, rchild  
+Each node has 3 pointers: parent, lchild, rchild  
 ```
       x
      / \
@@ -859,10 +886,10 @@ Each mode has 3 pointers: parent, lchild, rchild
 ```
 
 Runway scheduling problem. Insert aircraft landing  at least k minutes (3 min in this case) away from any other scheduled landings.  
-Plane landing @:	2  5  37  44  99
-**Steps**
-Find position
-Check if theres 3min space either side
+Plane landing @:	2  5  37  44  99  
+**Steps**  
+Find position  
+Check if theres 3min space either side  
 Insert new landing  
 
 Implemented as **sorted array**  
@@ -877,40 +904,54 @@ No binary search on a list! - so brute force O(n)
 Implemented as **heap**  
 Check for element n1 <= k <= n2 requires searching whole tree - O(n)  
 
-Implemented as **binary search tree (BST)**
-Find, navigate tree left if looking for an earlier time, right if larger. worst case from root of tree to leaf - ie height O(h)
-Check do check at each node O(1)
-Insert pointer manipulation O(1)
+Implemented as **binary search tree (BST)**  
+Find, navigate tree left if looking for an earlier time, right if larger. worst case from root of tree to leaf - ie height O(h)  
+Check do check at each node O(1)  
+Insert pointer manipulation O(1)  
 
-**Other O(h) operations**
-Min - far left leaf
-Max - far right leaf
-Next largest value - Up a node?
+**Other O(h) operations**  
+Min - far left leaf  
+Max - far right leaf  
+Next largest value - Up a node? NO its next right node - parent.min() - smallest node of parent subtree. (or parent if no subtree)  
 
-Augmented BST add subtree size to the data in the node. Includes the node and its children
-Maintained by incrementing the tree size by one as theyre traversed to an insertion
+#### Augmented BST - 37m - node_count_before  
+Augmented BST add subtree size to the data in the node. Includes the node and its children (number after dash in tree below).    
+Maintained by incrementing the tree size by one as theyre traversed to an insertion.  
 
-To find how many planes scheduled to land before time t?
-Find highest node that is smaller than t return tree size to the left of the node including it.
-Which is node subtree size - rchild subtree size (since al these nodes are higher) - **ALMOST**
-To the left of the tree including back up the tree! Work through example!
+To find how many planes scheduled to land before time t?  
+Find highest node that is smaller than t return tree size to the left of the node including it.  
+Which is node subtree size - rchild subtree size (since all these nodes are higher) - **ALMOST**  
+To the left of the tree including back up the tree! Work through example!    
+
 ```
-              80
-      40               120
-  20       30     *100       140  
-10   15  25  35  90   110  130  150
+                    129-12
+
+        104-5                   158-6
+
+   82-3       116-1     **138-3       184-2    
+
+77-1 103-1  -     -    134-1 141-1 175-1  -   
 ```
-```
-              o
-      o               o
-  o       o       *       o  
-o   o   o   o   o   o   o   o
-```
+
+**For t=138 number planes scheduled before are** - 43m  
+All of left subtree: left_child.tree_size = 1  
++   
+(find first **parent** node less than 138) = 129.left_child.tree_size + 1(node 129) = 6  
+=  
+total: 7  
+
+**Algorithm:**
+Start at root is **t** larger than node?
+YES - add left_child.tree_size + 1 to total, move to right_child
+NO - move to left_child
+Repeat until no more children or t = node
+Return total
 
 ### R5 - Recursion Trees, Binary Search Trees
-[vid](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28)  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec05.pdf)
-[Code]() 
+[vid](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec05.pdf) ~ 
+[Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
+[Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 
 #### Vid contents
 3m-14m 	Solving Recurrence for merge sort. (PS2 problem 1)
@@ -947,6 +988,82 @@ until reach base case
 1   1   1   1  . . .  1   1   1   1        # base case
 ```
 
+
+Binary Search Tree (BST) 
+Local: algos/binary_search_tree.py
+
+
+#### get_successor()
+```
+Example tree
+                                               67                                               
+
+                       45                                             129                       
+
+           15                      57                     104                     158           
+
+     -           29          -           66          82         116         138         184     
+
+  -     -     17    35    -     -     -     -     77   103    -     -    134   141   175    -   
+
+ -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  90 -  -  -  -  -  -  -  -  -  -  -  -  - 
+rc = right_child   rp = right_parent(node == node.parent.left)
+
+# case 1 - node has rc
+return rc.min
+
+
+# case 2 - node has no rc (dont care about lc always smaller)
+         - has rp (left of parent : node == node.parent.left)
+return parent
+
+
+# case 3 - node has no rc or rp
+         - right of parent : node == node.parent.right
+go up parent until one has a right parent
+return that
+
+Case 3 covers case two - so no need to implement case 2
+```
+
+#### delete()
+```
+Example tree - BST (Binary search tree - unusually flat! Can be very lopsided)
+                                               67                                               
+
+                       45                                             129                       
+
+           15                      57                     104                     158           
+
+     -           29          -           66          82         116         138         184     
+
+  -     -     17    35    -     -     -     -     77   103    -     -    134   141   175    -   
+
+ -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  90 -  -  -  -  -  -  -  -  -  -  -  -  - 
+rc = right_child   rp = right_parent(node == node.parent.left)
+
+case 1: leaf
+	simply delete
+
+case 2: delete single node with only one sub-tree
+	EG delete 15, 57 or 184
+	replace parent pointer to node to point at subtree
+	straight or zig/zag its the same
+
+case 2: deleting a node that has 2 subtrees
+	replace node with successor - smallest element in right subtree
+	successor may have a subtree so need to call delete on it first
+	replace original deleted node with it
+	(from R5-44m50)
+
+
+	running time 
+		find key O(h) +
+		delete - possible 2 subtrees O(h)
+		link swaps constant time O(1)
+		= O(h) + O(h) + O(1) = 2 * O(h) + O(1) = O(h)
+
+```
 
 
 
@@ -1338,7 +1455,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1349,7 +1468,9 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading: 
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1375,7 +1496,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1387,7 +1510,9 @@ COPY RECITATION TEMPLATE into further lectures
 Code:
 Reading: 
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1410,7 +1535,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1433,7 +1560,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1454,7 +1583,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1480,7 +1611,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1501,7 +1634,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1522,7 +1657,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1543,7 +1680,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1568,7 +1707,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1591,7 +1732,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1613,7 +1756,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1634,7 +1779,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1659,7 +1806,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1680,7 +1829,9 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents
+#### Vid contents  
+
+#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
