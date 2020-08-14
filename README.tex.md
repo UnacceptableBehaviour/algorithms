@@ -1092,6 +1092,8 @@ RI - representation invariant
 11m - AVL trees definition and balance
 18m - showing height is logn
 10-28m - height of balanced tree maths
+19m-25m - Analyse Nh min nodes in a tree of height h - version 1
+25m-XXm - Analyse Nh min nodes in a tree of height h - version 2
 Rotations
 Insert
 Other balanced trees
@@ -1158,18 +1160,26 @@ an approximation for which is  (Fibonacci number = nearest integer . . .
 
 [paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
+\begin{equation}
+  N_h > \frac{\phi^n}{\sqrt5},\;\;  N_h > \frac{1.618^n}{\sqrt5},\;\; n > \frac{1.618^n}{\sqrt5}
+\end{equation}
+
+Since Nh = min nodes in a tree of height h, and phi = 1.618.
+
 
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
 
-Insert(23)	- steps to do an insert
+insert(x) - steps to do an insert
+```
 insert as normal for BST
 update each nodes height while parsing tree (and largest_height L M R - left middle right)
 largest_height = hL - hR 
 from inserted node walk up the tree checking largest_height if abs(largest_height) > 2
 	if largest_height > 2 right-rotate	(left height too large)
 	if largest_height < -2 anti-rotate	(right height too large)
+```
 
 What the above is saying is - if the difference in height between to children is more than +/-1 then tree need rebalancing
 	
