@@ -810,8 +810,8 @@ See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-sea
 26m	insert() - O(h) - height of tree - **O(logn)** - n=number of nodes  
 35m	min() - O(h) - go farthest left   
 36m	max() - O(h) - go farthest right  
-37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?  
- - Add number of nodes below node to it. (number includes node itself)  
+37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
+              Add number of nodes below node to it. (number includes node itself)  
 43m	AUGMENTATION - Rank k - algorithm code   
 
 
@@ -860,7 +860,7 @@ Maintained by incrementing the tree size by one as theyre traversed to an insert
 
 To find how many planes scheduled to land before time t?  
 Find highest node that is smaller than t return tree size to the left of the node including it.  
-Which is node subtree size - rchild subtree size (since all these nodes are higher) - **ALMOST**  
+Which is node subtree size - right_child subtree size (since all these nodes are higher) - **ALMOST**  
 To the left of the tree including back up the tree! Work through example!    
 
 ```
@@ -873,7 +873,7 @@ To the left of the tree including back up the tree! Work through example!
 77-1 103-1  -     -    134-1 141-1 175-1  -   
 ```
 
-**For t=138 number planes scheduled before are** - 43m  
+For t=138 number planes scheduled before are - 43m  
 All of left subtree: left_child.tree_size = 1  
 +   
 (find first **parent** node less than 138) = 129.left_child.tree_size + 1(node 129) = 6  
@@ -881,11 +881,13 @@ All of left subtree: left_child.tree_size = 1
 total: 7  
 
 **Algorithm:**
-Start at root is **t** larger than node?
-YES - add left_child.tree_size + 1 to total, move to right_child
-NO - move to left_child
-Repeat until no more children or t = node
-Return total
+```
+Start at root is **t** larger than node?  
+YES - add left_child.tree_size + 1 to total, move to right_child  
+NO - move to left_child  
+Repeat until no more children or t = node  
+Return total  
+```
 
 ### R5 - Recursion Trees, Binary Search Trees
 [vid](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28) ~ 
