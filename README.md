@@ -1159,9 +1159,13 @@ Reading:
 
 #### Vid contents
 0-7m - BST review, height,
-7m-  AVL balance
-
-
+7m-11m  AVL balance
+11m	  Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)
+18m BST review, insert
+21m AVL review, left_rotate, right_rotate
+28m22 pointer exchange pseudo code right_rotate
+40m AVL review REBALANCE,
+50m rebalance synopsis - AUGMENTATION (height in this case) needed for ps3
 
 #### BST review
 height h = longest path to leaf
@@ -1184,6 +1188,8 @@ so the root evaluates to max(-1,-1)+1 = 0
 <p align="center"><img src="/tex/f57a1206b4d8107434bf43e707ba7447.svg?invert_in_darkmode&sanitize=true" align=middle width=180.9113328pt height=63.92694825pt/></p>
 <p align="center"><img src="/tex/e995c36961b11f1a0347824daca8f22f.svg?invert_in_darkmode&sanitize=true" align=middle width=139.04518815pt height=40.182651299999996pt/></p>
 Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
+
+REBALANCE
 
 
 #### Maths notes  
