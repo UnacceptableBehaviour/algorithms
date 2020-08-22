@@ -118,8 +118,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
 	8. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents**](#vid-contents)  
 		3. [Sorting in Linear-Time](#sorting-in-linear-time)  
+			1. [Counting Sort - 37m](#counting-sort---37m)  
 	9. [R7 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r7---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -1432,12 +1433,19 @@ e) Re-write the data structure using the most efficient method from class (no li
 **(RI)**:   
 **properties**: 
 
-#### Vid contents  
+#### **Vid contents**  
 0-2m - Introduction  
 2m-32m Computational models - **Comparison model**  
 5m20 - Descision tree  
-10m50 - properties of descision tree - leaves are answers  
-
+14m48 - properties of descision tree - node, leaf, path, path length, height  
+16m - Searching lower bound  
+18m - PROOF searching Ω(lg n) - simple  
+20m-24m - Sorting lower bound - logic
+24m-32m - Sorting lower bound - maths PROOF - p2 in notes  
+32m-37m - INTRODUCTION RAM MODEL & INTEGER SORTING  
+37m-40m - COUNTING SORT  
+40m-44m - Counting sort RUNNING TIME - O(k + n)  n=keys n=key range
+45m - [RADIX Sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11
 
 #### Sorting in Linear-Time  
 - **comparison model**   (computation model)  
@@ -1455,10 +1463,27 @@ CONCEPTS: Models of computation: **Comparison model** 2-32m
 | path length | running time |
 | height of tree | worst case running time |
 
+
 - **ram model**   (computation model)  
 - O(n) sorting algorithms  
 . . counting sort  
 . . radix sort  
+
+**Assumptions**:
+\begin{align*}
+  sorting \\
+  n\; keys\;\in\{0,1,2,..k-1\} \\
+  \text{and each fits in a word} \\
+  \text{for k...large number?} \\
+  \text{can be sorted in }\Theta(n)\; time
+\end{align*}
+
+##### Counting Sort - 37m
+Go through unsorted items using key to allocate to an index of an array.
+This basically creates a **linked list** at the **index** of an array for **duplicates**
+
+Running cost: O(k + n)  n=keys n=key range
+
 
 
 
