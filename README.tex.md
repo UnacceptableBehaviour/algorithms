@@ -93,7 +93,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
 			3. [Max_heapify](#maxheapify)  
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
-		1. [**DATA STRUCTURE** - BST - Binary search trees](#data-structure---bst---binary-search-trees)  
+		1. [**DATA STRUCTURE - BST - Binary search trees**](#data-structure---bst---binary-search-trees)  
 		2. [Vid contents](#vid-contents)  
 		3. [Augmented BST - 37m - node_count_before](#augmented-bst---37m---nodecountbefore)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
@@ -102,14 +102,17 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [get_successor()](#getsuccessor)  
 		4. [delete()](#delete)  
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
-		1. [**DATA STRUCTURE** - AVL tree - R6 50m](#data-structure---avl-tree---r6-50m)  
+		1. [**DATA STRUCTURE - AVL tree - R6 50m**](#data-structure---avl-tree---r6-50m)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [TERMS](#terms)  
-		5. [Maths notes - AVL tree (20-28m)](#maths-notes---avl-tree-20-28m)  
-	6. [R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r6---maths--code------------------------------------------------------------)  
+		5. [Maths notes - AVL tree (19-25m) - height analysis v1](#maths-notes---avl-tree-19-25m---height-analysis-v1)  
+		6. [Maths notes - AVL tree (26m) - height analysis v2](#maths-notes---avl-tree-26m---height-analysis-v2)  
+	6. [R6 - maths & code](#r6---maths--code)  
 		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
+		2. [BST review](#bst-review)  
+		3. [AVL properties](#avl-properties)  
+		4. [Maths notes](#maths-notes)  
 	7. [Problem set 2 (due)](#problem-set-2-due)  
 		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
 		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
@@ -855,12 +858,12 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 [Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 Reading: CLRS Chapter 10, 12.1-3
 
-#### **DATA STRUCTURE** - BST - Binary search trees  
+#### **DATA STRUCTURE - BST - Binary search trees**  
 **type:** BST  - [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)  
 **use cases:** sorted data, priority queue 
-**queries:** search/find, min, max, node_count_before  
+**queries:** next_smaller, next_larger, search/find, min, max, node_count_before  
 **updates:** insert, delete  
-**representation invariant (RI):** All children to left are smaller, all children to the right are larger.  
+**representation invariant (RI):** ALL children to left are smaller, ALL children to the right are larger.  
 **properties:** sorted data  
 See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
@@ -1076,30 +1079,29 @@ case 2: deleting a node that has 2 subtrees
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf) - 
 [MIT EG code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/avl.py) - 
 [guess implementation code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)  
+ 
 
-#### **DATA STRUCTURE** - AVL tree - R6 50m  
-type:  tree  
-use cases: sort & retrieve data set, prefered in search intensive application, insert more costly  
-queries: search - Θ(logn), in-order traversal - Θ(n), successor, predecessor  
-updates: insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn)    
-RI: height left/right trees only every differ by 1 - balanced tree   
-properties: height = logn => tree balanced - height & balance maintained in each node   
+#### **DATA STRUCTURE - AVL tree - R6 50m**  
+**type:**  tree (balanced )  
+**use cases:** sort & retrieve data set, prefered in search intensive application, insert more costly  
+**queries:** min, max, successor, predecessor, search - Θ(logn), in-order traversal - Θ(n)  
+**updates:** insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn), rebalance    
+**RI:** height left/right trees only every differ by 1 - balanced tree   
+**RI from BST:** ALL children to left are smaller, ALL children to the right are larger.  
+**properties:** height = logn => tree balanced - height & balance maintained in each node   
 RI - representation invariant  
 
 #### Vid contents  
-0-2m - BST summary - in-order traversal using recursion
-2m-11m - importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation
-11m - AVL trees definition and balance
-18m - showing height is logn
-10-28m - height of balanced tree maths
-19m-25m - Analyse Nh min nodes in a tree of height h - version 1
-25m-XXm - Analyse Nh min nodes in a tree of height h - version 2
-Rotations
-Insert
-Other balanced trees
-Data structures in general
-Lower bounds
-
+0-2m - BST summary - in-order traversal using recursion  
+2m-11m - importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation  
+11m - AVL trees definition and balance  
+18m - showing height is logn  
+10-28m - height of balanced tree maths  
+19m-25m - Analyse Nh min nodes in a tree of height h - v1  
+26m-XXm - Analyse Nh min nodes in a tree of height h - v2 - ps3  
+32m-48m -  Rotations  
+48m-52  - AVL sort  
+50m - summary of heap / bst AVL reasons for use  
 
 #### Example problem
 
@@ -1127,9 +1129,7 @@ information local to node has low (constant time) maintenance over head
 largest_height also store which height is larger +1 left,  0 equal, -1 right
 
 
-
-
-#### Maths notes - AVL tree (20-28m)
+#### Maths notes - AVL tree (19-25m) - height analysis v1
 Min number of nodes in a balanced tree
 
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
@@ -1150,28 +1150,38 @@ IE In a tree of height h, number of nodes n,  is the sum of: the root + the two 
 
 The above recurrence is similar to the Fibonacci sequence, defined as:
 \begin{equation}
-  F_n = F_{n-1} + F_{n-2}
+  F_h = F_{h-1} + F_{h-2}
 \end{equation}
 
 an approximation for which is  (Fibonacci number = nearest integer . . .
 \begin{equation}
-  F_n =  \frac{\phi^n}{\sqrt5},\; n \ge 0,\; (phi)\;\phi=\frac{1+\sqrt5}{2},\;\phi\approx1.618
+  F_h =  \frac{\phi^h}{\sqrt5},\; h \ge 0,\; (phi)\;\phi=\frac{1+\sqrt5}{2},\;\phi\approx1.618
 \end{equation}
 
 [paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
 \begin{equation}
-  N_h > \frac{\phi^n}{\sqrt5},\;\;  N_h > \frac{1.618^n}{\sqrt5},\;\; n > \frac{1.618^n}{\sqrt5}
+  N_h > \frac{\phi^h}{\sqrt5},\;\;  N_h > \frac{1.618^h}{\sqrt5},\;\; n > \frac{1.618^h}{\sqrt5}
 \end{equation}
 
 Since Nh = min nodes in a tree of height h, and phi = 1.618.
+
+\begin{equation}
+  n > \frac{\phi^h}{\sqrt5}\;same\;as\;\frac{\phi^h}{\sqrt5} < n\;\; take\; log_{\phi}
+\end{equation}
+\begin{equation}
+  h + sml\;const < log_{\phi}n \approx 1.44log_2n
+\end{equation}
+
+#### Maths notes - AVL tree (26m) - height analysis v2
+
 
 
 
 
 Method of maintaining property: balanced AVL tree.  << WHOLE LECTURE ABOUT THIS!
 
-insert(x) - steps to do an insert
+**insert(x)** - steps to do an insert
 ```
 insert as normal for BST
 update each nodes height while parsing tree (and largest_height L M R - left middle right)
@@ -1183,7 +1193,7 @@ from inserted node walk up the tree checking largest_height if abs(largest_heigh
 
 What the above is saying is - if the difference in height between to children is more than +/-1 then tree need rebalancing
 	
-Rotation Cases (@ 23m)
+Rotation Cases (@ 32m)
 ```
       29
      /
@@ -1217,25 +1227,56 @@ Rotation Cases (@ 23m)
 
 
 
-28m + 
-
-
-33m50
-search
-rotation - tree manipulation
-left & right rotate 
-
 50m good summary of heap / bst AVL reasons for use
 
 
 
-### R6 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### R6 - maths & code
 [vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf)  
+[Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf)
 Reading: 
 
 #### Vid contents
+0-7m - BST review, height,
+7m-  AVL balance
+
+
+
+#### BST review
+height h = longest path to leaf
+
+**4m28** - diagram on board show a single node has a height of 0
+then he writes 
+```
+height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintained in each node)  
+```
+which means tit should be 1 - ?? 
+The code line - Height Augmentation ln 7 says 1
+```
+def update_height(node): 8 node.height = max(height(node.left), height(node.right)) + 1
+```
+**6m** for case where node is a leaf height returns -1!
+so the root evaluates to max(-1,-1)+1 = 0
+
+#### AVL properties
+\begin{align*}
+  h = max(h_l, h_r) + 1 \\
+  h = -1\;for\;leaf\;node \\
+  \forall n, |h_l - h_r| \le 1 \\
+  plus\;BST\;properties
+\end{align*}
+\begin{align*}
+  h = height\;of\;node \\
+  h_l = height\;of\;left\;child \\
+  h_r = \textit{height of right child} \\
+\end{align*}
+\begin{align*}
+  balanced\;property:\\
+  \forall n, |h_l - h_r| \le 1
+\end{align*}
+Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1748,6 +1789,13 @@ representation invariant (RI):
 properties:  
 
 #### Vid contents  
+0-5m - Introduction to Dynamic Programming (DP) recursion + memoization + guessing
+5m-11m20 - Solving Fibonacci w/ Memoization - naive version
+11m20-15m40 - Memoized version
+15m40- running cost Θ(n) - **rule 30m49 flashback** for acyclic sub problems
+19m30-23m - DP generalisation, running cost
+23m-29m Bottom-up DP algorithm (topological sort)
+29m-51m shortest paths, converting cyclic paths to acyclic & bellman-ford
 
 #### Example problem
 
