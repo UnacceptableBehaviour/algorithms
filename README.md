@@ -117,12 +117,15 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
 		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
 	8. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
-		1. [Sorting in Linear-Time](#sorting-in-linear-time)  
+		1. [**DATA STRUCTURE**](#data-structure)  
+		2. [Vid contents](#vid-contents)  
+		3. [Sorting in Linear-Time](#sorting-in-linear-time)  
 	9. [R7 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r7---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
 9. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 	2. [R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r8---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -136,9 +139,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	6. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
-		1. [Vid contents](#vid-contents)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+		1. [**DATA STRUCTURE**](#data-structure)  
+		2. [Vid contents](#vid-contents)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 10. [Problem set 4 due](#problem-set-4-due)  
 11. [Quiz 1](#quiz-1)  
 12. [Unit 4: Numerics](#unit-4-numerics)  
@@ -729,13 +733,13 @@ Code: [Python](https://github.com/UnacceptableBehaviour/algorithms/blob/master/a
 
 
 #### **DATA STRUCTURE - Priority Q - L4 3m33**  
-**type:**  -  (maxheap or minheap) - prefered implementation ?  
-**use cases:** finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
-**queries:** min/max  
-**updates:** pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
-**RI max heap:** Node is larger than or equal child nodes, complete binary tree  
-**RI min heap:** Node is less than or equal child nodes, complete binary tree  
-**properties:** root contains max/min value  
+**type**:  -  (maxheap or minheap) - prefered implementation ?  
+**use cases**: finding min or max value in sorted set (not both), scheduling, flattening linked list, finding non overlaping intervals, ROAM  
+**queries**: min/max  
+**updates**: pop_min/max - Θ(logn), insert item - Θ(logn), delete item - Θ(logn), change priority  
+**RI max heap**: Node is larger than or equal child nodes, complete binary tree  
+**RI min heap**: Node is less than or equal child nodes, complete binary tree  
+**properties**: root contains max/min value, comparison model  
 node positions in array:  
 root i=1  
 parent = i/2  
@@ -799,12 +803,12 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 Reading: CLRS Chapter 10, 12.1-3
 
 #### **DATA STRUCTURE - BST - Binary search trees**  
-**type:** BST  - [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)  
-**use cases:** sorted data, priority queue 
-**queries:** next_smaller, next_larger, search/find, min, max, node_count_before  
-**updates:** insert, delete  
-**representation invariant (RI):** ALL children to left are smaller, ALL children to the right are larger.  
-**properties:** sorted data  
+**type**: BST  - [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)  
+**use cases**: sorted data, priority queue 
+**queries**: next_smaller, next_larger, search/find, min, max, node_count_before  
+**updates**: insert, delete  
+**representation invariant (RI)**: ALL children to left are smaller, ALL children to the right are larger.  
+**properties**: sorted data, comparison model  
 See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
 #### Vid contents
@@ -1022,13 +1026,13 @@ case 2: deleting a node that has 2 subtrees
  
 
 #### **DATA STRUCTURE - AVL tree - R6 50m**  
-**type:**  tree (balanced )  
-**use cases:** sort & retrieve data set, prefered in search intensive application, insert more costly  
-**queries:** min, max, successor, predecessor, search - Θ(logn), in-order traversal - Θ(n)  
-**updates:** insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn), rebalance    
-**RI:** height left/right trees only every differ by 1 - balanced tree   
-**RI from BST:** ALL children to left are smaller, ALL children to the right are larger.  
-**properties:** height = logn => tree balanced - height & balance maintained in each node   
+**type**:  tree (balanced )  
+**use cases**: sort & retrieve data set, prefered in search intensive application, insert more costly  
+**queries**: min, max, successor, predecessor, search - Θ(logn), in-order traversal - Θ(n)  
+**updates**: insert item - Θ(logn), insert n items - Θ(nlogn), delete item - Θ(logn), rebalance    
+**RI**: height left/right trees only every differ by 1 - balanced tree   
+**RI from BST**: ALL children to left are smaller, ALL children to the right are larger.  
+**properties**: height = logn => tree balanced - height & balance maintained in each node, comparison model   
 RI - representation invariant  
 
 #### Vid contents  
@@ -1152,44 +1156,46 @@ Rotation Cases (@ 32m)
 
 
 ### R6 - maths & code
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf)  
-[Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf)
+[vid]() ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
+[Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
 Reading: 
 
 #### Vid contents
-0-7m - BST review, height,
-7m-11m  AVL balance
-11m	  Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)
-18m BST review, insert
-21m AVL review, left_rotate, right_rotate
-28m22 pointer exchange pseudo code right_rotate
-40m AVL review REBALANCE,
-50m rebalance synopsis - AUGMENTATION (height in this case) needed for ps3
+0-7m - BST review, height  
+7m-11m  AVL balance  
+11m	  Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)  
+18m BST review, insert  
+21m AVL review, left_rotate, right_rotate  
+28m22 pointer exchange pseudo code right_rotate  
+40m AVL review REBALANCE  
+50m rebalance synopsis - AUGMENTATION (height in this case) needed for ps3  
 
 #### BST review
-height h = longest path to leaf
+height h = longest path to leaf  
 
-**4m28** - diagram on board show a single node has a height of 0
-then he writes 
+**4m28** - diagram on board show a single node has a height of 0  
+then he writes  
 ```
 height  = max(lchild height, rchild height) +1  max(3,8)+1 = 9  (maintained in each node)  
 ```
-which means tit should be 1 - ?? 
-The code line - Height Augmentation ln 7 says 1
+which means tit should be 1 - ??   
+The code line - Height Augmentation ln 7 says 1  
 ```
 def update_height(node): 8 node.height = max(height(node.left), height(node.right)) + 1
 ```
-**6m** for case where node is a leaf height returns -1!
-so the root evaluates to max(-1,-1)+1 = 0
+**6m** for case where node is a leaf height returns -1!  
+so the root evaluates to max(-1,-1)+1 = 0  
 
 #### AVL properties
 <p align="center"><img src="/tex/e7aac7e676b9fa8a486e5a3b49b6af71.svg?invert_in_darkmode&sanitize=true" align=middle width=157.18425854999998pt height=89.49772094999999pt/></p>
 <p align="center"><img src="/tex/f57a1206b4d8107434bf43e707ba7447.svg?invert_in_darkmode&sanitize=true" align=middle width=180.9113328pt height=63.92694825pt/></p>
-<p align="center"><img src="/tex/e995c36961b11f1a0347824daca8f22f.svg?invert_in_darkmode&sanitize=true" align=middle width=139.04518815pt height=40.182651299999996pt/></p>
+
 Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
+<p align="center"><img src="/tex/e995c36961b11f1a0347824daca8f22f.svg?invert_in_darkmode&sanitize=true" align=middle width=139.04518815pt height=40.182651299999996pt/></p>
 
 REBALANCE
+CASE 1 - unbalanced in a straight line: Rotate to fold the line
 
 
 #### Maths notes  
@@ -1205,43 +1211,43 @@ Koch snowflake rendering: computational requirements of 4 ways of rendering LoD 
 	Recursion tree - forrest of trees in this case
 	Run example code fractal.html (/algorithms/problems/MIT6_006F11_ps2/fractal)
 First - 3D hardware accelerated rendering . .
-Surface > triangles > CPU co-ords list > GPU renders
-a) [1pt] height of recursion tree for rendering snowflake of LoD n?
-b) [1pt] how many node in the tree at level n
-c) [1pt] whats the rendering time (triangle count) for a node at depth i
-d) [1pt] whats the rendering time (triangle count) at each level i (all nodes on that level)
-e) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)
-
-Second - 2D accelerated rendering . .
-Surface oulines > open/closed paths > CPU co-ords list > GPU renders (used in laser cutters & plotters)
-Properties of a koch snowflake 
-f) [1pt] height of recursion tree for rendering snowflake of LoD n?
-g) [1pt] how many node in the tree at level n
-h) [1pt] whats the rendering time (line segment count) for a node at depth i
-i) [1pt] whats the asymptotic rendering time (line segment count) for a node in the last level n
-j) [1pt] whats asymptotic rendering time (line segment count) at each level of the tree
+Surface > triangles > CPU co-ords list > GPU renders  
+a) [1pt] height of recursion tree for rendering snowflake of LoD n?  
+b) [1pt] how many node in the tree at level n  
+c) [1pt] whats the rendering time (triangle count) for a node at depth i  
+d) [1pt] whats the rendering time (triangle count) at each level i (all nodes on that level)  
+e) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
+  
+Second - 2D accelerated rendering . .  
+Surface oulines > open/closed paths > CPU co-ords list > GPU renders (used in laser cutters & plotters)  
+Properties of a koch snowflake   
+f) [1pt] height of recursion tree for rendering snowflake of LoD n?  
+g) [1pt] how many node in the tree at level n  
+h) [1pt] whats the rendering time (line segment count) for a node at depth i  
+i) [1pt] whats the asymptotic rendering time (line segment count) for a node in the last level n  
+j) [1pt] whats asymptotic rendering time (line segment count) at each level of the tree  
 k) [1pt] whats the asymptotic rendering time (line segment count) at the last level n	
-l) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)
+l) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
 
-Third - 2D unaccelerated rendering . . aka software rendering (CPU only) (used in laser cutters & plotters)
-Surface oulines > open/closed paths > CPU co-ords list > CPU rasterises co-ords 
-NOTE the rasterised pixels represent the ink required to print or the the power required for laser to cut the image!!
-m) [1pt] height of recursion tree for rendering snowflake of LoD n?
-n) [1pt] how many node in the tree at level n
-o) [1pt] whats the rendering time (line segment length) for a node at depth i (assume original triangle side length = 1)
-p) [1pt] whats the asymptotic rendering time (line segment length) for a node in the last level n
-q) [1pt] whats asymptotic rendering time (line segment length) at each level of the tree
+Third - 2D unaccelerated rendering . . aka software rendering (CPU only) (used in laser cutters & plotters)  
+Surface oulines > open/closed paths > CPU co-ords list > CPU rasterises co-ords   
+NOTE the rasterised pixels represent the ink required to print or the the power required for laser to cut the image!!  
+m) [1pt] height of recursion tree for rendering snowflake of LoD n?  
+n) [1pt] how many node in the tree at level n  
+o) [1pt] whats the rendering time (line segment length) for a node at depth i (assume original triangle side length = 1)  
+p) [1pt] whats the asymptotic rendering time (line segment length) for a node in the last level n  
+q) [1pt] whats asymptotic rendering time (line segment length) at each level of the tree  
 r) [1pt] whats the asymptotic rendering time (line segment length) at the last level n	
-s) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)
+s) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
+  
+Fourth - 3D unaccelerated rendering . . (CPU only)  
+Surface > triangles > CPU co-ords list > CPU rasterises  
+t) [4pt] total asymptotic cost for the CPU to render LoD n (using this method - assume initial triangle side length = 1)  
+u) [15pt] prove using recursion tree method  
+  
+#### 2-2 Digital Circuit Simulation [60pt]  
 
-Fourth - 3D unaccelerated rendering . . (CPU only)
-Surface > triangles > CPU co-ords list > CPU rasterises
-t) [4pt] total asymptotic cost for the CPU to render LoD n (using this method - assume initial triangle side length = 1)
-u) [15pt] prove using recursion tree method
-
-#### 2-2 Digital Circuit Simulation [60pt]
-
-a) What name of method w highest CPU usage? _find_min part of class
+a) What name of method w highest CPU usage? _find_min part of class  
 
 Profiler Qs
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
@@ -1324,21 +1330,45 @@ e) Re-write the data structure using the most efficient method from class (no li
 ### L7 - Counting sort, radix sort, lower bounds for sorting and searching
 [vid](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=0s)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec07.pdf)  
+[radix_sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11
+
+#### **DATA STRUCTURE**  
+**type**:  
+**use cases**: good for bla  
+**queries**:  
+**updates**:  
+**(RI)**:   
+**properties**: 
+
+#### Vid contents  
+0-2m - Introduction  
+2m-32m Computational models - **Comparison model**  
+5m20 - Descision tree  
+10m50 - properties of descision tree - leaves are answers  
+
 
 #### Sorting in Linear-Time  
 - **comparison model**   (computation model)  
+- Only operation allowed are comparisons
 - lower bounds  
-. . searching: Ω(lg n) - binary search is optimal  
-. . sorting: Ω(n lg n) - merge sort is optimal  
-  
+	searching: Ω(lg n) - binary search is optimal  
+	sorting: Ω(n lg n) - merge sort is optimal  
+
+CONCEPTS: Models of computation: **Comparison model** 2-32m  
+| decision tree | algorithm |
+|-|-|
+| internal node | binary decision (comparison) |
+| leaf | answer |
+| root-to-leaf path | algorithm execution |
+| path length | running time |
+| height of tree | worst case running time |
+
 - **ram model**   (computation model)  
 - O(n) sorting algorithms  
 . . counting sort  
 . . radix sort  
 
-CONCEPTS: Models of computation: 
 
-Proofs up to 32m  upt to here all comparison model.
 
 ### R7 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
@@ -1361,6 +1391,14 @@ Any equation identities / topics for this lecture include context and uses for l
 [vid](https://www.youtube.com/watch?v=0M_kIqhwbFo&t=758s)  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf)  
 [succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q)  
+
+#### **DATA STRUCTURE**  
+**type**:  
+**use cases**: good for bla  
+**queries**:  
+**updates**:  
+**(RI)**:   
+**properties**:  
 
 Python built in hash() - should be called prehash - but basically return and integer based on the input. (to use as a key for dict for example)
 ```
@@ -1443,12 +1481,12 @@ Code:
 Reading:
 
 #### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
+**type**:  
+**use cases**: good for bla  
+**queries**:  
+**updates**:  
+**(RI)**:   
+**properties**:  
 
 #### Vid contents  
 
@@ -1462,6 +1500,14 @@ Any equation identities / topics for this lecture include context and uses for l
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading: 
+
+#### **DATA STRUCTURE**  
+**type**:  
+**use cases**: good for bla  
+**queries**:  
+**updates**:  
+**(RI)**:   
+**properties**: 
 
 #### Vid contents  
 
@@ -1861,6 +1907,8 @@ Balanced	Usually refers to weight height balance leaf depths differ by no more t
 ADT - Abstract Data Type (interface definition, methods & properties)  
 DS - Data Structure (actual implementation of the ADT)  
 RI - representation invariant  
+
+Stable sorting algorithm - A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted. 
 
 Note for array of **any** size tree: element A[n/2+1 . . n] are ALL leaves! 
 
