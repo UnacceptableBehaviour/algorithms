@@ -136,6 +136,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
 	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
+		1. [Vid contents](#vid-contents)  
 	4. [R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r9---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -1461,25 +1462,26 @@ Any equation identities / topics for this lecture include context and uses for l
 [Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
 Reading: 
 
-#### Vid contents
-0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)
-5m-13m - Python dict API summary, and Motivarion (see lect notes)
-13m Solution 1 - Direct access table
-
-Prehashing
-Hashing
-Chaining
-Simple uniform hashing
-Good hash functions
+#### Vid contents  
+0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
+5m-13m - Python dict API summary, and Motivarion (see lect notes)  
+13m-24m Solution 1 - Direct access table  
+24m- Solution 2 - Hashing  
+29n - introduces collisions - chainig  
+34m - Simple uniform hashing - Mapping number of keys to number of slots   
+42m - hashing to table size m
+43m - DIVISION
+44m - MULTIPLICATION
 
 
 #### **DATA STRUCTURE**  
 **type**: dictionary (ADT)  
-**use cases**: good for bla  
-**queries**: search(key) O(1)   
-**updates**: insert(key, item), delete(key)  
+**use cases**: dictionaries, dbs, compilers, symbol lookup, routers, virt mem, all over   
+**queries**: search(key) O(1 + chain length = alpha)   
+**updates**: insert(key, item), delete(key) both O(1 + chain length = alpha)     
 **(RI)**:   
-**properties**:  
+**properties**: m = Θ(n) ie number of spaces in table m ~ number of keys n    
+
 
 **Motivation:**  
 DB - uses hashing and search trees
@@ -1498,35 +1500,58 @@ Prehashing - map keys to integers (array location)
 Python built in hash() - should be called prehash - but basically return and integer based on the input. (to use as a key for dict for example)  
 ```
 Python dunder function __hash__ is called when built in hash(object) is called.
-if you dont implement hash hash(obj) used id(obj) to as the hash value
+if you dont implement hash hash(obj) used id(obj) to as the hash value
   this avoid collision because no two things occupy the same space in memory so id is unique
 ```
   
+**24m Solution 2 - Hashing - Mapping from Giant space of key to array indexes**
 **Solution to 2:**  
 I you have a space of keys, run those through hash function to generate indexes (ideally they should be equally distributed through the target array)  
-The ratio of number of indexes (entries) (n) : number of array spaces (m)  is the load factor - alpha = n/m  
+The ratio of number of indexes (entries) (n) : number of array spaces (m)  is the load factor - alpha = n/m (aka expected collision chain length)  
 
+
+Methods for dealing with collisions (Chaining @ 30m & open addressing (next week) ) one type of open addressing is linear probing
 
 See L9 1m-4m sunccict synopsis of last lecture and this solution!!  
 note the n may end up in a linked list for chaining  
 ![Visual summary of solution](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_algos_6.006_L9_1m17.png)  
   
-DIVISION method & MULTIPLICATION method  
-DIVISION method
+**Hashing methods: DIVISION, MULTIPLICATION, UNIVERSAL HASHING (prefered)**  
+**34m - Simple uniform hashing - Mapping number of keys to number of slots**  
+Assumptions:  
+a) each key equally likely to be hashed to ANY slot in the table
+b) INDEPENDANT of where other keys hashing
+Hash function need to know size of table - m.
+
+**43m - DIVISION method**
 <p align="center"><img src="/tex/43ef667bc88c9a4b11f53131c888318f.svg?invert_in_darkmode&sanitize=true" align=middle width=116.84731574999998pt height=16.438356pt/></p>
-MULTIPLICATION method - preferred
-<p align="center"><img src="/tex/28750d6eebcffb412fa8ad4f2c2fb139.svg?invert_in_darkmode&sanitize=true" align=middle width=183.52173344999997pt height=128.26874114999998pt/></p>
+Note: m should be PRIME and not too close to power of 2.
+
+**44m - MULTIPLICATION method - preferred over division (notes p5)**
+<p align="center"><img src="/tex/00775c78e4a24e6e638a8d4fbabe5502.svg?invert_in_darkmode&sanitize=true" align=middle width=372.3509757pt height=177.41939159999998pt/></p>
+a should be random, odd, and in the range 2^(r-1) < a < 2^r, and not close to a power of 2.
+w number of bits in key range  
+
+Basically multiply the key (w bits) by an odd (fixed to the function) random number resulting in a number of length 2w bits. (assuming a is also w bits long)
+Take the section with the hight diversity (in the middle) that generates a number of at least m (required spaces). IE 2^r bits must be at least m 
+Which is why the m=2^r part which select the length of th section that is taken for the hash result.
+See diagram notes top p6  
 
 
-30m
-Methods for dealing with collisions (Chaining @ 30m & open addressing (next week) )
-  one type of open addressing is linear probing
+
+**48m - UNIVERSAL HASHING (preferred)**  
+blur. . . note bottom p6 . . . take 6.046 to understand better. . .
+Revisit this but implementation seems relatively simple
 
 
 **TERMS**
 prehash collisions
-chaining - open addressing
-open addressing - linear probing
+collisions - chaining = storing the collision in a linked list at the address
+collisions - linear probing = store the collision in the next available free address
+collisions - open addressing = linear probing is open addressing (may not find item exactly where expceted)
+collisions - closed addressing = chaining is closed addressing (item store always in same location)
+simple uniform hashing
+universal hashing
 
 
 
@@ -1554,6 +1579,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
+#### Vid contents
 
 How to choose m (table size)  - (on overflow double it)
 
