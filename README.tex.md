@@ -1555,41 +1555,87 @@ Any equation identities / topics for this lecture include context and uses for l
 ### L8 - Hashing with chaining - (dictionary / associative array)	 
 [vid](https://www.youtube.com/watch?v=0M_kIqhwbFo&t=758s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf) ~ 
-[succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q)  
-
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
+[succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q) ~ 
+[Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
 Reading: 
 
 #### Vid contents
+0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)
+5m-13m - Python dict API summary, and Motivarion (see lect notes)
+13m Solution 1 - Direct access table
+
+Prehashing
+Hashing
+Chaining
+Simple uniform hashing
+Good hash functions
 
 
 #### **DATA STRUCTURE**  
-**type**:  
+**type**: dictionary (ADT)  
 **use cases**: good for bla  
-**queries**:  
-**updates**:  
+**queries**: search(key) O(1)   
+**updates**: insert(key, item), delete(key)  
 **(RI)**:   
 **properties**:  
 
-Python built in hash() - should be called prehash - but basically return and integer based on the input. (to use as a key for dict for example)
+**Motivation:**  
+DB - uses hashing and search trees
+Dictionary lookup - use hash table
+Spell check - trial perturbation of each letter - really?
+
+
+**13m Solution 1 - Direct access table**  
+Problems:
+1. key not being integers (therefore dont map direct to memory)  
+2. if there are a lot of gaps in keys this solution is a huge memory hog!  
+
+**Solution to 1:**  
+Prehashing - map keys to integers (array location)  
+  
+Python built in hash() - should be called prehash - but basically return and integer based on the input. (to use as a key for dict for example)  
 ```
 Python dunder function __hash__ is called when built in hash(object) is called.
-if you dont implement hash hash(obj) used id(obj) to create hash
+if you dont implement hash hash(obj) used id(obj) to as the hash value
+  this avoid collision because no two things occupy the same space in memory so id is unique
 ```
+  
+**Solution to 2:**  
+I you have a space of keys, run those through hash function to generate indexes (ideally they should be equally distributed through the target array)  
+The ratio of number of indexes (entries) (n) : number of array spaces (m)  is the load factor - alpha = n/m  
 
+
+See L9 1m-4m sunccict synopsis of last lecture and this solution!!  
+note the n may end up in a linked list for chaining  
+![Visual summary of solution](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_algos_6.006_L9_1m17.png)  
+  
+DIVISION method & MULTIPLICATION method  
+DIVISION method
+\begin{align*}
+  h(k) = k\;mod\;m
+\end{align*}
+MULTIPLICATION method - preferred
+\begin{align*}
+  h(k) = []\\
+  where\;m=2^r\\
+  \textit{n = ratio of hash indexes}\\
+  \textit{m = array spaces}\\
+  load\;factor\;\alpha=\frac{n}{m}
+\end{align*}
+
+
+30m
 Methods for dealing with collisions (Chaining @ 30m & open addressing (next week) )
   one type of open addressing is linear probing
 
 
-I you have a space of keys, run those through hash function to generate indexes (ideally they should be equally distributed through the target array)
-The ratio of number of indexes (entries) (n) : number of array spaces (m)  is the load factor 
-Check understanding here!
-See L9 1m-
-Sunccict sunopsis of last lecture!!  Including above
-note the n may end up in a linked list for chaining
+**TERMS**
+prehash collisions
+chaining - open addressing
+open addressing - linear probing
 
-LAST 10m re-watch 
+
+
 
 ### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
