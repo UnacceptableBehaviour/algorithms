@@ -96,7 +96,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
 		1. [**DATA STRUCTURE - BST - Binary search trees**](#data-structure---bst---binary-search-trees)  
 		2. [Vid contents](#vid-contents)  
-		3. [Augmented BST - 37m - node_count_before](#augmented-bst---37m---nodecountbefore)  
+		3. [Augmented BST - 37m - node_count_before - RANK](#augmented-bst---37m---nodecountbefore---rank)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -140,12 +140,16 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	4. [R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r9---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
-	5. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
+	5. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
+		1. [3-1](#3-1)  
+		2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
+		3. [REFS - alt profilers](#refs---alt-profilers)  
+	6. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	6. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+	7. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
@@ -828,7 +832,7 @@ See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-sea
 36m	max() - O(h) - go farthest right  
 37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
               Add number of nodes below node to it. (number includes node itself)  
-43m	AUGMENTATION - Rank k - algorithm code   
+43m	AUGMENTATION - Rank(k) - algorithm code - O(logn) for a balanced tree!! Pseudo code below.   
 
 
 
@@ -870,7 +874,7 @@ Min - far left leaf
 Max - far right leaf  
 Next largest value - Up a node? NO its next right node - parent.min() - smallest node of parent subtree. (or parent if no subtree)  
 
-#### Augmented BST - 37m - node_count_before  
+#### Augmented BST - 37m - node_count_before - RANK  
 Augmented BST add subtree size to the data in the node. Includes the node and its children (number after dash in tree below).    
 Maintained by incrementing the tree size by one as theyre traversed to an insertion.  
 
@@ -917,7 +921,7 @@ Return total
 26m-35m	Data structures, BST, (unbalanced)
 35m-42m 	BST find successor/predecessor
 42m-54m 	BST delete, 3 cases O(h) height of tree
-54m-end	BST augmentation - Uses example min - needed for problem set
+54m-end	BST augmentation - Uses example min - needed for problem set 3 PS3
 
 #### Maths notes  
 Solving Recurrence for merge sort:
@@ -1163,7 +1167,7 @@ Rotation Cases (@ 32m)
 
 
 ### R6 - maths & code
-[vid]() ~ 
+[vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
 Reading: 
@@ -1545,24 +1549,97 @@ Revisit this but implementation seems relatively simple
 
 
 **TERMS**
-prehash collisions
-collisions - chaining = storing the collision in a linked list at the address
-collisions - linear probing = store the collision in the next available free address
-collisions - open addressing = linear probing is open addressing (may not find item exactly where expceted)
-collisions - closed addressing = chaining is closed addressing (item store always in same location)
-simple uniform hashing
-universal hashing
+prehash collisions  
+collisions - chaining = storing the collision in a linked list at the address  
+collisions - linear probing = store the collision in the next available free address  
+collisions - open addressing = linear probing is open addressing (may not find item exactly where expceted)  
+collisions - closed addressing = chaining is closed addressing (item store always in same location)  
+simple uniform hashing  
+universal hashing  
+  
 
 
 
 
 ### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
+[lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
 Code:
 Reading: 
 
 #### Vid contents
+0-xm - Walk the code in problem set 3 - 
+
+
+
+All the lines(vectors) are added to the RangeIndex
+CrossVerifier((layers)._events_from_layer).wire_crossings > _compute_crossings > list 
+	
+7m
+```
+> python -m cProfile -s time circuit2.py < tests/10grid_s.in
+file contains list wires: wire v7035 61240 -815340 61240 410695
+                               name   x1     y1     x2    y2
+                  vertical wire since x1 = x2
+command[0]   wire 
+command[1]   v7035 
+coordinates  61240 -815340 61240 410695
+
+Loaded into layers
+layer = WireLayer.from_file(sys.stdin)          # ln
+      if command[0] == 'wire':
+        coordinates = [float(token) for token in command[2:6]]
+        layer.add_wire(command[1], *coordinates)
+              Wire(name, x1, y1, x2, y2) + internally enumerated wire_id
+				x1, y1, x2, y2 = *coordinates
+        layer.wires = dict with name as key, Wire object as value
+
+Once loaded the layer is passed to CrossVerifier
+_events_from_layer(layer)
+    left_edge = min([wire.x1 for wire in layer.wires.values()])   # find leftmost co-ordinate
+        
+    go through wires and sort into events - add for horizontal, query for vertical
+      if wire.is_horizontal():
+        self.events.append([left_edge, 0, wire.object_id, 'add', wire])     # left_edge - constant
+      else:
+        self.events.append([wire.x1, 1, wire.object_id, 'query', wire])     # wire.x1 - wire dependant
+
+    EG
+    1) ADD [-100, 0, 1, add, wire_obj]         # horizontal wire - _events_from_layer:line 333
+    2) QUERY [-50, 1, 2, query, wire_obj]      # vertical wire - _events_from_layer:line 333
+
+    CrossVerifier.events is a list[]
+
+self.events.sort() # sort by 1st column then second then 3rd if 1st column same
+    So will sort:
+    Horizontal vectors 1st (all have left_edge in 1st column) sorted by incrementing obj_id,
+	then vertical vectors sorted by x.1 co-ordinate (left to right)
+    
+self.index = RangeIndex()                        # create RangeIndex
+self.result_set = ResultSet()                    # create ResultSet
+
+result = verifier.wire_crossings()
+    self._compute_crossings(False)               # count_crossings calls self._compute_crossings(True)
+        result = self.result_set                 # initialised as ResultSet()
+
+       @loop through self.events                 # KeyWirePair - (KeyWirePairL & KeyWirePairH lower & upper limits obj_id)
+       @                                         # have comparison operators __le__, __ge__ etc
+       @                                         # add all the horizontal vectors as KeyWirePair objects
+       @self.index.add(KeyWirePair(wire.y1, wire))	             the KEY in Range index is the horizonal lines vertical position y1
+       @                                         # wire is vertical wire
+       @for kwp in self.index.list(KeyWirePairL(wire.y1),KeyWirePairH(wire.y2)):
+       @      get all horizontal vertices that lie in the vertical range of this wire
+       @      check if they cross, and add to list cross_wires and from there compile in result			
+
+```
+![walking code colour anotation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_algos_6.006_ps3_code_walk.png)  
+**Steps to optimise code: todo. . .**  
+Adapt AVL tree code to implement rank & count.  
+Implement LCA, Node-List, & List  
+Integrate into circuit2.py  
+Run profiler
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1615,488 +1692,16 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 		Problem set 3 due
-		Problem set 4 out
+### Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
+#### 3-1 
 
-### L10 - Open addressing, cryptographic hashing  
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
 
-#### **DATA STRUCTURE**  
-**type**:  
-**use cases**: good for bla  
-**queries**:  
-**updates**:  
-**(RI)**:   
-**properties**:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-### R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading: 
-
-#### **DATA STRUCTURE**  
-**type**:  
-**use cases**: good for bla  
-**queries**:  
-**updates**:  
-**(RI)**:   
-**properties**: 
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-## Problem set 4 due
-## Quiz 1	 
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Unit 4: Numerics
-### L11 - Integer arithmetic, Karatsuba multiplication	
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-### R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-COPY RECITATION TEMPLATE into further lectures
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading: 
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-## Problem set 5 out
-
-### L12 - Square roots, Newton's method	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Unit 5: Graphs
-### L13 - Breadth-first search (BFS)	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-### L14	Depth-first search (DFS), topological sorting
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-## Problem set 5 due
-## Problem set 6 out
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Unit 6: Shortest Paths
-### L15 - Single-source shortest paths problem	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-### L16 - Dijkstra	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-### L17 - Bellman-Ford	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-### L18 - Speeding up Dijkstra
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-		Problem set 6 due
-	 	Quiz 2	 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Unit 7: Dynamic Programming
-### L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-0-5m - Introduction to Dynamic Programming (DP) recursion + memoization + guessing
-5m-11m20 - Solving Fibonacci w/ Memoization - naive version
-11m20-15m40 - Memoized version
-15m40- running cost Θ(n) - **rule 30m49 flashback** for acyclic sub problems
-19m30-23m - DP generalisation, running cost
-23m-29m Bottom-up DP algorithm (topological sort)
-29m-51m shortest paths, converting cyclic paths to acyclic & bellman-ford
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-## Problem set 7 out
-
-### L20 - Parent pointers; text justification, perfect-information blackjack	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-
-### L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-### L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-## Problem set 7 due
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Unit 8: Advanced Topics
-### L23 - Computational complexity	 
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-### 24 - Algorithms research topics
-[vid]()  
-[lect notes]()  
-Code:
-Reading:
-
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
-
-#### Vid contents  
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-
-
-
-
-## Glossary of terms
-
-The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
-O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
-Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case (common in **CompSci**)  
-Ω - big Omega - BEST case or LOWER bound (common in **CompSci**)  
-o - little O - loose upper bound (common in Maths rare in CompSci)  
-ω - little omega - rough estimate of the order of the growth (rarely used)  
-T(n) - function defining the exact Time or number of steps to complete an algorithm for n items  
-
-Binary tree types:  
-Full			All nodes have 2 children or 0 children (one child not allowed)  
-Complete	Filled top to bottom left to right (and removed in reverse, data position likely re-ordered to preserve RI - EG Heap)  
-Perfect		All layers have all their nodes  
-Balanced	Usually refers to weight height balance leaf depths differ by no more than 1 (can also be weight balanced)
-
-ADT - Abstract Data Type (interface definition, methods & properties)  
-DS - Data Structure (actual implementation of the ADT)  
-RI - representation invariant  
-
-Stable sorting algorithm - A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted. 
-
-Note for array of **any** size tree: element A[n/2+1 . . n] are ALL leaves! 
-
-
-## How To s
-### How so I plot a chart with python?
+#### 3-2 Tool Optimisation [55 points]
+Overview of how this code work is in R8
 ```
-> .pe						# alias .pe='. venv/bin/activate'
-> pip install matplotlib			# plotting lib
-> pip install numpy				# math sci lib 
-> ./matplotlib/plot.py				# super basic 2d plot example - in maths repo
-```
-[./matplotlib/time_complexity_plot_q.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/matplotlib/time_complexity_plot_q.py)  
+> python -m cProfile -s time circuit2.py < tests/10grid_s.in           # profile test - take nearly 15min!
 
-### How to setup autogenerate README.md file from RTF notes?
-```
-> python --version			# Python 2.7.16
-> python3 -m venv venv
-> .pe					# alias .pe='. venv/bin/activate'
-> python --version			# Python 3.7.5
-> pip install --upgrade pip
-> pip install striprtf			# for rtf processing
-```
-
-### How do I autogenerate README.md file from RTF?
-```
-> .pe				# alias .pe='. venv/bin/activate'
-> ./create_TOC_for_md.py -p	# takes MATHS_00_MIT_6.042.rtf course notes and add TOC > README.md
-				# also add README.md to git, commits, and pushes
-				# -p = commit & push
-```
-
-### How can I add maths formulas to README.md?
-#### Manually: Generate math image and embed it.
-Install Latex tools [notes here](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/context.md)  
-Open LaTeXit edit equation click text and hit the LaTeXit button to check its good.  
-Export as png and upload it to git (need to do this so the URL and be used to embed the image)  
-Embed image with  
-```
-![uses dot product of the vector of each document](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/20200228_1715_dot_prod_doc_distance.png)  
-Note the ! before opening [ denotes image
-```
-#### Automagically:  Install texify.
-[Find texify here](https://github.com/agurodriguez/github-texify)  
-Use LaTeXit to check formula correctness then past it into doc surrounded by consecutive \$ symbols like so
+<img src="/tex/3e966ac53415d84573ee2471aa2b6915.svg?invert_in_darkmode&sanitize=true" align=middle width=6617.159783849999pt height=8059.180324800001pt/> symbols like so
 ![latex script](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/images/latex_example.png)  
 
 Will display the following document distance equation  
