@@ -96,7 +96,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
 		1. [**DATA STRUCTURE - BST - Binary search trees**](#data-structure---bst---binary-search-trees)  
 		2. [Vid contents](#vid-contents)  
-		3. [Augmented BST - 37m - node_count_before](#augmented-bst---37m---nodecountbefore)  
+		3. [Augmented BST - 37m - node_count_before - RANK](#augmented-bst---37m---nodecountbefore---rank)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
@@ -140,12 +140,16 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	4. [R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r9---maths--code------------------------------------------------------------)  
 		1. [Vid contents](#vid-contents)  
 		2. [Maths notes](#maths-notes)  
-	5. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
+	5. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
+		1. [3-1](#3-1)  
+		2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
+		3. [REFS - alt profilers](#refs---alt-profilers)  
+	6. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	6. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+	7. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
@@ -888,7 +892,7 @@ See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-sea
 36m	max() - O(h) - go farthest right  
 37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
               Add number of nodes below node to it. (number includes node itself)  
-43m	AUGMENTATION - Rank k - algorithm code   
+43m	AUGMENTATION - Rank(k) - algorithm code - O(logn) for a balanced tree!! Pseudo code below.   
 
 
 
@@ -930,7 +934,7 @@ Min - far left leaf
 Max - far right leaf  
 Next largest value - Up a node? NO its next right node - parent.min() - smallest node of parent subtree. (or parent if no subtree)  
 
-#### Augmented BST - 37m - node_count_before  
+#### Augmented BST - 37m - node_count_before - RANK  
 Augmented BST add subtree size to the data in the node. Includes the node and its children (number after dash in tree below).    
 Maintained by incrementing the tree size by one as theyre traversed to an insertion.  
 
@@ -977,7 +981,7 @@ Return total
 26m-35m	Data structures, BST, (unbalanced)
 35m-42m 	BST find successor/predecessor
 42m-54m 	BST delete, 3 cases O(h) height of tree
-54m-end	BST augmentation - Uses example min - needed for problem set
+54m-end	BST augmentation - Uses example min - needed for problem set 3 PS3
 
 #### Maths notes  
 Solving Recurrence for merge sort:
@@ -1243,7 +1247,7 @@ Rotation Cases (@ 32m)
 
 
 ### R6 - maths & code
-[vid]() ~ 
+[vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
 Reading: 
@@ -1653,24 +1657,97 @@ Revisit this but implementation seems relatively simple
 
 
 **TERMS**
-prehash collisions
-collisions - chaining = storing the collision in a linked list at the address
-collisions - linear probing = store the collision in the next available free address
-collisions - open addressing = linear probing is open addressing (may not find item exactly where expceted)
-collisions - closed addressing = chaining is closed addressing (item store always in same location)
-simple uniform hashing
-universal hashing
+prehash collisions  
+collisions - chaining = storing the collision in a linked list at the address  
+collisions - linear probing = store the collision in the next available free address  
+collisions - open addressing = linear probing is open addressing (may not find item exactly where expceted)  
+collisions - closed addressing = chaining is closed addressing (item store always in same location)  
+simple uniform hashing  
+universal hashing  
+  
 
 
 
 
 ### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
+[lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
 Code:
 Reading: 
 
 #### Vid contents
+0-xm - Walk the code in problem set 3 - 
+
+
+
+All the lines(vectors) are added to the RangeIndex
+CrossVerifier((layers)._events_from_layer).wire_crossings > _compute_crossings > list 
+	
+7m
+```
+> python -m cProfile -s time circuit2.py < tests/10grid_s.in
+file contains list wires: wire v7035 61240 -815340 61240 410695
+                               name   x1     y1     x2    y2
+                  vertical wire since x1 = x2
+command[0]   wire 
+command[1]   v7035 
+coordinates  61240 -815340 61240 410695
+
+Loaded into layers
+layer = WireLayer.from_file(sys.stdin)          # ln
+      if command[0] == 'wire':
+        coordinates = [float(token) for token in command[2:6]]
+        layer.add_wire(command[1], *coordinates)
+              Wire(name, x1, y1, x2, y2) + internally enumerated wire_id
+				x1, y1, x2, y2 = *coordinates
+        layer.wires = dict with name as key, Wire object as value
+
+Once loaded the layer is passed to CrossVerifier
+_events_from_layer(layer)
+    left_edge = min([wire.x1 for wire in layer.wires.values()])   # find leftmost co-ordinate
+        
+    go through wires and sort into events - add for horizontal, query for vertical
+      if wire.is_horizontal():
+        self.events.append([left_edge, 0, wire.object_id, 'add', wire])     # left_edge - constant
+      else:
+        self.events.append([wire.x1, 1, wire.object_id, 'query', wire])     # wire.x1 - wire dependant
+
+    EG
+    1) ADD [-100, 0, 1, add, wire_obj]         # horizontal wire - _events_from_layer:line 333
+    2) QUERY [-50, 1, 2, query, wire_obj]      # vertical wire - _events_from_layer:line 333
+
+    CrossVerifier.events is a list[]
+
+self.events.sort() # sort by 1st column then second then 3rd if 1st column same
+    So will sort:
+    Horizontal vectors 1st (all have left_edge in 1st column) sorted by incrementing obj_id,
+	then vertical vectors sorted by x.1 co-ordinate (left to right)
+    
+self.index = RangeIndex()                        # create RangeIndex
+self.result_set = ResultSet()                    # create ResultSet
+
+result = verifier.wire_crossings()
+    self._compute_crossings(False)               # count_crossings calls self._compute_crossings(True)
+        result = self.result_set                 # initialised as ResultSet()
+
+       @loop through self.events                 # KeyWirePair - (KeyWirePairL & KeyWirePairH lower & upper limits obj_id)
+       @                                         # have comparison operators __le__, __ge__ etc
+       @                                         # add all the horizontal vectors as KeyWirePair objects
+       @self.index.add(KeyWirePair(wire.y1, wire))	             the KEY in Range index is the horizonal lines vertical position y1
+       @                                         # wire is vertical wire
+       @for kwp in self.index.list(KeyWirePairL(wire.y1),KeyWirePairH(wire.y2)):
+       @      get all horizontal vertices that lie in the vertical range of this wire
+       @      check if they cross, and add to list cross_wires and from there compile in result			
+
+```
+![walking code colour anotation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_algos_6.006_ps3_code_walk.png)  
+**Steps to optimise code: todo. . .**  
+Adapt AVL tree code to implement rank & count.  
+Implement LCA, Node-List, & List  
+Integrate into circuit2.py  
+Run profiler
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1723,7 +1800,106 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 		Problem set 3 due
-		Problem set 4 out
+### Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
+#### 3-1 
+
+
+#### 3-2 Tool Optimisation [55 points]
+Overview of how this code work is in R8
+```
+> python -m cProfile -s time circuit2.py < tests/10grid_s.in           # profile test - take nearly 15min!
+
+$ python -m cProfile -s time circuit2.py < tests/10grid_s.in
+124668802
+         1436321483 function calls (1436321412 primitive calls) in 917.681 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+187590314  279.644    0.000  428.213    0.000 circuit2.py:55(intersects)
+    20000  195.692    0.010  366.372    0.018 circuit2.py:157(list)             < < < high tot.time
+562840882  148.598    0.000  148.598    0.000 circuit2.py:47(is_horizontal)
+        1  113.702  113.702  917.153  917.153 circuit2.py:336(_compute_crossings)      3
+299400000  100.610    0.000  100.610    0.000 circuit2.py:246(__le__)
+261444830   70.069    0.000   70.069    0.000 circuit2.py:256(__ge__)
+124719049    8.749    0.000    8.749    0.000 {method 'append' of 'list' objects}
+        1    0.135    0.135    0.371    0.371 circuit2.py:119(from_file)
+    34970    0.108    0.000    0.146    0.000 circuit2.py:20(__init__)
+        1    0.085    0.085    0.110    0.110 circuit2.py:327(_events_from_layer)
+    20000    0.052    0.000    0.052    0.000 circuit2.py:281(__init__)
+    34970    0.044    0.000    0.191    0.000 circuit2.py:99(add_wire)
+        1    0.041    0.041    0.041    0.041 {method 'sort' of 'list' objects}
+    34972    0.024    0.000    0.024    0.000 {method 'readline' of 'file' objects}
+20460/20445    0.022    0.000    0.022    0.000 {len}
+    34972    0.021    0.000    0.021    0.000 {method 'split' of 'str' objects}
+    34970    0.021    0.000    0.021    0.000 circuit2.py:81(next_object_id)
+    20000    0.017    0.000    0.017    0.000 circuit2.py:290(__init__)
+    14970    0.013    0.000    0.013    0.000 circuit2.py:233(__init__)
+    20000    0.009    0.000    0.009    0.000 circuit2.py:363(trace_sweep_line)
+    20000    0.005    0.000    0.005    0.000 circuit2.py:51(is_vertical)
+    14970    0.005    0.000    0.006    0.000 circuit2.py:147(add)
+       57    0.003    0.000    0.003    0.000 {min}
+        1    0.001    0.001  917.681  917.681 circuit2.py:3(<module>)                 2
+        1    0.000    0.000  917.153  917.153 circuit2.py:313( )                      1
+        1    0.000    0.000    0.151    0.151 circuit2.py:299(__init__)
+        6    0.000    0.000    0.001    0.000 sre_parse.py:725(parse)
+        9    0.000    0.000    0.000    0.000 sre_compile.py:428(_simple)
+       80    0.000    0.000    0.000    0.000 sre_parse.py:207(match)
+```
+
+Profiler Qs
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     15/6    0.000    0.000    0.001    0.000 sre_parse.py:414(_parse)
+Whats the 15/6 mean under ncalls? Recursive call here: 6 primitive call 15 in total
+
+Profiler column meanings: https://docs.python.org/3/library/profile.html
+```
+ncalls
+    for the number of calls.
+tottime
+    for the total time spent in the given function (and excluding time made in calls to sub-functions)
+percall
+    is the quotient of tottime divided by ncalls
+cumtime
+    is the cumulative time spent in this and all subfunctions (from invocation till exit). This figure is accurate even for recursive functions.
+percall
+    is the quotient of cumtime divided by primitive calls
+filename:lineno(function)
+    provides the respective data of each function
+```
+
+  
+**3-2 a)** list  
+**3-2 a)** 187590314 calls - why per call time zero?  
+**Setup for next questions**
+```
+Copy good_trace.jsonp to /circuit2/visualizer/bin/trace.jsonp         # its a trace of how sweeper should work
+dbl click /circuit2/visualizer/bin/visualizer.html                    # or drag it into chrome
+```   
+![walking code colour anotation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_algos_6.006_ps3_code_walk.png)  
+**Steps to optimise code: todo. . .**  
+Adapt AVL tree code to implement rank & count.  
+Implement LCA, Node-List, & List  
+Integrate into circuit2.py  
+Run profiler
+
+
+#### REFS - alt profilers
+Using sProfile - https://towardsdatascience.com/how-to-profile-your-code-in-python-e70c834fad89  
+Alternative profilers - https://pythonspeed.com/articles/beyond-cprofile/
+Python debugger - https://docs.python.org/3/library/pdb.html
+Python debugger tutorial - https://realpython.com/python-debugging-pdb/
+Alternative implementation to CPython - https://www.pypy.org/
+-
+Working out if two vectors intersect + special cases - https://www.youtube.com/watch?v=bbTqI0oqL5U
+Sweep line algorithm 2/5 theory - https://www.youtube.com/watch?v=qkhUNzCGDt0
+  event (point) queue (use balanced BST) & sweepline status (use balanced BST)
+Sweep line algorithm 3/5 pseudo code - https://www.youtube.com/watch?v=I9EsN2DTnN8
+Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube.com/watch?v=8C3_ZKy4KkA
+
+
+
+Problem set 4 out
 
 ### L10 - Open addressing, cryptographic hashing  
 [vid]()  
