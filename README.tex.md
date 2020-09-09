@@ -109,7 +109,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		4. [TERMS](#terms)  
 		5. [Maths notes - AVL tree (19-25m) - height analysis v1](#maths-notes---avl-tree-19-25m---height-analysis-v1)  
 		6. [Maths notes - AVL tree (26m) - height analysis v2](#maths-notes---avl-tree-26m---height-analysis-v2)  
-	6. [R6 - maths & code](#r6---maths--code)  
+	6. [R6 - AVL trees](#r6---avl-trees)  
 		1. [Vid contents](#vid-contents)  
 		2. [BST review](#bst-review)  
 		3. [AVL properties](#avl-properties)  
@@ -130,30 +130,24 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [Maths notes](#maths-notes)  
 9. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
-		1. [Vid contents](#vid-contents)  
-		2. [**DATA STRUCTURE**](#data-structure)  
+		1. [**DATA STRUCTURE**](#data-structure)  
 	2. [R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r8---maths--code------------------------------------------------------------)  
-		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
+		1. [Maths notes](#maths-notes)  
 	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
-		1. [Vid contents](#vid-contents)  
 	4. [R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r9---maths--code------------------------------------------------------------)  
-		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
+		1. [Maths notes](#maths-notes)  
 	5. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
 		1. [3-1](#3-1)  
 		2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
 		3. [REFS - alt profilers](#refs---alt-profilers)  
 	6. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 	7. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 10. [Problem set 4 due](#problem-set-4-due)  
 11. [Quiz 1](#quiz-1)  
 12. [Unit 4: Numerics](#unit-4-numerics)  
@@ -1246,7 +1240,7 @@ Rotation Cases (@ 32m)
 
 
 
-### R6 - maths & code
+### R6 - AVL trees
 [vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
@@ -1564,12 +1558,12 @@ Any equation identities / topics for this lecture include context and uses for l
 [Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
 Reading: 
 
-#### Vid contents  
+**#### Vid contents**  
 0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
 5m-13m - Python dict API summary, and Motivarion (see lect notes)  
 13m-24m Solution 1 - Direct access table  
 24m- Solution 2 - Hashing  
-29n - introduces collisions - chainig  
+29n - introduces collisions - chaining  
 34m - Simple uniform hashing - Mapping number of keys to number of slots   
 42m - hashing to table size m
 43m - DIVISION
@@ -1606,7 +1600,7 @@ if you dont implement hash hash(obj) used id(obj) to as the hash value
   this avoid collision because no two things occupy the same space in memory so id is unique
 ```
   
-**24m Solution 2 - Hashing - Mapping from Giant space of key to array indexes**
+**24m Solution 2 - Hashing - Mapping from Giant space of key to array indexes**  
 **Solution to 2:**  
 I you have a space of keys, run those through hash function to generate indexes (ideally they should be equally distributed through the target array)  
 The ratio of number of indexes (entries) (n) : number of array spaces (m)  is the load factor - alpha = n/m (aka expected collision chain length)  
@@ -1622,7 +1616,7 @@ note the n may end up in a linked list for chaining
 **34m - Simple uniform hashing - Mapping number of keys to number of slots**  
 Assumptions:  
 a) each key equally likely to be hashed to ANY slot in the table
-b) INDEPENDANT of where other keys hashing
+b) INDEPENDENT of where other keys hashing
 Hash function need to know size of table - m.
 
 **43m - DIVISION method**
@@ -1641,11 +1635,11 @@ Note: m should be PRIME and not too close to power of 2.
   \textit{(expected collision chain length)}\;load\;factor\;\alpha=\frac{n}{m}\\
   \textit{expected operation (insert del etc) time}\;\Theta(1+\alpha)
 \end{align*}
-a should be random, odd, and in the range 2^(r-1) < a < 2^r, and not close to a power of 2.
+a should be random, odd, and in the range 2^(r-1) < a < 2^r, and NOT close to a power of 2.  
 w number of bits in key range  
-
+  
 Basically multiply the key (w bits) by an odd (fixed to the function) random number resulting in a number of length 2w bits. (assuming a is also w bits long)
-Take the section with the hight diversity (in the middle) that generates a number of at least m (required spaces). IE 2^r bits must be at least m 
+Take the section with the highest diversity (in the middle) that generates a number of at least m (required spaces). IE 2^r bits must be at least m 
 Which is why the m=2^r part which select the length of th section that is taken for the hash result.
 See diagram notes top p6  
 
@@ -1653,14 +1647,14 @@ See diagram notes top p6
 
 **48m - UNIVERSAL HASHING (preferred)**  
 blur. . . note bottom p6 . . . take 6.046 to understand better. . .
-Revisit this but implementation seems relatively simple
+Revisit this - implementation seems relatively simple
 
 
 **TERMS**
 prehash collisions  
 collisions - chaining = storing the collision in a linked list at the address  
 collisions - linear probing = store the collision in the next available free address  
-collisions - open addressing = linear probing is open addressing (may not find item exactly where expceted)  
+collisions - open addressing = linear probing is open addressing (may not find item exactly where expected)  
 collisions - closed addressing = chaining is closed addressing (item store always in same location)  
 simple uniform hashing  
 universal hashing  
@@ -1676,8 +1670,14 @@ universal hashing
 Code:
 Reading: 
 
-#### Vid contents
-0-xm - Walk the code in problem set 3 - 
+**#### Vid contents**  
+0-xm - Walk the code in problem set 3 -  
+9m - introduce lexicographic comparison sort  
+17m-29m  - RangeIndex methods and running time for example (poor) code  
+29m - KeyWirePairs,   
+42m - RangeIndex - comparision model penalty  
+43m - LIST LCA pseudo code  
+49m - LCA run time intuition  
 
 
 
@@ -1764,7 +1764,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### Vid contents
+**#### Vid contents**  
 
 How to choose m (table size)  - (on overflow double it)
 
@@ -1791,7 +1791,7 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 Code:
 Reading: 
 
-#### Vid contents
+**#### Vid contents**  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1799,7 +1799,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 
-		Problem set 3 due
+
 ### Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
 #### 3-1 
 
@@ -1915,7 +1915,7 @@ Reading:
 **(RI)**:   
 **properties**:  
 
-#### Vid contents  
+**#### Vid contents**  
 
 #### Example problem
 
@@ -1936,7 +1936,7 @@ Reading:
 **(RI)**:   
 **properties**: 
 
-#### Vid contents  
+**#### Vid contents**  
 
 #### Example problem
 
