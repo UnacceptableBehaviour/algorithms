@@ -45,7 +45,6 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 | :flashlight: 24. Topics in Algorithms Research                                                                                                                                   |                                                                                                                                                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                     |
 
 
-
 ## Contents  
 1. [Abstract](#abstract)  
 2. [Progress](#progress)  
@@ -1678,7 +1677,7 @@ Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 	use choosing size using random prime 
 
 ### R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-[vid]()  
+[vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading: 
