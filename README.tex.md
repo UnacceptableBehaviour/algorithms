@@ -131,10 +131,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 9. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-	2. [R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r8---maths--code------------------------------------------------------------)  
+	2. [R8 - Simulation Algorithms](#r8---simulation-algorithms)  
 		1. [Maths notes](#maths-notes)  
 	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
-	4. [R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r9---maths--code------------------------------------------------------------)  
+	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
 		1. [Maths notes](#maths-notes)  
 	5. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
 		1. [3-1](#3-1)  
@@ -1615,16 +1615,16 @@ note the n may end up in a linked list for chaining
 **Hashing methods: DIVISION, MULTIPLICATION, UNIVERSAL HASHING (prefered)**  
 **34m - Simple uniform hashing - Mapping number of keys to number of slots**  
 Assumptions:  
-a) each key equally likely to be hashed to ANY slot in the table
-b) INDEPENDENT of where other keys hashing
-Hash function need to know size of table - m.
+a) each key equally likely to be hashed to ANY slot in the table  
+b) INDEPENDENT of where other keys hashing  
+Hash function need to know size of table - m.  
 
 **43m - DIVISION method**
 \begin{align*}
   h(k) = k\;mod\;m
 \end{align*}
-Note: m should be PRIME and not too close to power of 2.
-
+Note: m should be PRIME and not too close to power of 2.  
+  
 **44m - MULTIPLICATION method - preferred over division (notes p5)**
 \begin{align*}
   h(k) = [(a\cdot k)\;mod\;2^w] >> (w-r)\\
@@ -1650,7 +1650,7 @@ blur. . . note bottom p6 . . . take 6.046 to understand better. . .
 Revisit this - implementation seems relatively simple
 
 
-**TERMS**
+**TERMS**  
 prehash collisions  
 collisions - chaining = storing the collision in a linked list at the address  
 collisions - linear probing = store the collision in the next available free address  
@@ -1661,13 +1661,11 @@ universal hashing
   
 
 
-
-
-### R8 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### R8 - Simulation Algorithms
 [vid](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
 [lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
-Code:
+Code: 
 Reading: 
 
 **#### Vid contents**  
@@ -1747,7 +1745,7 @@ Adapt AVL tree code to implement rank & count.
 Implement LCA, Node-List, & List  
 Integrate into circuit2.py  
 Run profiler
-
+sort lexicographic comparison
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -1760,38 +1758,94 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ### L9 - Table doubling, Karp-Rabin
-[vid](https://www.youtube.com/watch?v=BRO7mVIFt08) ~ [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec09.pdf)  
+[vid](https://www.youtube.com/watch?v=BRO7mVIFt08) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec09.pdf)  
 Code:
 Reading:
 
 **#### Vid contents**  
+0-3m - Refresh Hashing with Chaining: Load factor  
+3m - Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
+7m30 - Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
+15m - Amortisation - COST of table doubling operation calculated as a series   
+21m - Inserts - Table doubling costs  
+23m - Delete - Table downsizing  
+23m46 - Delete - PROBLEM w/ table downsizing by half  
+23m50 - Optimal upsized & downsize - double giong up only halve when n (entries) down to 1/4  
+27m - strategy for implementing table doubling in an RTOS  
+28m - String Matching  
+34m - Cost for simple string matching theta Θ(s*t) could be QUADRATIC
+35m - using a rolling hash ADT - concepts
+41m-47m - Rolling hash ADT - pseudo code - problem set 4
+
 
 How to choose m (table size)  - (on overflow double it)
-
-Amortisation 15m
 
 When array becomes full n=m,  double in size m*2
 When shrinking shrink when n gets to m/4 shrink m to m/2
 
 ** Invariant property: n <= m <= 4n ***
 n has to be smaller than m (size of structure) or entries wont fit in the data structure
-If n falls to m/4 halve structure size m = m/2
+If n falls to m/4 halve structure size m = m/2, results in amortised  constant time
 
-27m - listen to concept
-Term: constant amortised - note on python lists
-Means  amortized time
+27m - listen to concept - table doubling in RTOS, to minimise rebuild time (and there minimise impact to latency) see [Alternatives to all-at-once rehashing](https://en.wikipedia.org/wiki/Hash_table).   
+Term: amortised constant time - note on python lists
 
+**String Matching**
+ #### Rolling Hash ADT - 37m - Karp Rabin string matching
+needed for Problem set 4 ? ps4
+see notes p4
 
 Rolling hash ADT - pseudo code. 41m - 47m  - 1987? getting more recent
 	use choosing size using random prime 
 
-### R9 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+rehash function: 4m41
+https://www.youtube.com/watch?v=oxd_Z1osgCk
+[c / c++ / python / java code](https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/)
+```
+Rehashing: hash(txt[s+1..s+m]) = d( hash(txt[s..s+m-1]) - txt[s]*h ) + txt[s+m]) mod q )
+hash(txt[s+1..s+m]) = hash value @ shift s  
+hash(txt[s..s+m-1]) = hash value @ next shift (s+1)
+d: number of character in the alphabet (256 for 8bits)
+q: prime number (laregr number = less collisions / false positives)
+h: d^(m-1)
+
+https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/ 
+compiled local
+https://github.com/UnacceptableBehaviour/gdb_lldb/blob/master/karp_rabin.cc
+build instruction in file
+```
+
+
+### R9 - Rolling Hashes, Amortized Analysis
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf)  
 Code:
 Reading: 
 
 **#### Vid contents**  
+0-5m  - Walk through naive implementation
+5m30-10m - Avoiding false positives / maths of collisions
+10m 	Running time - 
+14m - fast hashing - mod prime number
+18m-22m - SLIDE implementation
+22m - prehash - smart way
+28m - contsructor(__init__) for rolling_hash
+30m - append & skip
+36m-38 - multiplicative inverse - precomputed because base on const
+40m - rolling_hash, append, skip, hash - cost
+	
+
+Naive implementation of string match O(n*k), where n is string length & m is the search string length.
+For each of he n positions each letter in k needs to be compared to the to search text.
+
+For hashing the smaller the m (number of available spaces) the hash maps to the the higher the number of collisions (and in this application potential matches)
+5m30-10m
+
+Naively implements hash function for n character string will be O(n) - (10m30 - Assume O(1) using rolling hash)
+
+Computation of [modular inverse](https://docs.python.org/3/library/functions.html#pow) 
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
