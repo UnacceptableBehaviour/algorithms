@@ -1788,22 +1788,22 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 Reading: 
 
 **#### Vid contents**  
-**0m-1m** - 		what to cover? Hashes, Code & Amortisation
-**1m-3m** - 		Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse
-**3m-14m** - 	Why using primes is important in hash function
-**13m6** - 		Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better 
-**14m-00m** - 	Walk the code in problem set 4 ps4 - 
-**15m** - 		Rolinghash, API diff - slide(new, old) split out into: append(new), skip(old), 
-**16m20** - 		kfasta.py - iterator implemtaion, __iter__, next()
-**21m-44m** -  	dnaseq.py method by method & python features needed
+**0m-1m** - 		what to cover? Hashes, Code & Amortisation  
+**1m-3m** - 		Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
+**3m-14m** - 	Why using primes is important in hash function  
+**13m6** - 		Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
+**14m-00m** - 	Walk the code in problem set 4 ps4   
+**15m** - 		Rolinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
+**16m20** - 		kfasta.py - iterator implemtaion, __iter__, next()  
+**21m-44m** -  	dnaseq.py method by method & python features needed  
 **21m** -  		implementing reverse w/o using a lot of memory 	
-**23m-37m** - 	generators / yield / subsequences(), 
-**38n-40m** - 	intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement
-**40m-44m** - 	getExactSubmatches()
-**44m** - 		Amortized analysis
-**49m-53m** - 	Time analysis list, append, memory alocation
-**53m** - 		Aggregate analysis / Cost based accounting
-**53m-57m** - 	Maths on aggregate analysis - write 
+**23m-37m** - 	generators / yield / subsequences()   
+**38n-40m** - 	intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
+**40m-44m** - 	getExactSubmatches()  
+**44m** - 		Amortized analysis  
+**49m-53m** - 	Time analysis list, append, memory alocation  
+**53m** - 		Aggregate analysis / Cost based accounting  
+**53m-57m** - 	Maths on aggregate analysis - write   
 
   
 https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8
