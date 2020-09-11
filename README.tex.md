@@ -16,33 +16,33 @@ Work notes from Introduction to [Algorithms MIT 6.006](https://ocw.mit.edu/cours
 KEY: (:white_check_mark:) watched, (:mag:) rewatch, (:flashlight:) unseen / to watch, (:question:) problem / open question  
 CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) not happy / code smells,  
 
-| Lectures                                                                                                                                                                         | Recitations                                                                                                                                                                                                                                    | Problem Sets                                                                                                                                                      | Solutions                                                                                                                                                        | Example Code                                                                                                              | Implementation                                                                                                                                                                                                                                               |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| :white_check_mark: [01. Algorithmic Thinking, Peak Finding](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=3s)                    | :flashlight: [R01. Asymptotic Complexity, Peak Finding](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/recitation-1-asymptotic-complexity-peak-finding/) | [Set 1 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)   | [Set 1](https://github.com/UnacceptableBehaviour/algorithms#problem-set-1)                                                                                       | [DocDistance Optimisations](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) |                                                                                                                                                                                                                                                              |
-| :white_check_mark: [02. Models of Computation, Document Distance](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3&t=117s)            | :flashlight: [R02. Python Cost Model, Document Distance](https://www.youtube.com/watch?v=j0upQLUrpM8)                                                                                                                                          |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :white_check_mark: [03. Insertion Sort, Merge Sort](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=4&t=1953s)                         | :flashlight: [R03. Document Distance, Insertion and Merge Sort](https://www.youtube.com/watch?v=4iXLnF3hExw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=27)                                                                                  | [Set 2 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps2.pdf)   |                                                                                                                                                                  |                                                                                                                           | :seedling: [merge.sort-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/merge_sort.py)                                                                                                                                              |
-| :white_check_mark: [04. Heaps and Heap Sort](https://www.youtube.com/watch?v=B7hVxCmfPtM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5&t=2064s)                                |                                                                                                                                                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           | :seedling: [Heap-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)                                                                                                                                                      |
-| :white_check_mark: [05. Binary Search Trees, BST Sort](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6&t=1s)                         | :white_check_mark: [R05. Recursion Trees, Binary Search Trees](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28)                                                                                   |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           | :seedling: [BST-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py)                                                                                                                                             |
-| :white_check_mark: [06. AVL Trees, AVL Sort](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=7&t=1913s)                                | :white_check_mark: [R06. AVL Trees](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29)                                                                                                              |                                                                                                                                                                   |                                                                                                                                                                  | [AVL / BST](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L6_BST_AVL_trees)                | :seedling: [AVL-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)                                                                                                                                                            |
-| :white_check_mark: [07. Counting Sort, Radix Sort, Lower Bounds for Sorting](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=301s) | :white_check_mark: [R07. Comparison Sort, Counting and Radix Sort](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30)                                                                               | [Set 3 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :white_check_mark: [08. Hashing with Chaining](https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=9&t=0s)                                 | :white_check_mark: [R08. Simulation Algorithms](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31)                                                                                                  |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           | :seedling: [Hash.w.Chaining-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array_dict.py)   :cactus: [Hash Div/Mul Word search](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/string_match_hash.py) |
-| :white_check_mark: [09. Table Doubling, Karp](https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10&t=0s)                                 | :mag: [R09. Rolling Hashes, Amortized Analysis](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)                                                                                                  | [Set 4 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf)   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| No lecture 9b                                                                                                                                                                    | :flashlight: [R09b - DNA Sequence Matching](https://www.youtube.com/watch?v=-DwGrJ8JxDc)                                                                                                                                                       |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: [10. Open Addressing, Cryptographic Hashing](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10)                          | :flashlight: R10. Quiz 1 Review-                                                                                                                                                                                                               | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1.pdf)          | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1_sol.pdf)     |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 11. Integer Arithmetic, Karatsuba Multiplication                                                                                                                    | :flashlight: R11. Principles of Algorithm Design                                                                                                                                                                                               | [Set 5 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps5.pdf)   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 12. Square Roots, Newton's Method                                                                                                                                   | :flashlight: R12. Karatsuba Multiplication, Newton's Method                                                                                                                                                                                    |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 13. Breadth                                                                                                                                                         | :flashlight: R13. Breadth                                                                                                                                                                                                                      |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 14. Depth                                                                                                                                                           | :flashlight: R14. Depth                                                                                                                                                                                                                        | [Set 6 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps6.pdf)   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 15. Single                                                                                                                                                          | :flashlight: R15. Shortest Paths                                                                                                                                                                                                               |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 16. Dijkstra                                                                                                                                                        | :flashlight: R16. Rubik's Cube, StarCraft Zero                                                                                                                                                                                                 |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 17. Bellman                                                                                                                                                         | :flashlight: R18. Quiz 2 Review                                                                                                                                                                                                                | [Quiz 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz2.pdf)          | [Quiz 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz2_sol.pdf)     |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 18. Speeding up Dijkstra                                                                                                                                            | :flashlight: R19. Dynamic Programming - Crazy Eights, Shortest Path                                                                                                                                                                            | [Set 7 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps7.pdf)   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 19. Dynamic Programming I - Fibonacci, Shortest Paths                                                                                                               | :flashlight: R20. Dynamic Programming - Blackjack                                                                                                                                                                                              |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 20. Dynamic Programming II - Text Justification, Blackjack                                                                                                          | :flashlight: R21. Dynamic Programming - Knapsack Problem                                                                                                                                                                                       |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 21. DP III - Parenthesization, Edit Distance, Knapsack                                                                                                              | :flashlight: R22. Dynamic Programming - Dance Dance Revolution                                                                                                                                                                                 |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 22. DP IV - Guitar Fingering, Tetris, Super Mario Bros.                                                                                                             | :flashlight: R23. Computational Complexity                                                                                                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 23. Computational Complexity                                                                                                                                        | :flashlight: R24. Final Exam Review                                                                                                                                                                                                            | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final.pdf)      | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final_sol.pdf) |                                                                                                                           |                                                                                                                                                                                                                                                              |
-| :flashlight: 24. Topics in Algorithms Research                                                                                                                                   |                                                                                                                                                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                           |                                                                                                                                                                                                                                                              |
+| Lectures                                                                                                                                                                         | Recitations                                                                                                                                                                                                                                    | Problem Sets                                                                                                                                                      | Solutions                                                                                                                                                        | Example Code                                                                                                                                                                                                                                                                               | Implementation                                                                                                                                                                                                                                               |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :white_check_mark: [01. Algorithmic Thinking, Peak Finding](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=3s)                    | :flashlight: [R01. Asymptotic Complexity, Peak Finding](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/recitation-1-asymptotic-complexity-peak-finding/) | [Set 1 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps1.pdf)   | [Set 1](https://github.com/UnacceptableBehaviour/algorithms#problem-set-1)                                                                                       | [DocDistance Optimisations](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance)   [PS1 - Problem Code](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/ps1.zip)   |                                                                                                                                                                                                                                                              |
+| :white_check_mark: [02. Models of Computation, Document Distance](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3&t=117s)            | :flashlight: [R02. Python Cost Model, Document Distance](https://www.youtube.com/watch?v=j0upQLUrpM8)                                                                                                                                          |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :white_check_mark: [03. Insertion Sort, Merge Sort](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=4&t=1953s)                         | :flashlight: [R03. Document Distance, Insertion and Merge Sort](https://www.youtube.com/watch?v=4iXLnF3hExw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=27)                                                                                  | [Set 2 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps2.pdf)   |                                                                                                                                                                  | [PS2 - Problem Code](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/ps2.zip)                                                                                                                               | :seedling: [merge.sort-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/merge_sort.py)                                                                                                                                              |
+| :white_check_mark: [04. Heaps and Heap Sort](https://www.youtube.com/watch?v=B7hVxCmfPtM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5&t=2064s)                                |                                                                                                                                                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            | :seedling: [Heap-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/heap_ify.py)                                                                                                                                                      |
+| :white_check_mark: [05. Binary Search Trees, BST Sort](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6&t=1s)                         | :white_check_mark: [R05. Recursion Trees, Binary Search Trees](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28)                                                                                   |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            | :seedling: [BST-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py)                                                                                                                                             |
+| :white_check_mark: [06. AVL Trees, AVL Sort](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=7&t=1913s)                                | :white_check_mark: [R06. AVL Trees](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29)                                                                                                              |                                                                                                                                                                   |                                                                                                                                                                  | [AVL / BST](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L6_BST_AVL_trees)                                                                                                                                                                                 | :seedling: [AVL-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)                                                                                                                                                            |
+| :white_check_mark: [07. Counting Sort, Radix Sort, Lower Bounds for Sorting](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=301s) | :white_check_mark: [R07. Comparison Sort, Counting and Radix Sort](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30)                                                                               | [Set 3 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)   |                                                                                                                                                                  | [PS3 - Problem Code](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/ps3.zip)                                                                                                                               |                                                                                                                                                                                                                                                              |
+| :white_check_mark: [08. Hashing with Chaining](https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=9&t=0s)                                 | :white_check_mark: [R08. Simulation Algorithms](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31)                                                                                                  |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            | :seedling: [Hash.w.Chaining-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array_dict.py)   :cactus: [Hash Div/Mul Word search](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/string_match_hash.py) |
+| :white_check_mark: [09. Table Doubling, Karp](https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10&t=0s)                                 | :mag: [R09. Rolling Hashes, Amortized Analysis](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)                                                                                                  | [Set 4 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf)   |                                                                                                                                                                  | [PS4 - Problem Code](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz)                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                              |
+| No lecture 9b                                                                                                                                                                    | :flashlight: [R09b - DNA Sequence Matching](https://www.youtube.com/watch?v=-DwGrJ8JxDc)                                                                                                                                                       |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: [10. Open Addressing, Cryptographic Hashing](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10)                          | :flashlight: R10. Quiz 1 Review-                                                                                                                                                                                                               | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1.pdf)          | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1_sol.pdf)     |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 11. Integer Arithmetic, Karatsuba Multiplication                                                                                                                    | :flashlight: R11. Principles of Algorithm Design                                                                                                                                                                                               | [Set 5 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps5.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 12. Square Roots, Newton's Method                                                                                                                                   | :flashlight: R12. Karatsuba Multiplication, Newton's Method                                                                                                                                                                                    |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 13. Breadth                                                                                                                                                         | :flashlight: R13. Breadth                                                                                                                                                                                                                      |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 14. Depth                                                                                                                                                           | :flashlight: R14. Depth                                                                                                                                                                                                                        | [Set 6 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps6.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 15. Single                                                                                                                                                          | :flashlight: R15. Shortest Paths                                                                                                                                                                                                               |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 16. Dijkstra                                                                                                                                                        | :flashlight: R16. Rubik's Cube, StarCraft Zero                                                                                                                                                                                                 |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 17. Bellman                                                                                                                                                         | :flashlight: R18. Quiz 2 Review                                                                                                                                                                                                                | [Quiz 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz2.pdf)          | [Quiz 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz2_sol.pdf)     |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 18. Speeding up Dijkstra                                                                                                                                            | :flashlight: R19. Dynamic Programming - Crazy Eights, Shortest Path                                                                                                                                                                            | [Set 7 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps7.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 19. Dynamic Programming I - Fibonacci, Shortest Paths                                                                                                               | :flashlight: R20. Dynamic Programming - Blackjack                                                                                                                                                                                              |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 20. Dynamic Programming II - Text Justification, Blackjack                                                                                                          | :flashlight: R21. Dynamic Programming - Knapsack Problem                                                                                                                                                                                       |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 21. DP III - Parenthesization, Edit Distance, Knapsack                                                                                                              | :flashlight: R22. Dynamic Programming - Dance Dance Revolution                                                                                                                                                                                 |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 22. DP IV - Guitar Fingering, Tetris, Super Mario Bros.                                                                                                             | :flashlight: R23. Computational Complexity                                                                                                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 23. Computational Complexity                                                                                                                                        | :flashlight: R24. Final Exam Review                                                                                                                                                                                                            | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final.pdf)      | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final_sol.pdf) |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: 24. Topics in Algorithms Research                                                                                                                                   |                                                                                                                                                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 
 
 
@@ -136,7 +136,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
 	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
 		1. [Maths notes](#maths-notes)  
-	5. [R9b - Rolling Hashes, Amortized Analysis](#r9b---rolling-hashes-amortized-analysis)  
+	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
 		1. [Maths notes](#maths-notes)  
 	6. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
 		1. [3-1](#3-1)  
@@ -1766,12 +1766,12 @@ Code:
 Reading:
 
 **#### Vid contents**  
-0-3m - Refresh Hashing with Chaining: Load factor  
-3m - Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
-7m30 - Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
-15m - Amortisation - COST of table doubling operation calculated as a series   
-21m - Inserts - Table doubling costs  
-23m - Delete - Table downsizing  
+0-3m - 	Refresh Hashing with Chaining: Load factor  
+3m - 	Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
+7m30 - 	Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
+15m - 	Amortisation - COST of table doubling operation calculated as a series   
+21m - 	Inserts - Table doubling costs  
+23m - 	Delete - Table downsizing  
 23m46 - Delete - PROBLEM w/ table downsizing by half  
 23m50 - Optimal upsized & downsize - double giong up only halve when n (entries) down to 1/4  
 27m - strategy for implementing table doubling in an RTOS  
@@ -1820,8 +1820,8 @@ build instruction in file
 
 
 ### R9 - Rolling Hashes, Amortized Analysis
-[vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf)  
+[vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf) ~ 
 Code:
 Reading: 
 
@@ -1849,8 +1849,6 @@ For hashing the smaller the m (number of available spaces) the hash maps to the 
 
 Naively implements hash function for n character string will be O(n) - (10m30 - Assume O(1) using rolling hash)
 
-
-
 **54m** Number of edges in a tree of N nodes is N-1  
 Demonstrates intuitive proof of in order traversal in O(N) giving an amortized cost of O(1) per node < check understanding
 
@@ -1861,7 +1859,7 @@ Computation of [modular inverse](https://stackoverflow.com/questions/4798654/mod
 [Using python built in pow()](https://docs.python.org/3/library/functions.html#pow) ~ 
 [Wha?](https://www.kite.com/python/answers/how-to-calculate-modular-multiplicative-inverse-in-python)  
   
-Multiplicative inverse / Modular inverse - 36m  
+Multiplicative inverse / Modular inverse - 36m - also covered in R9b first 
 add steps in calculation / proof - definition of modular inverse - revisit context  
 ```
 Given two integers a and m, find modular multiplicative inverse of a under modulo m.
@@ -1890,22 +1888,105 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 ```
 
 
-### R9b - Rolling Hashes, Amortized Analysis
-[vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf)  
-Code:
+### R9b - 9b: DNA Sequence Matching  
+[vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09b.pdf) ~ 
+[Code Zip](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
+[Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
 Reading: 
 
 **#### Vid contents**  
+**0m-1m** - 		what to cover? Hashes, Code & Amortisation
+**1m-3m** - 		Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse
+**3m-14m** - 	Why using primes is important in hash function
+**13m6** - 		Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better 
+**14m-00m** - 	Walk the code in problem set 4 ps4 - 
+**15m** - 		Rolinghash, API diff - slide(new, old) split out into: append(new), skip(old), 
+**16m20** - 		kfasta.py - iterator implemtaion, __iter__, next()
+**21m-44m** -  	dnaseq.py method by method & python features needed
+**21m** -  		implementing reverse w/o using a lot of memory 	
+**23m-37m** - 	generators / yield / subsequences(), 
+**38n-40m** - 	intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement
+**40m-44m** - 	getExactSubmatches()
+**44m** - 		Amortized analysis
+**49m-53m** - 	Time analysis list, append, memory alocation
+**53m** - 		Aggregate analysis / Cost based accounting
+**53m-57m** - 	Maths on aggregate analysis - write 
+
+  
+https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8
+
+Generators:
+```
+def subsequences(seq, k):
+    try:
+        subseq = ''
+        while True:
+            while len(subseq) < k:
+                subseq += seq.next()
+            yield subseq
+            subseq = subseq[1:]
+    except StopIteration:
+        return
+
+for subseq in subsequences(seq, 3):
+    print subseq
+    i += 1
+
+# another method for generating primes
+def isPrime(n):
+    if n < 2 or n % 1 > 0:
+        return False
+    elif n == 2 or n == 3:
+        return True
+    for x in range(2, int(n**0.5) + 1):
+        if n % x == 0:
+            return False
+    return True
+
+def getPrimes(value = 1):    
+    while True:
+        if isPrime(value):
+            yield value
+        value += 1
+
+p2 = getPrimes()
+
+while True
+    table_size_m = next(p2)
+    print(table_size_m)
+```
+
+
 
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+13m6 reason to use prime over
+p - 2^w / bla see 1st 2mins
 
+44m Amortized analysis
+
+Example using lists:
+| list function | cost
+| - | - |
+|	l = list()	| 		O(1) 	|
+|	for lis size N |			|
+|	l.append()	|	O(N) worst case	|
+The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
+  
+insertions + number of table doubles
+\begin{align*}
+  \sum_{n}{}O(1)+  \sum_{logn}{}O(2^i)\\
+  gives\\
+  O(n)+O(n)
+\end{align*}
 
 
 ### Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)  
+[PS3 problem code]
 #### 3-1 
 
 
@@ -1914,7 +1995,7 @@ Overview of how this code work is in R8
 ```
 > python -m cProfile -s time circuit2.py < tests/10grid_s.in           # profile test - take nearly 15min!
 
-$ python -m cProfile -s time circuit2.py < tests/10grid_s.in
+> python -m cProfile -s time circuit2.py < tests/10grid_s.in
 124668802
          1436321483 function calls (1436321412 primitive calls) in 917.681 seconds
 
@@ -2007,10 +2088,11 @@ Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube
 Problem set 4 out
 
 ### L10 - Open addressing, cryptographic hashing  
-[vid]()  
-[lect notes]()  
+[vid](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture10.pdf)  
 Code:
-Reading:
+Reading:  
+[Collisions 6m refresh](https://www.youtube.com/watch?v=KyUTuwz_b7Q&t=720s) 5m open addressing: linear probing - 9m load factor & chaining: closed addressing
 
 #### **DATA STRUCTURE**  
 **type**:  
@@ -2051,13 +2133,21 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ## Problem set 4 due
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf) ~ 
+[Code](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
+[git Solution Code]()
+
+
+
+
+
 ## Quiz 1	 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 4: Numerics
 ### L11 - Integer arithmetic, Karatsuba multiplication	
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2096,7 +2186,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L12 - Square roots, Newton's method	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2121,7 +2211,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ## Unit 5: Graphs
 ### L13 - Breadth-first search (BFS)	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2144,7 +2234,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L14	Depth-first search (DFS), topological sorting
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2172,7 +2262,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ## Unit 6: Shortest Paths
 ### L15 - Single-source shortest paths problem	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2195,7 +2285,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L16 - Dijkstra	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2218,7 +2308,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L17 - Bellman-Ford	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2241,7 +2331,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L18 - Speeding up Dijkstra
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2268,7 +2358,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ## Unit 7: Dynamic Programming
 ### L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2300,7 +2390,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L20 - Parent pointers; text justification, perfect-information blackjack	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2324,7 +2414,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2347,7 +2437,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2374,7 +2464,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ## Unit 8: Advanced Topics
 ### L23 - Computational complexity	 
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
@@ -2397,7 +2487,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### 24 - Algorithms research topics
 [vid]()  
-[lect notes]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading:
 
