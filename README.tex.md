@@ -2091,7 +2091,7 @@ Problem set 4 out
 [vid](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture10.pdf)  
 Code:
-Reading:  
+Reading: CLRS Chapter 11.4 (and 11.3.3 and 11.5 if interested)
 [Collisions 6m refresh](https://www.youtube.com/watch?v=KyUTuwz_b7Q&t=720s) 5m open addressing: linear probing - 9m load factor & chaining: closed addressing
 
 #### **DATA STRUCTURE**  
@@ -2103,11 +2103,100 @@ Reading:
 **properties**:  
 
 **#### Vid contents**  
+**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-m** - 	Open Addressing - no chaining = no pointers  
+**8m** - 		Mapping from key through trial count to slots U x {0,1. . . m-1} > {0,1. . . m-1}  
+**11m** - 		Eg of **INSERTION** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
+**15m** - 		Eg of **SEARCH** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
+**22m** - 		Coping w/ a search **after a deletion**! Inserts a DELETE_ME flag in place.  
+**30m-00m** - 	Probing strategies  
+**30m** - 		1 - linear probing  
+**33m50** - 		clustering issue  
+**36m** - 		Double hashing to **solve clustering**   
+**39m** - 		Uniform Hashing Assumption - NOT same as SIMPLE Uniform hashing
+**41m-46m** - 	Followed by Uniform Hashing **Analysis CRITICAL info!**  
+**46m** - 		Cryptographic Hashing - NOT on quiz FYI only
+**0m-3m** - 		
+**0m-3m** - 		
+**0m-3m** - 		
+**0m-3m** - 		
+
+
+3m30 Open Addressing:  
+Linear probing: insert, search delete  
+One item per slot so **m > n** (more array slots than items n)
+
+U x {0,1. . . m-1}  >  {0,1. . . m-1}
+U - universe of keys x trials count > slots in table
+
+Notation for trials:  
+h(k,0) 1st attempt to insert k  
+h(k,1) 2nd attempt to insert k  
+h(k,2) 3rd attempt to insert k  
+etc
+
+**30m - Probing Startegies - Linear Probing **
+hp - hprime is an ordinary hashing function   
+i - tries  
+m - table entries  
+Problem with Linear probing hash function  
+  
+h(k,i) = (hp(k) +i ) mod m
+  
+Permutation OK but has problems w/ clustering - when a CLUSTER STARTS TO FORM the probability of colliding w/ it GOES UP  
+If  0.01 < alpha (load factor m/n) < 0.99  
+then cluster size = Θ(logn) (35m20)  
+
+**36m Double hashing to solve clustering**   
+  
+h(k,i) = (h1(k) + i*h2(k) ) mod m  
+
+Term relatively prime - see maths below - follow up math insert formula - get intuition
+
+
+**39m - Uniform hashing assumption**  
+Each key is equally likely to have any one of the m! permutations as its probe sequence  
+- not really true  
+- but double hashing can come close  
+
+Analysis: basically as table starts to fill alpha n/m (slots become fewer so load factor goes UP)
+Cost if insert  <= 1/(1-alpha)
+Add equations in latex
+As alpha -> tends to 1 insert goes though the roof
+
+Requires resize of table by time alpha gets to 0.5-0.6
+
+
+**46m Cryptographic Hashing - Password**
+Talks about one way cryptographic hashing for password.
+So only meet to store
+
 
 #### Example problem
 
+
 #### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+**Term relatively prime aka "coprime" or "mutually prime"**:  
+When two numbers have no common factors other than 1.  
+In other words there is no value that you could divide them both by exactly (without any remainder).  
+
+Simplifying a fraction as much as possible with give a numerator and denominator that are **coprime**.
+  
+**EG**  
+factors of 21 are 1,3,7,21  
+factors of 22 are 1,2,11,22  
+only common factor is 1 so they are relatively prime.  
+  
+21 and 24 are NOT relatively prime:  
+factors of 21 are 1,3,7,21  
+factors of 24 are 1,2,3,4,6,8,12,24  
+common factors are 1 AND 3  
+
+
+
+Why do we care?  
+
+
 
 ### R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 [vid]()  
