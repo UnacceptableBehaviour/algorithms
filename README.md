@@ -1,7 +1,7 @@
-# Introduction to Algorithms (links below)
-file:/a_syllabus/_COURSES/ALGO_00_Intro_2_Algorithms_MIT.rtf  
+# Introduction to Algorithms (MIT 6.006)
 REPO: [algorithms](https://github.com/UnacceptableBehaviour/algorithms)  
 See [References](#references) for links to course content  
+
 
 ## Abstract
 Work notes from Introduction to [Algorithms MIT 6.006](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/syllabus/) course [lectures on ytube](https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)   
@@ -9,7 +9,6 @@ Work notes from Introduction to [Algorithms MIT 6.006](https://ocw.mit.edu/cours
 [Lectures & Recitations](http://courses.csail.mit.edu/6.006/fall11/notes.shtml) ~ 
 [Resources - Python / Latex](http://courses.csail.mit.edu/6.006/fall11/resources.shtml) ~ 
 [Quizzes/Exams](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/)  
-
 
 
 ## Progress
@@ -114,21 +113,21 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [BST review](#bst-review)  
 		3. [AVL properties](#avl-properties)  
 		4. [Maths notes](#maths-notes)  
-	7. [Problem set 2 (due)](#problem-set-2-due)  
+9. [Problem set 2.](#problem-set-2)  
 		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
 		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
-	8. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
+	1. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [**DATA STRUCTURE - Counting sort**](#data-structure---counting-sort)  
 		2. [**DATA STRUCTURE**](#data-structure)  
 		3. [**Vid contents**](#vid-contents)  
 		4. [Sorting in Linear-Time](#sorting-in-linear-time)  
 			1. [Counting Sort - 37m](#counting-sort---37m)  
 			2. [Radix Sort - 45m](#radix-sort---45m)  
-	9. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
+	2. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
 		1. [Vid contents](#vid-contents)  
 		2. [Summary Sorting Algos So far:](#summary-sorting-algos-so-far)  
 		3. [Maths notes](#maths-notes)  
-9. [Unit 3: Hashing](#unit-3-hashing)  
+10. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 	2. [R8 - Simulation Algorithms](#r8---simulation-algorithms)  
@@ -138,21 +137,21 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Maths notes](#maths-notes)  
 	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
 		1. [Maths notes](#maths-notes)  
-	6. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
+11. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
 		1. [3-1](#3-1)  
 		2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
 		3. [REFS - alt profilers](#refs---alt-profilers)  
-	7. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
+	1. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
-	8. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+	2. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
-10. [Problem set 4 due](#problem-set-4-due)  
-11. [Quiz 1](#quiz-1)  
-12. [Unit 4: Numerics](#unit-4-numerics)  
+12. [Problem set 4](#problem-set-4)  
+13. [Quiz 1](#quiz-1)  
+14. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
@@ -162,13 +161,13 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Vid contents](#vid-contents)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
-13. [Problem set 5 out](#problem-set-5-out)  
+15. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-14. [Unit 5: Graphs](#unit-5-graphs)  
+16. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
@@ -179,9 +178,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-15. [Problem set 5 due](#problem-set-5-due)  
-16. [Problem set 6 out](#problem-set-6-out)  
-17. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
+17. [Problem set 5 due](#problem-set-5-due)  
+18. [Problem set 6 out](#problem-set-6-out)  
+19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [L15 - Single-source shortest paths problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
@@ -202,13 +201,13 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-18. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
+20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-19. [Problem set 7 out](#problem-set-7-out)  
+21. [Problem set 7 out](#problem-set-7-out)  
 	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
@@ -224,8 +223,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-20. [Problem set 7 due](#problem-set-7-due)  
-21. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
+22. [Problem set 7 due](#problem-set-7-due)  
+23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Vid contents](#vid-contents)  
@@ -236,8 +235,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-22. [Glossary of terms](#glossary-of-terms)  
-23. [How To s](#how-to-s)  
+24. [Glossary of terms](#glossary-of-terms)  
+25. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
 	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
 	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
@@ -245,7 +244,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-24. [References](#references)  
+26. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
 	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
@@ -1207,11 +1206,11 @@ CASE 1 - unbalanced in a straight line: Rotate to fold the line
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 	
+## Problem set 2.
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps2.pdf)  
 
-
-
- 	
-### Problem set 2 (due)
 #### 2-1 Fractal rendering [40pts]
 Koch snowflake rendering: computational requirements of 4 ways of rendering LoD n (Level of Detail 0-n)
 	Recitation 5 (0m - 13m) explains how to do this - dont be scared if you costs at each level arent the same sum them up and youll get the right answer
@@ -1870,9 +1869,9 @@ The argument goes that since l.append() is O(1) and only O(N) infrequently, the 
   
 insertions + number of table doubles
 <p align="center"><img src="/tex/7eeb5443be35f55d195b367ca0410daf.svg?invert_in_darkmode&sanitize=true" align=middle width=148.4520939pt height=90.06403395pt/></p>
-
-
-### Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)  
 [PS3 problem code]
 #### 3-1 
@@ -2108,8 +2107,8 @@ Reading:
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
-
-## Problem set 4 due
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## Problem set 4
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf) ~ 
 [Code](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
 [git Solution Code]()
