@@ -113,20 +113,20 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [BST review](#bst-review)  
 		3. [AVL properties](#avl-properties)  
 		4. [Maths notes](#maths-notes)  
-9. [Problem set 2.](#problem-set-2)  
-		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
-		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
-	1. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
+	7. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [**DATA STRUCTURE - Counting sort**](#data-structure---counting-sort)  
-		2. [**DATA STRUCTURE**](#data-structure)  
+		2. [**DATA STRUCTURE - Radix sort**](#data-structure---radix-sort)  
 		3. [**Vid contents**](#vid-contents)  
 		4. [Sorting in Linear-Time](#sorting-in-linear-time)  
 			1. [Counting Sort - 37m](#counting-sort---37m)  
 			2. [Radix Sort - 45m](#radix-sort---45m)  
-	2. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
+	8. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
 		1. [Vid contents](#vid-contents)  
 		2. [Summary Sorting Algos So far:](#summary-sorting-algos-so-far)  
 		3. [Maths notes](#maths-notes)  
+9. [Problem set 2.](#problem-set-2)  
+		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
+		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
 10. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
 		1. [**DATA STRUCTURE**](#data-structure)  
@@ -137,15 +137,15 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [Maths notes](#maths-notes)  
 	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
 		1. [Maths notes](#maths-notes)  
-11. [Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3-due---range-query-analysis--circuit-layout-tool-optimisation)  
-		1. [3-1](#3-1)  
-		2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
-		3. [REFS - alt profilers](#refs---alt-profilers)  
-	1. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
+11. [Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3---range-query-analysis--circuit-layout-tool-optimisation)  
+	1. [3-1 Range Query - AVL tree](#3-1-range-query---avl-tree)  
+	2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
+		1. [REFS - alt profilers](#refs---alt-profilers)  
+	3. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
-	2. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+	4. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -1299,131 +1299,6 @@ CASE 1 - unbalanced in a straight line: Rotate to fold the line
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
   
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 	
-## Problem set 2.
-[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps2.pdf)  
-
-#### 2-1 Fractal rendering [40pts]
-Koch snowflake rendering: computational requirements of 4 ways of rendering LoD n (Level of Detail 0-n)
-	Recitation 5 (0m - 13m) explains how to do this - dont be scared if you costs at each level arent the same sum them up and youll get the right answer
-	Recursion tree - forrest of trees in this case
-	Run example code fractal.html (/algorithms/problems/MIT6_006F11_ps2/fractal)
-First - 3D hardware accelerated rendering . .
-Surface > triangles > CPU co-ords list > GPU renders  
-a) [1pt] height of recursion tree for rendering snowflake of LoD n?  
-b) [1pt] how many node in the tree at level n  
-c) [1pt] whats the rendering time (triangle count) for a node at depth i  
-d) [1pt] whats the rendering time (triangle count) at each level i (all nodes on that level)  
-e) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
-  
-Second - 2D accelerated rendering . .  
-Surface oulines > open/closed paths > CPU co-ords list > GPU renders (used in laser cutters & plotters)  
-Properties of a koch snowflake   
-f) [1pt] height of recursion tree for rendering snowflake of LoD n?  
-g) [1pt] how many node in the tree at level n  
-h) [1pt] whats the rendering time (line segment count) for a node at depth i  
-i) [1pt] whats the asymptotic rendering time (line segment count) for a node in the last level n  
-j) [1pt] whats asymptotic rendering time (line segment count) at each level of the tree  
-k) [1pt] whats the asymptotic rendering time (line segment count) at the last level n	
-l) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
-
-Third - 2D unaccelerated rendering . . aka software rendering (CPU only) (used in laser cutters & plotters)  
-Surface oulines > open/closed paths > CPU co-ords list > CPU rasterises co-ords   
-NOTE the rasterised pixels represent the ink required to print or the the power required for laser to cut the image!!  
-m) [1pt] height of recursion tree for rendering snowflake of LoD n?  
-n) [1pt] how many node in the tree at level n  
-o) [1pt] whats the rendering time (line segment length) for a node at depth i (assume original triangle side length = 1)  
-p) [1pt] whats the asymptotic rendering time (line segment length) for a node in the last level n  
-q) [1pt] whats asymptotic rendering time (line segment length) at each level of the tree  
-r) [1pt] whats the asymptotic rendering time (line segment length) at the last level n	
-s) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
-  
-Fourth - 3D unaccelerated rendering . . (CPU only)  
-Surface > triangles > CPU co-ords list > CPU rasterises  
-t) [4pt] total asymptotic cost for the CPU to render LoD n (using this method - assume initial triangle side length = 1)  
-u) [15pt] prove using recursion tree method  
-  
-#### 2-2 Digital Circuit Simulation [60pt]  
-
-a) What name of method w highest CPU usage? _find_min part of class  
-
-Profiler Qs
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-     15/6    0.000    0.000    0.001    0.000 sre_parse.py:414(_parse)
-Whats the 15/6 mean under ncalls? Recursive call here: 6 primitive call 15 in total
-
-Profiler column meanings: https://docs.python.org/3/library/profile.html
-```
-ncalls
-    for the number of calls.
-tottime
-    for the total time spent in the given function (and excluding time made in calls to sub-functions)
-percall
-    is the quotient of tottime divided by ncalls
-cumtime
-    is the cumulative time spent in this and all subfunctions (from invocation till exit). This figure is accurate even for recursive functions.
-percall
-    is the quotient of cumtime divided by primitive calls
-filename:lineno(function)
-    provides the respective data of each function
-```
-
-Full result of profiler in: circuit/profiler_output.txt
-```
-        628290079 function calls (628095620 primitive calls) in 474.045 seconds
-
-   Ordered by: internal time
-
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-   259964  275.241    0.001  471.218    0.002 circuit.py:381(_find_min)         ** CULPRIT
-625762426  195.969    0.000  195.969    0.000 circuit.py:286(__lt__)            # less than dunder function
-    64400    0.788    0.000  473.659    0.007 circuit.py:423(step)		# simulation time step > _find_min > __lt__
-828936/634537    0.264    0.000    0.340    0.000 {len}
-    65554    0.233    0.000    0.421    0.000 circuit.py:163(transition_output)
-   194381    0.216    0.000  471.437    0.002 circuit.py:361(min)
-        1    0.173    0.173  473.948  473.948 circuit.py:456(run)
-        1    0.001    0.001  474.045  474.045 circuit.py:3(<module>)
-```
-
-To run tests:
-```
-> python circuit_test.py                                               # whole suite - 6min
-
-> python circuit.py  < tests/1gate.in > out                            # run single test write results out
-
-> diff out tests/1gate.gold                                            # compare result to verified result
-
-> python -m cProfile -s time circuit.py < tests/5devadas13.in          # profile test - take nearly 8min!
-
-> TRACE=jsonp python circuit.py < tests/1gate.in > circuit.jsonp		# create a trace for visualiser
-> TRACE=jsonp python circuit.py < tests/2gates.in > circuit.jsonp		# create a trace for visualiser
-> TRACE=jsonp python circuit.py < tests/3xor.in > circuit.jsonp
-> TRACE=jsonp python circuit.py < tests/4sort.in > circuit.jsonp
-
-EG
-> python circuit_test.py 
-Testing correctness:
-Testing 1gate.in ...... OK
-Testing 2gates.in ...... OK
-Testing 3xor.in ...... OK
-Testing 4sort.in ...... OK
-Testing 5devadas13.in ...... OK
-.
-----------------------------------------------------------------------
-Ran 1 test in 360.847s
-OK
-
-> python circuit.py  < tests/1gate.in 
-19 axb 1
-29 axb 0
-
-```
-
-b) How many time is this method called? 259964
-c) What tightest asymptotic bound of the worst case running time of the method with the bottleneck?
-d) If implemented optimally whats the tightest asymptotic bound of the re-implemented method?
-e) Re-write the data structure using the most efficient method from class (no lib imports)
-
 
 ### L7 - Counting sort, radix sort, lower bounds for sorting and searching
 [vid](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=0s) ~ 
@@ -1442,7 +1317,7 @@ Reading:
 **properties**: in place? stable  
 comp model = computational model
 
-#### **DATA STRUCTURE**  
+#### **DATA STRUCTURE - Radix sort**  
 **type**:  (bucket / digital sort), sort by digit LSB > MSB or vice versa, based on counting sort, stable  
 **comp model**: non comparative, ram model, sorting algorithm  
 **use cases**: good for bla  
@@ -1547,9 +1422,133 @@ counting sort k=digits
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 	
+## Problem set 2.
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps2.pdf)  
+
+#### 2-1 Fractal rendering [40pts]
+Koch snowflake rendering: computational requirements of 4 ways of rendering LoD n (Level of Detail 0-n)  
+	Recitation 5 (0m - 13m) explains how to do this - dont be scared if you costs at each level arent the same sum them up and youll get the right answer  
+	Recursion tree - forrest of trees in this case  
+	Run example code fractal.html (/algorithms/problems/MIT6_006F11_ps2/fractal)  git difftool
+  
+**First - 3D hardware accelerated rendering . .**  
+Surface > triangles > CPU co-ords list > GPU renders  
+a) [1pt] height of recursion tree for rendering snowflake of LoD n?  
+b) [1pt] how many node in the tree at level n  
+c) [1pt] whats the rendering time (triangle count) for a node at depth i  
+d) [1pt] whats the rendering time (triangle count) at each level i (all nodes on that level)  
+e) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
+  
+**Second - 2D accelerated rendering . .**  
+Surface oulines > open/closed paths > CPU co-ords list > GPU renders (used in laser cutters & plotters)  
+Properties of a koch snowflake   
+f) [1pt] height of recursion tree for rendering snowflake of LoD n?  
+g) [1pt] how many node in the tree at level n  
+h) [1pt] whats the rendering time (line segment count) for a node at depth i  
+i) [1pt] whats the asymptotic rendering time (line segment count) for a node in the last level n  
+j) [1pt] whats asymptotic rendering time (line segment count) at each level of the tree  
+k) [1pt] whats the asymptotic rendering time (line segment count) at the last level n	
+l) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
+
+**Third - 2D unaccelerated rendering . . aka software rendering (CPU only)** (used in laser cutters & plotters)  
+Surface oulines > open/closed paths > CPU co-ords list > CPU rasterises co-ords   
+NOTE the rasterised pixels represent the ink required to print or the the power required for laser to cut the image!!  
+m) [1pt] height of recursion tree for rendering snowflake of LoD n?  
+n) [1pt] how many node in the tree at level n  
+o) [1pt] whats the rendering time (line segment length) for a node at depth i (assume original triangle side length = 1)  
+p) [1pt] whats the asymptotic rendering time (line segment length) for a node in the last level n  
+q) [1pt] whats asymptotic rendering time (line segment length) at each level of the tree  
+r) [1pt] whats the asymptotic rendering time (line segment length) at the last level n	
+s) [1pt] total asymptotic cost for the CPU to render LoD n (using this method)  
+  
+**Fourth - 3D unaccelerated rendering . . (CPU only)**  
+Surface > triangles > CPU co-ords list > CPU rasterises  
+t) [4pt] total asymptotic cost for the CPU to render LoD n (using this method - assume initial triangle side length = 1)  
+u) [15pt] prove using recursion tree method  
+  
+#### 2-2 Digital Circuit Simulation [60pt]  
+
+a) What name of method w highest CPU usage? _find_min part of class  
+
+Profiler Qs
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     15/6    0.000    0.000    0.001    0.000 sre_parse.py:414(_parse)
+Whats the 15/6 mean under ncalls? Recursive call here: 6 primitive call 15 in total
+
+Profiler column meanings: https://docs.python.org/3/library/profile.html
+```
+ncalls
+    for the number of calls.
+tottime
+    for the total time spent in the given function (and excluding time made in calls to sub-functions)
+percall
+    is the quotient of tottime divided by ncalls
+cumtime
+    is the cumulative time spent in this and all subfunctions (from invocation till exit). This figure is accurate even for recursive functions.
+percall
+    is the quotient of cumtime divided by primitive calls
+filename:lineno(function)
+    provides the respective data of each function
+```
+
+Full result of profiler in: circuit/profiler_output.txt
+```
+        628290079 function calls (628095620 primitive calls) in 474.045 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   259964  275.241    0.001  471.218    0.002 circuit.py:381(_find_min)         ** CULPRIT
+625762426  195.969    0.000  195.969    0.000 circuit.py:286(__lt__)            # less than dunder function
+    64400    0.788    0.000  473.659    0.007 circuit.py:423(step)		# simulation time step > _find_min > __lt__
+828936/634537    0.264    0.000    0.340    0.000 {len}
+    65554    0.233    0.000    0.421    0.000 circuit.py:163(transition_output)
+   194381    0.216    0.000  471.437    0.002 circuit.py:361(min)
+        1    0.173    0.173  473.948  473.948 circuit.py:456(run)
+        1    0.001    0.001  474.045  474.045 circuit.py:3(<module>)
+```
+
+To run tests:
+```
+> python circuit_test.py                                               # whole suite - 6min
+
+> python circuit.py  < tests/1gate.in > out                            # run single test write results out
+
+> diff out tests/1gate.gold                                            # compare result to verified result
+
+> python -m cProfile -s time circuit.py < tests/5devadas13.in          # profile test - take nearly 8min!
+
+> TRACE=jsonp python circuit.py < tests/1gate.in > circuit.jsonp		# create a trace for visualiser
+> TRACE=jsonp python circuit.py < tests/2gates.in > circuit.jsonp		# create a trace for visualiser
+> TRACE=jsonp python circuit.py < tests/3xor.in > circuit.jsonp
+> TRACE=jsonp python circuit.py < tests/4sort.in > circuit.jsonp
+
+EG
+> python circuit_test.py 
+Testing correctness:
+Testing 1gate.in ...... OK
+Testing 2gates.in ...... OK
+Testing 3xor.in ...... OK
+Testing 4sort.in ...... OK
+Testing 5devadas13.in ...... OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 360.847s
+OK
+
+> python circuit.py  < tests/1gate.in 
+19 axb 1
+29 axb 0
+
+```
+
+b) How many time is this method called? 259964
+c) What tightest asymptotic bound of the worst case running time of the method with the bottleneck?
+d) If implemented optimally whats the tightest asymptotic bound of the re-implemented method?
+e) Re-write the data structure using the most efficient method from class (no lib imports)
 
 
-		Problem set 3 out
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 3: Hashing
 ### L8 - Hashing with chaining - (dictionary / associative array)	 
@@ -1900,7 +1899,7 @@ Reading:
 **3m-14m** - 	Why using primes is important in hash function  
 **13m6** - 		Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
 **14m-00m** - 	Walk the code in problem set 4 ps4   
-**15m** - 		Rolinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
+**15m** - 		Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
 **16m20** - 		kfasta.py - iterator implemtaion, __iter__, next()  
 **21m-44m** -  	dnaseq.py method by method & python features needed  
 **21m** -  		implementing reverse w/o using a lot of memory 	
@@ -1973,6 +1972,7 @@ Example using lists:
 |	l = list()	| 		O(1) 	|
 |	for lis size N |			|
 |	l.append()	|	O(N) worst case	|
+
 The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
   
 insertions + number of table doubles
@@ -1983,14 +1983,14 @@ insertions + number of table doubles
 \end{align*}
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Problem set 3 (due) - Range Query (Analysis) / Circuit Layout (Tool optimisation)
+## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)  
 [PS3 problem code]
-#### 3-1 
+### 3-1 Range Query - AVL tree
 
 
-#### 3-2 Tool Optimisation [55 points]
-Overview of how this code work is in R8
+### 3-2 Tool Optimisation [55 points]
+Overview of how this code work is in recitation 8
 ```
 > python -m cProfile -s time circuit2.py < tests/10grid_s.in           # profile test - take nearly 15min!
 
@@ -2032,11 +2032,13 @@ Overview of how this code work is in R8
        80    0.000    0.000    0.000    0.000 sre_parse.py:207(match)
 ```
 
-Profiler Qs
+Profiler Qs  
+```
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
      15/6    0.000    0.000    0.001    0.000 sre_parse.py:414(_parse)
-Whats the 15/6 mean under ncalls? Recursive call here: 6 primitive call 15 in total
-
+```
+Whats the 15/6 mean under ncalls? Recursive call here: 6 primitive call 15 in total  
+  
 Profiler column meanings: https://docs.python.org/3/library/profile.html
 ```
 ncalls
@@ -2075,7 +2077,6 @@ Alternative profilers - https://pythonspeed.com/articles/beyond-cprofile/
 Python debugger - https://docs.python.org/3/library/pdb.html
 Python debugger tutorial - https://realpython.com/python-debugging-pdb/
 Alternative implementation to CPython - https://www.pypy.org/
--
 Working out if two vectors intersect + special cases - https://www.youtube.com/watch?v=bbTqI0oqL5U
 Sweep line algorithm 2/5 theory - https://www.youtube.com/watch?v=qkhUNzCGDt0
   event (point) queue (use balanced BST) & sweepline status (use balanced BST)
@@ -2083,8 +2084,6 @@ Sweep line algorithm 3/5 pseudo code - https://www.youtube.com/watch?v=I9EsN2DTn
 Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube.com/watch?v=8C3_ZKy4KkA
 
 
-
-Problem set 4 out
 
 ### L10 - Open addressing, cryptographic hashing  
 [vid](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10) ~ 
@@ -2115,13 +2114,10 @@ Reading: CLRS Chapter 11.4 (and 11.3.3 and 11.5 if interested)
 **39m** - 		Uniform Hashing Assumption - NOT same as SIMPLE Uniform hashing
 **41m-46m** - 	Followed by Uniform Hashing **Analysis CRITICAL info!**  
 **46m** - 		Cryptographic Hashing - NOT on quiz FYI only
-**0m-3m** - 		
-**0m-3m** - 		
-**0m-3m** - 		
-**0m-3m** - 		
 
 
-3m30 Open Addressing:  
+
+**3m30 Open Addressing:**  
 Linear probing: insert, search delete  
 One item per slot so **m > n** (more array slots than items n)
 
@@ -2134,13 +2130,13 @@ h(k,1) 2nd attempt to insert k
 h(k,2) 3rd attempt to insert k  
 etc
 
-**30m - Probing Startegies - Linear Probing **
+**30m - Probing Startegies - Linear Probing**  
 hp - hprime is an ordinary hashing function   
 i - tries  
 m - table entries  
 Problem with Linear probing hash function  
   
-h(k,i) = (hp(k) +i ) mod m
+h(k,i) = (hp(k) +i ) mod m  
   
 Permutation OK but has problems w/ clustering - when a CLUSTER STARTS TO FORM the probability of colliding w/ it GOES UP  
 If  0.01 < alpha (load factor m/n) < 0.99  
@@ -2150,7 +2146,7 @@ then cluster size = Θ(logn) (35m20)
   
 h(k,i) = (h1(k) + i*h2(k) ) mod m  
 
-Term relatively prime - see maths below - follow up math insert formula - get intuition
+Term **relatively prime** - see maths below - follow up math insert formula - get intuition
 
 
 **39m - Uniform hashing assumption**  
@@ -2175,7 +2171,7 @@ So only meet to store
 
 
 #### Maths notes  
-**Term relatively prime aka "coprime" or "mutually prime"**:  
+**Term "relatively prime" aka "coprime" or "mutually prime"**:  
 When two numbers have no common factors other than 1.  
 In other words there is no value that you could divide them both by exactly (without any remainder).  
 
