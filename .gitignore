@@ -1,5 +1,5 @@
 # for osx
-.DS_Store
+**/*.DS_Store   # ignore .DS_Store in subdirectories too!
 *.aux
 *.fdb_latexmk
 *.fls
@@ -7,15 +7,26 @@
 *.out
 *.synctex.gz
 *.RHistory
-*.pyc
-*.pyo
+
+#*.pyc
+#*.pyo
+*.py[co]    # file or folder ending in .pyc or .pyo. However, it doesn’t match .py!
+
 matplotlib/covid_cases.py
   
-# ignore directory and contents
-/__pycache__
-/venv
-/scratch
-/problems
+                  # ignore directory and contents
+__pycache__/      # directory at any level / at end
+venv/
+/scratch          # root directory
+
+# instead of
+#/problems
 #/problems/MIT6_006F11_ps1/venv
 #/problems/MIT6_006F11_ps1/__pycache__
 #/problems/MIT6_006F11_ps1/*.jsonp
+
+# notes on 
+# https://labs.consol.de/development/git/2017/02/22/gitignore.html
+
+# specific to python EG
+# https://github.com/github/gitignore/blob/master/Python.gitignore
