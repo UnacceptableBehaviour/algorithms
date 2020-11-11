@@ -145,7 +145,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
-	4. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -157,7 +157,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r11---maths--code------------------------------------------------------------)  
+	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [Vid contents](#vid-contents)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -255,13 +255,6 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 
 
 
-
-
-
-
-
-
-
 Create an algorithms reference, and aide-memoire  
 
 In the mean time here are two great resources:  
@@ -310,7 +303,20 @@ See R1 31m & 43m
 Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
 
 51m48  
-<p align="center"><img src="/tex/345071e71619869b5189c43f93597997.svg?invert_in_darkmode&sanitize=true" align=middle width=546.9241338pt height=114.95363879999998pt/></p>
+$$
+\begin{equation}
+  binary\;tree\;height\;h = log_2n
+\end{equation}
+\begin{equation}
+  T(n,m) = T(n, \frac{m}{2}) + \Theta(n)
+\end{equation}
+\begin{equation}
+  T(n,m) = \Theta(n)\;.\;.\;\Theta(n)\;(log_2m\;times\;for\;m\;columns)
+\end{equation}
+\begin{equation}
+  T(n,m) = \Theta(nlogm) = \Theta(nlogn)\;\text{where n=m}
+\end{equation}
+$$
 m = columns  
 n = rows  
 **That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.**  
@@ -363,7 +369,11 @@ The above list is useful because of the following fact: if a function f(n) is a 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
 Egs
-<p align="center"><img src="/tex/f1ebe4d3468c6d3f2f6243ce83e00dad.svg?invert_in_darkmode&sanitize=true" align=middle width=474.77859989999996pt height=18.312383099999998pt/></p>
+$$
+\begin{align}
+f(n) = 10log(n) + 5(log(n))^3 + 7n + 3n^2 + 6n^3,  then f(n) = O(n^3)
+\end{align}
+$$
 
 Simplified set theory? Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the sloppier equality notation is more common at present.  
 		
@@ -374,7 +384,11 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 
 #### Useful maths equations
 Fundamental to binary tree algorithms:
-<p align="center"><img src="/tex/4cd8fa5dbdeb7a9567601dd345719d75.svg?invert_in_darkmode&sanitize=true" align=middle width=450.19701375pt height=16.438356pt/></p>
+$$
+\begin{equation}
+  binary\;tree\;height\;h = logn
+\end{equation}
+$$
 
 
 
@@ -412,9 +426,17 @@ Finish R1 notes from - Recurrence Traps & 2-D Peak Finding: Algorithm 5
 
 #### Maths notes  
 (26m) [Stirlings approximation - equation for n!](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-<p align="center"><img src="/tex/17789aec953e515f4d4dbbcbe79c0588.svg?invert_in_darkmode&sanitize=true" align=middle width=411.75196425pt height=31.070567549999996pt/></p>
+$$
+\begin{equation}
+  n! \approx \sqrt{2 \pi n}\left(\frac{n}{e}\right)^n
+\end{equation}
+$$
 (26m) [Equation for Series - summation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-<p align="center"><img src="/tex/8182cc03706f858356e39b08f4cc0a9d.svg?invert_in_darkmode&sanitize=true" align=middle width=409.5568059pt height=44.89738935pt/></p>
+$$
+\begin{equation}
+  \sum_{i=1}^{n}i = \frac{n(n+1)}{2}
+\end{equation}
+$$
 
 
 ### L2 - Models of computation, Python cost model, document distance	   
@@ -506,7 +528,15 @@ Sum them up to give a value.
 The larger the value the more correlated they are.  
 Obviously bigger documents will naturally give bigger numbers do the value is normalised by dividing by the size of the original vectors.  
 
-<p align="center"><img src="/tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
+$$
+\begin{equation}
+  D_1.D_2\\
+\end{equation}
+\begin{equation}
+  \sum_{w}D_1[w].D_2[w]
+  \label{sum}  
+\end{equation}
+$$
 
 #### Examples Document distance code:
 [this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
@@ -582,17 +612,40 @@ Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.p
 Comment functions in/out of the source or add custom functions!   
 
 Problem 1.1a
-<p align="center"><img src="/tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode&sanitize=true" align=middle width=349.90844955pt height=94.4878902pt/></p>
+$$
+\begin{align}
+f2(n) = 10000000n = O(n) = linear\\
+f1(n) = n^{0.999999}log n = O(n log n) = quasilinear \\
+f4(n) = n^2 = O(n^2) = quadratic\\
+f3(n) = 1.000001^n = O(c^n) = exponential
+\end{align}
+$$
 
 Problem 1.1b
-<p align="center"><img src="/tex/cbde0d11ea8f1ebd27ab4ac5526ed78a.svg?invert_in_darkmode&sanitize=true" align=middle width=373.18578164999997pt height=122.87297219999999pt/></p>
+$$
+\begin{align}
+f1(n) = 2^{2^{1000000}} = O(1) = constant\\
+f3(n) = \binom{n}{2} \text{ notation is combinatorics} = O(nlogn)\\ 
+f4(n) = n \sqrt{n} = n^1{n^\frac{1}{2}} = n^{1.5} = O(n^c) = polynomial\\
+f2(n) = 2^{2100000n} = O(c^n) = exponential
+\end{align}
+$$
 Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
-<p align="center"><img src="/tex/c25acae12157db0472ada055c7a1f07d.svg?invert_in_darkmode&sanitize=true" align=middle width=588.0255678pt height=32.990165999999995pt/></p>
+\begin{equation}
+    log(n^{n+\frac{1}{2}}) - log((n-2)^{n-\frac{2}{3}}) =     (n+\frac{1}{2})log(n) - (n-\frac{2}{3})log(n-2)
+\end{equation}
 with the left dominating the right give nlog(n)  
 
 
 Problem 1.1c  
-<p align="center"><img src="/tex/ead0e3753b23a641f6e42c4f3e27c3af.svg?invert_in_darkmode&sanitize=true" align=middle width=390.7235673pt height=131.8078443pt/></p>
+$$
+\begin{align}
+f2(n) = 2^n = O(c^n) = constant.exponential\\
+f4(n) = \sum_{i=1}^{n}(i+1) = \frac{n(n+1)}{2} = O(n^2) = quadratic\\
+f1(n) = n^{\sqrt{n}} = n^{n^{\frac{1}{2}}} = O(n^n) = linear.exponential\\
+f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
+\end{align}
+$$
 
 ### Problem 1-2. [15 points] Recurrence Relation Resolution
 For each of the following recurrence relations, pick the correct asymptotic runtime:  
@@ -1093,24 +1146,44 @@ Min number of nodes in a balanced tree
 
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
-<p align="center"><img src="/tex/383c5c1963e50e762b29e138eb72d9e5.svg?invert_in_darkmode&sanitize=true" align=middle width=576.5765841pt height=75.6164376pt/></p>
+$$
+\begin{equation}
+  N_h = minimum\;number\;of\;nodes\;in\;an\;AVL\;tree\;of\;height\;h
+\end{equation}
+\begin{equation}
+  N_{O(1)} = O(1)\;\;base\;case
+\end{equation}
+\begin{equation}
+  N_h = 1 + N_{h-1} + N_{h-2}
+\end{equation}
+$$
 
 IE In a tree of height h, number of nodes n,  is the sum of: the root + the two sub trees (that differ in height by 1).   
 
 The above recurrence is similar to the Fibonacci sequence, defined as:
-<p align="center"><img src="/tex/879e4c656816fb13d3336800ffc32155.svg?invert_in_darkmode&sanitize=true" align=middle width=416.60102385pt height=16.438356pt/></p>
+\begin{equation}
+  F_h = F_{h-1} + F_{h-2}
+\end{equation}
 
 an approximation for which is  (Fibonacci number = nearest integer . . .
-<p align="center"><img src="/tex/10bc491a11e7caa7ce2adf0dc2bb4654.svg?invert_in_darkmode&sanitize=true" align=middle width=519.082245pt height=40.66383749999999pt/></p>
+\begin{equation}
+  F_h =  \frac{\phi^h}{\sqrt5},\; h \ge 0,\; (phi)\;\phi=\frac{1+\sqrt5}{2},\;\phi\approx1.618
+\end{equation}
 
 [paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
-<p align="center"><img src="/tex/3507b4c628b099bdc90c8d77576a879e.svg?invert_in_darkmode&sanitize=true" align=middle width=488.94835109999997pt height=40.364374049999995pt/></p>
+\begin{equation}
+  N_h > \frac{\phi^h}{\sqrt5},\;\;  N_h > \frac{1.618^h}{\sqrt5},\;\; n > \frac{1.618^h}{\sqrt5}
+\end{equation}
 
 Since Nh = min nodes in a tree of height h, and phi = 1.618.
 
-<p align="center"><img src="/tex/4605c59e9c2d5e486a9018ec99ad8368.svg?invert_in_darkmode&sanitize=true" align=middle width=479.47994324999996pt height=40.364374049999995pt/></p>
-<p align="center"><img src="/tex/513de2a713c2b966f334198bbcc3f720.svg?invert_in_darkmode&sanitize=true" align=middle width=475.66339754999996pt height=17.031940199999998pt/></p>
+\begin{equation}
+  n > \frac{\phi^h}{\sqrt5}\;same\;as\;\frac{\phi^h}{\sqrt5} < n\;\; take\; log_{\phi}
+\end{equation}
+\begin{equation}
+  h + sml\;const < log_{\phi}n \approx 1.44log_2n
+\end{equation}
 
 #### Maths notes - AVL tree (26m) - height analysis v2
 
@@ -1203,11 +1276,23 @@ def update_height(node): 8 node.height = max(height(node.left), height(node.righ
 so the root evaluates to max(-1,-1)+1 = 0  
 
 #### AVL properties
-<p align="center"><img src="/tex/e7aac7e676b9fa8a486e5a3b49b6af71.svg?invert_in_darkmode&sanitize=true" align=middle width=157.18425854999998pt height=89.49772094999999pt/></p>
-<p align="center"><img src="/tex/f57a1206b4d8107434bf43e707ba7447.svg?invert_in_darkmode&sanitize=true" align=middle width=180.9113328pt height=63.92694825pt/></p>
+\begin{align*}
+  h = max(h_l, h_r) + 1 \\
+  h = -1\;for\;leaf\;node \\
+  \forall n, |h_l - h_r| \le 1 \\
+  plus\;BST\;properties
+\end{align*}
+\begin{align*}
+  h = height\;of\;node \\
+  h_l = height\;of\;left\;child \\
+  h_r = \textit{height of right child} \\
+\end{align*}
 
 Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
-<p align="center"><img src="/tex/e995c36961b11f1a0347824daca8f22f.svg?invert_in_darkmode&sanitize=true" align=middle width=139.04518815pt height=40.182651299999996pt/></p>
+\begin{align*}
+  balanced\;property:\\
+  \forall n, |h_l - h_r| \le 1
+\end{align*}
 
 REBALANCE
 CASE 1 - unbalanced in a straight line: Rotate to fold the line
@@ -1286,7 +1371,13 @@ CONCEPTS: Models of computation: **Comparison model** 2-32m
 . . radix sort  
 
 **Assumptions**:
-<p align="center"><img src="/tex/30a16d8ba2ec61de9c56eca0595ae5ec.svg?invert_in_darkmode&sanitize=true" align=middle width=194.83224255pt height=113.58123149999999pt/></p>
+\begin{align*}
+  sorting \\
+  n\; keys\;\in\{0,1,2,..k-1\} \\
+  \text{and each fits in a word} \\
+  \text{for k...large number?} \\
+  \text{can be sorted in }\Theta(n)\; time
+\end{align*}
 
 ##### Counting Sort - 37m
 Go through unsorted items using key to allocate to an index of an array.
@@ -1531,11 +1622,21 @@ b) INDEPENDENT of where other keys hashing
 Hash function need to know size of table - m.  
 
 **43m - DIVISION method**
-<p align="center"><img src="/tex/43ef667bc88c9a4b11f53131c888318f.svg?invert_in_darkmode&sanitize=true" align=middle width=116.84731574999998pt height=16.438356pt/></p>
+\begin{align*}
+  h(k) = k\;mod\;m
+\end{align*}
 Note: m should be PRIME and not too close to power of 2.  
   
 **44m - MULTIPLICATION method - preferred over division (notes p5)**
-<p align="center"><img src="/tex/00775c78e4a24e6e638a8d4fbabe5502.svg?invert_in_darkmode&sanitize=true" align=middle width=372.3509757pt height=177.41939159999998pt/></p>
+\begin{align*}
+  h(k) = [(a\cdot k)\;mod\;2^w] >> (w-r)\\
+  k\;is\;w\;bits\\
+  a\;is\;random\\
+  where\;m=2^r\\
+  \textit{m = array spaces}\\
+  \textit{(expected collision chain length)}\;load\;factor\;\alpha=\frac{n}{m}\\
+  \textit{expected operation (insert del etc) time}\;\Theta(1+\alpha)
+\end{align*}
 a should be random, odd, and in the range 2^(r-1) < a < 2^r, and NOT close to a power of 2.  
 w number of bits in key range  
   
@@ -1811,6 +1912,26 @@ Reading:
 **49m-53m** - 	Time analysis list, append, memory alocation  
 **53m** - 		Aggregate analysis / Cost based accounting  
 **53m-57m** - 	Maths on aggregate analysis - write   
+  
+v2 contents  
+  
+| time			| notes	|
+| **0m-1m** 		| what to cover? Hashes, Code & Amortisation  |
+| **1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  |
+| **3m-14m** 	| Why using primes is important in hash function  |
+| **13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   |
+| **14m-00m** 	| Walk the code in problem set 4 ps4   |
+| **15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   |
+| **16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  |
+| **21m-44m** 	| dnaseq.py method by method & python features needed  |
+| **21m** 		| implementing reverse w/o using a lot of memory 	|
+| **23m-37m** 	| generators / yield / subsequences()   |
+| **38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  |
+| **40m-44m** 	| getExactSubmatches()  |
+| **44m** 		| Amortized analysis  |
+| **49m-53m** 	| Time analysis list, append, memory alocation  |
+| **53m** 		| Aggregate analysis / Cost based accounting  |
+| **53m-57m**	| Maths on aggregate analysis - write |  
 
   
 https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8
@@ -1868,16 +1989,20 @@ p - 2^w / bla see 1st 2mins
 44m Amortized analysis
 
 Example using lists:
-| list function | cost
+| 	list function 		| cost				|
 | - | - |
-|	l = list()	| 		O(1) 	|
-|	for lis size N |			|
-|	l.append()	|	O(N) worst case	|
+|	l = list()			| 	O(1)	 		|
+|	for list size N 	|					|
+|	l.append()		|	O(N) worst case	|
 
 The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
   
 insertions + number of table doubles
-<p align="center"><img src="/tex/7eeb5443be35f55d195b367ca0410daf.svg?invert_in_darkmode&sanitize=true" align=middle width=148.4520939pt height=90.06403395pt/></p>
+\begin{align*}
+  \sum_{n}{}O(1)+  \sum_{logn}{}O(2^i)\\
+  gives\\
+  O(n)+O(n)
+\end{align*}
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
@@ -1968,17 +2093,19 @@ Integrate into circuit2.py
 Run profiler
 
 
-#### REFS - alt profilers
+#### REFS - alt profilers  
 Using sProfile - https://towardsdatascience.com/how-to-profile-your-code-in-python-e70c834fad89  
-Alternative profilers - https://pythonspeed.com/articles/beyond-cprofile/
-Python debugger - https://docs.python.org/3/library/pdb.html
-Python debugger tutorial - https://realpython.com/python-debugging-pdb/
-Alternative implementation to CPython - https://www.pypy.org/
-Working out if two vectors intersect + special cases - https://www.youtube.com/watch?v=bbTqI0oqL5U
-Sweep line algorithm 2/5 theory - https://www.youtube.com/watch?v=qkhUNzCGDt0
-  event (point) queue (use balanced BST) & sweepline status (use balanced BST)
-Sweep line algorithm 3/5 pseudo code - https://www.youtube.com/watch?v=I9EsN2DTnN8
-Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube.com/watch?v=8C3_ZKy4KkA
+Alternative profilers - https://pythonspeed.com/articles/beyond-cprofile/  
+Python debugger - https://docs.python.org/3/library/pdb.html  
+Python debugger tutorial - https://realpython.com/python-debugging-pdb/  
+Alternative implementation to CPython - https://www.pypy.org/  
+Working out if two vectors intersect + special cases - https://www.youtube.com/watch?v=bbTqI0oqL5U  
+  
+**Sweepline Algorithm Background**  
+Sweep line algorithm 2/5 theory - https://www.youtube.com/watch?v=qkhUNzCGDt0  
+  event (point) queue (use balanced BST) & sweepline status (use balanced BST)  
+Sweep line algorithm 3/5 pseudo code - https://www.youtube.com/watch?v=I9EsN2DTnN8  
+Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube.com/watch?v=8C3_ZKy4KkA  
 
 
 
@@ -2090,9 +2217,9 @@ Why do we care?
 
 
 
-### R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R10 - Quiz 1 review
+[vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) - 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) - 
 Code:
 Reading: 
 
@@ -2105,6 +2232,10 @@ Reading:
 **properties**: 
 
 **#### Vid contents**  
+**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-5m** - 	Solving a Recursion problem  
+
+
 
 #### Example problem
 
@@ -2147,7 +2278,7 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-### R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### R11 - Principles of Algorithm Design
 COPY RECITATION TEMPLATE into further lectures
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
@@ -2560,7 +2691,15 @@ Use LaTeXit to check formula correctness then past it into doc surrounded by con
 ![latex script](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/images/latex_example.png)  
 
 Will display the following document distance equation  
-<p align="center"><img src="/tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode&sanitize=true" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
+$$
+\begin{equation}
+  D_1.D_2\\
+\end{equation}
+\begin{equation}
+  \sum_{w}D_1[w].D_2[w]
+  \label{sum}  
+\end{equation}
+$$
 
 #### How can I get rid of ref numbers, or get them to increment at least?
 open problem . .
