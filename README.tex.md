@@ -132,10 +132,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [**DATA STRUCTURE**](#data-structure)  
 	2. [R8 - Simulation Algorithms](#r8---simulation-algorithms)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R8**](#vid-contents---r8)  
 		2. [Maths notes](#maths-notes)  
 	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - L9**](#vid-contents---l9)  
 	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
 		1. [**Vid contents - R9**](#vid-contents---r9)  
 		2. [Maths notes](#maths-notes)  
@@ -1696,16 +1696,16 @@ universal hashing
 Code: 
 Reading: 
 
-#### **Vid contents - **
+#### **Vid contents - R8**
  time			| notes	
 | - | - |
-0-xm - Walk the code in problem set 3 -  
-9m - introduce lexicographic comparison sort  
-17m-29m  - RangeIndex methods and running time for example (poor) code  
-29m - KeyWirePairs,   
-42m - RangeIndex - comparision model penalty  
-43m - LIST LCA pseudo code  
-49m - LCA run time intuition  
+**0-xm**		| Walk the code in problem set 3 -  
+**9m**			| introduce lexicographic comparison sort  
+**17m-29m **	| RangeIndex methods and running time for example (poor) code  
+**29m**			| KeyWirePairs,   
+**42m**			| RangeIndex - comparision model penalty  
+**43m**			| LIST LCA pseudo code  
+**49m**			| LCA run time intuition  
 
 
 
@@ -1793,22 +1793,22 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### **Vid contents - **
- time			| notes	
+#### **Vid contents - L9**
+ time		| notes	
 | - | - |
-0-3m - 	Refresh Hashing with Chaining: Load factor  
-3m - 	Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
-7m30 - 	Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
-15m - 	Amortisation - COST of table doubling operation calculated as a series   
-21m - 	Inserts - Table doubling costs  
-23m - 	Delete - Table downsizing  
-23m46 - Delete - PROBLEM w/ table downsizing by half  
-23m50 - Optimal upsized & downsize - double giong up only halve when n (entries) down to 1/4  
-27m - strategy for implementing table doubling in an RTOS  
-28m - String Matching  
-34m - Cost for simple string matching theta Θ(s*t) could be QUADRATIC
-35m - using a rolling hash ADT - concepts
-41m-47m - Rolling hash ADT - pseudo code - problem set 4
+**0-3m**	| Refresh Hashing with Chaining: Load factor  
+**3m**		| Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
+**7m30**	| Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
+**15m**		| Amortisation - COST of table doubling operation calculated as a series   
+**21m**		| Inserts - Table doubling costs  
+**23m**		| Delete - Table downsizing  
+**23m46**	| Delete - PROBLEM w/ table downsizing by half  
+**23m50**	| Optimal upsized & downsize - double giong up only halve when n (entries) down to 1/4  
+**27m**		| strategy for implementing table doubling in an RTOS  
+**28m**		| String Matching  
+**34m**		| Cost for simple string matching theta Θ(s*t) could be QUADRATIC
+**35m**		| using a rolling hash ADT - concepts
+**41m-47m**| Rolling hash ADT - pseudo code - problem set 4
 
 
 How to choose m (table size)  - (on overflow double it)
