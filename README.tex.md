@@ -121,7 +121,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 			1. [Counting Sort - 37m](#counting-sort---37m)  
 			2. [Radix Sort - 45m](#radix-sort---45m)  
 	8. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R7**](#vid-contents---r7)  
 		2. [Summary Sorting Algos So far:](#summary-sorting-algos-so-far)  
 		3. [Maths notes](#maths-notes)  
 9. [Problem set 2.](#problem-set-2)  
@@ -1418,15 +1418,15 @@ Conceptually simple - sort by each digit starting from LSB or MSB
 Code:
 Reading: 
 
-#### **Vid contents - **
+#### **Vid contents - R7**
  time			| notes	
 | - | - |
-0-  - Summary sorting Algos so far  
-7m - Python comparison overloading __lt__,__le__,__gt__,__ge__,__gq__,__ne__,
-7m-35m - implementing COUNTING sort in place?
-35m - implementing RADIX sort
-42m-47m - RADIX sort running time justification - REDO this when awake - ps2 or ps3
-47m-52m - Stability, implications & summary of algos
+**0m**			| Summary sorting Algos so far  
+**7m**			| Python comparison overloading __lt__,__le__,__gt__,__ge__,__gq__,__ne__,
+**7m-35m**		| implementing COUNTING sort in place?
+**35m**			| implementing RADIX sort
+**42m-47m**	| RADIX sort running time justification - REDO this when awake - ps2 or ps3
+**47m-52m**	| Stability, implications & summary of algos
 
 #### Summary Sorting Algos So far:
 Note for sorting you have to output the data set size n for optimal run time(Ω) is Ω(n)
