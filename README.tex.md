@@ -59,7 +59,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		5. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - maths & code](#r1---maths--code)  
-		1. [Vid contents](#vid-contents)  
+		1. [Vid contents - R1](#vid-contents---r1)  
 		2. [Maths notes](#maths-notes)  
 	3. [L2 - Models of computation, Python cost model, document distance](#l2---models-of-computation-python-cost-model-document-distance)  
 		1. [Vid contents](#vid-contents)  
@@ -400,14 +400,16 @@ $$
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 Reading: 
 
-#### Vid contents
-2m - 13m40 Asymptotic complexity Ω, Θ, O  
-13m40 - common worst case runtimes  
-16m - example asymptotic notation  
-23m - log(log(n))  
-25m - log ( N choose N/2 ) = Θ(n)    
-31m - 43m peak finding 1d - running time T(n)
-43m - 53m peak finding - running time T(n)
+#### Vid contents - R1
+ time			| notes	
+| - | - |
+**2m - 13m40**	| Asymptotic complexity Ω, Θ, O  
+**13m40**		| common worst case runtimes  
+**16m**			| example asymptotic notation  
+**23m**			| log(log(n))  
+**25m**			| log ( N choose N/2 ) = Θ(n)    
+**31m**			| 43m peak finding 1d - running time T(n)
+**43m - 53m**	| peak finding - running time T(n)
 
 NOTE
 g(x) = O(f(x)) - UPPER bound - O - big O
