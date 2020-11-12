@@ -1422,7 +1422,7 @@ Reading:
  time			| notes	
 | - | - |
 **0m**			| Summary sorting Algos so far  
-**7m**			| Python comparison overloading __lt__,__le__,__gt__,__ge__,__gq__,__ne__,
+**7m**			| Python comparison overloading ```__lt__,__le__,__gt__,__ge__,__gq__,__ne__```
 **7m-35m**		| implementing COUNTING sort in place?
 **35m**			| implementing RADIX sort
 **42m-47m**	| RADIX sort running time justification - REDO this when awake - ps2 or ps3
