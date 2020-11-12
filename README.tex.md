@@ -53,7 +53,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
-		1. [Vid contents](#vid-contents)  
+		1. [Vid contents - L1](#vid-contents---l1)  
 		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		3. [**Symbols:**](#symbols)  
 		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
@@ -136,7 +136,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
 		1. [Maths notes](#maths-notes)  
 	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
-		1. [Maths notes](#maths-notes)  
+		1. [**Vid contents**](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
 11. [Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3---range-query-analysis--circuit-layout-tool-optimisation)  
 	1. [3-1 Range Query - AVL tree](#3-1-range-query---avl-tree)  
 	2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
@@ -145,7 +146,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
-	4. [R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r10---maths--code------------------------------------------------------------)  
+	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -157,7 +158,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -](#r11---maths--code------------------------------------------------------------)  
+	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [Vid contents](#vid-contents)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -273,21 +274,23 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-#### Vid contents
-0m - 15m45  Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
-15m45 - 36m20 Peak finding 1D  
-17m50 defining the solution to 1D algorithm  
-27m40 Divide & conquer (binary search)  
-32m30 Recurence relation overview  
-36m20 -  Peak finding 2D  
-37m13 defining the solution to 2D algorithm - note a >= b - means   
-38m Greedy ascent algorithm - find highest neighbour, go in that direction, loop  
-40m43 Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!  
-43m 2D binary search  
-46m EG 1 - incorrect search  
-47m45 EG2 - working version  
-51m25 Recurrence for 2D algorithm  
-54m15 Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)  
+#### Vid contents - L1
+ time			| notes	
+| - | - |
+**0m - 15m45**		| Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
+**15m45 - 36m20**	|  Peak finding 1D  
+**17m50**			|  defining the solution to 1D algorithm  
+**27m40**			|  Divide & conquer (binary search)  
+**32m30**			|  Recurence relation overview  
+**36m20**			|  Peak finding 2D  
+**37m13**			|  defining the solution to 2D algorithm - note a >= b - means   
+**38m**				|  Greedy ascent algorithm - find highest neighbour, go in that direction, loop  
+**40m43**			|  Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!  
+**43m**				|  2D binary search  
+**46m**				|  EG 1 - incorrect search  
+**47m45**			|  EG2 - working version  
+**51m25**			|  Recurrence for 2D algorithm  
+**54m15**			|  Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)  
   
 Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
@@ -1893,26 +1896,26 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 [Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
 Reading: 
 
-**#### Vid contents**  
-**0m-1m** - 		what to cover? Hashes, Code & Amortisation  
-**1m-3m** - 		Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
-**3m-14m** - 	Why using primes is important in hash function  
-**13m6** - 		Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
-**14m-00m** - 	Walk the code in problem set 4 ps4   
-**15m** - 		Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
-**16m20** - 		kfasta.py - iterator implemtaion, __iter__, next()  
-**21m-44m** -  	dnaseq.py method by method & python features needed  
-**21m** -  		implementing reverse w/o using a lot of memory 	
-**23m-37m** - 	generators / yield / subsequences()   
-**38n-40m** - 	intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
-**40m-44m** - 	getExactSubmatches()  
-**44m** - 		Amortized analysis  
-**49m-53m** - 	Time analysis list, append, memory alocation  
-**53m** - 		Aggregate analysis / Cost based accounting  
-**53m-57m** - 	Maths on aggregate analysis - write   
+#### **Vid contents**  
+ time			| notes	
+| - | - |
+**0m-1m** 		| what to cover? Hashes, Code & Amortisation  
+**1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
+**3m-14m** 		| Why using primes is important in hash function  
+**13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
+**14m-00m** 	| Walk the code in problem set 4 ps4   
+**15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
+**16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  
+**21m-44m** 	| dnaseq.py method by method & python features needed  
+**21m** 		| implementing reverse w/o using a lot of memory 	
+**23m-37m** 	| generators / yield / subsequences()   
+**38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
+**40m-44m** 	| getExactSubmatches()  
+**44m** 		| Amortized analysis  
+**49m-53m** 	| Time analysis list, append, memory alocation  
+**53m** 		| Aggregate analysis / Cost based accounting  
+**53m-57m**	| Maths on aggregate analysis - write    
 
-  
-https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8
 
 Generators:
 ```
@@ -1967,11 +1970,11 @@ p - 2^w / bla see 1st 2mins
 44m Amortized analysis
 
 Example using lists:
-| list function | cost
+| 	list function 		| cost				|
 | - | - |
-|	l = list()	| 		O(1) 	|
-|	for lis size N |			|
-|	l.append()	|	O(N) worst case	|
+|	l = list()			| 	O(1)	 		|
+|	for list size N 	|					|
+|	l.append()		|	O(N) worst case	|
 
 The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
   
@@ -1984,8 +1987,11 @@ insertions + number of table doubles
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
-[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)  
-[PS3 problem code]
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf) ~ 
+[PS3 problem code]() ~ 
+[Setting up the Komodo IDE for python debegging]
+(https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8)  
+
 ### 3-1 Range Query - AVL tree
 
 
@@ -2071,17 +2077,19 @@ Integrate into circuit2.py
 Run profiler
 
 
-#### REFS - alt profilers
+#### REFS - alt profilers  
 Using sProfile - https://towardsdatascience.com/how-to-profile-your-code-in-python-e70c834fad89  
-Alternative profilers - https://pythonspeed.com/articles/beyond-cprofile/
-Python debugger - https://docs.python.org/3/library/pdb.html
-Python debugger tutorial - https://realpython.com/python-debugging-pdb/
-Alternative implementation to CPython - https://www.pypy.org/
-Working out if two vectors intersect + special cases - https://www.youtube.com/watch?v=bbTqI0oqL5U
-Sweep line algorithm 2/5 theory - https://www.youtube.com/watch?v=qkhUNzCGDt0
-  event (point) queue (use balanced BST) & sweepline status (use balanced BST)
-Sweep line algorithm 3/5 pseudo code - https://www.youtube.com/watch?v=I9EsN2DTnN8
-Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube.com/watch?v=8C3_ZKy4KkA
+Alternative profilers - https://pythonspeed.com/articles/beyond-cprofile/  
+Python debugger - https://docs.python.org/3/library/pdb.html  
+Python debugger tutorial - https://realpython.com/python-debugging-pdb/  
+Alternative implementation to CPython - https://www.pypy.org/  
+Working out if two vectors intersect + special cases - https://www.youtube.com/watch?v=bbTqI0oqL5U  
+  
+**Sweepline Algorithm Background**  
+Sweep line algorithm 2/5 theory - https://www.youtube.com/watch?v=qkhUNzCGDt0  
+  event (point) queue (use balanced BST) & sweepline status (use balanced BST)  
+Sweep line algorithm 3/5 pseudo code - https://www.youtube.com/watch?v=I9EsN2DTnN8  
+Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube.com/watch?v=8C3_ZKy4KkA  
 
 
 
@@ -2193,9 +2201,9 @@ Why do we care?
 
 
 
-### R10 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R10 - Quiz 1 review
+[vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) - 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) - 
 Code:
 Reading: 
 
@@ -2208,6 +2216,10 @@ Reading:
 **properties**: 
 
 **#### Vid contents**  
+**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-5m** - 	Solving a Recursion problem  
+
+
 
 #### Example problem
 
@@ -2250,7 +2262,7 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-### R11 - maths & code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+### R11 - Principles of Algorithm Design
 COPY RECITATION TEMPLATE into further lectures
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
