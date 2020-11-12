@@ -53,23 +53,23 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
-		1. [Vid contents - L1](#vid-contents---l1)  
+		1. [**Vid contents - ** - L1](#vid-contents------l1)  
 		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		3. [**Symbols:**](#symbols)  
 		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		5. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - maths & code](#r1---maths--code)  
-		1. [Vid contents - R1](#vid-contents---r1)  
+		1. [**Vid contents - ** - R1](#vid-contents------r1)  
 		2. [Maths notes](#maths-notes)  
 	3. [L2 - Models of computation, Python cost model, document distance](#l2---models-of-computation-python-cost-model-document-distance)  
-		1. [Vid contents](#vid-contents)  
+		1. [**Vid contents - L2**](#vid-contents---l2)  
 		2. [Model of computation:](#model-of-computation)  
 		3. [Python Model  - Computational Steps](#python-model----computational-steps)  
 		4. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
 		5. [Examples Document distance code:](#examples-document-distance-code)  
 		6. [Maths notes](#maths-notes)  
 	4. [R2 - doc distance optimisation - python cost model](#r2---doc-distance-optimisation---python-cost-model)  
-		1. [Vid contents](#vid-contents)  
+		1. [**Vid contents - **](#vid-contents---)  
 		2. [Setting up for profiling](#setting-up-for-profiling)  
 		3. [Code of code](#code-of-code)  
 		4. [Comparing versions](#comparing-versions)  
@@ -94,22 +94,22 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 			3. [Max_heapify](#maxheapify)  
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
 		1. [**DATA STRUCTURE - BST - Binary search trees**](#data-structure---bst---binary-search-trees)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Augmented BST - 37m - node_count_before - RANK](#augmented-bst---37m---nodecountbefore---rank)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
-		1. [Vid contents](#vid-contents)  
+		1. [**Vid contents - **](#vid-contents---)  
 		2. [Maths notes](#maths-notes)  
 		3. [get_successor()](#getsuccessor)  
 		4. [delete()](#delete)  
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
 		1. [**DATA STRUCTURE - AVL tree - R6 50m**](#data-structure---avl-tree---r6-50m)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [TERMS](#terms)  
 		5. [Maths notes - AVL tree (19-25m) - height analysis v1](#maths-notes---avl-tree-19-25m---height-analysis-v1)  
 		6. [Maths notes - AVL tree (26m) - height analysis v2](#maths-notes---avl-tree-26m---height-analysis-v2)  
 	6. [R6 - AVL trees](#r6---avl-trees)  
-		1. [Vid contents](#vid-contents)  
+		1. [**Vid contents - **](#vid-contents---)  
 		2. [BST review](#bst-review)  
 		3. [AVL properties](#avl-properties)  
 		4. [Maths notes](#maths-notes)  
@@ -121,7 +121,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 			1. [Counting Sort - 37m](#counting-sort---37m)  
 			2. [Radix Sort - 45m](#radix-sort---45m)  
 	8. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
-		1. [Vid contents](#vid-contents)  
+		1. [**Vid contents - **](#vid-contents---)  
 		2. [Summary Sorting Algos So far:](#summary-sorting-algos-so-far)  
 		3. [Maths notes](#maths-notes)  
 9. [Problem set 2.](#problem-set-2)  
@@ -129,14 +129,18 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
 10. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
-		1. [**DATA STRUCTURE**](#data-structure)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [**DATA STRUCTURE**](#data-structure)  
 	2. [R8 - Simulation Algorithms](#r8---simulation-algorithms)  
-		1. [Maths notes](#maths-notes)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Maths notes](#maths-notes)  
 	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
+		1. [**Vid contents - **](#vid-contents---)  
 	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
-		1. [Maths notes](#maths-notes)  
+		1. [**Vid contents - R9**](#vid-contents---r9)  
+		2. [Maths notes](#maths-notes)  
 	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
-		1. [**Vid contents**](#vid-contents)  
+		1. [**Vid contents - R9b**](#vid-contents---r9b)  
 		2. [Maths notes](#maths-notes)  
 11. [Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3---range-query-analysis--circuit-layout-tool-optimisation)  
 	1. [3-1 Range Query - AVL tree](#3-1-range-query---avl-tree)  
@@ -144,39 +148,41 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [REFS - alt profilers](#refs---alt-profilers)  
 	3. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+		2. [**Vid contents - L10**](#vid-contents---l10)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+		2. [**Vid contents - R10**](#vid-contents---r10)  
+		3. [Example problem](#example-problem)  
+		4. [Maths notes](#maths-notes)  
 12. [Problem set 4](#problem-set-4)  
 13. [Quiz 1](#quiz-1)  
 14. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
-		1. [Vid contents](#vid-contents)  
+		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
 15. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 16. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	2. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 17. [Problem set 5 due](#problem-set-5-due)  
@@ -184,56 +190,56 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [L15 - Single-source shortest paths problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	2. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	3. [L17 - Bellman-Ford](#l17---bellman-ford)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	4. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 21. [Problem set 7 out](#problem-set-7-out)  
 	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	2. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	3. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 22. [Problem set 7 due](#problem-set-7-due)  
 23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	2. [24 - Algorithms research topics](#24---algorithms-research-topics)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
+		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 24. [Glossary of terms](#glossary-of-terms)  
@@ -274,7 +280,7 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-#### Vid contents - L1
+#### **Vid contents - ** - L1
  time			| notes	
 | - | - |
 **0m - 15m45**		| Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
@@ -400,7 +406,7 @@ $$
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 Reading: 
 
-#### Vid contents - R1
+#### **Vid contents - ** - R1
  time			| notes	
 | - | - |
 **2m - 13m40**	| Asymptotic complexity Ω, Θ, O  
@@ -448,14 +454,17 @@ $$
 DocDistance 8 versions Code see R2 ~ 
 [DocDistance 8 versions R2 notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf)  
 
-#### Vid contents
-0-6m - Whats an algorithm  
-6m - model of computation  
-7m50 - Random access machine (model of computation)  
-13m40 - Pointer machine (model of computation)  
-19m - 32m - Python model
-32m -  44m - Document distance
-44m - 8 version of doc distance and optimisations
+#### **Vid contents - L2**
+ time			| notes	
+| - | - |
+**0-6m**		| Whats an algorithm  
+**6m**			| model of computation  
+**7m50**		| Random access machine (model of computation)  
+**13m40**		| Pointer machine (model of computation)  
+**19m-32m		| Python model
+**32m-44m**	| Document distance
+**44m**			| 8 version of doc distance and optimisations
+
 
 
 Algorithm: computational procedure for solving a problem  
@@ -565,7 +574,9 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 [Doc Distance 7 stages optimisation local code](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 
-#### Vid contents
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-7m - inner product  
 7m - got through docdist1  
 13m - cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
@@ -580,12 +591,10 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 #### Code of code
 ```
-9
-10
-11
-12
-13
-14 
+Texify issue notes
+Let me try this again but without the opening and closing brackets "<" and ">" so it won't try to render :)
+What TeXify emits: <img src="/docs/Tuple/tex/4b83ab92144c8118c40653189ab60df5.svg?invert_in_darkmode&sanitize=true" align=middle width=81.54091274999998pt height=22.831056599999986pt/>
+What it needs to be: <img src="/docs/Tuple/tex/4b83ab92144c8118c40653189ab60df5.svg?invert_in_darkmode&sanitize=true" align="middle" width="81.54091274999998pt" height="22.831056599999986pt"/&gt:
 ```
 
 #### Comparing versions
@@ -882,7 +891,9 @@ Reading: CLRS Chapter 10, 12.1-3
 **properties**: sorted data, comparison model  
 See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
-#### Vid contents
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-6m	define problem - runway scheduling - to demonstrate BST ADT  
 6m-21m	EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)  
 21m	intro to BSTs  
@@ -975,7 +986,9 @@ Return total
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
 [Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 
-#### Vid contents
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 3m-14m 	Solving Recurrence for merge sort. (PS2 problem 1)
 14m-26m	Data structures, HEAP
 26m-35m	Data structures, BST, (unbalanced)
@@ -1106,7 +1119,9 @@ case 2: deleting a node that has 2 subtrees
 **properties**: height = logn => tree balanced - height & balance maintained in each node, comparison model   
 RI - representation invariant  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
 0-2m - BST summary - in-order traversal using recursion  
 2m-11m - importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation  
 11m - AVL trees definition and balance  
@@ -1252,7 +1267,9 @@ Rotation Cases (@ 32m)
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
 Reading: 
 
-#### Vid contents
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-7m - BST review, height  
 7m-11m  AVL balance  
 11m	  Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)  
@@ -1336,6 +1353,8 @@ comp model = computational model
 
 
 #### **Vid contents**  
+ time			| notes	
+| - | - |
 0-2m - Introduction  
 2m-32m Computational models - **Comparison model**  
 5m20 - Descision tree  
@@ -1399,7 +1418,9 @@ Conceptually simple - sort by each digit starting from LSB or MSB
 Code:
 Reading: 
 
-#### Vid contents
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-  - Summary sorting Algos so far  
 7m - Python comparison overloading __lt__,__le__,__gt__,__ge__,__gq__,__ne__,
 7m-35m - implementing COUNTING sort in place?
@@ -1563,7 +1584,9 @@ e) Re-write the data structure using the most efficient method from class (no li
 [Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
 Reading: 
 
-**#### Vid contents**  
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
 5m-13m - Python dict API summary, and Motivarion (see lect notes)  
 13m-24m Solution 1 - Direct access table  
@@ -1673,7 +1696,9 @@ universal hashing
 Code: 
 Reading: 
 
-**#### Vid contents**  
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-xm - Walk the code in problem set 3 -  
 9m - introduce lexicographic comparison sort  
 17m-29m  - RangeIndex methods and running time for example (poor) code  
@@ -1768,7 +1793,9 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-**#### Vid contents**  
+#### **Vid contents - **
+ time			| notes	
+| - | - |
 0-3m - 	Refresh Hashing with Chaining: Load factor  
 3m - 	Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
 7m30 - 	Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
@@ -1828,20 +1855,22 @@ build instruction in file
 Code:
 Reading: 
 
-**#### Vid contents**  
-0-5m -		Walk through naive implementation  
-5m30-10m - Avoiding false positives / maths of collisions  
-10m - 		Running time
-14m - 		fast hashing - mod prime number  
-18m-22m - 	SLIDE implementation  
-22m - 		prehash - smart way  
-28m - 		contsructor(__init__) for rolling_hash  
-30m - 		append & skip  
-36m-38 - 	modular / multiplicative inverse - precomputed because base on const  
-40m - 		rolling_hash, append, skip, hash - cost  
-52m - 		amortised analysis breakdown  
-54m - 		listing BST nodes in order - In order traversal - amortised cost  
-59m - 		amortised analysis - ps4  
+#### **Vid contents - R9**
+ time			| notes	
+| - | - |
+**0-5m**		| Walk through naive implementation  
+**5m30-10m**	| Avoiding false positives / maths of collisions  
+**10m**			| Running time
+**14m**			| fast hashing - mod prime number  
+**18m-22m**	| SLIDE implementation  
+**22m**			| prehash - smart way  
+**28m**			| contsructor(__init__) for rolling_hash  
+**30m**			| append & skip  
+**36m-38**		| modular / multiplicative inverse - precomputed because base on const  
+**40m**			| rolling_hash, append, skip, hash - cost  
+**52m**			| amortised analysis breakdown  
+**54m**			| listing BST nodes in order - In order traversal - amortised cost  
+**59m**			| amortised analysis - ps4  
 	
 
 Naive implementation of string match O(n*k), where n is string length & m is the search string length.
@@ -1898,7 +1927,7 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 [Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
 Reading: 
 
-#### **Vid contents**  
+#### **Vid contents - R9b**  
  time			| notes	
 | - | - |
 **0m-1m** 		| what to cover? Hashes, Code & Amortisation  
@@ -2110,20 +2139,22 @@ Reading: CLRS Chapter 11.4 (and 11.3.3 and 11.5 if interested)
 **(RI)**:   
 **properties**:  
 
-**#### Vid contents**  
-**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
-**3m30-m** - 	Open Addressing - no chaining = no pointers  
-**8m** - 		Mapping from key through trial count to slots U x {0,1. . . m-1} > {0,1. . . m-1}  
-**11m** - 		Eg of **INSERTION** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
-**15m** - 		Eg of **SEARCH** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
-**22m** - 		Coping w/ a search **after a deletion**! Inserts a DELETE_ME flag in place.  
-**30m-00m** - 	Probing strategies  
-**30m** - 		1 - linear probing  
-**33m50** - 		clustering issue  
-**36m** - 		Double hashing to **solve clustering**   
-**39m** - 		Uniform Hashing Assumption - NOT same as SIMPLE Uniform hashing
-**41m-46m** - 	Followed by Uniform Hashing **Analysis CRITICAL info!**  
-**46m** - 		Cryptographic Hashing - NOT on quiz FYI only
+#### **Vid contents - L10**
+ time			| notes	
+| - | - |
+**0m-3m**		| Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-m**		| Open Addressing - no chaining = no pointers  
+**8m**			| Mapping from key through trial count to slots U x {0,1. . . m-1} > {0,1. . . m-1}  
+**11m**			| Eg of **INSERTION** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
+**15m**			| Eg of **SEARCH** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
+**22m**			| Coping w/ a search **after a deletion**! Inserts a DELETE_ME flag in place.  
+**30m-00m**	| Probing strategies  
+**30m**			| 1 - linear probing  
+**33m50**		| clustering issue  
+**36m**			| Double hashing to **solve clustering**   
+**39m**			| Uniform Hashing Assumption - NOT same as SIMPLE Uniform hashing
+**41m-46m**	| Followed by Uniform Hashing **Analysis CRITICAL info!**  
+**46m**			| Cryptographic Hashing - NOT on quiz FYI only
 
 
 
@@ -2217,9 +2248,11 @@ Reading:
 **(RI)**:   
 **properties**: 
 
-**#### Vid contents**  
-**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
-**3m30-5m** - 	Solving a Recursion problem  
+#### **Vid contents - R10**
+ time			| notes	
+| - | - |
+**0m-3m**		| Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-5m**	| Solving a Recursion problem  
 
 
 
@@ -2257,7 +2290,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2271,7 +2307,10 @@ COPY RECITATION TEMPLATE into further lectures
 Code:
 Reading: 
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2296,7 +2335,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2321,7 +2363,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2344,7 +2389,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2372,7 +2420,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2395,7 +2446,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2418,7 +2472,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2441,7 +2498,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2468,7 +2528,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 0-5m - Introduction to Dynamic Programming (DP) recursion + memoization + guessing
 5m-11m20 - Solving Fibonacci w/ Memoization - naive version
 11m20-15m40 - Memoized version
@@ -2500,7 +2563,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2524,7 +2590,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2547,7 +2616,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2574,7 +2646,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2597,7 +2672,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
