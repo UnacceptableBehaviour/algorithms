@@ -651,9 +651,11 @@ f2(n) = 2^{2100000n} = O(c^n) = exponential
 \end{align}
 $$
 Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
+$$
 \begin{equation}
     log(n^{n+\frac{1}{2}}) - log((n-2)^{n-\frac{2}{3}}) =     (n+\frac{1}{2})log(n) - (n-\frac{2}{3})log(n-2)
 \end{equation}
+$$
 with the left dominating the right give nlog(n)  
 
 
@@ -666,6 +668,7 @@ f1(n) = n^{\sqrt{n}} = n^{n^{\frac{1}{2}}} = O(n^n) = linear.exponential\\
 f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
 \end{align}
 $$
+
 
 ### Problem 1-2. [15 points] Recurrence Relation Resolution
 For each of the following recurrence relations, pick the correct asymptotic runtime:  
@@ -1188,29 +1191,36 @@ $$
 IE In a tree of height h, number of nodes n,  is the sum of: the root + the two sub trees (that differ in height by 1).   
 
 The above recurrence is similar to the Fibonacci sequence, defined as:
+$$
 \begin{equation}
   F_h = F_{h-1} + F_{h-2}
 \end{equation}
+$$
 
 an approximation for which is  (Fibonacci number = nearest integer . . .
+$$
 \begin{equation}
   F_h =  \frac{\phi^h}{\sqrt5},\; h \ge 0,\; (phi)\;\phi=\frac{1+\sqrt5}{2},\;\phi\approx1.618
 \end{equation}
+$$
 
 [paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
+$$
 \begin{equation}
   N_h > \frac{\phi^h}{\sqrt5},\;\;  N_h > \frac{1.618^h}{\sqrt5},\;\; n > \frac{1.618^h}{\sqrt5}
 \end{equation}
+$$
 
-Since Nh = min nodes in a tree of height h, and phi = 1.618.
-
+Since Nh = min nodes in a tree of height h, and phi = 1.618.  
+$$
 \begin{equation}
   n > \frac{\phi^h}{\sqrt5}\;same\;as\;\frac{\phi^h}{\sqrt5} < n\;\; take\; log_{\phi}
 \end{equation}
 \begin{equation}
   h + sml\;const < log_{\phi}n \approx 1.44log_2n
 \end{equation}
+$$
 
 #### Maths notes - AVL tree (26m) - height analysis v2
 
@@ -1305,6 +1315,7 @@ def update_height(node): 8 node.height = max(height(node.left), height(node.righ
 so the root evaluates to max(-1,-1)+1 = 0  
 
 #### AVL properties
+$$
 \begin{align*}
   h = max(h_l, h_r) + 1 \\
   h = -1\;for\;leaf\;node \\
@@ -1316,12 +1327,15 @@ so the root evaluates to max(-1,-1)+1 = 0
   h_l = height\;of\;left\;child \\
   h_r = \textit{height of right child} \\
 \end{align*}
+$$
 
 Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
+$$
 \begin{align*}
   balanced\;property:\\
   \forall n, |h_l - h_r| \le 1
 \end{align*}
+$$
 
 REBALANCE
 CASE 1 - unbalanced in a straight line: Rotate to fold the line
@@ -1403,6 +1417,7 @@ CONCEPTS: Models of computation: **Comparison model** 2-32m
 . . radix sort  
 
 **Assumptions**:
+$$
 \begin{align*}
   sorting \\
   n\; keys\;\in\{0,1,2,..k-1\} \\
@@ -1410,6 +1425,7 @@ CONCEPTS: Models of computation: **Comparison model** 2-32m
   \text{for k...large number?} \\
   \text{can be sorted in }\Theta(n)\; time
 \end{align*}
+$$
 
 ##### Counting Sort - 37m
 Go through unsorted items using key to allocate to an index of an array.
@@ -1658,12 +1674,15 @@ b) INDEPENDENT of where other keys hashing
 Hash function need to know size of table - m.  
 
 **43m - DIVISION method**
+$$
 \begin{align*}
   h(k) = k\;mod\;m
 \end{align*}
+$$
 Note: m should be PRIME and not too close to power of 2.  
   
 **44m - MULTIPLICATION method - preferred over division (notes p5)**
+$$
 \begin{align*}
   h(k) = [(a\cdot k)\;mod\;2^w] >> (w-r)\\
   k\;is\;w\;bits\\
@@ -1673,6 +1692,7 @@ Note: m should be PRIME and not too close to power of 2.
   \textit{(expected collision chain length)}\;load\;factor\;\alpha=\frac{n}{m}\\
   \textit{expected operation (insert del etc) time}\;\Theta(1+\alpha)
 \end{align*}
+$$
 a should be random, odd, and in the range 2^(r-1) < a < 2^r, and NOT close to a power of 2.  
 w number of bits in key range  
   
@@ -2020,11 +2040,13 @@ Example using lists:
 The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
   
 insertions + number of table doubles
+$$
 \begin{align*}
   \sum_{n}{}O(1)+  \sum_{logn}{}O(2^i)\\
   gives\\
   O(n)+O(n)
 \end{align*}
+$$
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
