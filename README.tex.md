@@ -53,13 +53,13 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
-		1. [**Vid contents - ** - L1](#vid-contents------l1)  
+		1. [**Vid contents - L1**](#vid-contents---l1)  
 		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		3. [**Symbols:**](#symbols)  
 		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		5. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - maths & code](#r1---maths--code)  
-		1. [**Vid contents - ** - R1](#vid-contents------r1)  
+		1. [**Vid contents - R1**](#vid-contents---r1)  
 		2. [Maths notes](#maths-notes)  
 	3. [L2 - Models of computation, Python cost model, document distance](#l2---models-of-computation-python-cost-model-document-distance)  
 		1. [**Vid contents - L2**](#vid-contents---l2)  
@@ -69,7 +69,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		5. [Examples Document distance code:](#examples-document-distance-code)  
 		6. [Maths notes](#maths-notes)  
 	4. [R2 - doc distance optimisation - python cost model](#r2---doc-distance-optimisation---python-cost-model)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R2**](#vid-contents---r2)  
 		2. [Setting up for profiling](#setting-up-for-profiling)  
 		3. [Code of code](#code-of-code)  
 		4. [Comparing versions](#comparing-versions)  
@@ -94,16 +94,16 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 			3. [Max_heapify](#maxheapify)  
 	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
 		1. [**DATA STRUCTURE - BST - Binary search trees**](#data-structure---bst---binary-search-trees)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L5**](#vid-contents---l5)  
 		3. [Augmented BST - 37m - node_count_before - RANK](#augmented-bst---37m---nodecountbefore---rank)  
 	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R5**](#vid-contents---r5)  
 		2. [Maths notes](#maths-notes)  
 		3. [get_successor()](#getsuccessor)  
 		4. [delete()](#delete)  
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
 		1. [**DATA STRUCTURE - AVL tree - R6 50m**](#data-structure---avl-tree---r6-50m)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L6**](#vid-contents---l6)  
 		3. [Example problem](#example-problem)  
 		4. [TERMS](#terms)  
 		5. [Maths notes - AVL tree (19-25m) - height analysis v1](#maths-notes---avl-tree-19-25m---height-analysis-v1)  
@@ -116,7 +116,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	7. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
 		1. [**DATA STRUCTURE - Counting sort**](#data-structure---counting-sort)  
 		2. [**DATA STRUCTURE - Radix sort**](#data-structure---radix-sort)  
-		3. [**Vid contents**](#vid-contents)  
+		3. [**Vid contents - L7**](#vid-contents---l7)  
 		4. [Sorting in Linear-Time](#sorting-in-linear-time)  
 			1. [Counting Sort - 37m](#counting-sort---37m)  
 			2. [Radix Sort - 45m](#radix-sort---45m)  
@@ -174,13 +174,21 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	2. [R12 - Principles of Algorithm Design](#r12---principles-of-algorithm-design)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 16. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
+	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	3. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
@@ -280,8 +288,8 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-#### **Vid contents - ** - L1
- time			| notes	
+#### **Vid contents - L1**
+ time				| notes	
 | - | - |
 **0m - 15m45**		| Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
 **15m45 - 36m20**	|  Peak finding 1D  
@@ -406,7 +414,7 @@ $$
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 Reading: 
 
-#### **Vid contents - ** - R1
+#### **Vid contents - R1**
  time			| notes	
 | - | - |
 **2m - 13m40**	| Asymptotic complexity Ω, Θ, O  
@@ -574,12 +582,12 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 [Doc Distance 7 stages optimisation local code](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 
-#### **Vid contents - **
- time			| notes	
+#### **Vid contents - R2**
+ time		| notes	
 | - | - |
-0-7m - inner product  
-7m - got through docdist1  
-13m - cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
+**0-7m**	| inner product  
+7m**		| go through docdist1  
+13m**		| cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
  One line, N = characters, w = word size, number of word = N / w + 1 (1 for each space)  
  
 
@@ -891,19 +899,19 @@ Reading: CLRS Chapter 10, 12.1-3
 **properties**: sorted data, comparison model  
 See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
-#### **Vid contents - **
+#### **Vid contents - L5**
  time			| notes	
 | - | - |
-0-6m	define problem - runway scheduling - to demonstrate BST ADT  
-6m-21m	EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)  
-21m	intro to BSTs  
-24m	BST RI  
-26m	insert() - O(h) - height of tree - **O(logn)** - n=number of nodes  
-35m	min() - O(h) - go farthest left   
-36m	max() - O(h) - go farthest right  
-37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
-              Add number of nodes below node to it. (number includes node itself)  
-43m	AUGMENTATION - Rank(k) - algorithm code - O(logn) for a balanced tree!! Pseudo code below.   
+**0-6m**		| define problem - runway scheduling - to demonstrate BST ADT  
+**6m-21m**		| EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)  
+**21m**			| intro to BSTs  
+**24m**			| BST RI  
+**26m**			| insert() - O(h) - height of tree - **O(logn)** - n=number of nodes  
+**35m**			| min() - O(h) - go farthest left   
+**36m**			| max() - O(h) - go farthest right  
+**37m-43m**	| Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
+   		           	| Add number of nodes below node to it. (number includes node itself)  
+**43m**			| AUGMENTATION - Rank(k) - algorithm code - O(logn) for a balanced tree!! Pseudo code below.   
 
 
 
@@ -986,15 +994,15 @@ Return total
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
 [Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 
-#### **Vid contents - **
+#### **Vid contents - R5**
  time			| notes	
 | - | - |
-3m-14m 	Solving Recurrence for merge sort. (PS2 problem 1)
-14m-26m	Data structures, HEAP
-26m-35m	Data structures, BST, (unbalanced)
-35m-42m 	BST find successor/predecessor
-42m-54m 	BST delete, 3 cases O(h) height of tree
-54m-end	BST augmentation - Uses example min - needed for problem set 3 PS3
+**3m-14m**		| Solving Recurrence for merge sort. (PS2 problem 1)
+**14m-26m**	| Data structures, HEAP
+**26m-35m**	| Data structures, BST, (unbalanced)
+**35m-42m**	| BST find successor/predecessor
+**42m-54m**	| BST delete, 3 cases O(h) height of tree
+**54m-end**		| BST augmentation - Uses example min - needed for problem set 3 PS3
 
 #### Maths notes  
 Solving Recurrence for merge sort:
@@ -1107,6 +1115,7 @@ case 2: deleting a node that has 2 subtrees
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf) - 
 [MIT EG code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/avl.py) - 
 [guess implementation code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)  
+Reading: see lecture notes p6 summary of BSTs and where in CLRS to find them
  
 
 #### **DATA STRUCTURE - AVL tree - R6 50m**  
@@ -1119,19 +1128,19 @@ case 2: deleting a node that has 2 subtrees
 **properties**: height = logn => tree balanced - height & balance maintained in each node, comparison model   
 RI - representation invariant  
 
-#### **Vid contents - **  
+#### **Vid contents - L6**  
  time			| notes	
 | - | - |
-0-2m - BST summary - in-order traversal using recursion  
-2m-11m - importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation  
-11m - AVL trees definition and balance  
-18m - showing height is logn  
-10-28m - height of balanced tree maths  
-19m-25m - Analyse Nh min nodes in a tree of height h - v1  
-26m-XXm - Analyse Nh min nodes in a tree of height h - v2 - ps3  
-32m-48m -  Rotations  
-48m-52  - AVL sort  
-50m - summary of heap / bst AVL reasons for use  
+**0-2m**		| BST summary - in-order traversal using recursion  
+**2m-11m**		| importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation  
+**11m**			| AVL trees definition and balance  
+**18m**			| showing height is logn  
+**10-28m**		| height of balanced tree maths  
+**19m-25m**	| Analyse Nh min nodes in a tree of height h - v1  
+**26m-XXm**	| Analyse Nh min nodes in a tree of height h - v2 - ps3  
+**32m-48m**	| Rotations  
+**48m-52 **		| AVL sort  
+**50m**			| summary of heap / bst AVL reasons for use  
 
 #### Example problem
 
@@ -1265,19 +1274,19 @@ Rotation Cases (@ 32m)
 [vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
-Reading: 
+Reading: none listed  
 
 #### **Vid contents - **
- time			| notes	
+ time		| notes	
 | - | - |
-0-7m - BST review, height  
-7m-11m  AVL balance  
-11m	  Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)  
-18m BST review, insert  
-21m AVL review, left_rotate, right_rotate  
-28m22 pointer exchange pseudo code right_rotate  
-40m AVL review REBALANCE  
-50m rebalance synopsis - AUGMENTATION (height in this case) needed for ps3  
+**0-7m**	| BST review, height  
+**7m-11m**	| AVL balance  
+**11m	**	| Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)  
+**18m**		| BST review, insert  
+**21m**		| AVL review, left_rotate, right_rotate  
+**28m22**	| pointer exchange pseudo code right_rotate  
+**40m**		| AVL review REBALANCE  
+**50m**		| rebalance synopsis - AUGMENTATION (height in this case) needed for ps3  
 
 #### BST review
 height h = longest path to leaf  
@@ -1327,7 +1336,7 @@ Any equation identities / topics for this lecture include context and uses for l
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec07.pdf) ~ 
 [radix_sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11
 Code:
-Reading: 
+Reading: none listed  
 
 #### **DATA STRUCTURE - Counting sort**  
 **type**: , mediocre sorting algorithm 
@@ -1352,21 +1361,22 @@ comp model = computational model
 
 
 
-#### **Vid contents**  
+#### **Vid contents - L7**  
  time			| notes	
 | - | - |
-0-2m - Introduction  
-2m-32m Computational models - **Comparison model**  
-5m20 - Descision tree  
-14m48 - properties of descision tree - node, leaf, path, path length, height  
-16m - Searching lower bound  
-18m - PROOF searching Ω(lg n) - simple  
-20m-24m - Sorting lower bound - logic
-24m-32m - Sorting lower bound - maths PROOF - p2 in notes  
-32m-37m - INTRODUCTION RAM MODEL & INTEGER SORTING  
-37m-40m - COUNTING SORT  
-40m-44m - Counting sort RUNNING TIME - O(k + n)  n=keys k=key range - no of digits? 
-45m - [RADIX Sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11 
+**0-2m**		| Introduction  
+**2m-32m**		| Computational models - **Comparison model**  
+**5m20**		| Descision tree  
+**14m48**		| properties of descision tree - node, leaf, path, path length, height  
+**16m**			| Searching lower bound  
+**18m**			| PROOF searching Ω(lg n) - simple  
+**20m-24m**	| Sorting lower bound - logic
+**24m-32m**	| Sorting lower bound - maths PROOF - p2 in notes  
+**32m-37m**	| INTRODUCTION RAM MODEL & INTEGER SORTING  
+**37m-40m**	| COUNTING SORT  
+**40m-44m**	| Counting sort RUNNING TIME - O(k + n)  n=keys k=key range - no of digits? 
+**45m**			| [RADIX Sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11 
+
 [RADIX sort wiki](https://en.wikipedia.org/wiki/Radix_sort)  
 
 
@@ -1416,7 +1426,7 @@ Conceptually simple - sort by each digit starting from LSB or MSB
 [vid](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec07.pdf) ~ 
 Code:
-Reading: 
+Reading: none listed  
 
 #### **Vid contents - R7**
  time			| notes	
@@ -1582,7 +1592,7 @@ e) Re-write the data structure using the most efficient method from class (no li
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf) ~ 
 [succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q) ~ 
 [Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
-Reading: 
+Reading: none listed  
 
 #### **Vid contents - L8**
  time			| notes	
@@ -1694,7 +1704,7 @@ universal hashing
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
 [lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
 Code: 
-Reading: 
+Reading: none listed  
 
 #### **Vid contents - R8**
  time			| notes	
@@ -1853,7 +1863,7 @@ build instruction in file
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf) ~ 
 Code:
-Reading: 
+Reading: none listed  
 
 #### **Vid contents - R9**
  time			| notes	
@@ -1925,7 +1935,7 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09b.pdf) ~ 
 [Code Zip](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
 [Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
-Reading: 
+Reading: none listed  
 
 #### **Vid contents - R9b**  
  time			| notes	
@@ -2238,7 +2248,7 @@ Why do we care?
 [vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) - 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) - 
 Code:
-Reading: 
+Reading: none listed  
 
 #### **DATA STRUCTURE**  
 **type**:  
@@ -2345,6 +2355,24 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R12 - Principles of Algorithm Design
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2362,6 +2390,23 @@ queries:
 updates:  
 representation invariant (RI):   
 properties:  
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R11 - Principles of Algorithm Design
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
 
 #### **Vid contents - **  
  time			| notes	
