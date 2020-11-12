@@ -129,7 +129,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
 10. [Unit 3: Hashing](#unit-3-hashing)  
 	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - L8**](#vid-contents---l8)  
 		2. [**DATA STRUCTURE**](#data-structure)  
 	2. [R8 - Simulation Algorithms](#r8---simulation-algorithms)  
 		1. [**Vid contents - R8**](#vid-contents---r8)  
@@ -1584,18 +1584,18 @@ e) Re-write the data structure using the most efficient method from class (no li
 [Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
 Reading: 
 
-#### **Vid contents - **
+#### **Vid contents - L8**
  time			| notes	
 | - | - |
-0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
-5m-13m - Python dict API summary, and Motivarion (see lect notes)  
-13m-24m Solution 1 - Direct access table  
-24m- Solution 2 - Hashing  
-29n - introduces collisions - chaining  
-34m - Simple uniform hashing - Mapping number of keys to number of slots   
-42m - hashing to table size m
-43m - DIVISION
-44m - MULTIPLICATION
+**0-5m**		| Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
+**5m-13m**		| Python dict API summary, and Motivarion (see lect notes)  
+**13m-24m**	| Solution 1 - Direct access table  
+**24m**			| Solution 2 - Hashing  
+**29n**			| introduces collisions - chaining  
+**34m**			| Simple uniform hashing - Mapping number of keys to number of slots   
+**42m**			| hashing to table size m
+**43m**			| DIVISION
+**44m**			| MULTIPLICATION
 
 
 #### **DATA STRUCTURE**  
@@ -1701,7 +1701,7 @@ Reading:
 | - | - |
 **0-xm**		| Walk the code in problem set 3 -  
 **9m**			| introduce lexicographic comparison sort  
-**17m-29m **	| RangeIndex methods and running time for example (poor) code  
+**17m-29m**	| RangeIndex methods and running time for example (poor) code  
 **29m**			| KeyWirePairs,   
 **42m**			| RangeIndex - comparision model penalty  
 **43m**			| LIST LCA pseudo code  
