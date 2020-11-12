@@ -136,12 +136,17 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
 		1. [Maths notes](#maths-notes)  
 	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
-		1. [Maths notes](#maths-notes)  
+		1. [**Vid contents**](#vid-contents)  
+		2. [Maths notes](#maths-notes)  
 11. [Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3---range-query-analysis--circuit-layout-tool-optimisation)  
 	1. [3-1 Range Query - AVL tree](#3-1-range-query---avl-tree)  
 	2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
 		1. [REFS - alt profilers](#refs---alt-profilers)  
 	3. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
+		1. [**DATA STRUCTURE**](#data-structure)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -153,6 +158,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Vid contents](#vid-contents)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
+		1. [Vid contents](#vid-contents)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 15. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
@@ -244,8 +253,6 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 
 
 ## AIM:  
-
-
 
 Create an algorithms reference, and aide-memoire  
 
@@ -1887,136 +1894,12 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 [Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
 Reading: 
 
-**#### Vid contents**  
-**0m-1m** - 		what to cover? Hashes, Code & Amortisation  
-**1m-3m** - 		Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
-**3m-14m** - 	Why using primes is important in hash function  
-**13m6** - 		Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
-**14m-00m** - 	Walk the code in problem set 4 ps4   
-**15m** - 		Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
-**16m20** - 		kfasta.py - iterator implemtaion, __iter__, next()  
-**21m-44m** -  	dnaseq.py method by method & python features needed  
-**21m** -  		implementing reverse w/o using a lot of memory 	
-**23m-37m** - 	generators / yield / subsequences()   
-**38n-40m** - 	intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
-**40m-44m** - 	getExactSubmatches()  
-**44m** - 		Amortized analysis  
-**49m-53m** - 	Time analysis list, append, memory alocation  
-**53m** - 		Aggregate analysis / Cost based accounting  
-**53m-57m** - 	Maths on aggregate analysis - write   
-  
-v2 contents  
-  
-| time			| notes	|
-| --- | --- |
-| **0m-1m** 		| what to cover? Hashes, Code & Amortisation  |
-| **1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  |
-| **3m-14m** 	| Why using primes is important in hash function  |
-| **13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   |
-| **14m-00m** 	| Walk the code in problem set 4 ps4   |
-| **15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   |
-| **16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  |
-| **21m-44m** 	| dnaseq.py method by method & python features needed  |
-| **21m** 		| implementing reverse w/o using a lot of memory 	|
-| **23m-37m** 	| generators / yield / subsequences()   |
-| **38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  |
-| **40m-44m** 	| getExactSubmatches()  |
-| **44m** 		| Amortized analysis  |
-| **49m-53m** 	| Time analysis list, append, memory alocation  |
-| **53m** 		| Aggregate analysis / Cost based accounting  |
-| **53m-57m**	| Maths on aggregate analysis - write |  
-  
-v3 contents
-  
-| time			| notes	|
-| - | - |
-| **0m-1m** 		| what to cover? Hashes, Code & Amortisation  |
-| **1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  |
-| **3m-14m** 	| Why using primes is important in hash function  |
-| **13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   |
-| **14m-00m** 	| Walk the code in problem set 4 ps4   |
-| **15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   |
-| **16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  |
-| **21m-44m** 	| dnaseq.py method by method & python features needed  |
-| **21m** 		| implementing reverse w/o using a lot of memory 	|
-| **23m-37m** 	| generators / yield / subsequences()   |
-| **38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  |
-| **40m-44m** 	| getExactSubmatches()  |
-| **44m** 		| Amortized analysis  |
-| **49m-53m** 	| Time analysis list, append, memory alocation  |
-| **53m** 		| Aggregate analysis / Cost based accounting  |
-| **53m-57m**	| Maths on aggregate analysis - write |  
-  
-v4 contents
-  
-| time			| notes	
-| - | - |
-| **0m-1m** 		| what to cover? Hashes, Code & Amortisation  
-| **1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
-| **3m-14m** 	| Why using primes is important in hash function  
-| **13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
-| **14m-00m** 	| Walk the code in problem set 4 ps4   
-| **15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
-| **16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  
-| **21m-44m** 	| dnaseq.py method by method & python features needed  
-| **21m** 		| implementing reverse w/o using a lot of memory 	
-| **23m-37m** 	| generators / yield / subsequences()   
-| **38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
-| **40m-44m** 	| getExactSubmatches()  
-| **44m** 		| Amortized analysis  
-| **49m-53m** 	| Time analysis list, append, memory alocation  
-| **53m** 		| Aggregate analysis / Cost based accounting  
-| **53m-57m**	| Maths on aggregate analysis - write  
-  
-v5 contents
-  
+#### **Vid contents**  
  time			| notes	
 | - | - |
 **0m-1m** 		| what to cover? Hashes, Code & Amortisation  
 **1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
-**3m-14m** 	| Why using primes is important in hash function  
-**13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
-**14m-00m** 	| Walk the code in problem set 4 ps4   
-**15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
-**16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  
-**21m-44m** 	| dnaseq.py method by method & python features needed  
-**21m** 		| implementing reverse w/o using a lot of memory 	
-**23m-37m** 	| generators / yield / subsequences()   
-**38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
-**40m-44m** 	| getExactSubmatches()  
-**44m** 		| Amortized analysis  
-**49m-53m** 	| Time analysis list, append, memory alocation  
-**53m** 		| Aggregate analysis / Cost based accounting  
-**53m-57m**	| Maths on aggregate analysis - write    
-  
-v6 contents
-  
- time			| notes	
- - | -   
-**0m-1m** 		| what to cover? Hashes, Code & Amortisation  
-**1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
-**3m-14m** 	| Why using primes is important in hash function  
-**13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
-**14m-00m** 	| Walk the code in problem set 4 ps4   
-**15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
-**16m20** 		| kfasta.py - iterator implemtaion, __iter__, next()  
-**21m-44m** 	| dnaseq.py method by method & python features needed  
-**21m** 		| implementing reverse w/o using a lot of memory 	
-**23m-37m** 	| generators / yield / subsequences()   
-**38n-40m** 	| intervalSubsequenceHashes(), concept of DRY code use subsequenceHashes() to implement  
-**40m-44m** 	| getExactSubmatches()  
-**44m** 		| Amortized analysis  
-**49m-53m** 	| Time analysis list, append, memory alocation  
-**53m** 		| Aggregate analysis / Cost based accounting  
-**53m-57m**	| Maths on aggregate analysis - write    
-  
-v7 contents
-  
- time			| notes	
- --- | ---   
-**0m-1m** 		| what to cover? Hashes, Code & Amortisation  
-**1m-3m** 		| Hashes, Extended Euclids Method, GCD greatest comm on divisor - modular multiplicative inverse  
-**3m-14m** 	| Why using primes is important in hash function  
+**3m-14m** 		| Why using primes is important in hash function  
 **13m6** 		| Caching - better to use time on a good mod (hash) function than use up all your memory - warm cache performs better   
 **14m-00m** 	| Walk the code in problem set 4 ps4   
 **15m** 		| Rollinghash, API diff - slide(new, old) split out into: append(new), skip(old),   
@@ -2031,10 +1914,6 @@ v7 contents
 **53m** 		| Aggregate analysis / Cost based accounting  
 **53m-57m**	| Maths on aggregate analysis - write    
 
-test text - remove  
-
-  
-https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8
 
 Generators:
 ```
@@ -2106,8 +1985,11 @@ insertions + number of table doubles
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
-[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)  
-[PS3 problem code]
+[PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf) ~ 
+[PS3 problem code]() ~ 
+[Setting up the Komodo IDE for python debegging]
+(https://www.google.com/search?q=integrating+python+debugging+in+komodo&oq=integrating+python+debugger+in+komodo&aqs=chrome.1.69i57j33.16303j1j7&sourceid=chrome&ie=UTF-8)  
+
 ### 3-1 Range Query - AVL tree
 
 
@@ -2314,7 +2196,35 @@ common factors are 1 AND 3
 
 
 Why do we care?  
-  
+
+
+
+### R10 - Quiz 1 review
+[vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) - 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) - 
+Code:
+Reading: 
+
+#### **DATA STRUCTURE**  
+**type**:  
+**use cases**: good for bla  
+**queries**:  
+**updates**:  
+**(RI)**:   
+**properties**: 
+
+**#### Vid contents**  
+**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-5m** - 	Solving a Recursion problem  
+
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 4
 [PDF here](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf) ~ 
@@ -2342,6 +2252,20 @@ queries:
 updates:  
 representation invariant (RI):   
 properties:  
+
+#### Vid contents  
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R11 - Principles of Algorithm Design
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
 
 #### Vid contents  
 
