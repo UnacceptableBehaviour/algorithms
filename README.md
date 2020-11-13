@@ -45,220 +45,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 
 
 
-## Contents  
-1. [Abstract](#abstract)  
-2. [Progress](#progress)  
-3. [Contents](#contents)  
-4. [AIM:](#aim)  
-5. [Intoduction to algorithms MIT - part 1 / 3:](#intoduction-to-algorithms-mit---part-1--3)  
-6. [Unit 1: Introduction](#unit-1-introduction)  
-	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
-		1. [Vid contents](#vid-contents)  
-		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
-		3. [**Symbols:**](#symbols)  
-		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
-		5. [Useful maths equations](#useful-maths-equations)  
-	2. [R1 - maths & code](#r1---maths--code)  
-		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
-	3. [L2 - Models of computation, Python cost model, document distance](#l2---models-of-computation-python-cost-model-document-distance)  
-		1. [Vid contents](#vid-contents)  
-		2. [Model of computation:](#model-of-computation)  
-		3. [Python Model  - Computational Steps](#python-model----computational-steps)  
-		4. [Document distance (problem and algorithms)](#document-distance-problem-and-algorithms)  
-		5. [Examples Document distance code:](#examples-document-distance-code)  
-		6. [Maths notes](#maths-notes)  
-	4. [R2 - doc distance optimisation - python cost model](#r2---doc-distance-optimisation---python-cost-model)  
-		1. [Vid contents](#vid-contents)  
-		2. [Setting up for profiling](#setting-up-for-profiling)  
-		3. [Code of code](#code-of-code)  
-		4. [Comparing versions](#comparing-versions)  
-		5. [Maths notes](#maths-notes)  
-7. [Problem set 1.](#problem-set-1)  
-	1. [Problem 1-1. [15 points] Asymptotic Practice   Calculating asymptotic complexity (Big O notation)](#problem-1-1-15-points-asymptotic-practice--calculating-asymptotic-complexity-big-o-notation)  
-	2. [Problem 1-2. [15 points] Recurrence Relation Resolution](#problem-1-2-15-points-recurrence-relation-resolution)  
-	3. [Problem 1-3. [16 points] Peak-Finding Correctness](#problem-1-3-16-points-peak-finding-correctness)  
-	4. [Problem 1-4. [16 points] Peak-Finding Efficiency](#problem-1-4-16-points-peak-finding-efficiency)  
-	5. [Problem 1-5. [19 points] Peak-Finding Proof](#problem-1-5-19-points-peak-finding-proof)  
-	6. [Problem 1-6. [19 points] Peak-Finding Counterexamples 	data that shows how the python algorithms can fail](#problem-1-6-19-points-peak-finding-counterexamplesdata-that-shows-how-the-python-algorithms-can-fail)  
-8. [Unit 2: Sorting and Trees](#unit-2-sorting-and-trees)  
-	1. [L3 - Insertion sort, merge sort](#l3---insertion-sort-merge-sort)  
-		1. [Insertion sort](#insertion-sort)  
-		2. [Merge Sort](#merge-sort)  
-	2. [L4 - Heaps and heap sort](#l4---heaps-and-heap-sort)  
-		1. [**DATA STRUCTURE - Priority Q - L4 3m33**](#data-structure---priority-q---l4-3m33)  
-		2. [Priority Queue](#priority-queue)  
-		3. [Heap](#heap)  
-			1. [Heap as a tree navigation](#heap-as-a-tree-navigation)  
-			2. [Heap as a tree properties](#heap-as-a-tree-properties)  
-			3. [Max_heapify](#maxheapify)  
-	3. [L5 - Binary search trees, BST sort](#l5---binary-search-trees-bst-sort)  
-		1. [**DATA STRUCTURE - BST - Binary search trees**](#data-structure---bst---binary-search-trees)  
-		2. [Vid contents](#vid-contents)  
-		3. [Augmented BST - 37m - node_count_before - RANK](#augmented-bst---37m---nodecountbefore---rank)  
-	4. [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees)  
-		1. [Vid contents](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
-		3. [get_successor()](#getsuccessor)  
-		4. [delete()](#delete)  
-	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
-		1. [**DATA STRUCTURE - AVL tree - R6 50m**](#data-structure---avl-tree---r6-50m)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [TERMS](#terms)  
-		5. [Maths notes - AVL tree (19-25m) - height analysis v1](#maths-notes---avl-tree-19-25m---height-analysis-v1)  
-		6. [Maths notes - AVL tree (26m) - height analysis v2](#maths-notes---avl-tree-26m---height-analysis-v2)  
-	6. [R6 - AVL trees](#r6---avl-trees)  
-		1. [Vid contents](#vid-contents)  
-		2. [BST review](#bst-review)  
-		3. [AVL properties](#avl-properties)  
-		4. [Maths notes](#maths-notes)  
-	7. [L7 - Counting sort, radix sort, lower bounds for sorting and searching](#l7---counting-sort-radix-sort-lower-bounds-for-sorting-and-searching)  
-		1. [**DATA STRUCTURE - Counting sort**](#data-structure---counting-sort)  
-		2. [**DATA STRUCTURE - Radix sort**](#data-structure---radix-sort)  
-		3. [**Vid contents**](#vid-contents)  
-		4. [Sorting in Linear-Time](#sorting-in-linear-time)  
-			1. [Counting Sort - 37m](#counting-sort---37m)  
-			2. [Radix Sort - 45m](#radix-sort---45m)  
-	8. [R7 - Algos so far summary -](#r7---algos-so-far-summary--)  
-		1. [Vid contents](#vid-contents)  
-		2. [Summary Sorting Algos So far:](#summary-sorting-algos-so-far)  
-		3. [Maths notes](#maths-notes)  
-9. [Problem set 2.](#problem-set-2)  
-		1. [2-1 Fractal rendering [40pts]](#2-1-fractal-rendering-40pts)  
-		2. [2-2 Digital Circuit Simulation [60pt]](#2-2-digital-circuit-simulation-60pt)  
-10. [Unit 3: Hashing](#unit-3-hashing)  
-	1. [L8 - Hashing with chaining - (dictionary / associative array)](#l8---hashing-with-chaining---dictionary--associative-array)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-	2. [R8 - Simulation Algorithms](#r8---simulation-algorithms)  
-		1. [Maths notes](#maths-notes)  
-	3. [L9 - Table doubling, Karp-Rabin](#l9---table-doubling-karp-rabin)  
-	4. [R9 - Rolling Hashes, Amortized Analysis](#r9---rolling-hashes-amortized-analysis)  
-		1. [Maths notes](#maths-notes)  
-	5. [R9b - 9b: DNA Sequence Matching](#r9b---9b-dna-sequence-matching)  
-		1. [**Vid contents**](#vid-contents)  
-		2. [Maths notes](#maths-notes)  
-11. [Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)](#problem-set-3---range-query-analysis--circuit-layout-tool-optimisation)  
-	1. [3-1 Range Query - AVL tree](#3-1-range-query---avl-tree)  
-	2. [3-2 Tool Optimisation [55 points]](#3-2-tool-optimisation-55-points)  
-		1. [REFS - alt profilers](#refs---alt-profilers)  
-	3. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
-	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
-12. [Problem set 4](#problem-set-4)  
-13. [Quiz 1](#quiz-1)  
-14. [Unit 4: Numerics](#unit-4-numerics)  
-	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
-		1. [Vid contents](#vid-contents)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
-15. [Problem set 5 out](#problem-set-5-out)  
-	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-16. [Unit 5: Graphs](#unit-5-graphs)  
-	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	2. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-17. [Problem set 5 due](#problem-set-5-due)  
-18. [Problem set 6 out](#problem-set-6-out)  
-19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
-	1. [L15 - Single-source shortest paths problem](#l15---single-source-shortest-paths-problem)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	2. [L16 - Dijkstra](#l16---dijkstra)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	3. [L17 - Bellman-Ford](#l17---bellman-ford)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	4. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
-	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-21. [Problem set 7 out](#problem-set-7-out)  
-	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	2. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	3. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-22. [Problem set 7 due](#problem-set-7-due)  
-23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
-	1. [L23 - Computational complexity](#l23---computational-complexity)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	2. [24 - Algorithms research topics](#24---algorithms-research-topics)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [Vid contents](#vid-contents)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-24. [Glossary of terms](#glossary-of-terms)  
-25. [How To s](#how-to-s)  
-	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
-	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
-	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
-	4. [How can I add maths formulas to README.md?](#how-can-i-add-maths-formulas-to-readmemd)  
-		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
-		2. [Automagically:  Install texify.](#automagically--install-texify)  
-		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-26. [References](#references)  
-	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
-	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
-	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
-	4. [Advanced Algorithms 2008 (part 3 / 3)](#advanced-algorithms-2008-part-3--3)  
+## Contents
+Autogenerated: ()
 
-
-## AIM:  
-
-
-
-
-
-
+## AIM:
 Create an algorithms reference, and aide-memoire  
 
 In the mean time here are two great resources:  
@@ -279,21 +69,23 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
-#### Vid contents
-0m - 15m45  Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
-15m45 - 36m20 Peak finding 1D  
-17m50 defining the solution to 1D algorithm  
-27m40 Divide & conquer (binary search)  
-32m30 Recurence relation overview  
-36m20 -  Peak finding 2D  
-37m13 defining the solution to 2D algorithm - note a >= b - means   
-38m Greedy ascent algorithm - find highest neighbour, go in that direction, loop  
-40m43 Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!  
-43m 2D binary search  
-46m EG 1 - incorrect search  
-47m45 EG2 - working version  
-51m25 Recurrence for 2D algorithm  
-54m15 Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)  
+#### **Vid contents - L1**
+ time				| notes	
+| - | - |
+**0m - 15m45**		| Introduction to course and 8 units its separated into - mentions prerequisite Maths 6.042  
+**15m45 - 36m20**	|  Peak finding 1D  
+**17m50**			|  defining the solution to 1D algorithm  
+**27m40**			|  Divide & conquer (binary search)  
+**32m30**			|  Recurence relation overview  
+**36m20**			|  Peak finding 2D  
+**37m13**			|  defining the solution to 2D algorithm - note a >= b - means   
+**38m**				|  Greedy ascent algorithm - find highest neighbour, go in that direction, loop  
+**40m43**			|  Greedy ascent algorithm complexity Θ(mn) (rown x columns) O(n^2) IE BAD!  
+**43m**				|  2D binary search  
+**46m**				|  EG 1 - incorrect search  
+**47m45**			|  EG2 - working version  
+**51m25**			|  Recurrence for 2D algorithm  
+**54m15**			|  Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)  
   
 Peak finding: assuming **single peak**, and   
 Initial look at 1d peak finding (an single index array)
@@ -307,20 +99,7 @@ See R1 31m & 43m
 Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
 
 51m48  
-$$
-\begin{equation}
-  binary\;tree\;height\;h = log_2n
-\end{equation}
-\begin{equation}
-  T(n,m) = T(n, \frac{m}{2}) + \Theta(n)
-\end{equation}
-\begin{equation}
-  T(n,m) = \Theta(n)\;.\;.\;\Theta(n)\;(log_2m\;times\;for\;m\;columns)
-\end{equation}
-\begin{equation}
-  T(n,m) = \Theta(nlogm) = \Theta(nlogn)\;\text{where n=m}
-\end{equation}
-$$
+you_have_been_replaced.svg
 m = columns  
 n = rows  
 **That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.**  
@@ -373,11 +152,7 @@ The above list is useful because of the following fact: if a function f(n) is a 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
 Egs
-$$
-\begin{align}
-f(n) = 10log(n) + 5(log(n))^3 + 7n + 3n^2 + 6n^3,  then f(n) = O(n^3)
-\end{align}
-$$
+you_have_been_replaced.svg
 
 Simplified set theory? Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the sloppier equality notation is more common at present.  
 		
@@ -388,11 +163,7 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 
 #### Useful maths equations
 Fundamental to binary tree algorithms:
-$$
-\begin{equation}
-  binary\;tree\;height\;h = logn
-\end{equation}
-$$
+you_have_been_replaced.svg
 
 
 
@@ -403,14 +174,16 @@ $$
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 Reading: 
 
-#### Vid contents
-2m - 13m40 Asymptotic complexity Ω, Θ, O  
-13m40 - common worst case runtimes  
-16m - example asymptotic notation  
-23m - log(log(n))  
-25m - log ( N choose N/2 ) = Θ(n)    
-31m - 43m peak finding 1d - running time T(n)
-43m - 53m peak finding - running time T(n)
+#### **Vid contents - R1**
+ time			| notes	
+| - | - |
+**2m - 13m40**	| Asymptotic complexity Ω, Θ, O  
+**13m40**		| common worst case runtimes  
+**16m**			| example asymptotic notation  
+**23m**			| log(log(n))  
+**25m**			| log ( N choose N/2 ) = Θ(n)    
+**31m**			| 43m peak finding 1d - running time T(n)
+**43m - 53m**	| peak finding - running time T(n)
 
 NOTE
 g(x) = O(f(x)) - UPPER bound - O - big O
@@ -430,17 +203,9 @@ Finish R1 notes from - Recurrence Traps & 2-D Peak Finding: Algorithm 5
 
 #### Maths notes  
 (26m) [Stirlings approximation - equation for n!](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-$$
-\begin{equation}
-  n! \approx \sqrt{2 \pi n}\left(\frac{n}{e}\right)^n
-\end{equation}
-$$
+you_have_been_replaced.svg
 (26m) [Equation for Series - summation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-$$
-\begin{equation}
-  \sum_{i=1}^{n}i = \frac{n(n+1)}{2}
-\end{equation}
-$$
+you_have_been_replaced.svg
 
 
 ### L2 - Models of computation, Python cost model, document distance	   
@@ -449,14 +214,17 @@ $$
 DocDistance 8 versions Code see R2 ~ 
 [DocDistance 8 versions R2 notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf)  
 
-#### Vid contents
-0-6m - Whats an algorithm  
-6m - model of computation  
-7m50 - Random access machine (model of computation)  
-13m40 - Pointer machine (model of computation)  
-19m - 32m - Python model
-32m -  44m - Document distance
-44m - 8 version of doc distance and optimisations
+#### **Vid contents - L2**
+ time			| notes	
+| - | - |
+**0-6m**		| Whats an algorithm  
+**6m**			| model of computation  
+**7m50**		| Random access machine (model of computation)  
+**13m40**		| Pointer machine (model of computation)  
+**19m-32m		| Python model
+**32m-44m**	| Document distance
+**44m**			| 8 version of doc distance and optimisations
+
 
 
 Algorithm: computational procedure for solving a problem  
@@ -532,15 +300,7 @@ Sum them up to give a value.
 The larger the value the more correlated they are.  
 Obviously bigger documents will naturally give bigger numbers do the value is normalised by dividing by the size of the original vectors.  
 
-$$
-\begin{equation}
-  D_1.D_2\\
-\end{equation}
-\begin{equation}
-  \sum_{w}D_1[w].D_2[w]
-  \label{sum}  
-\end{equation}
-$$
+you_have_been_replaced.svg
 
 #### Examples Document distance code:
 [this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
@@ -566,10 +326,12 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 [Doc Distance 7 stages optimisation local code](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 
-#### Vid contents
-0-7m - inner product  
-7m - got through docdist1  
-13m - cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
+#### **Vid contents - R2**
+ time		| notes	
+| - | - |
+**0-7m**	| inner product  
+7m**		| go through docdist1  
+13m**		| cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
  One line, N = characters, w = word size, number of word = N / w + 1 (1 for each space)  
  
 
@@ -581,12 +343,10 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 #### Code of code
 ```
-9
-10
-11
-12
-13
-14 
+Texify issue notes
+Let me try this again but without the opening and closing brackets "<" and ">" so it won't try to render :)
+What TeXify emits: <img src="/docs/Tuple/tex/4b83ab92144c8118c40653189ab60df5.svg?invert_in_darkmode&sanitize=true" align=middle width=81.54091274999998pt height=22.831056599999986pt/>
+What it needs to be: <img src="/docs/Tuple/tex/4b83ab92144c8118c40653189ab60df5.svg?invert_in_darkmode&sanitize=true" align="middle" width="81.54091274999998pt" height="22.831056599999986pt"/&gt:
 ```
 
 #### Comparing versions
@@ -616,40 +376,18 @@ Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.p
 Comment functions in/out of the source or add custom functions!   
 
 Problem 1.1a
-$$
-\begin{align}
-f2(n) = 10000000n = O(n) = linear\\
-f1(n) = n^{0.999999}log n = O(n log n) = quasilinear \\
-f4(n) = n^2 = O(n^2) = quadratic\\
-f3(n) = 1.000001^n = O(c^n) = exponential
-\end{align}
-$$
+you_have_been_replaced.svg
 
 Problem 1.1b
-$$
-\begin{align}
-f1(n) = 2^{2^{1000000}} = O(1) = constant\\
-f3(n) = \binom{n}{2} \text{ notation is combinatorics} = O(nlogn)\\ 
-f4(n) = n \sqrt{n} = n^1{n^\frac{1}{2}} = n^{1.5} = O(n^c) = polynomial\\
-f2(n) = 2^{2100000n} = O(c^n) = exponential
-\end{align}
-$$
+you_have_been_replaced.svg
 Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
-\begin{equation}
-    log(n^{n+\frac{1}{2}}) - log((n-2)^{n-\frac{2}{3}}) =     (n+\frac{1}{2})log(n) - (n-\frac{2}{3})log(n-2)
-\end{equation}
+you_have_been_replaced.svg
 with the left dominating the right give nlog(n)  
 
 
 Problem 1.1c  
-$$
-\begin{align}
-f2(n) = 2^n = O(c^n) = constant.exponential\\
-f4(n) = \sum_{i=1}^{n}(i+1) = \frac{n(n+1)}{2} = O(n^2) = quadratic\\
-f1(n) = n^{\sqrt{n}} = n^{n^{\frac{1}{2}}} = O(n^n) = linear.exponential\\
-f3(n) = n^{10}.2^{\frac{n}{2}} = O(n^c.c^n) = polynomial.exponential\\
-\end{align}
-$$
+you_have_been_replaced.svg
+
 
 ### Problem 1-2. [15 points] Recurrence Relation Resolution
 For each of the following recurrence relations, pick the correct asymptotic runtime:  
@@ -883,17 +621,19 @@ Reading: CLRS Chapter 10, 12.1-3
 **properties**: sorted data, comparison model  
 See [R5 - Recursion Trees, Binary Search Trees](#r5---recursion-trees-binary-search-trees) for queries / updates walkthrough
 
-#### Vid contents
-0-6m	define problem - runway scheduling - to demonstrate BST ADT  
-6m-21m	EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)  
-21m	intro to BSTs  
-24m	BST RI  
-26m	insert() - O(h) - height of tree - **O(logn)** - n=number of nodes  
-35m	min() - O(h) - go farthest left   
-36m	max() - O(h) - go farthest right  
-37m-43	Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
-              Add number of nodes below node to it. (number includes node itself)  
-43m	AUGMENTATION - Rank(k) - algorithm code - O(logn) for a balanced tree!! Pseudo code below.   
+#### **Vid contents - L5**
+ time			| notes	
+| - | - |
+**0-6m**		| define problem - runway scheduling - to demonstrate BST ADT  
+**6m-21m**		| EGs things that dont work: sorted array, sorted list(no fast insertion), heap(no successor/ predecessor or pointers)  
+**21m**			| intro to BSTs  
+**24m**			| BST RI  
+**26m**			| insert() - O(h) - height of tree - **O(logn)** - n=number of nodes  
+**35m**			| min() - O(h) - go farthest left   
+**36m**			| max() - O(h) - go farthest right  
+**37m-43m**	| Functional **AUGMENTATION** - Rank(t) - how many planes land before time t?   
+   		           	| Add number of nodes below node to it. (number includes node itself)  
+**43m**			| AUGMENTATION - Rank(k) - algorithm code - O(logn) for a balanced tree!! Pseudo code below.   
 
 
 
@@ -976,13 +716,15 @@ Return total
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
 [Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 
-#### Vid contents
-3m-14m 	Solving Recurrence for merge sort. (PS2 problem 1)
-14m-26m	Data structures, HEAP
-26m-35m	Data structures, BST, (unbalanced)
-35m-42m 	BST find successor/predecessor
-42m-54m 	BST delete, 3 cases O(h) height of tree
-54m-end	BST augmentation - Uses example min - needed for problem set 3 PS3
+#### **Vid contents - R5**
+ time			| notes	
+| - | - |
+**3m-14m**		| Solving Recurrence for merge sort. (PS2 problem 1)
+**14m-26m**	| Data structures, HEAP
+**26m-35m**	| Data structures, BST, (unbalanced)
+**35m-42m**	| BST find successor/predecessor
+**42m-54m**	| BST delete, 3 cases O(h) height of tree
+**54m-end**		| BST augmentation - Uses example min - needed for problem set 3 PS3
 
 #### Maths notes  
 Solving Recurrence for merge sort:
@@ -1095,6 +837,7 @@ case 2: deleting a node that has 2 subtrees
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf) - 
 [MIT EG code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/avl.py) - 
 [guess implementation code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)  
+Reading: see lecture notes p6 summary of BSTs and where in CLRS to find them
  
 
 #### **DATA STRUCTURE - AVL tree - R6 50m**  
@@ -1107,17 +850,19 @@ case 2: deleting a node that has 2 subtrees
 **properties**: height = logn => tree balanced - height & balance maintained in each node, comparison model   
 RI - representation invariant  
 
-#### Vid contents  
-0-2m - BST summary - in-order traversal using recursion  
-2m-11m - importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation  
-11m - AVL trees definition and balance  
-18m - showing height is logn  
-10-28m - height of balanced tree maths  
-19m-25m - Analyse Nh min nodes in a tree of height h - v1  
-26m-XXm - Analyse Nh min nodes in a tree of height h - v2 - ps3  
-32m-48m -  Rotations  
-48m-52  - AVL sort  
-50m - summary of heap / bst AVL reasons for use  
+#### **Vid contents - L6**  
+ time			| notes	
+| - | - |
+**0-2m**		| BST summary - in-order traversal using recursion  
+**2m-11m**		| importance of being balanced -  getting HEIGHT to be logn - local HEIGHT calculation  
+**11m**			| AVL trees definition and balance  
+**18m**			| showing height is logn  
+**10-28m**		| height of balanced tree maths  
+**19m-25m**	| Analyse Nh min nodes in a tree of height h - v1  
+**26m-XXm**	| Analyse Nh min nodes in a tree of height h - v2 - ps3  
+**32m-48m**	| Rotations  
+**48m-52 **		| AVL sort  
+**50m**			| summary of heap / bst AVL reasons for use  
 
 #### Example problem
 
@@ -1150,44 +895,22 @@ Min number of nodes in a balanced tree
 
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
-$$
-\begin{equation}
-  N_h = minimum\;number\;of\;nodes\;in\;an\;AVL\;tree\;of\;height\;h
-\end{equation}
-\begin{equation}
-  N_{O(1)} = O(1)\;\;base\;case
-\end{equation}
-\begin{equation}
-  N_h = 1 + N_{h-1} + N_{h-2}
-\end{equation}
-$$
+you_have_been_replaced.svg
 
 IE In a tree of height h, number of nodes n,  is the sum of: the root + the two sub trees (that differ in height by 1).   
 
 The above recurrence is similar to the Fibonacci sequence, defined as:
-\begin{equation}
-  F_h = F_{h-1} + F_{h-2}
-\end{equation}
+you_have_been_replaced.svg
 
 an approximation for which is  (Fibonacci number = nearest integer . . .
-\begin{equation}
-  F_h =  \frac{\phi^h}{\sqrt5},\; h \ge 0,\; (phi)\;\phi=\frac{1+\sqrt5}{2},\;\phi\approx1.618
-\end{equation}
+you_have_been_replaced.svg
 
 [paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
-\begin{equation}
-  N_h > \frac{\phi^h}{\sqrt5},\;\;  N_h > \frac{1.618^h}{\sqrt5},\;\; n > \frac{1.618^h}{\sqrt5}
-\end{equation}
+you_have_been_replaced.svg
 
-Since Nh = min nodes in a tree of height h, and phi = 1.618.
-
-\begin{equation}
-  n > \frac{\phi^h}{\sqrt5}\;same\;as\;\frac{\phi^h}{\sqrt5} < n\;\; take\; log_{\phi}
-\end{equation}
-\begin{equation}
-  h + sml\;const < log_{\phi}n \approx 1.44log_2n
-\end{equation}
+Since Nh = min nodes in a tree of height h, and phi = 1.618.  
+you_have_been_replaced.svg
 
 #### Maths notes - AVL tree (26m) - height analysis v2
 
@@ -1251,17 +974,19 @@ Rotation Cases (@ 32m)
 [vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
-Reading: 
+Reading: none listed  
 
-#### Vid contents
-0-7m - BST review, height  
-7m-11m  AVL balance  
-11m	  Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)  
-18m BST review, insert  
-21m AVL review, left_rotate, right_rotate  
-28m22 pointer exchange pseudo code right_rotate  
-40m AVL review REBALANCE  
-50m rebalance synopsis - AUGMENTATION (height in this case) needed for ps3  
+#### **Vid contents - **
+ time		| notes	
+| - | - |
+**0-7m**	| BST review, height  
+**7m-11m**	| AVL balance  
+**11m	**	| Why height is logn (number of nodes in h rows (doubles each row) n = 2^h so height h = logn)  
+**18m**		| BST review, insert  
+**21m**		| AVL review, left_rotate, right_rotate  
+**28m22**	| pointer exchange pseudo code right_rotate  
+**40m**		| AVL review REBALANCE  
+**50m**		| rebalance synopsis - AUGMENTATION (height in this case) needed for ps3  
 
 #### BST review
 height h = longest path to leaf  
@@ -1280,23 +1005,10 @@ def update_height(node): 8 node.height = max(height(node.left), height(node.righ
 so the root evaluates to max(-1,-1)+1 = 0  
 
 #### AVL properties
-\begin{align*}
-  h = max(h_l, h_r) + 1 \\
-  h = -1\;for\;leaf\;node \\
-  \forall n, |h_l - h_r| \le 1 \\
-  plus\;BST\;properties
-\end{align*}
-\begin{align*}
-  h = height\;of\;node \\
-  h_l = height\;of\;left\;child \\
-  h_r = \textit{height of right child} \\
-\end{align*}
+you_have_been_replaced.svg
 
 Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
-\begin{align*}
-  balanced\;property:\\
-  \forall n, |h_l - h_r| \le 1
-\end{align*}
+you_have_been_replaced.svg
 
 REBALANCE
 CASE 1 - unbalanced in a straight line: Rotate to fold the line
@@ -1311,7 +1023,7 @@ Any equation identities / topics for this lecture include context and uses for l
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec07.pdf) ~ 
 [radix_sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11
 Code:
-Reading: 
+Reading: none listed  
 
 #### **DATA STRUCTURE - Counting sort**  
 **type**: , mediocre sorting algorithm 
@@ -1336,19 +1048,22 @@ comp model = computational model
 
 
 
-#### **Vid contents**  
-0-2m - Introduction  
-2m-32m Computational models - **Comparison model**  
-5m20 - Descision tree  
-14m48 - properties of descision tree - node, leaf, path, path length, height  
-16m - Searching lower bound  
-18m - PROOF searching Ω(lg n) - simple  
-20m-24m - Sorting lower bound - logic
-24m-32m - Sorting lower bound - maths PROOF - p2 in notes  
-32m-37m - INTRODUCTION RAM MODEL & INTEGER SORTING  
-37m-40m - COUNTING SORT  
-40m-44m - Counting sort RUNNING TIME - O(k + n)  n=keys k=key range - no of digits? 
-45m - [RADIX Sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11 
+#### **Vid contents - L7**  
+ time			| notes	
+| - | - |
+**0-2m**		| Introduction  
+**2m-32m**		| Computational models - **Comparison model**  
+**5m20**		| Descision tree  
+**14m48**		| properties of descision tree - node, leaf, path, path length, height  
+**16m**			| Searching lower bound  
+**18m**			| PROOF searching Ω(lg n) - simple  
+**20m-24m**	| Sorting lower bound - logic
+**24m-32m**	| Sorting lower bound - maths PROOF - p2 in notes  
+**32m-37m**	| INTRODUCTION RAM MODEL & INTEGER SORTING  
+**37m-40m**	| COUNTING SORT  
+**40m-44m**	| Counting sort RUNNING TIME - O(k + n)  n=keys k=key range - no of digits? 
+**45m**			| [RADIX Sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11 
+
 [RADIX sort wiki](https://en.wikipedia.org/wiki/Radix_sort)  
 
 
@@ -1375,13 +1090,7 @@ CONCEPTS: Models of computation: **Comparison model** 2-32m
 . . radix sort  
 
 **Assumptions**:
-\begin{align*}
-  sorting \\
-  n\; keys\;\in\{0,1,2,..k-1\} \\
-  \text{and each fits in a word} \\
-  \text{for k...large number?} \\
-  \text{can be sorted in }\Theta(n)\; time
-\end{align*}
+you_have_been_replaced.svg
 
 ##### Counting Sort - 37m
 Go through unsorted items using key to allocate to an index of an array.
@@ -1398,15 +1107,17 @@ Conceptually simple - sort by each digit starting from LSB or MSB
 [vid](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec07.pdf) ~ 
 Code:
-Reading: 
+Reading: none listed  
 
-#### Vid contents
-0-  - Summary sorting Algos so far  
-7m - Python comparison overloading __lt__,__le__,__gt__,__ge__,__gq__,__ne__,
-7m-35m - implementing COUNTING sort in place?
-35m - implementing RADIX sort
-42m-47m - RADIX sort running time justification - REDO this when awake - ps2 or ps3
-47m-52m - Stability, implications & summary of algos
+#### **Vid contents - R7**
+ time			| notes	
+| - | - |
+**0m**			| Summary sorting Algos so far  
+**7m**			| Python comparison overloading ```__lt__,__le__,__gt__,__ge__,__gq__,__ne__```
+**7m-35m**		| implementing COUNTING sort in place?
+**35m**			| implementing RADIX sort
+**42m-47m**	| RADIX sort running time justification - REDO this when awake - ps2 or ps3
+**47m-52m**	| Stability, implications & summary of algos
 
 #### Summary Sorting Algos So far:
 Note for sorting you have to output the data set size n for optimal run time(Ω) is Ω(n)
@@ -1562,18 +1273,20 @@ e) Re-write the data structure using the most efficient method from class (no li
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf) ~ 
 [succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q) ~ 
 [Code - 1st try - associative array](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array.py) ~ 
-Reading: 
+Reading: none listed  
 
-**#### Vid contents**  
-0-5m - Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
-5m-13m - Python dict API summary, and Motivarion (see lect notes)  
-13m-24m Solution 1 - Direct access table  
-24m- Solution 2 - Hashing  
-29n - introduces collisions - chaining  
-34m - Simple uniform hashing - Mapping number of keys to number of slots   
-42m - hashing to table size m
-43m - DIVISION
-44m - MULTIPLICATION
+#### **Vid contents - L8**
+ time			| notes	
+| - | - |
+**0-5m**		| Into to dictionary & functions( insert, delete, search) - implement - O(1) constant time (w/ high probability)  
+**5m-13m**		| Python dict API summary, and Motivarion (see lect notes)  
+**13m-24m**	| Solution 1 - Direct access table  
+**24m**			| Solution 2 - Hashing  
+**29n**			| introduces collisions - chaining  
+**34m**			| Simple uniform hashing - Mapping number of keys to number of slots   
+**42m**			| hashing to table size m
+**43m**			| DIVISION
+**44m**			| MULTIPLICATION
 
 
 #### **DATA STRUCTURE**  
@@ -1626,21 +1339,11 @@ b) INDEPENDENT of where other keys hashing
 Hash function need to know size of table - m.  
 
 **43m - DIVISION method**
-\begin{align*}
-  h(k) = k\;mod\;m
-\end{align*}
+you_have_been_replaced.svg
 Note: m should be PRIME and not too close to power of 2.  
   
 **44m - MULTIPLICATION method - preferred over division (notes p5)**
-\begin{align*}
-  h(k) = [(a\cdot k)\;mod\;2^w] >> (w-r)\\
-  k\;is\;w\;bits\\
-  a\;is\;random\\
-  where\;m=2^r\\
-  \textit{m = array spaces}\\
-  \textit{(expected collision chain length)}\;load\;factor\;\alpha=\frac{n}{m}\\
-  \textit{expected operation (insert del etc) time}\;\Theta(1+\alpha)
-\end{align*}
+you_have_been_replaced.svg
 a should be random, odd, and in the range 2^(r-1) < a < 2^r, and NOT close to a power of 2.  
 w number of bits in key range  
   
@@ -1672,16 +1375,18 @@ universal hashing
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
 [lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
 Code: 
-Reading: 
+Reading: none listed  
 
-**#### Vid contents**  
-0-xm - Walk the code in problem set 3 -  
-9m - introduce lexicographic comparison sort  
-17m-29m  - RangeIndex methods and running time for example (poor) code  
-29m - KeyWirePairs,   
-42m - RangeIndex - comparision model penalty  
-43m - LIST LCA pseudo code  
-49m - LCA run time intuition  
+#### **Vid contents - R8**
+ time			| notes	
+| - | - |
+**0-xm**		| Walk the code in problem set 3 -  
+**9m**			| introduce lexicographic comparison sort  
+**17m-29m**	| RangeIndex methods and running time for example (poor) code  
+**29m**			| KeyWirePairs,   
+**42m**			| RangeIndex - comparision model penalty  
+**43m**			| LIST LCA pseudo code  
+**49m**			| LCA run time intuition  
 
 
 
@@ -1769,20 +1474,22 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-**#### Vid contents**  
-0-3m - 	Refresh Hashing with Chaining: Load factor  
-3m - 	Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
-7m30 - 	Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
-15m - 	Amortisation - COST of table doubling operation calculated as a series   
-21m - 	Inserts - Table doubling costs  
-23m - 	Delete - Table downsizing  
-23m46 - Delete - PROBLEM w/ table downsizing by half  
-23m50 - Optimal upsized & downsize - double giong up only halve when n (entries) down to 1/4  
-27m - strategy for implementing table doubling in an RTOS  
-28m - String Matching  
-34m - Cost for simple string matching theta Θ(s*t) could be QUADRATIC
-35m - using a rolling hash ADT - concepts
-41m-47m - Rolling hash ADT - pseudo code - problem set 4
+#### **Vid contents - L9**
+ time		| notes	
+| - | - |
+**0-3m**	| Refresh Hashing with Chaining: Load factor  
+**3m**		| Resizing table, for optimum performance - Start small (constant) and grow (or shrink) as necessary.  
+**7m30**	| Growing, allocate the memory & rehash all entries (w/ a hash function appropriet to new table size)  
+**15m**		| Amortisation - COST of table doubling operation calculated as a series   
+**21m**		| Inserts - Table doubling costs  
+**23m**		| Delete - Table downsizing  
+**23m46**	| Delete - PROBLEM w/ table downsizing by half  
+**23m50**	| Optimal upsized & downsize - double giong up only halve when n (entries) down to 1/4  
+**27m**		| strategy for implementing table doubling in an RTOS  
+**28m**		| String Matching  
+**34m**		| Cost for simple string matching theta Θ(s*t) could be QUADRATIC
+**35m**		| using a rolling hash ADT - concepts
+**41m-47m**| Rolling hash ADT - pseudo code - problem set 4
 
 
 How to choose m (table size)  - (on overflow double it)
@@ -1827,22 +1534,24 @@ build instruction in file
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf) ~ 
 Code:
-Reading: 
+Reading: none listed  
 
-**#### Vid contents**  
-0-5m -		Walk through naive implementation  
-5m30-10m - Avoiding false positives / maths of collisions  
-10m - 		Running time
-14m - 		fast hashing - mod prime number  
-18m-22m - 	SLIDE implementation  
-22m - 		prehash - smart way  
-28m - 		contsructor(__init__) for rolling_hash  
-30m - 		append & skip  
-36m-38 - 	modular / multiplicative inverse - precomputed because base on const  
-40m - 		rolling_hash, append, skip, hash - cost  
-52m - 		amortised analysis breakdown  
-54m - 		listing BST nodes in order - In order traversal - amortised cost  
-59m - 		amortised analysis - ps4  
+#### **Vid contents - R9**
+ time			| notes	
+| - | - |
+**0-5m**		| Walk through naive implementation  
+**5m30-10m**	| Avoiding false positives / maths of collisions  
+**10m**			| Running time
+**14m**			| fast hashing - mod prime number  
+**18m-22m**	| SLIDE implementation  
+**22m**			| prehash - smart way  
+**28m**			| contsructor(__init__) for rolling_hash  
+**30m**			| append & skip  
+**36m-38**		| modular / multiplicative inverse - precomputed because base on const  
+**40m**			| rolling_hash, append, skip, hash - cost  
+**52m**			| amortised analysis breakdown  
+**54m**			| listing BST nodes in order - In order traversal - amortised cost  
+**59m**			| amortised analysis - ps4  
 	
 
 Naive implementation of string match O(n*k), where n is string length & m is the search string length.
@@ -1897,9 +1606,9 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09b.pdf) ~ 
 [Code Zip](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
 [Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
-Reading: 
+Reading: none listed  
 
-#### **Vid contents**  
+#### **Vid contents - R9b**  
  time			| notes	
 | - | - |
 **0m-1m** 		| what to cover? Hashes, Code & Amortisation  
@@ -1982,11 +1691,7 @@ Example using lists:
 The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
   
 insertions + number of table doubles
-\begin{align*}
-  \sum_{n}{}O(1)+  \sum_{logn}{}O(2^i)\\
-  gives\\
-  O(n)+O(n)
-\end{align*}
+you_have_been_replaced.svg
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
@@ -2111,20 +1816,22 @@ Reading: CLRS Chapter 11.4 (and 11.3.3 and 11.5 if interested)
 **(RI)**:   
 **properties**:  
 
-**#### Vid contents**  
-**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
-**3m30-m** - 	Open Addressing - no chaining = no pointers  
-**8m** - 		Mapping from key through trial count to slots U x {0,1. . . m-1} > {0,1. . . m-1}  
-**11m** - 		Eg of **INSERTION** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
-**15m** - 		Eg of **SEARCH** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
-**22m** - 		Coping w/ a search **after a deletion**! Inserts a DELETE_ME flag in place.  
-**30m-00m** - 	Probing strategies  
-**30m** - 		1 - linear probing  
-**33m50** - 		clustering issue  
-**36m** - 		Double hashing to **solve clustering**   
-**39m** - 		Uniform Hashing Assumption - NOT same as SIMPLE Uniform hashing
-**41m-46m** - 	Followed by Uniform Hashing **Analysis CRITICAL info!**  
-**46m** - 		Cryptographic Hashing - NOT on quiz FYI only
+#### **Vid contents - L10**
+ time			| notes	
+| - | - |
+**0m-3m**		| Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-m**		| Open Addressing - no chaining = no pointers  
+**8m**			| Mapping from key through trial count to slots U x {0,1. . . m-1} > {0,1. . . m-1}  
+**11m**			| Eg of **INSERTION** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
+**15m**			| Eg of **SEARCH** w/ linear probing - see animation in **Collisions 6m refresh link at top!**  
+**22m**			| Coping w/ a search **after a deletion**! Inserts a DELETE_ME flag in place.  
+**30m-00m**	| Probing strategies  
+**30m**			| 1 - linear probing  
+**33m50**		| clustering issue  
+**36m**			| Double hashing to **solve clustering**   
+**39m**			| Uniform Hashing Assumption - NOT same as SIMPLE Uniform hashing
+**41m-46m**	| Followed by Uniform Hashing **Analysis CRITICAL info!**  
+**46m**			| Cryptographic Hashing - NOT on quiz FYI only
 
 
 
@@ -2208,7 +1915,7 @@ Why do we care?
 [vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) - 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) - 
 Code:
-Reading: 
+Reading: none listed  
 
 #### **DATA STRUCTURE**  
 **type**:  
@@ -2218,9 +1925,11 @@ Reading:
 **(RI)**:   
 **properties**: 
 
-**#### Vid contents**  
-**0m-3m** - 		Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
-**3m30-5m** - 	Solving a Recursion problem  
+#### **Vid contents - R10**
+ time			| notes	
+| - | - |
+**0m-3m**		| Into - Open Addressing, Uniform hashing analysis, Cryptographic Hashing  
+**3m30-5m**	| Solving a Recursion problem  
 
 
 
@@ -2258,7 +1967,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2272,7 +1984,10 @@ COPY RECITATION TEMPLATE into further lectures
 Code:
 Reading: 
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2297,12 +2012,33 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R12 - Principles of Algorithm Design
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 
@@ -2322,7 +2058,27 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R11 - Principles of Algorithm Design
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2345,7 +2101,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2373,7 +2132,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2396,7 +2158,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2419,7 +2184,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2442,7 +2210,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2469,7 +2240,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 0-5m - Introduction to Dynamic Programming (DP) recursion + memoization + guessing
 5m-11m20 - Solving Fibonacci w/ Memoization - naive version
 11m20-15m40 - Memoized version
@@ -2501,7 +2275,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2525,7 +2302,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2548,7 +2328,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2575,7 +2358,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2598,7 +2384,10 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### Vid contents  
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
 
 #### Example problem
 
@@ -2678,15 +2467,7 @@ Use LaTeXit to check formula correctness then past it into doc surrounded by con
 ![latex script](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/images/latex_example.png)  
 
 Will display the following document distance equation  
-$$
-\begin{equation}
-  D_1.D_2\\
-\end{equation}
-\begin{equation}
-  \sum_{w}D_1[w].D_2[w]
-  \label{sum}  
-\end{equation}
-$$
+you_have_been_replaced.svg
 
 #### How can I get rid of ref numbers, or get them to increment at least?
 open problem . .
@@ -2733,6 +2514,3 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-d
   
 ### Advanced Algorithms 2008 (part 3 / 3)  
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/  
-  
- -   
- 
