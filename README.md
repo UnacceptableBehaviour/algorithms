@@ -99,7 +99,7 @@ See R1 31m & 43m
 Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
 
 51m48  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/345071e71619869b5189c43f93597997.svg?invert_in_darkmode" align=middle width=546.9241338pt height=114.95363879999998pt/></p>
 m = columns  
 n = rows  
 **That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.**  
@@ -152,7 +152,7 @@ The above list is useful because of the following fact: if a function f(n) is a 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
 Egs
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/f1ebe4d3468c6d3f2f6243ce83e00dad.svg?invert_in_darkmode" align=middle width=474.77859989999996pt height=18.312383099999998pt/></p>
 
 Simplified set theory? Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the sloppier equality notation is more common at present.  
 		
@@ -163,7 +163,7 @@ Simplified set theory? Some people (mostly mathematicians, as opposed to compute
 
 #### Useful maths equations
 Fundamental to binary tree algorithms:
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/4cd8fa5dbdeb7a9567601dd345719d75.svg?invert_in_darkmode" align=middle width=450.19701375pt height=16.438356pt/></p>
 
 
 
@@ -203,9 +203,9 @@ Finish R1 notes from - Recurrence Traps & 2-D Peak Finding: Algorithm 5
 
 #### Maths notes  
 (26m) [Stirlings approximation - equation for n!](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/17789aec953e515f4d4dbbcbe79c0588.svg?invert_in_darkmode" align=middle width=411.75196425pt height=31.070567549999996pt/></p>
 (26m) [Equation for Series - summation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/8182cc03706f858356e39b08f4cc0a9d.svg?invert_in_darkmode" align=middle width=409.5568059pt height=44.89738935pt/></p>
 
 
 ### L2 - Models of computation, Python cost model, document distance	   
@@ -300,7 +300,7 @@ Sum them up to give a value.
 The larger the value the more correlated they are.  
 Obviously bigger documents will naturally give bigger numbers do the value is normalised by dividing by the size of the original vectors.  
 
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
 
 #### Examples Document distance code:
 [this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
@@ -376,17 +376,17 @@ Plotting functions to get a feel for them [./matplotlib/time_complexity_plot_q.p
 Comment functions in/out of the source or add custom functions!   
 
 Problem 1.1a
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/5c6d2a50d62a2677f5bcb2524aba5432.svg?invert_in_darkmode" align=middle width=349.90844955pt height=94.4878902pt/></p>
 
 Problem 1.1b
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/cbde0d11ea8f1ebd27ab4ac5526ed78a.svg?invert_in_darkmode" align=middle width=373.18578164999997pt height=122.87297219999999pt/></p>
 Note for f3() boils down to this [proof I think . . ](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/1st_stab_nCr_proof.jpeg)  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/30831ea54e6d2aaa95c75354ba90a536.svg?invert_in_darkmode" align=middle width=588.0255678pt height=32.990165999999995pt/></p>
 with the left dominating the right give nlog(n)  
 
 
 Problem 1.1c  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/37c3e732f0f3d4fd72a6a3be1c4ddfe1.svg?invert_in_darkmode" align=middle width=390.7235673pt height=131.8078443pt/></p>
 
 
 ### Problem 1-2. [15 points] Recurrence Relation Resolution
@@ -895,22 +895,22 @@ Min number of nodes in a balanced tree
 
 ![Total nodes in AVL tree](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/L6_AVL_trees_00_22m33.png)  
 
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/383c5c1963e50e762b29e138eb72d9e5.svg?invert_in_darkmode" align=middle width=576.5765841pt height=75.6164376pt/></p>
 
 IE In a tree of height h, number of nodes n,  is the sum of: the root + the two sub trees (that differ in height by 1).   
 
 The above recurrence is similar to the Fibonacci sequence, defined as:
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/fe34309ae7640b667b1f6447388dda13.svg?invert_in_darkmode" align=middle width=416.60102385pt height=16.438356pt/></p>
 
 an approximation for which is  (Fibonacci number = nearest integer . . .
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/3ec3c60cafc38e9907db3baee783b5d1.svg?invert_in_darkmode" align=middle width=519.082245pt height=40.66383749999999pt/></p>
 
 [paper showing the above here](https://sites.math.northwestern.edu/~mlerma/problem_solving/results/recurrences.pdf)  
 
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/ec9e29dd37915b070851591fc0a8a29e.svg?invert_in_darkmode" align=middle width=488.94835109999997pt height=40.364374049999995pt/></p>
 
 Since Nh = min nodes in a tree of height h, and phi = 1.618.  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/25daeaa6b045a0e60d8b27d13233ff40.svg?invert_in_darkmode" align=middle width=479.47994324999996pt height=68.90318325pt/></p>
 
 #### Maths notes - AVL tree (26m) - height analysis v2
 
@@ -1005,10 +1005,10 @@ def update_height(node): 8 node.height = max(height(node.left), height(node.righ
 so the root evaluates to max(-1,-1)+1 = 0  
 
 #### AVL properties
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/bec9d36be56907261a7fc6a5b39e2995.svg?invert_in_darkmode" align=middle width=338.09538675pt height=89.49772094999999pt/></p>
 
 Reads **for all** n, height of left and right subtree differs by 1 or less - basically says this tree is **balanced**
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/35f0c911cc1d6a2b2d14cda7845f0ba0.svg?invert_in_darkmode" align=middle width=139.04518815pt height=40.182651299999996pt/></p>
 
 REBALANCE
 CASE 1 - unbalanced in a straight line: Rotate to fold the line
@@ -1090,7 +1090,7 @@ CONCEPTS: Models of computation: **Comparison model** 2-32m
 . . radix sort  
 
 **Assumptions**:
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/05ea9e591d6759b253558adb4e450141.svg?invert_in_darkmode" align=middle width=194.83224255pt height=113.58123149999999pt/></p>
 
 ##### Counting Sort - 37m
 Go through unsorted items using key to allocate to an index of an array.
@@ -1339,11 +1339,11 @@ b) INDEPENDENT of where other keys hashing
 Hash function need to know size of table - m.  
 
 **43m - DIVISION method**
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/8b58394c7caa548efc9ea46f801edf1b.svg?invert_in_darkmode" align=middle width=116.84731574999998pt height=16.438356pt/></p>
 Note: m should be PRIME and not too close to power of 2.  
   
 **44m - MULTIPLICATION method - preferred over division (notes p5)**
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/812b5ac3728dbdcba1fd80e28b31572a.svg?invert_in_darkmode" align=middle width=372.3509757pt height=177.41939159999998pt/></p>
 a should be random, odd, and in the range 2^(r-1) < a < 2^r, and NOT close to a power of 2.  
 w number of bits in key range  
   
@@ -1691,7 +1691,7 @@ Example using lists:
 The argument goes that since l.append() is O(1) and only O(N) infrequently, the amortised cost is O(N)
   
 insertions + number of table doubles
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/e8efdf27cd9831837d8cc794b91e2cad.svg?invert_in_darkmode" align=middle width=148.4520939pt height=90.06403395pt/></p>
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Problem set 3 - Range Query (Analysis) / Circuit Layout (Tool optimisation)
@@ -2467,7 +2467,7 @@ Use LaTeXit to check formula correctness then past it into doc surrounded by con
 ![latex script](https://github.com/UnacceptableBehaviour/latex_maths/blob/master/images/latex_example.png)  
 
 Will display the following document distance equation  
-you_have_been_replaced.svg
+<p align="center"><img src="./tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
 
 #### How can I get rid of ref numbers, or get them to increment at least?
 open problem . .
