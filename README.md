@@ -25,10 +25,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 | :white_check_mark: [06. AVL Trees, AVL Sort](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=7&t=1913s)                                | :white_check_mark: [R06. AVL Trees](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29)                                                                                                              |                                                                                                                                                                   |                                                                                                                                                                  | [AVL / BST](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L6_BST_AVL_trees)                                                                                                                                                                                 | :seedling: [AVL-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/AVL.py)                                                                                                                                                            |
 | :white_check_mark: [07. Counting Sort, Radix Sort, Lower Bounds for Sorting](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=301s) | :white_check_mark: [R07. Comparison Sort, Counting and Radix Sort](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30)                                                                               | [Set 3 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps3.pdf)   |                                                                                                                                                                  | [PS3 - Problem Code](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/ps3.zip)                                                                                                                               |                                                                                                                                                                                                                                                              |
 | :white_check_mark: [08. Hashing with Chaining](https://www.youtube.com/watch?v=0M_kIqhwbFo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=9&t=0s)                                 | :white_check_mark: [R08. Simulation Algorithms](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31)                                                                                                  |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            | :seedling: [Hash.w.Chaining-P3](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/assoc_array_dict.py)   :cactus: [Hash Div/Mul Word search](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/string_match_hash.py) |
-| :white_check_mark: [09. Table Doubling, Karp](https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10&t=0s)                                 | :mag: [R09. Rolling Hashes, Amortized Analysis](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)                                                                                                  | [Set 4 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf)   |                                                                                                                                                                  | [PS4 - Problem Code](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz)                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                              |
-| No lecture 9b                                                                                                                                                                    | :flashlight: [R09b - DNA Sequence Matching](https://www.youtube.com/watch?v=-DwGrJ8JxDc)                                                                                                                                                       |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
-| :flashlight: [10. Open Addressing, Cryptographic Hashing](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10)                          | :flashlight: R10. Quiz 1 Review-                                                                                                                                                                                                               | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1.pdf)          | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1_sol.pdf)     |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
-| :flashlight: 11. Integer Arithmetic, Karatsuba Multiplication                                                                                                                    | :flashlight: R11. Principles of Algorithm Design                                                                                                                                                                                               | [Set 5 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps5.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :white_check_mark: [09. Table Doubling, Karp](https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10&t=0s)                                 | :white_check_mark: [R09. Rolling Hashes, Amortized Analysis](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)                                                                                     | [Set 4 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf)   |                                                                                                                                                                  | [PS4 - Problem Code](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz)                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                              |
+| No lecture 9b                                                                                                                                                                    | :white_check_mark: [R09b - DNA Sequence Matching](https://www.youtube.com/watch?v=-DwGrJ8JxDc)                                                                                                                                                 |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :flashlight: [10. Open Addressing, Cryptographic Hashing](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10)                          | :white_check_mark: [R10. Quiz 1 Review](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34)                                                                                                          | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1.pdf)          | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1_sol.pdf)     |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :mag: [11. Integer Arithmetic, Karatsuba Multiplication](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture11.pdf)                                                      | :mag: R11. Principles of Algorithm Design                                                                                                                                                                                                      | [Set 5 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps5.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :flashlight: 12. Square Roots, Newton's Method                                                                                                                                   | :flashlight: R12. Karatsuba Multiplication, Newton's Method                                                                                                                                                                                    |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :flashlight: 13. Breadth                                                                                                                                                         | :flashlight: R13. Breadth                                                                                                                                                                                                                      |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :flashlight: 14. Depth                                                                                                                                                           | :flashlight: R14. Depth                                                                                                                                                                                                                        | [Set 6 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps6.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
@@ -42,7 +42,6 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 | :flashlight: 22. DP IV - Guitar Fingering, Tetris, Super Mario Bros.                                                                                                             | :flashlight: R23. Computational Complexity                                                                                                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :flashlight: 23. Computational Complexity                                                                                                                                        | :flashlight: R24. Final Exam Review                                                                                                                                                                                                            | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final.pdf)      | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final_sol.pdf) |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :flashlight: 24. Topics in Algorithms Research                                                                                                                                   |                                                                                                                                                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
-
 
 
 ## Contents  
@@ -153,16 +152,15 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		4. [Maths notes](#maths-notes)  
 	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
 		1. [**Vid contents - R10**](#vid-contents---r10)  
-		2. [Example problem](#example-problem)  
+		2. [Example problems](#example-problems)  
 		3. [Maths notes](#maths-notes)  
 12. [Problem set 4](#problem-set-4)  
 13. [Quiz 1](#quiz-1)  
 14. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
@@ -2147,11 +2145,11 @@ Reading: none listed
 **50m-54m**	| Time complexity - set pieces, techniques
   
   
-**1m Q?**  time complexity to move items from one table to another, **compared** to checking an empty table   
+**1m Q?  time complexity to move items from one table to another, COMPARED to checking an empty table**   
   
 Moving items from one table to another, is moving a pointer NOT a whole object & therefore O(1).  
   
-Table of m entries:  
+**Table of m entries:**  
 action			| time		| empty		| full table
 | - | - | - | - |
 index into table 	| O(1)		| O(m)		| O(m)
@@ -2206,7 +2204,7 @@ If comparing to complicated time complexities take logs - because they are monot
 <p align="center"><img src="./tex/e7e1fce898b1583cb28cc71db94ffdd5.svg?invert_in_darkmode" align=middle width=0.0pt height=0.0pt/></p>
 
 
-#### Example problem
+#### Example problems
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -2227,28 +2225,80 @@ Any equation identities / topics for this lecture include context and uses for l
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 4: Numerics
 ### L11 - Integer arithmetic, Karatsuba multiplication	
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading:
+[vid](https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=11) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture11.pdf) ~ 
+[R12 Karatsuba Multiplication](https://www.youtube.com/watch?v=JRgIXyEPnbA)
 
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
+
 
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-3m**		| intro, work w/ many digit numbers, very large, or high precision
+**3m-18m**		| irrationals, Catalan numbers - loong aside?
+**18m-31m**	| Newtons method, leading to need for high precision multiplication
+**30m-38m**	| High precision multiplication of d digit #s 
+**34m**			| High precision multiplication of d-digit number
+**38m-42m**	| Karatsuba Multiplication see R12 
+**42m-**	| Circular Geopmetry Problem
+
+
+**4m - Catalan numbers - ??**
+Lambda beloning to P  
+If alpha & beta belong to P, then (alpha)beta belong to P  
+Cardinality of the set Cn = number of elements of the set.  
+Series
+<p align="center"><img src="./tex/c3b6e1e43f8c2ac256f18de069ab3e62.svg?invert_in_darkmode" align=middle width=507.42181214999994pt height=45.2741091pt/></p>
+
+**18m-30m - Newtons method, leading to need for high precision multiplication**
+
+Start with 
+<p align="center"><img src="./tex/3a59ea538e9da8d042d31a87488d5ccc.svg?invert_in_darkmode" align=middle width=488.04185429999995pt height=51.572928pt/></p>
+Using newtons method first need to know how  to do multiplication.
+
+
+**34m - High precision multiplication of d-digit number**
+Note the switch form d-digit numbers to n-digit numbers!  
+
+TWO n-digit numbers (radix r=2, 10) < is this base 2 for decimal numbers? CHECK  
+numbers x, y where: 0 <= x, y < r^n. (EG for a **64 digit binary number** then **x & y < 2^64**)  
+Makes sense since largest 64bit number is 2^64 - 1  
+
+So for 64Kword digit number recursively split them in half until their length reaches your target platforms word size. 64bits for example.
+Then multiply back up!?? 
+
+```
+        a  b
+    x = 5678
+    y = 1234            # x.y = 7006652
+        c  d
+        
+r1 = a.c = 672          # 10^4 - shift right 4 zero's for ballpark result MS addition 
+r3 = a.d + b.c = 2840   # 10^2 - shift right by 2 zeros - middle addition
+r2 = b.d = 2652         # 10^0 - the LS addition
+
+
+r1 << 4       6720000
+r3 << 2        284000
+r2 << 0          2652 +
+total         7006652   # tada!
+
+ split  split
+   x   .  y      r1    (   r3  )   r2
+(a + b)(c + d) = a.c + a.d + b.c + b.d
+              
+so r3 = (a + b)(c + d) - r1 - r2
+```
+See 37m26:  
+Quiz 2 ps - O(n^2) - worse than Karasuba
 
 
 #### Example problem
 
 #### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+
 
 ### R11 - Principles of Algorithm Design
 COPY RECITATION TEMPLATE into further lectures
@@ -2789,4 +2839,7 @@ https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-d
 https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/  
   
  -   
+ 
+
+Θ Ω ω - little omega - rough estimate of the order of the growth (rarely used)  
  
