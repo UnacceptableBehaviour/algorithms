@@ -2310,6 +2310,13 @@ Reading:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-14m**		| Sorted skewed array
+
+Use binary search home in on the break.
+N elements in the array 
+Array sorted.
+k - amount of shift - rotation
+e - target number
 
 
 #### Example problem
