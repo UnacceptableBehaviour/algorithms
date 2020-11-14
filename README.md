@@ -152,10 +152,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - R10**](#vid-contents---r10)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		1. [**Vid contents - R10**](#vid-contents---r10)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 12. [Problem set 4](#problem-set-4)  
 13. [Quiz 1](#quiz-1)  
 14. [Unit 4: Numerics](#unit-4-numerics)  
@@ -2136,13 +2135,6 @@ Why do we care?
 Code:
 Reading: none listed  
 
-#### **DATA STRUCTURE**  
-**type**:  
-**use cases**: good for bla  
-**queries**:  
-**updates**:  
-**(RI)**:   
-**properties**: 
 
 #### **Vid contents - R10**
  time			| notes	
@@ -2153,9 +2145,8 @@ Reading: none listed
 **24m-36m**	| Bunker Hill problem - RABIN KARP - ROLLING HASH 
 **36m-50m**	| Rank search in parallel of 2 lists
 **50m-54m**	| Time complexity - set pieces, techniques
-
-
-
+  
+  
 **1m Q?**  time complexity to move items from one table to another, **compared** to checking an empty table   
   
 Moving items from one table to another, is moving a pointer NOT a whole object & therefore O(1).  
@@ -2165,8 +2156,8 @@ action			| time		| empty		| full table
 | - | - | - | - |
 index into table 	| O(1)		| O(m)		| O(m)
 move item		| 0			| 0			| O(m)
-				|total		| O(m)		| 2O(m)
-contants cancel	|total		| O(m)		| O(m)
+-				| total		| O(m)		| 2O(m)
+contants cancel	| total		| O(m)		| O(m)
 Implies same time complexity
   
   
@@ -2175,9 +2166,10 @@ Implies same time complexity
 2. RECURSION TREES - CLRS 4.4 p88 - Ex p92/93
 Maths: series, powers, logs
 
-The hint given is the a formula involving n is a constant - 2 - which makes it a base case:
-T(C) = O(1)
-Hint:
+The hint given is the a formula involving n is a constant - 2 - which makes it a base case:  
+T(C) = O(1)  
+Hint:  
+<p align="center"><img src="./tex/0e974a87a4f26f70be7eb6e18e6609f5.svg?invert_in_darkmode" align=middle width=409.5786783pt height=21.1522905pt/></p>
 
 
 **14m30-24m** - Gold coins problem - DECISION TREE**
