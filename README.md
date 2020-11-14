@@ -2156,8 +2156,8 @@ action			| time		| empty		| full table
 | - | - | - | - |
 index into table 	| O(1)		| O(m)		| O(m)
 move item		| 0			| 0			| O(m)
--				| total		| O(m)		| 2O(m)
-contants cancel	| total		| O(m)		| O(m)
+total			|			| O(m)		| 2O(m)
+constants cancel	| total		| O(m)		| O(m)
 Implies same time complexity
   
   
