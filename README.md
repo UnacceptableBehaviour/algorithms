@@ -160,11 +160,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
 15. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
@@ -179,8 +176,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		3. [Maths notes](#maths-notes)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
@@ -779,9 +775,9 @@ RI - representation invariant
 
 #### Priority Queue
 Implements a set of elements associated with a key - methods:
-insert(x, into set S),  
-get max priority (of set S),  
-extract_max (of set S)  -  get max and remove it!  
+insert(x, into set S) - add S as leaf node and bubble up to correct position,  
+get max priority (of set S) - read max - O(1)
+extract_max (of set S)  -  pop(max) replace max w/ last leaf and maxheapify - swap it w/ higher of the two leaves until in correct position, O(logn)  
 inc_key (in set S, increase element xs key, to value k)  
 get min priority (of set S),  
 delete, change priority in Q.  
@@ -795,7 +791,7 @@ Root of tree is array index 0, (tree node i=1)
 counting on like that [see page 4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
 
 ##### Heap as a tree navigation
-[see page 5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)  
+[see page 5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec04.pdf)  
 **Using array to implement the heap**  
 root i=1  
 parent = i/2  
@@ -2290,47 +2286,125 @@ total         7006652   # tada!
 so r3 = (a + b)(c + d) - r1 - r2
 ```
 See 37m26:  
-Quiz 2 ps - O(n^2) - worse than Karasuba
-
+Quiz 2 ps - O(n^2) - worse than Karatsuba
 
 #### Example problem
-
-#### Maths notes  
-
+Ex Code Karatsuba multiplication in python.
+Take 2 input s multiply them together using recursive Karatsuba call.
 
 
 
 ### R11 - Principles of Algorithm Design
-COPY RECITATION TEMPLATE into further lectures
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
+[vid](https://www.youtube.com/watch?v=a_otxyu0mSQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=35) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf) ~ 
+Code: 
 Reading: 
 
 #### **Vid contents - **  
  time			| notes	
 | - | - |
-**0m-14m**		| Sorted skewed array
-
-Use binary search home in on the break.
-N elements in the array 
-Array sorted.
-k - amount of shift - rotation
-e - target number
+**0m-14m**		| HOW TO APPROACH A SOLUTION using EG problem Sorting a shifted / rotated array
+**14m-42m**	| Extract kth laregest element from MinHeap example
+**42m-end**		| 
 
 
-#### Example problem
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+**N** elements in the array & array is sorted.
+**k** - amount of shift - rotation
+**e** - target number
+
+Linear search O(N)
+
+Binary algo: **If you know k**
+You know its shifted by k so centre is 
+0 index			N-k mod N
+middle index		((N-k) + N/2) mod N
+Use de-referenced binary search - IE translate index w/ offset k w/ wrap around (size of array N)
+
+
+**USE BINARY SEARCH HOME IN ON THE BREAK**
+W/o knowing k - find the break - searching for a number to the left that is larger than its successor
+  
+At each step check for the target number e.  
+  
+```
+If at any point the target is in between one step and the next & that is ascending range re-scope the search limits to those points  
+  
+get first element - n0 - need a point of reference so that sequence break can be found
+    n0 > n[N-1]
+start index idx = n/2
+loop_start:
+is number target e?                - found target
+is number to the left larger?     - found break
+    YES found target
+    NO  go to n/4 or 3n/4
+            is number smaller than n0?
+                YES - break on left - idx = n/4
+                NO  - break on right - idx = 3n/4
+loop - until found break (or target)
+then look for target
+```
+
+**Problem 2 - Using MinHeap - Find the Kth ranked number in the heap**  
+How do we achieve a good running time for this hard problem of O(KlogK)  
+```
+MinHeap 
+N elements
+extract kth smallest element
+val-rank
+k=3 is element val 6
+
+                    2-1
+
+        5-2                   7-4
+
+   6-3       9-6          8-5  
+
+```
+
+**Brute force solutions:**  
+a) sort array O(nlogn), retrieve kth element - O(1) - O(nlogn)  
+  
+b) pop_heap K times - O(Klogn) - **K** number of times you call **pop(logn)** - pop log n to bubble leaf down to right position  
+  
+
+
+**Problem 3**
+```
+Array of random elements    e = 56,756,27,98,56,4,6356,879,68,8,4,64,6746,7,746,72,9,99,2
+Query is range i to j       0 <= i,j <= n
+Return minimum in the range
+```
+a) precompute all answers  
+Number of possible range queries is n*n (i, j) create a hash to lookup the precomputed answer  
+Hash convert 2 digit base n number into table index. EG 23,53 = index 23*n+53  
+**Precompute cost:** O(n^3) or O(n^2) if using rolling hash style minimum assessment (see 48m)  
+**Space cost:** O(n^2) approx, there would be some duplicate inverted ranges  
+**Query cost:** O(1)  
+ 
+b) brute force search element on every query  
+**Precompute cost:** O(1)  
+**Space cost:** O(n^2)  
+**Query cost:** O(N)  
+
+thoughts)  
+Pre-compute ranges larger than n/4, or predetermined sweet-spot.
+Compute remaining queries.
+
+c) Solution  - 52m
+**Space cost:** O(nlogn) / O(1) elements  
+IMPLEMENT THIS SOLUTION  
+
+
+[Maintining medians](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf) not covered in the recitation.  
 
 
 
 ## Problem set 5 out
 
 ### L12 - Square roots, Newton's method	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=2YeJ-5UAke8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=12)  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture12.pdf)  
 Code:
 Reading:
 
@@ -2345,12 +2419,26 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-2m**		| Motivation, use of multiplication in division
+**2m-5m**		| Review
+**5m-10m**		| Error analysis of Newtons method Epsilon n being the error
+**11m-23m**	| Multiplication Algorithms
+**23m-**		| High precision division
+**26m30-**		| Division
+**26m30-**		| Newton iteration < 
+**30m47**		| Critical - in the box! Derived from Newtons iteration
+**33m-**		| Example w/ numbers plugged in!!
+**36m-**		| Complexity calculation of division - SPOILER SAME AS MULTIPLICATION!
+**47m30-**		| Complexity of computing square toots - SPOILER SAME AS MULTIPLICATION!
 
 
 #### Example problem
 
 #### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+29m33
+<p align="center"><img src="./tex/0db2f7109e43128df5cfa823b55ba0ab.svg?invert_in_darkmode" align=middle width=481.75145369999996pt height=38.83491479999999pt/></p>
+
+
 
 ### R12 - Principles of Algorithm Design
 COPY RECITATION TEMPLATE into further lectures
@@ -2375,8 +2463,8 @@ Any equation identities / topics for this lecture include context and uses for l
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 5: Graphs
 ### L13 - Breadth-first search (BFS)	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=s-CYnVz-uh4&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=13) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture13.pdf)  
 Code:
 Reading:
 
@@ -2391,12 +2479,22 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-2m**		| Intorduction to graphs, adjacency lists
+**5m**			| Applications
+**10m**			| Pocket cube
+**20m**			| Graph representation, adjacency lists
+**34m**			| BFS algorithm pseudo / python code 
+**45m**			| Shortest paths properties
+**49m45**		| Runtime &  Handshaking Lemma
+  
+  
+Handshaking Lemma, CLRS p1173, 717  
+Lemma - a subsidiary or intermediate theorem in an argument or proof.
 
-
-#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+Graphs appendix in text book!
 
 ### R11 - Principles of Algorithm Design
 COPY RECITATION TEMPLATE into further lectures
