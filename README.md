@@ -162,22 +162,23 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [Example problem](#example-problem)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [**Vid contents - **](#vid-contents---)  
+		2. [Principle of practical algorithm design](#principle-of-practical-algorithm-design)  
 15. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [R12 - Principles of Algorithm Design](#r12---principles-of-algorithm-design)  
+	2. [R12 - Karatsuba Multiplication, Newtons Method](#r12---karatsuba-multiplication-newtons-method)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
+		2. [Example of finding cubed root](#example-of-finding-cubed-root)  
 		3. [Maths notes](#maths-notes)  
 16. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Maths notes](#maths-notes)  
-	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
+	2. [R13 - Breadth-First Search (BFS)](#r13---breadth-first-search-bfs)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -186,6 +187,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	4. [R14 - Principles of Algorithm Design](#r14---principles-of-algorithm-design)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 17. [Problem set 5 due](#problem-set-5-due)  
 18. [Problem set 6 out](#problem-set-6-out)  
 19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
@@ -2264,9 +2269,9 @@ So for 64Kword digit number recursively split them in half until their length re
 Then multiply back up!?? 
 
 ```
-        a  b
-    x = 5678
-    y = 1234            # x.y = 7006652
+        a  b            # x.y = 7006652
+    x = 5678            # n digits   a = n/2 digits
+    y = 1234            # n digits   as do b,c,d
         c  d
         
 r1 = a.c = 672          # 10^4 - shift right 4 zero's for ballpark result MS addition 
@@ -2279,18 +2284,32 @@ r3 << 2        284000
 r2 << 0          2652 +
 total         7006652   # tada!
 
+but r3 involves 2 multiplications (expensive component) so above results in
+4 calls to the recursive multiplication w/ numbers half the size: n/2 yielding . .
+
+T(n) = 4T(n/2) + O(n)	complexity O(n^2) - R12 0-10m
+       ^
+
  split  split
    x   .  y      r1    (   r3  )   r2
 (a + b)(c + d) = a.c + a.d + b.c + b.d
               
 so r3 = (a + b)(c + d) - r1 - r2
+
+So r3 can be generated using the data from r1 & r2 multiplication need only 1 multiply instead of 2
+resulting in 3 calls to the recursive multiplication w/ numbers half the size: n/2 yielding . .
+
+T(n) = 3T(n/2) + O(n)	complexity O(n^log3)
+       ^
+
 ```
 See 37m26:  
 Quiz 2 ps - O(n^2) - worse than Karatsuba
 
 #### Example problem
-Ex Code Karatsuba multiplication in python.
-Take 2 input s multiply them together using recursive Karatsuba call.
+Ex Code Karatsuba multiplication in python.  
+Take 2 input s multiply them together using recursive Karatsuba call.  
+[wikipedia pseudo code](https://en.m.wikipedia.org/wiki/Karatsuba_algorithm#Pseudocode)  
 
 
 
@@ -2308,6 +2327,23 @@ Reading:
 **42m-end**		| 
 
 
+#### Principle of practical algorithm design
+[More details in lecture notes p1](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf)  
+1. Experiment w/ examples - generate inputs to test ideas on  
+2. Simplify the problem - break into sub problems, do some pre processing on data, set one of the inputs to be contant, including some assumptions about the data to minimise special cases.  
+3. Look for similar problems - leverage elements or approaches used in those problems.  
+4. Delegate the work - use recursion, dividing the problem delegating the subproblems to recursive function calls. If you cant figure out how to solve a problem, see if you can figure out how to solve only the last bit of it. Then see if you can use recursion to solve the rest of it.
+5. Design according to the runtime - to be able to do this we need a list of algo vs runtime & recurrence relations - crib sheet
+
+
+Exersize
+implement n!, profile it plot time to compute against n
+implement stage memoized n! profile it plot time to compute against n - how much space is required for a 100x compute advantage?
+
+
+**Problem 0 - Maintaining Medians Final Exam Fall 2008**
+Make notes  
+
 
 **N** elements in the array & array is sorted.
 **k** - amount of shift - rotation
@@ -2322,7 +2358,7 @@ middle index		((N-k) + N/2) mod N
 Use de-referenced binary search - IE translate index w/ offset k w/ wrap around (size of array N)
 
 
-**USE BINARY SEARCH HOME IN ON THE BREAK**
+**Problem 1 - USE BINARY SEARCH HOME IN ON THE BREAK**
 W/o knowing k - find the break - searching for a number to the left that is larger than its successor
   
 At each step check for the target number e.  
@@ -2440,22 +2476,38 @@ properties:
 
 
 
-### R12 - Principles of Algorithm Design
-COPY RECITATION TEMPLATE into further lectures
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R12 - Karatsuba Multiplication, Newtons Method
+[vid](https://www.youtube.com/watch?v=JRgIXyEPnbA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=36) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec12_newton.pdf)  
 Code:
 Reading: 
 
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**1m-10m**		| Karatsuba Multiplication - see L11 34m
+**3m**			| time complexity normal multiply vs Karatsuba O(n^log3)
+**10m**			| Newtons Method
+**10m-20m**	| deriving Newtons Method
+**30m33**		| One thing to remember is using this trick
+**31m**			| Example of finding cubed root
+
+ 
+30m33 removing difficult division
+<p align="center"><img src="./tex/323a51f3a68d9fcecf7ed62783dac9d0.svg?invert_in_darkmode" align=middle width=557.7948288pt height=33.81208709999999pt/></p>
+
+#### Example of finding cubed root
+<p align="center"><img src="./tex/c724a2d36546a89e933b70554b75a8fa.svg?invert_in_darkmode" align=middle width=388.21453275pt height=17.4097869pt/></p>
+for 10 digits of precision multiply by 10^d IE left shift 10 places in decimal
+<p align="center"><img src="./tex/92a133c17877d00d265cdc07285af102.svg?invert_in_darkmode" align=middle width=456.04515165pt height=20.611176299999997pt/></p>
 
 
-#### Example problem
+
+
+
 
 #### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+<p align="center"><img src="./tex/0db2f7109e43128df5cfa823b55ba0ab.svg?invert_in_darkmode" align=middle width=481.75145369999996pt height=38.83491479999999pt/></p>
 
 
 
@@ -2488,7 +2540,7 @@ properties:
 **49m45**		| Runtime &  Handshaking Lemma
   
   
-Handshaking Lemma, CLRS p1173, 717  
+Handshaking Lemma, CLRS p1173  
 Lemma - a subsidiary or intermediate theorem in an argument or proof.
 
 
@@ -2496,8 +2548,7 @@ Lemma - a subsidiary or intermediate theorem in an argument or proof.
 Any equation identities / topics for this lecture include context and uses for later reference  
 Graphs appendix in text book!
 
-### R11 - Principles of Algorithm Design
-COPY RECITATION TEMPLATE into further lectures
+### R13 - Breadth-First Search (BFS)
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
@@ -2528,6 +2579,24 @@ queries:
 updates:  
 representation invariant (RI):   
 properties:  
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+### R14 - Principles of Algorithm Design
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
 
 #### **Vid contents - **  
  time			| notes	
