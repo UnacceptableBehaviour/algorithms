@@ -180,8 +180,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [Maths notes](#maths-notes)  
 	2. [R13 - Breadth-First Search (BFS)](#r13---breadth-first-search-bfs)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+		2. [Maths notes](#maths-notes)  
 	3. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
@@ -2488,18 +2487,38 @@ Reading:
 **1m-10m**		| Karatsuba Multiplication - see L11 34m
 **3m**			| time complexity normal multiply vs Karatsuba O(n^log3)
 **10m**			| Newtons Method
+**11m20**		| Graphical walk through theory
 **10m-20m**	| deriving Newtons Method
 **30m33**		| One thing to remember is using this trick
 **31m**			| Example of finding cubed root
 
- 
-30m33 removing difficult division
+
+11m20 Graphical walk through theory  
+tan(Θ) = opposite / adjacent ()  
+This works by making a first guess.  
+Finding the tangent at that guess and using its intersection w/ y=0 as the next guess.  
+Repeat this log d times where **d is the precision in digits**. [explain log d comes from raising to a power below 1 inserts 0s in e]  
+We need to remove difficult division which is done my multiplying everything by 10^d and working w/ integers.  
+Feed the result back into the approximation until you get the same result twice which means we have converged on a solution.  
+The initial guess is arrived at by binary search to get a number that produced a correct most significant digit.  
+Then homing in on then solution w/ Newtons method.  
+  
+
+30m33 removing difficult division  
 <p align="center"><img src="./tex/323a51f3a68d9fcecf7ed62783dac9d0.svg?invert_in_darkmode" align=middle width=557.7948288pt height=33.81208709999999pt/></p>
 
 #### Example of finding cubed root
 <p align="center"><img src="./tex/c724a2d36546a89e933b70554b75a8fa.svg?invert_in_darkmode" align=middle width=388.21453275pt height=17.4097869pt/></p>
 for 10 digits of precision multiply by 10^d IE left shift 10 places in decimal
 <p align="center"><img src="./tex/92a133c17877d00d265cdc07285af102.svg?invert_in_darkmode" align=middle width=456.04515165pt height=20.611176299999997pt/></p>
+
+Summary of steps - towards code:  
+  
+Approach: Create function whose root is the answer we seek & use newtons method to home in on the solution  
+Generate function.  
+**See worked notes for steps w/ maths R12 p2-3**  
+Type up add here  
+CODE this up - requires Karatsuba Coded. .   
 
 
 
@@ -2535,8 +2554,12 @@ properties:
 **5m**			| Applications
 **10m**			| Pocket cube
 **20m**			| Graph representation, adjacency lists
-**34m**			| BFS algorithm pseudo / python code 
+**29m30**		| Space used Θ(V+E) vertices + edges I assume
+**34m**			| BFS algorithm pseudo / python code - writing it on the board yawn. .
+**37m**			| BFS algorithm pseudo / python code - WALKING the code
+**43m**			| Parent pointer concept to create shortest paths
 **45m**			| Shortest paths properties
+**49m30**		| Total running time BFS 2.E 
 **49m45**		| Runtime &  Handshaking Lemma
   
   
@@ -2557,9 +2580,52 @@ Reading:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0-17m**		| PS5 help
+**17m-28m**	| Terms BFS graphs, handshaking lemma
+**28m-34m**	| Representing graphs in python, adjacency lists
+**34m30**		| Representing graphs in python, adjacency matrix
+**39m**			| Walk Breadth First Search - BFS
+**44m**			| BFS running time decomposition
+
+47m - fell asleep on the keyboarrrrrrrrrrrrrrrrrrr
+
+**TERMS**  
+Vertex - node in the graph.  
+Edge - line connecting two nodes.  
+Connected component - set of nodes connected by edges that can all be reached from each other.  
+Degree - number of other nodes connected to a node  
+Handshaking Lemma - Sum of all the degrees = 2 x number of edges. (each edge add 1 to the degree of 2 nodes)  
+For directed graphs:  
+In degree - number of incoming edges  
+Out degree - number of outgoing edges  
+Total in degrees = Total out degrees
+Sum of in degrees + Sum of out degrees = 2E
+
+**28m - Representing graphs in python**  
+Graph is represented using a dict of vertices.  
+Each vertex has an adjacency list of the vertices (nodes) its connected to.  
+The length of the adjacency list is the degree of the node (number of other nodes its connected to).  
+Space = O(V+E) assuming empty lists 33m40
+
+**34m30 - Representing graphs in python, adjacency matrix**   
+Square matrix of nodes using a bit per node.  
+If nodes are connected a 1 is placed in the cross section.  
+If nodes are NOT connected a 0 is placed in the cross section.  
+Where a node crosses with itself the cross is set to 1.  
+Number of 1s  in the matrix = 2E + V (the +V comes from the nodes croxing with themselves, V nodes so +V)  
+Number of 0s  in the matrix = V^2 - (2E + V) (V^2 is all the cross points - total # of 1s)  
+Space V^2 bits
+
+**39m - Walk Breadth First Search - BFS**  
+BFS start form a particular node will discover the elements in a component. NOT necessarily the whole graph.  
+Uses a Queue data structure to store nodes as they are discovered, then remove them after their connections have been checked.  
+Nodes are kept in a dict.  
+
+**44m - BFS running time decomposition**
+Matrix - O(V^2)
+Adjacency list - O(V + E) or O(E) - 47m40
 
 
-#### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
