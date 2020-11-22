@@ -158,25 +158,25 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 13. [Quiz 1](#quiz-1)  
 14. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - L11**](#vid-contents---l11)  
 		2. [Example problem](#example-problem)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R11**](#vid-contents---r11)  
 		2. [Principle of practical algorithm design](#principle-of-practical-algorithm-design)  
 15. [Problem set 5 out](#problem-set-5-out)  
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L12**](#vid-contents---l12)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	2. [R12 - Karatsuba Multiplication, Newtons Method](#r12---karatsuba-multiplication-newtons-method)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R12**](#vid-contents---r12)  
 		2. [Example of finding cubed root](#example-of-finding-cubed-root)  
 		3. [Maths notes](#maths-notes)  
 16. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L13**](#vid-contents---l13)  
 		3. [Maths notes](#maths-notes)  
 	2. [R13 - Breadth-First Search (BFS)](#r13---breadth-first-search-bfs)  
 		1. [**Vid contents - **](#vid-contents---)  
@@ -184,8 +184,6 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
 	4. [R14 - Principles of Algorithm Design](#r14---principles-of-algorithm-design)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
@@ -198,17 +196,25 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [L16 - Dijkstra](#l16---dijkstra)  
+	2. [R15 - name](#r15---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	3. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	3. [L17 - Bellman-Ford](#l17---bellman-ford)  
+	4. [R16 - name](#r16---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	5. [L17 - Bellman-Ford](#l17---bellman-ford)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	4. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
+	6. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
@@ -2231,7 +2237,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 
-#### **Vid contents - **  
+#### **Vid contents - L11**  
  time			| notes	
 | - | - |
 **0m-3m**		| intro, work w/ many digit numbers, very large, or high precision
@@ -2318,7 +2324,7 @@ Take 2 input s multiply them together using recursive Karatsuba call.
 Code: 
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R11**  
  time			| notes	
 | - | - |
 **0m-14m**		| HOW TO APPROACH A SOLUTION using EG problem Sorting a shifted / rotated array
@@ -2451,7 +2457,7 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L12**  
  time			| notes	
 | - | - |
 **0m-2m**		| Motivation, use of multiplication in division
@@ -2481,7 +2487,7 @@ properties:
 Code:
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R12**  
  time			| notes	
 | - | - |
 **1m-10m**		| Karatsuba Multiplication - see L11 34m
@@ -2535,19 +2541,19 @@ CODE this up - requires Karatsuba Coded. .
 ## Unit 5: Graphs
 ### L13 - Breadth-first search (BFS)	 
 [vid](https://www.youtube.com/watch?v=s-CYnVz-uh4&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=13) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture13.pdf)  
-Code:
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture13.pdf) ~ 
+Code: [BFS EG w/ visualisation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py)
 Reading:
 
 #### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
+type: Breadth-first search (BFS)	   
+use cases: web crawlers, find shortest path & minimum spanning tree for unweighted graphs, route planning GPS, broadcasting in a network,    
 queries:  
 updates:  
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L13**  
  time			| notes	
 | - | - |
 **0m-2m**		| Intorduction to graphs, adjacency lists
@@ -2563,7 +2569,7 @@ properties:
 **49m45**		| Runtime &  Handshaking Lemma
   
   
-Handshaking Lemma, CLRS p1173  
+Handshaking Lemma, CLRS p1173 - says every edge increases the degrees by 2 - one for each node it connects.   
 Lemma - a subsidiary or intermediate theorem in an argument or proof.
 
 
@@ -2572,8 +2578,8 @@ Any equation identities / topics for this lecture include context and uses for l
 Graphs appendix in text book!
 
 ### R13 - Breadth-First Search (BFS)
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=5JxShDZ_ylo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=37) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf) ~ 
 Code:
 Reading: 
 
@@ -2633,8 +2639,8 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ### L14	Depth-first search (DFS), topological sorting
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture14.pdf) ~ 
 Code:
 Reading:
 
@@ -2649,12 +2655,22 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**1m-m**		| DFS using recursion to leave trail
+**2m-7m**		| Recursive call to find all nodes connected to a source
+**7m-9m** 		| Build on recursive function to find ALL vertices / nodes
+**9m** 			| Example
+**14m** 		| Running time O(V+E)
+**18m-30m** 	| Edge classification, in directed & undirected graphs
+**30m** 		| Use of edge type for cycle detection
+**31m-42m** 	| cycle detection
+**42m** 		| topological sort - scheduling
 
 
-#### Example problem
+Tree edge - edge that goes to something so far unvisited. (create )
+Back edge - node to ancestor in the tree / forrest
+Forward edge - node to descendant in the tree (further along from source)
+Cross edge - edge between two non ancestor relate subtrees, ancestral fork resulting in subtrees / siblings. 
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
 
 
 ### R14 - Principles of Algorithm Design
@@ -2705,6 +2721,22 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R15 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### L16 - Dijkstra	 
@@ -2720,6 +2752,23 @@ queries:
 updates:  
 representation invariant (RI):   
 properties:  
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R16 - name
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
 
 #### **Vid contents - **  
  time			| notes	
