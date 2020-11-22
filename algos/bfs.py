@@ -15,8 +15,7 @@ class BFSResult:
 			try:
 				node_str += f"{str(self.level[n])} - {self.parent[n].name}"
 			except:
-				node_str += f"{str(self.level[n])} - None"
-			
+				node_str += f"{str(self.level[n])} - None"			
 			node_str += "\n"
 		return node_str			
 
@@ -43,6 +42,8 @@ class Graph:
 class Node:
 	def __init__(self, name):
 		self.name = name
+	def __repr__(self):					# so networkx displays meaningful name on the node!
+		return self.name
 
 def bfs(g, s):
 	'''
@@ -74,7 +75,20 @@ from pprint import pprint
 import re
 import random
 DATAFILE = Path('./scratch/food.txt')
+# to draw graph
+import networkx as nx
+# https://github.com/networkx/networkx
+# https://networkx.org/documentation/stable/tutorial.html
+# https://networkx.org/documentation/stable/reference/drawing.html#drawing
+import matplotlib.pyplot as plt
+
+# TODO try
+# https://graph-tool.skewed.de/
+# https://graph-tool.skewed.de/static/doc/quickstart.html
+
 if __name__ == '__main__':
+	G = nx.Graph()
+	
 	# # create list random names
 	# with open(DATAFILE,'r') as f:
 	# 	text = f.read()
@@ -103,10 +117,12 @@ if __name__ == '__main__':
 	
 	nodes = []
 	for i in node_names:
-		nodes.append(Node(i))
+		node_to_add = Node(i) 
+		nodes.append(node_to_add)		
+		G.add_node(node_to_add)								# graphics representation
 	
 	C_LOW = 1	# 5
-	C_HIGH = 5	# 15
+	C_HIGH = 3	# 15
 	
 	g = Graph()
 	for i in nodes:
@@ -114,8 +130,8 @@ if __name__ == '__main__':
 		connections = random.randint(C_LOW,C_HIGH)
 		for c in range(connections):
 			rand_edge = random.randint(0,len(node_names)-1)
-			#print(f"{len(nodes)} - {rand_edge}")
 			g.add_edge(i,nodes[rand_edge])
+			G.add_edge(i,nodes[rand_edge])					# graphics representation
 		
 	pprint(g)
 	
@@ -125,3 +141,7 @@ if __name__ == '__main__':
 	pprint(bfs_result)
 	
 	print(f"Start node: {source_node.name}")
+
+	nx.draw(G, with_labels=True) # , font_weight='bold')
+	plt.show()
+	
