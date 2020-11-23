@@ -2548,7 +2548,7 @@ Reading:
 #### **DATA STRUCTURE**  
 type: Breadth-first search (BFS)	   
 use cases: web crawlers, find shortest path & minimum spanning tree for unweighted graphs, route planning GPS, broadcasting in a network,    
-queries:  
+queries: UPDATE from notes R13 at end  
 updates:  
 representation invariant (RI):   
 properties:  
@@ -2591,9 +2591,9 @@ Reading:
 **28m-34m**	| Representing graphs in python, adjacency lists
 **34m30**		| Representing graphs in python, adjacency matrix
 **39m**			| Walk Breadth First Search - BFS
-**44m**			| BFS running time decomposition
+**44m-52**		| BFS running time decomposition
+**52**			| FB / twitter thoughts - directed / undirected
 
-47m - fell asleep on the keyboarrrrrrrrrrrrrrrrrrr
 
 **TERMS**  
 Vertex - node in the graph.  
@@ -2645,21 +2645,21 @@ Adjacency list - O(V + E) or O(E) - 47m40
 See [lect notes p2](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf)  
 type 			| matrix 		| adjacency list
 | - | - | - |
-space			| Θ(Ew) bits	| Θ(V^2) bits
+space			| Θ(V^2) bits	| Θ(Ew) bits or Θ(V + E) nodes
 time			| -			| - 
 add edge  		| O(1)		| O(1)
 has edge?(U,V)  | O(1)		| O(degree)
 all neighbours	| Θ(V)		| O(degree)
-BFS			| O(v^2)		| O(V + E) or O(E) - 47m40
+BFS			| O(v^2)		| O(V + E) or O(E) - 47m40 
 
 w - word size
 V - number of vertices
 E - number of edges
 del edge - similar to find & add
   
-The adjacency list representation provides a compact way to represent sparse graphs  those for which |E| is much less than |V^2|  it is usually the method of choice.   
+The adjacency list representation provides a compact way to represent sparse graphs - those for which |E| is much less than |V^2| - it is usually the method of choice.   
 We may **prefer an adjacency matrix** representation when:  
-A) the graph is dense  |E| is close to |V^2| or   
+A) the graph is dense - |E| is close to |V^2| or   
 B) when we need to be able to tell quickly if there is an edge connecting two given vertices.  
   
 
@@ -2705,8 +2705,7 @@ Cross edge - edge between two non ancestor relate subtrees, ancestral fork resul
 
 
 ### R14 - Principles of Algorithm Design
-COPY RECITATION TEMPLATE into further lectures
-[vid]()  
+[vid]( )  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading: 
