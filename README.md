@@ -181,7 +181,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	2. [R13 - Breadth-First Search (BFS)](#r13---breadth-first-search-bfs)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Maths notes](#maths-notes)  
-	3. [L14	Depth-first search (DFS), topological sorting](#l14depth-first-search-dfs-topological-sorting)  
+	3. [L14 - Depth-first search (DFS), topological sorting](#l14---depth-first-search-dfs-topological-sorting)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 	4. [R14 - Principles of Algorithm Design](#r14---principles-of-algorithm-design)  
@@ -2614,11 +2614,12 @@ The length of the adjacency list is the degree of the node (number of other node
 Space = O(V+E) assuming empty lists 33m40
 
 **34m30 - Representing graphs in python, adjacency matrix**   
+See [lect notes p2](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf)  
 Square matrix of nodes using a bit per node.  
 If nodes are connected a 1 is placed in the cross section.  
 If nodes are NOT connected a 0 is placed in the cross section.  
 Where a node crosses with itself the cross is set to 1.  
-Number of 1s  in the matrix = 2E + V (the +V comes from the nodes croxing with themselves, V nodes so +V)  
+Number of 1s  in the matrix = 2E + V (the +V comes from the nodes crossing with themselves, V nodes so +V)  
 Number of 0s  in the matrix = V^2 - (2E + V) (V^2 is all the cross points - total # of 1s)  
 Space V^2 bits
 
@@ -2627,10 +2628,40 @@ BFS start form a particular node will discover the elements in a component. NOT 
 Uses a Queue data structure to store nodes as they are discovered, then remove them after their connections have been checked.  
 Nodes are kept in a dict.  
 
-**44m - BFS running time decomposition**
+**44m - BFS running time decomposition**  
+**Assumtions:**  
+Vertex/Node seen held in a hash table w/ T/F value	 - EG dict seen or dict level  
+Hash: search O(1), delete O(1), insert O(1)  
+BFS running time:
+
+BFS hash of adjacency lists:
+Look up edges for each node: O(V) - V number of nodes
+for each node O(degree) - number of edges connected - stored in list
+
+
 Matrix - O(V^2)
 Adjacency list - O(V + E) or O(E) - 47m40
 
+See [lect notes p2](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf)  
+type 			| matrix 		| adjacency list
+| - | - | - |
+space			| Θ(Ew) bits	| Θ(V^2) bits
+time			| -			| - 
+add edge  		| O(1)		| O(1)
+has edge?(U,V)  | O(1)		| O(degree)
+all neighbours	| Θ(V)		| O(degree)
+BFS			| O(v^2)		| O(V + E) or O(E) - 47m40
+
+w - word size
+V - number of vertices
+E - number of edges
+del edge - similar to find & add
+  
+The adjacency list representation provides a compact way to represent sparse graphs  those for which |E| is much less than |V^2|  it is usually the method of choice.   
+We may **prefer an adjacency matrix** representation when:  
+A) the graph is dense  |E| is close to |V^2| or   
+B) when we need to be able to tell quickly if there is an edge connecting two given vertices.  
+  
 
 
 #### Maths notes  
@@ -2638,7 +2669,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 
-### L14	Depth-first search (DFS), topological sorting
+### L14 - Depth-first search (DFS), topological sorting
 [vid](https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture14.pdf) ~ 
 Code:
