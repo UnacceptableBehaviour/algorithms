@@ -4,6 +4,8 @@
 from collections import deque
 import random
 from pprint import pprint
+import os
+
 
 class MazeNode:
 	def __init__(self, name, x, y, u=None,d=None,l=None,r=None):
@@ -166,6 +168,9 @@ class Maze:
 		
 		self.create_art()
 
+	def cls():
+		os.system('cls' if os.name=='nt' else 'clear')
+
 	def create_maze(self):
 		'''
 		randomly pick a square and add a side
@@ -196,6 +201,7 @@ class Maze:
 				del flat_maze[target_node]
 				#nodes_left = len(flat_maze)
 				print(f" - - - - - - nodes_left: {nodes_left}\n")
+			Maze.cls()
 			self.create_art()
 			print(self)
 		
@@ -313,10 +319,11 @@ class Maze:
 		return maze_str
 
 
+
 if __name__ == '__main__':
 
 	print("start_marker")
 	m = Maze(20,10)
 	#print('\n\ndisplay\n')
 	#print(m)
-	
+	#cls()	
