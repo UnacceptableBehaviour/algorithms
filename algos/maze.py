@@ -13,37 +13,101 @@ class MazeNode:
 		self.l = l
 		self.r = r
 		self.sides = 4 - len([i for i in [u,d,l,r] if i]) # None = wall
-		self.x = x  	# dbg
-		self.y = y  	# dbg
+		self.x = x
+		self.y = y
 		
-	def __repr__(self):					# so networkx displays meaningful name on the node!
-		return self.name
-	
-	def add_side(self):	
-		path_pairs = {self.u:self.u.d,
-					  self.d:self.d.u,
-					  self.l:self.l.r,
-					  self.r:self.r.l}		
-		try:
-			del(path_pairs[None])
-		except:
-			pass
+	def __repr__(self):
+		verbose = False
+		verbose = True
 		
-		print("path_pairs: --S")
-		for k in path_pairs.keys():
-			print(path_pairs[k].__class__)
+		if verbose:
+			u = 'None'
+			l = 'None'
+			r = 'None'
+			d = 'None'
+			try:
+				u = str(self.u.name)
+			except:
+				pass		
+			try:
+				l = str(self.l.name)
+			except:
+				pass		
+			try:
+				r = str(self.r.name)
+			except:
+				pass		
+			try:	
+				d = str(self.d.name)
+			except:
+				pass
 		
-		wall = random.choice(list(path_pairs.keys()))
-		print(f"wall: {wall.__class__} {wall.x},{wall.y}")
-		path_pairs[wall] = None		FIX THIS
-		wall = None
-		print(f"path_pairs len:{len(path_pairs)}")
-		self.sides += 1
-		print("path_pairs: --E")
-		for k in path_pairs.keys():
-			print(path_pairs[k].__class__)
+			#ascii_image = "    "+str(self.u.name)+"    "+"\n"+str(self.l.name)+"    "+str(self.r.name)+"\n"+"    "+str(self.d.name)+"    "+"\n"
+			ascii_image = "    "+u+"    "+"\n"+l+f" {str(self.sides).center(3)}"+r+"\n"+"    "+d+"    "		
+			return ascii_image
+		
+		return str(self.name)
 
-		return self.sides
+
+	def add_random_wall(self): # remove
+		REMOVE_CELL = 99
+		
+		available_routes_to_close = []
+		print(f"close ({self.x},{self.y})\n{self}")
+		# define how to close a link in each direction
+		def close_top():
+			self.u.d = None
+			self.u.sides += 1
+			self.u   = None
+			self.sides += 1 
+
+		def close_bottom():
+			self.d.u = None
+			self.d.sides += 1
+			self.d   = None
+			self.sides += 1
+		
+		def close_left():
+			self.l.r = None
+			self.l.sides += 1
+			self.l   = None
+			self.sides += 1
+		
+		def close_right():
+			self.r.l = None
+			self.r.sides += 1
+			self.r   = None
+			self.sides += 1
+			
+		# build list of open routes
+		if self.u:
+			if self.u.sides < 2:	# don't create cells w/ 3 sides
+				available_routes_to_close.append(close_top)
+
+		if self.d:
+			if self.d.sides < 2:
+				available_routes_to_close.append(close_bottom)
+
+		if self.l:
+			if self.l.sides < 2:
+				available_routes_to_close.append(close_left)
+
+		if self.r:
+			if self.r.sides < 2:
+				available_routes_to_close.append(close_right)
+
+
+		if len(available_routes_to_close) > 0:
+			# close a random route
+			close_wall = random.choice(available_routes_to_close)		
+			close_wall()
+			print(self)		
+			return self.sides
+		else:
+			# surrounded by cells w/ 2 sides - remove it
+			print(self)
+			return REMOVE_CELL
+		
 
 
 class Graph:
@@ -69,6 +133,13 @@ class Graph:
 
 class Maze:
 	def __init__(self, x=10, y=10):
+		'''
+		TLHC = 0,0 origin
+		         xy
+		mz = [  [00, 10, 20 . .  ],
+			    [01, 11, 21 . .  ],
+			    [02, 12, 22 . .  ] ]
+		'''
 		self.cell_size = 3
 		self.mz = []
 		self.mz_art = []
@@ -77,7 +148,7 @@ class Maze:
 		for yy in range(self.y):
 			self.mz.append([])
 			for xx in range(self.x):				
-				self.mz[yy].append(MazeNode(xx,yy,f"{str(xx).rjust(2)}{str(yy).rjust(2)}"))
+				self.mz[yy].append(MazeNode(f"{str(xx).rjust(2)}{str(yy).rjust(2)}",xx,yy))
 				#print(xx,yy,"--",f"{str(xx).rjust(2)}{str(yy).rjust(2)}")
 			#pprint(self.mz)
 		
@@ -104,14 +175,29 @@ class Maze:
 		flat_maze = [maze_node for row in self.mz for maze_node in row]
 		nodes_left = len(flat_maze)
 		print(f"flat_maze len: {nodes_left}")
+
+		# self.get(0,0).add_random_wall()
+		# self.get(self.x-1,0).add_random_wall()
+		# self.get(self.x-1,self.y-1).add_random_wall()
+		# self.get(5,self.y-1).add_random_wall()
+		# self.get(5,self.y-1).add_random_wall()
+		# self.get(0,self.y-1).add_random_wall()
 		
-		while nodes_left > 20:
-			target_node = random.randint(0, nodes_left-1)
-			sides = flat_maze[target_node].add_side()
+		while len(flat_maze) > 0:
+			target_node = random.randint(0, len(flat_maze)-1)
+			
+			if flat_maze[target_node].sides >= 2:	# cells get set from the 'other side'
+				del flat_maze[target_node]
+				#nodes_left = len(flat_maze)
+				continue
+			
+			sides = flat_maze[target_node].add_random_wall()
 			if sides >= 2:				
 				del flat_maze[target_node]
-				nodes_left = len(flat_maze)
-				print(f"nodes_left: {nodes_left}")
+				#nodes_left = len(flat_maze)
+				print(f" - - - - - - nodes_left: {nodes_left}\n")
+			self.create_art()
+			print(self)
 		
 	
 	def inc_x(self, x):
@@ -133,6 +219,7 @@ class Maze:
 		return y		
 		
 	def create_art(self):
+		self.mz_art = []
 		# build blank art array
 		print(f"create_art: x:{self.x} y:{self.y}")
 		for yy in range((self.y * (self.cell_size-1))+1):	# cells overlap by 1
@@ -143,6 +230,7 @@ class Maze:
 		for yy in range(self.y):
 			for xx in range(self.x):			
 				art = self.get_ascii(xx,yy)
+				#art = self.get_ascii(xx,yy,True) # debug - place number of side in centre
 				self.place_art(xx,yy, art)
 		# x = 0
 		# y = 0
@@ -171,6 +259,7 @@ class Maze:
 		xpos = x * (self.cell_size - 1)
 		ypos = y * (self.cell_size - 1)
 		# print(f"place_art {x}:{xpos},{y}:{ypos}")
+		# generalise to art size y / cell_size
 		self.mz_art[ypos][xpos:xpos+len(art[0])] = art[0]
 		self.mz_art[ypos+1][xpos:xpos+len(art[1])] = art[1]
 		self.mz_art[ypos+2][xpos:xpos+len(art[2])] = art[2]
@@ -224,24 +313,10 @@ class Maze:
 		return maze_str
 
 
-from pathlib import Path
-import re
-DATAFILE = Path('./scratch/food.txt')
-# to draw graph
-import networkx as nx
-# https://github.com/networkx/networkx
-# https://networkx.org/documentation/stable/tutorial.html
-# https://networkx.org/documentation/stable/reference/drawing.html#drawing
-import matplotlib.pyplot as plt
-
-# TODO try
-# https://graph-tool.skewed.de/
-# https://graph-tool.skewed.de/static/doc/quickstart.html
-
 if __name__ == '__main__':
 
+	print("start_marker")
 	m = Maze(20,10)
-	print('\n\ndisplay\n')
-	print(m)
-	
+	#print('\n\ndisplay\n')
+	#print(m)
 	
