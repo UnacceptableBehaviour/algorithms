@@ -175,14 +175,13 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [Maths notes](#maths-notes)  
 16. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
-		1. [**DATA STRUCTURE**](#data-structure)  
+		1. [**ADT - Algo - BFS**](#adt---algo---bfs)  
 		2. [**Vid contents - L13**](#vid-contents---l13)  
 		3. [Maths notes](#maths-notes)  
 	2. [R13 - Breadth-First Search (BFS)](#r13---breadth-first-search-bfs)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Maths notes](#maths-notes)  
 	3. [L14 - Depth-first search (DFS), topological sorting](#l14---depth-first-search-dfs-topological-sorting)  
-		1. [**DATA STRUCTURE**](#data-structure)  
+		1. [**ADT - Algo - DFS - Θ(V+E)**](#adt---algo---dfs---ve)  
 		2. [**Vid contents - **](#vid-contents---)  
 	4. [R14 - Principles of Algorithm Design](#r14---principles-of-algorithm-design)  
 		1. [**Vid contents - **](#vid-contents---)  
@@ -2545,9 +2544,9 @@ CODE this up - requires Karatsuba Coded. .
 Code: [BFS EG w/ visualisation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py)
 Reading:
 
-#### **DATA STRUCTURE**  
+#### **ADT - Algo - BFS**  
 type: Breadth-first search (BFS)	   
-use cases: web crawlers, find shortest path & minimum spanning tree for unweighted graphs, route planning GPS, broadcasting in a network,    
+use cases: web crawlers, find shortest path & minimum spanning tree for unweighted graphs, route planning GPS, broadcasting in a network, detecting unreachable vertices from s (start)    
 queries: UPDATE from notes R13 at end  
 updates:  
 representation invariant (RI):   
@@ -2663,9 +2662,8 @@ A) the graph is dense - |E| is close to |V^2| or
 B) when we need to be able to tell quickly if there is an edge connecting two given vertices.  
   
 
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+**REFS:**
+[BFS](https://medium.com/edureka/breadth-first-search-algorithm-17d2c72f0eaa)  
 
 
 
@@ -2675,9 +2673,9 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### **DATA STRUCTURE**  
-type:  
-use cases: good for bla  
+#### **ADT - Algo - DFS - Θ(V+E)**  
+type: Depth First Search  
+use cases: prescedence scheduling, cycle detection, logic requiring backtracking  
 queries:  
 updates:  
 representation invariant (RI):   
@@ -2693,14 +2691,61 @@ properties:
 **14m** 		| Running time O(V+E)
 **18m-30m** 	| Edge classification, in directed & undirected graphs
 **30m** 		| Use of edge type for cycle detection
-**31m-42m** 	| cycle detection
+**31m-42m** 	| cycle detection - and proof, uses matched parenthesis - recursion entry exit pairs
 **42m** 		| topological sort - scheduling
+**46m** 		| Correctness proof - topological sort
 
 
-Tree edge - edge that goes to something so far unvisited. (create )
-Back edge - node to ancestor in the tree / forrest
-Forward edge - node to descendant in the tree (further along from source)
-Cross edge - edge between two non ancestor relate subtrees, ancestral fork resulting in subtrees / siblings. 
+**Code - broad brush**   
+```
+parent = {s: None}    # keep track of vertices / nodes visited
+
+DFS-Visit(Adj, s):    # recursively find nodes in graph (Adj - dict of adjacency lists)
+    for v in Adj[S]:
+        if v not in parent:
+            parent[v] = s
+                DFS-Visit(Adj, v)
+
+
+# visit all components (subgraphs) by node dict
+# V is a set of vertices of the graph
+DFS(V, Adj):    
+    parent = {s: None}        # will contain list of root nodes at the end
+    for s in V:               # one for each component / subgraph
+        if s not in parent:
+            parent[s] = None
+            DFS-Visit(Adj, s) # different Adj for each component!
+```
+
+**14m - Running time Analysis - Θ(V+E)**  
+In DFS visit each vertex once O(V)  
+In DFS-visit called once per vertex V, pay len(Adj) or |Adj[v]|
+<p align="center"><img src="./tex/da3019098fbd557cb9b65162f3d2cd7a.svg?invert_in_darkmode" align=middle width=421.91298764999993pt height=37.775108249999995pt/></p>
+This says sum of |Adj[v]| for all v ∈ V (v in set V)  
+|Adj[v]| is saying len(Adj[v]) which is the list of successor nodes and implicitly edges.  
+So the sum of the lengths of all the adjacency lists is the number of edges. Thus O(E)  
+**So DFS +  DFS-visit is Θ(V+E)**  
+
+**Edge Clasification**  
+**Tree edge** - edge that goes to something so far unvisited. (parent hold the tree edges)  
+(these create a forrest of trees)
+**Back edge** - node to ancestor in the tree / forrest - **indicates a cycle** (all nodes in the stack - detected by marking inStack flag in the node and checking it in subsequent node visits)
+**Forward edge** - node to descendant in the tree (further along from source) (detected by counter stamping each node as its passed - forward node low to high)
+**Cross edge** - edge between two non ancestor related subtrees, ancestral fork resulting in subtrees / siblings. 
+
+**Cycle detection**  
+Back edges are detected by setting an INPROGRESS (node in the stack) flag at start of each recursive node check.  
+If the node being checked has the INPROGRESS flag set the edge is a back edge.  
+To get the cycle follow parent list back to the node.
+
+
+**42m - Topological sort - scheduling**
+Name come from sorting the topology of the graph.
+DAG - Directed Acyclic Graph
+Acyclic Graph - graph w/o any cycles in it.
+Output the reverse of the finishing times of each vertex.
+
+46m Correctness proof
 
 
 
