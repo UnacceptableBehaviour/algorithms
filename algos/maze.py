@@ -273,7 +273,7 @@ class Maze:
 	
 	def get_ascii(self,x,y, dbg=False):
 		node = self.get(x,y)
-		stud = '@'
+		stud = '@'		
 		blank = ' '
 		#print(f"get_ascii lev: {node.level} - {node.__class__.__name__} \n {node}")
 		

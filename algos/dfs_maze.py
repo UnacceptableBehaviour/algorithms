@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # 3.7
 
-from bfs import *
+from dfs import *
 from maze import *
 import sys
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
 	m = Maze(20,10)
 	print(m)
-	MazeNode.quiet_mode = False
+	#MazeNode.quiet_mode = False
 	
 	nodes = m.get_node_list()
 	
@@ -27,8 +27,10 @@ if __name__ == '__main__':
 
 	source_node = m.get(0,0)
 	
-	bfs_result = bfs(g, source_node)
+	dfs_result = dfs(g)
 	
-	pprint(bfs_result)
+	pprint(dfs_result)
 	
 	print(m)
+	
+	pprint(dfs_result.components)
