@@ -2721,18 +2721,18 @@ DFS(V, Adj):
 In DFS visit each vertex once O(V)  
 In DFS-visit called once per vertex V, pay len(Adj) or |Adj[v]|
 <p align="center"><img src="./tex/da3019098fbd557cb9b65162f3d2cd7a.svg?invert_in_darkmode" align=middle width=421.91298764999993pt height=37.775108249999995pt/></p>
-This says sum of |Adj[v]| for all v ∈ V (v in set V)  
-|Adj[v]| is saying len(Adj[v]) which is the list of successor nodes and implicitly edges.  
-So the sum of the lengths of all the adjacency lists is the number of edges. Thus O(E)  
-**So DFS +  DFS-visit is Θ(V+E)**  
-
-**Edge Clasification**  
-**Tree edge** - edge that goes to something so far unvisited. (parent hold the tree edges)  
-(these create a forrest of trees)
-**Back edge** - node to ancestor in the tree / forrest - **indicates a cycle** (all nodes in the stack - detected by marking inStack flag in the node and checking it in subsequent node visits)
-**Forward edge** - node to descendant in the tree (further along from source) (detected by counter stamping each node as its passed - forward node low to high)
-**Cross edge** - edge between two non ancestor related subtrees, ancestral fork resulting in subtrees / siblings. 
-
+This says sum of |Adj[v]| for all v ∈ V (v in set V)   
+|Adj[v]| is saying len(Adj[v]) which is the list of successor nodes and implicitly edges.   
+So the sum of the lengths of all the adjacency lists is the number of edges. Thus O(E)   
+**So DFS +  DFS-visit is Θ(V+E)**   
+  
+**Edge Clasification**   
+**Tree edge** - edge that goes to something so far unvisited. (parent holds the tree edges)   
+(these create a forrest of trees)   
+**Back edge** - node to ancestor in the tree / forrest - **indicates a cycle** (all nodes in the stack - detected by marking inStack flag in the node and checking it in subsequent node visits)  
+**Forward edge** - node to descendant in the tree (further along from source) (detected by counter stamping each node as its passed - forward node low to high)  
+**Cross edge** - edge between two non ancestor related subtrees, ancestral fork resulting in subtrees / siblings.   
+  
 **Cycle detection**  
 Back edges are detected by setting an INPROGRESS (node in the stack) flag at start of each recursive node check.  
 If the node being checked has the INPROGRESS flag set the edge is a back edge.  
@@ -2746,6 +2746,60 @@ Acyclic Graph - graph w/o any cycles in it.
 Output the reverse of the finishing times of each vertex.
 
 46m Correctness proof
+
+
+**Number zones in a maze**  
+Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
+[dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) & 
+[dfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs_maze.py)  
+```
+Maze
+   .123456789.123456789.123456789.123456789.123456789
+ 0 @@@@@@@@@@@@@   @   @   @@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@
+ 1     @       @   @       @       @                   @           @   @            
+ 2   1 @ 2   2 @ 3 @ 4   4 @ 4   4 @ 4   4   4   4   4 @ 5   5   5 @ 3 @ 1   1   1  
+ 3     @       @   @       @       @                   @           @   @            
+ 4 @   @   @   @   @@@@@@@@@   @   @   @@@@@@@@@   @   @   @@@@@   @   @   @@@@@@@@@
+ 5     @       @   @       @   @       @           @   @           @   @            
+ 6   1 @ 2   2 @ 3 @ 6   6 @ 4 @ 4   4 @ 4   4   4 @ 4 @ 5   5   5 @ 3 @ 1   1   1  
+ 7     @       @   @       @   @       @           @   @           @   @            
+ 8 @@@@@@@@@@@@@   @   @   @   @@@@@   @   @@@@@@@@@   @@@@@@@@@@@@@   @@@@@@@@@@@@@
+ 9     @           @       @       @                   @                   @        
+10   7 @ 3   3   3 @ 6   6 @ 4   4 @ 4   4   4   4   4 @ 3   3   3   3   3 @ 7   7  
+11     @           @       @       @                   @                   @        
+12 @   @   @@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@   @@@@@   @@@@@@@@@   @   @   @@@@@
+13     @           @           @                   @       @           @   @        
+14   7 @ 3   3   3 @ 8   8   8 @ 4   4   4   4   4 @ 3   3 @ 3   3   3 @ 3 @ 7   7  
+15     @           @           @                   @       @           @   @        
+16 @@@@@@@@@@@@@   @   @@@@@   @   @@@@@@@@@@@@@@@@@   @   @   @@@@@@@@@   @@@@@@@@@
+17 @               @           @       @               @   @           @           @
+18 @ 3   3   3   3 @ 8   8   8 @ 4   4 @ 3   3   3   3 @ 3 @ 3   3   3 @ 3   3   3 @
+19 @               @           @       @               @   @           @           @
+20 @   @@@@@@@@@@@@@@@@@   @@@@@@@@@   @   @@@@@@@@@   @   @@@@@@@@@   @@@@@@@@@   @
+21 @   @               @       @       @           @   @           @       @       @
+22 @ 3 @ 9   9   9   9 @ 8   8 @ 4   4 @ 3   3   3 @ 3 @ 3   3   3 @ 3   3 @ 3   3 @
+23 @   @               @       @       @           @   @           @       @       @
+24 @   @   @@@@@@@@@   @@@@@   @   @@@@@@@@@   @   @   @@@@@@@@@   @@@@@   @   @@@@@
+25     @               @       @   @       @       @   @           @       @        
+26   3 @ 9   9   9   9 @ 8   8 @ 4 @ 3   3 @ 3   3 @ 3 @ 3   3   3 @ 3   3 @ 3   3  
+27     @               @       @   @       @       @   @           @       @        
+28 @@@@@@@@@@@@@@@@@@@@@   @@@@@   @   @   @@@@@@@@@   @   @@@@@   @   @@@@@@@@@@@@@
+29 @       @               @       @   @           @   @   @       @   @           @
+30 @ 10  10@ 8   8   8   8 @ 4   4 @ 3 @ 3   3   3 @ 3 @ 3 @ 3   3 @ 3 @ 3   3   3 @
+31 @       @               @       @   @           @   @   @       @   @           @
+32 @   @   @   @@@@@@@@@   @   @   @   @@@@@@@@@   @   @   @   @@@@@   @   @@@@@   @
+33 @       @               @   @   @               @   @       @       @       @   @
+34 @ 10  10@ 8   8   8   8 @ 4 @ 4 @ 3   3   3   3 @ 3 @ 3   3 @ 3   3 @ 3   3 @ 3 @
+35 @       @               @   @   @               @   @       @       @       @   @
+36 @@@@@@@@@@@@@@@@@@@@@@@@@   @   @@@@@@@@@   @@@@@   @   @@@@@   @   @   @   @   @
+37                 @           @           @           @           @   @       @    
+38   3   3   3   3 @ 4   4   4 @ 4   4   4 @ 3   3   3 @ 3   3   3 @ 3 @ 3   3 @ 3  
+39                 @           @           @           @           @   @       @    
+40 @@@@@@@@@@@@@   @   @   @@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@
+
+[ 0 1,  1 1,  3 9,  4 9, 13 1,  4 2,  0 3,  4 4,  1 6,  0 8]  < Component Start nodes
+0,0 = TRHC  19,9 = BRHC 
+```
 
 
 
