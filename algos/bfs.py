@@ -13,7 +13,7 @@ class BFSResult:
 		for n in self.level.keys():
 			node_str += f"{n.name} ".rjust(22)
 			try:
-				node_str += f"{str(self.level[n])} - {self.parent[n].name}"
+				node_str += f"{str(self.level[n])} - {self.parent[n]}"
 			except:
 				node_str += f"{str(self.level[n])} - None"			
 			node_str += "\n"
@@ -34,10 +34,19 @@ class Graph:
 	def __repr__(self):
 		node_str = f'{self.__class__.__name__}          nodes - adjacency lists\n'
 		for n in self.adj.keys():
-			node_str += f"{n.name} ".rjust(22)
+			node_str += f"{n} ".rjust(22)
 			node_str += ','.join([item.name for item in self.adj[n]])
 			node_str += "\n"
 		return node_str
+
+# Matrix representation
+#   A B C D E
+# A 1 1 
+# B
+# C
+# D
+# E
+
 
 class Node:
 	def __init__(self, name):
@@ -56,6 +65,7 @@ def bfs(g, s):
 	r = BFSResult()
 	r.parent = {s: None}
 	r.level = {s: 0}
+	s.level = 0
 	
 	queue = deque()
 	queue.append(s)
@@ -65,28 +75,32 @@ def bfs(g, s):
 		for n in g.adj[u]:
 			if n not in r.level:
 				r.parent[n] = u
+				n.parent = u  					# maze
 				r.level[n] = r.level[u] + 1
+				n.level = r.level[n] 			# maze
 				queue.append(n)
 
 	return r
 
-from pathlib import Path
-from pprint import pprint
-import re
-import random
-DATAFILE = Path('./scratch/food.txt')
-# to draw graph
-import networkx as nx
-# https://github.com/networkx/networkx
-# https://networkx.org/documentation/stable/tutorial.html
-# https://networkx.org/documentation/stable/reference/drawing.html#drawing
-import matplotlib.pyplot as plt
 
-# TODO try
-# https://graph-tool.skewed.de/
-# https://graph-tool.skewed.de/static/doc/quickstart.html
 
 if __name__ == '__main__':
+	from pathlib import Path
+	from pprint import pprint
+	import re
+	import random
+	DATAFILE = Path('./scratch/food.txt')
+	# to draw graph
+	import networkx as nx
+	# https://github.com/networkx/networkx
+	# https://networkx.org/documentation/stable/tutorial.html
+	# https://networkx.org/documentation/stable/reference/drawing.html#drawing
+	import matplotlib.pyplot as plt
+	
+	# TODO try
+	# https://graph-tool.skewed.de/
+	# https://graph-tool.skewed.de/static/doc/quickstart.html
+
 	G = nx.Graph()
 	
 	# # create list random names

@@ -8,6 +8,8 @@ import os
 
 
 class MazeNode:
+	quiet_mode = True
+	
 	def __init__(self, name, x, y, u=None,d=None,l=None,r=None):
 		self.name = name
 		self.u = u
@@ -17,10 +19,11 @@ class MazeNode:
 		self.sides = 4 - len([i for i in [u,d,l,r] if i]) # None = wall
 		self.x = x
 		self.y = y
+		self.level = -1
+		self.parent = None
 		
 	def __repr__(self):
-		verbose = False
-		verbose = True
+		verbose = not MazeNode.quiet_mode
 		
 		if verbose:
 			u = 'None'
@@ -43,9 +46,12 @@ class MazeNode:
 				d = str(self.d.name)
 			except:
 				pass
-		
-			#ascii_image = "    "+str(self.u.name)+"    "+"\n"+str(self.l.name)+"    "+str(self.r.name)+"\n"+"    "+str(self.d.name)+"    "+"\n"
-			ascii_image = "    "+u+"    "+"\n"+l+f" {str(self.sides).center(3)}"+r+"\n"+"    "+d+"    "		
+
+			#	    8 6    				xy-u
+			#	7 7  1  9 7	     xy-l   sides   xy-r
+			#	   None                 xy-d
+			#ascii_image = "\n    "+u+"    "+"\n"+l+f" {str(self.sides).center(3)}"+r+"\n"+"    "+d+"    "
+			ascii_image = "\n    "+u+"    "+"\n"+l+f"{str(self.level).center(3)} "+r+"\n"+"    "+d+"    "
 			return ascii_image
 		
 		return str(self.name)
@@ -55,7 +61,7 @@ class MazeNode:
 		REMOVE_CELL = 99
 		
 		available_routes_to_close = []
-		print(f"close ({self.x},{self.y})\n{self}")
+		if not MazeNode.quiet_mode: print(f"close ({self.x},{self.y})\n{self}")
 		# define how to close a link in each direction
 		def close_top():
 			self.u.d = None
@@ -103,38 +109,19 @@ class MazeNode:
 			# close a random route
 			close_wall = random.choice(available_routes_to_close)		
 			close_wall()
-			print(self)		
+			if not MazeNode.quiet_mode: print(self)		
 			return self.sides
 		else:
 			# surrounded by cells w/ 2 sides - remove it
-			print(self)
+			if not MazeNode.quiet_mode: print(self)
 			return REMOVE_CELL
 		
 
-
-class Graph:
-	def __init__(self):
-		self.adj = {}
-
-	def add_edge(self, u, v):
-		#if self.adj[u] is None:
-		if u not in self.adj:
-			self.adj[u] = []
-			
-		if v not in self.adj[u]:
-			self.adj[u].append(v)
-	
-	def __repr__(self):
-		node_str = f'{self.__class__.__name__}          nodes - adjacency lists\n'
-		for n in self.adj.keys():
-			node_str += f"{n} ".rjust(22)
-			node_str += ','.join([item.name for item in self.adj[n]])
-			node_str += "\n"
-		return node_str
-
-
 class Maze:
-	def __init__(self, x=10, y=10):
+	MAZE_CELL_SIZE_SML = 3
+	MAZE_CELL_SIZE_LRG = 5
+	
+	def __init__(self, x=10, y=10, quiet_mode=True):
 		'''
 		TLHC = 0,0 origin
 		         xy
@@ -142,11 +129,13 @@ class Maze:
 			    [01, 11, 21 . .  ],
 			    [02, 12, 22 . .  ] ]
 		'''
-		self.cell_size = 3
+		self.cell_size = Maze.MAZE_CELL_SIZE_LRG
 		self.mz = []
 		self.mz_art = []
 		self.x = x
 		self.y = y
+		self.quiet_mode = quiet_mode
+		MazeNode.quiet_mode = quiet_mode
 		for yy in range(self.y):
 			self.mz.append([])
 			for xx in range(self.x):				
@@ -178,8 +167,7 @@ class Maze:
 		repeat until no targets left
 		'''
 		flat_maze = [maze_node for row in self.mz for maze_node in row]
-		nodes_left = len(flat_maze)
-		print(f"flat_maze len: {nodes_left}")
+		if not self.quiet_mode: print(f"flat_maze len: {len(flat_maze)}")
 
 		# self.get(0,0).add_random_wall()
 		# self.get(self.x-1,0).add_random_wall()
@@ -193,17 +181,17 @@ class Maze:
 			
 			if flat_maze[target_node].sides >= 2:	# cells get set from the 'other side'
 				del flat_maze[target_node]
-				#nodes_left = len(flat_maze)
 				continue
 			
 			sides = flat_maze[target_node].add_random_wall()
 			if sides >= 2:				
 				del flat_maze[target_node]
-				#nodes_left = len(flat_maze)
-				print(f" - - - - - - nodes_left: {nodes_left}\n")
-			Maze.cls()
-			self.create_art()
-			print(self)
+				if not self.quiet_mode: print(f" - - - - - - nodes_left: {len(flat_maze)}\n")
+			
+			if not self.quiet_mode:
+				Maze.cls()
+				self.create_art()
+				print(self)
 		
 	
 	def inc_x(self, x):
@@ -227,7 +215,7 @@ class Maze:
 	def create_art(self):
 		self.mz_art = []
 		# build blank art array
-		print(f"create_art: x:{self.x} y:{self.y}")
+		#print(f"create_art: x:{self.x} y:{self.y}")
 		for yy in range((self.y * (self.cell_size-1))+1):	# cells overlap by 1
 			self.mz_art.append([])
 			for xx in range((self.x * (self.cell_size-1))+1):				
@@ -265,34 +253,71 @@ class Maze:
 		xpos = x * (self.cell_size - 1)
 		ypos = y * (self.cell_size - 1)
 		# print(f"place_art {x}:{xpos},{y}:{ypos}")
-		# generalise to art size y / cell_size
-		self.mz_art[ypos][xpos:xpos+len(art[0])] = art[0]
-		self.mz_art[ypos+1][xpos:xpos+len(art[1])] = art[1]
-		self.mz_art[ypos+2][xpos:xpos+len(art[2])] = art[2]
-		
-		
-		
-	
+		# TODO - generalise to art size y / cell_size
+		if self.cell_size == Maze.MAZE_CELL_SIZE_SML:
+			self.mz_art[ypos][xpos:xpos+len(art[0])] = art[0]
+			self.mz_art[ypos+1][xpos:xpos+len(art[1])] = art[1]
+			self.mz_art[ypos+2][xpos:xpos+len(art[2])] = art[2]
+		if self.cell_size == Maze.MAZE_CELL_SIZE_LRG:
+			self.mz_art[ypos][xpos:xpos+len(art[0])] = art[0]
+			self.mz_art[ypos+1][xpos:xpos+len(art[1])] = art[1]
+			self.mz_art[ypos+2][xpos:xpos+len(art[2])] = art[2]
+			self.mz_art[ypos+3][xpos:xpos+len(art[3])] = art[3]
+			self.mz_art[ypos+4][xpos:xpos+len(art[4])] = art[4]
+			
 	def get(self,x,y):
 		return self.mz[y][x]		
+
+	def get_node_list(self):
+		return [maze_node for row in self.mz for maze_node in row]
 	
 	def get_ascii(self,x,y, dbg=False):
 		node = self.get(x,y)
 		stud = '@'
 		blank = ' '
+		#print(f"get_ascii lev: {node.level} - {node.__class__.__name__} \n {node}")
 		
-		if dbg:
-			cpoint = str(node.sides)
-		else:
-			cpoint = blank
-			
-		cell_art = [[stud, stud, stud],
-					[stud, cpoint, stud],
-					[stud, stud, stud] ]		
-		if node.u: cell_art[0][1] = blank
-		if node.d: cell_art[2][1] = blank
-		if node.l: cell_art[1][0] = blank
-		if node.r: cell_art[1][2] = blank
+		if self.cell_size == 3:		
+			if dbg:
+				cpoint = str(node.sides)
+			else:
+				#cpoint = blank
+				cpoint = str(node.level)[0]
+				
+			cell_art = [[stud, stud, stud],
+						[stud, cpoint, stud],
+						[stud, stud, stud] ]		
+			if node.u: cell_art[0][1] = blank
+			if node.d: cell_art[2][1] = blank
+			if node.l: cell_art[1][0] = blank
+			if node.r: cell_art[1][2] = blank
+		else: # 5
+			if dbg:
+				cpoint = str(node.sides)
+			else:
+				#cpoint = blank
+				cpoint = str(node.level)				
+				
+			cell_art = [[stud, stud, stud, stud, stud],
+						[stud, blank, blank, blank, stud],
+						[stud, blank, cpoint, blank, stud],
+						[stud, blank, blank, blank, stud],
+						[stud, stud, stud, stud, stud] ]		
+			if node.u: cell_art[0][1:4] = [blank,blank,blank]
+			if node.d: cell_art[4][1:4] = [blank,blank,blank]
+			if node.l:
+				cell_art[1][0] = blank
+				cell_art[2][0] = blank
+				cell_art[3][0] = blank
+			if node.r:
+				cell_art[1][4] = blank
+				cell_art[2][4] = blank
+				cell_art[3][4] = blank
+			if len(cpoint) >1:
+				cell_art[2][2] = cpoint[0]
+				cell_art[2][3] = cpoint[1]
+		
+		
 		return cell_art
 	
 
@@ -303,6 +328,7 @@ class Maze:
 		        *       * *
 		* *     * *     * *
 		'''
+		self.create_art()		
 		maze_str = f'{self.__class__.__name__}\n'
 		maze_str += '   .123456789.123456789.123456789.123456789.123456789\n'
 		# for yy in range(self.y):
@@ -315,7 +341,7 @@ class Maze:
 			maze_str += str(cnt).rjust(2)+' '+''.join(self.mz_art[yy])
 			maze_str += '\n'
 			cnt+=1
-
+		if self.quiet_mode: Maze.cls()
 		return maze_str
 
 
@@ -323,7 +349,7 @@ class Maze:
 if __name__ == '__main__':
 
 	print("start_marker")
-	m = Maze(20,10)
-	#print('\n\ndisplay\n')
+	m = Maze(20,10, False)	# show maze being built w/ debug data
+
+	#m = Maze(20,10)		# quite mode
 	#print(m)
-	#cls()	
