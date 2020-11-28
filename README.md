@@ -183,7 +183,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L14 - Depth-first search (DFS), topological sorting](#l14---depth-first-search-dfs-topological-sorting)  
 		1. [**ADT - Algo - DFS - Θ(V+E)**](#adt---algo---dfs---ve)  
 		2. [**Vid contents - **](#vid-contents---)  
-	4. [R14 - Principles of Algorithm Design](#r14---principles-of-algorithm-design)  
+	4. [R14 - Depth-First Search (DFS)](#r14---depth-first-search-dfs)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -2579,8 +2579,10 @@ Graphs appendix in text book!
 ### R13 - Breadth-First Search (BFS)
 [vid](https://www.youtube.com/watch?v=5JxShDZ_ylo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=37) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf) ~ 
-Code:
-Reading: 
+Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
+[bfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py) & 
+[bfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs_maze.py)  
+Reading: CLRS C22 p589-602 
 
 #### **Vid contents - **  
  time			| notes	
@@ -2661,6 +2663,58 @@ We may **prefer an adjacency matrix** representation when:
 A) the graph is dense - |E| is close to |V^2| or   
 B) when we need to be able to tell quickly if there is an edge connecting two given vertices.  
   
+**Number zones in a maze**  
+Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
+[bfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py) & 
+[bfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs_maze.py)  
+```
+> cd algos
+> ./maze.py        # display random maze
+> ./bfs_maze.py    # create random maze & graph of maze run BFS on it label distance from origin (0,0) TLHC
+Maze
+   .123456789.123456789.123456789.123456789.123456789
+ 0 @@@@@   @   @   @   @   @@@@@@@@@   @   @   @@@@@   @   @@@@@   @   @@@@@   @@@@@
+ 1     @   @           @   @       @   @   @   @       @       @       @       @    
+ 2   0 @ 11@ 12  13  14@ 17@ 22  23@ 26@ 29@ 30@ 41  40@ 17  18@ 11  10@ 5   6 @ 1  
+ 3     @   @           @   @       @   @   @   @       @       @       @       @    
+ 4 @   @   @@@@@@@@@@@@@   @   @   @   @   @   @   @   @@@@@   @@@@@@@@@   @@@@@   @
+ 5 @   @                   @   @       @   @   @   @   @               @           @
+ 6 @ 1 @ 12  13  14  15  16@ 21@ 24  25@ 28@ 29@ 40@ 39@ 20  19  20  21@ 4   3   2 @
+ 7 @   @                   @   @       @   @   @   @   @               @           @
+ 8 @   @@@@@@@@@@@@@@@@@@@@@   @   @@@@@   @   @   @   @   @@@@@@@@@   @@@@@@@@@@@@@
+ 9 @               @       @   @               @       @                           @
+10 @ 2   3   4   5 @ -1  -1@ 20@ 25  26  27  28@ 39  38@ 21  22  23  22  23  24  25@
+11 @               @       @   @               @       @                           @
+12 @@@@@@@@@@@@@   @   @   @   @@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@   @   @
+13 @       @       @   @   @   @           @       @           @           @   @   @
+14 @ 33  32@ 7   6 @ -1@ -1@ 19@ 20  21  22@ 39  38@ 37  36  35@ 26  25  24@ 25@ 26@
+15 @       @       @   @   @   @           @       @           @           @   @   @
+16 @   @   @   @@@@@   @   @   @   @@@@@   @   @   @@@@@@@@@   @   @@@@@   @   @   @
+17 @       @       @       @   @   @       @       @           @   @       @       @
+18 @ 32  31@ 8   9 @ -1  -1@ 18@ 19@ 24  23@ 38  37@ 32  33  34@ 27@ 22  23@ 26  27@
+19 @       @       @       @   @   @       @       @           @   @       @       @
+20 @@@@@   @@@@@   @@@@@@@@@   @   @   @@@@@@@@@   @   @@@@@@@@@   @   @   @@@@@   @
+21         @       @               @       @       @               @   @       @    
+22   29  30@ 11  10@ 15  16  17  18@ 25  26@ 35  36@ 31  30  29  28@ 21@ 24  25@ 28 
+23         @       @               @       @       @               @   @       @    
+24 @@@@@@@@@   @@@@@   @@@@@@@@@@@@@@@@@   @   @@@@@@@@@@@@@@@@@   @   @@@@@   @@@@@
+25         @           @       @       @   @   @               @   @       @        
+26   28  29@ 12  13  14@ 23  22@ 25  26@ 27@ 34@ 35  34  33  32@ 29@ 20  19@ 26  27 
+27         @           @       @       @   @   @               @   @       @        
+28 @   @   @@@@@@@@@@@@@   @   @   @   @   @   @   @@@@@@@@@   @   @   @   @@@@@@@@@
+29     @   @       @       @   @   @   @   @   @       @           @           @    
+30   29@ 30@ 29  28@ 25  24@ 21@ 24@ 27@ 28@ 33@ 36  35@ 32  31  30@ 19  18  17@ 30 
+31     @   @       @       @   @   @   @   @   @       @           @           @    
+32 @@@@@   @   @   @   @@@@@   @   @   @   @   @   @   @   @@@@@@@@@@@@@@@@@   @   @
+33             @       @       @   @       @   @   @       @                   @    
+34   32  31  30@ 27  26@ 19  20@ 23@ 28  29@ 32@ 37@ 34  33@ 14  13  14  15  16@ 31 
+35             @       @       @   @       @   @   @       @                   @    
+36 @@@@@@@@@@@@@@@@@@@@@   @   @   @@@@@@@@@   @   @@@@@@@@@   @   @@@@@@@@@@@@@@@@@
+37             @       @   @       @       @   @       @       @   @                
+38   9   10  11@ 14  15@ 18@ 21  22@ 27  28@ 31@ 38  39@ 16  15@ 12@ 9   8   7   8  
+39             @       @   @       @       @   @       @       @   @                
+40 @@@@@   @   @   @   @   @@@@@@@@@   @   @   @@@@@   @   @@@@@   @   @@@@@   @@@@@
+```
 
 **REFS:**
 [BFS](https://medium.com/edureka/breadth-first-search-algorithm-17d2c72f0eaa)  
@@ -2670,8 +2724,10 @@ B) when we need to be able to tell quickly if there is an edge connecting two gi
 ### L14 - Depth-first search (DFS), topological sorting
 [vid](https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture14.pdf) ~ 
-Code:
-Reading:
+Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
+[dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) & 
+[dfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs_maze.py)  
+Reading: CLRS C22 p603-602
 
 #### **ADT - Algo - DFS - Θ(V+E)**  
 type: Depth First Search  
@@ -2740,19 +2796,30 @@ To get the cycle follow parent list back to the node.
 
 
 **42m - Topological sort - scheduling**
-Name come from sorting the topology of the graph.
+Name comes from sorting the topology of the graph.
 DAG - Directed Acyclic Graph
 Acyclic Graph - graph w/o any cycles in it.
 Output the reverse of the finishing times of each vertex.
+Worked example CLRS p607.
+When DFS processing a graph first encounter & starttime depicted by (n and finish time by n).
+Entry & exit will be a well formed set of parentheses: 
+```
+(s (z (y (x x) y) (w w) z) s) (t (v v) (u u) t)
+```
+
+Do Practical Code example 
 
 46m Correctness proof
 
 
-**Number zones in a maze**  
+**Number components / subgraphs / zones in a maze**  
 Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
 [dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) & 
 [dfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs_maze.py)  
 ```
+> cd algos
+> ./maze.py        # display random maze
+> ./dfs_maze.py    # create random maze & graph of maze run DFS on it label components
 Maze
    .123456789.123456789.123456789.123456789.123456789
  0 @@@@@@@@@@@@@   @   @   @@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@
@@ -2803,15 +2870,16 @@ Maze
 
 
 
-### R14 - Principles of Algorithm Design
-[vid]( )  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R14 - Depth-First Search (DFS)
+[vid](https://www.youtube.com/watch?v=C5SPsY72_CM&t=810s) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec14.pdf) ~ 
 Code:
 Reading: 
 
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m** 			| Example
 
 
 #### Example problem
