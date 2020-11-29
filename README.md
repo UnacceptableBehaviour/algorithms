@@ -185,17 +185,15 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 	4. [R14 - Depth-First Search (DFS)](#r14---depth-first-search-dfs)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
 17. [Problem set 5 due](#problem-set-5-due)  
 18. [Problem set 6 out](#problem-set-6-out)  
 19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
-	1. [L15 - Single-source shortest paths problem](#l15---single-source-shortest-paths-problem)  
+	1. [L15 - Single-Source Shortest Paths Problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [R15 - name](#r15---name)  
+	2. [R15 - Shortest Paths](#r15---shortest-paths)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -2777,11 +2775,16 @@ DFS(V, Adj):
 In DFS visit each vertex once O(V)  
 In DFS-visit called once per vertex V, pay len(Adj) or |Adj[v]|
 <p align="center"><img src="./tex/da3019098fbd557cb9b65162f3d2cd7a.svg?invert_in_darkmode" align=middle width=421.91298764999993pt height=37.775108249999995pt/></p>
-This says sum of |Adj[v]| for all v ∈ V (v in set V)   
+
+This says for all v ∈ V (v in set V ie that are members of set V)   
+
 |Adj[v]| is saying len(Adj[v]) which is the list of successor nodes and implicitly edges.   
+
 So the sum of the lengths of all the adjacency lists is the number of edges. Thus O(E)   
+
 **So DFS +  DFS-visit is Θ(V+E)**   
-  
+
+    
 **Edge Clasification**   
 **Tree edge** - edge that goes to something so far unvisited. (parent holds the tree edges)   
 (these create a forrest of trees)   
@@ -2796,13 +2799,13 @@ To get the cycle follow parent list back to the node.
 
 
 **42m - Topological sort - scheduling**
-Name comes from sorting the topology of the graph.
-DAG - Directed Acyclic Graph
-Acyclic Graph - graph w/o any cycles in it.
-Output the reverse of the finishing times of each vertex.
-Worked example CLRS p607.
-When DFS processing a graph first encounter & starttime depicted by (n and finish time by n).
-Entry & exit will be a well formed set of parentheses: 
+Name comes from sorting the topology of the graph.  
+DAG - Directed Acyclic Graph  
+Acyclic Graph - graph w/o any cycles in it.  
+Output the reverse of the finishing times of each vertex.  
+Worked example CLRS p607.  
+When DFS processing a graph first encounter & starttime depicted by (n and finish time by n).  
+Entry & exit will be a well formed set of parentheses:   
 ```
 (s (z (y (x x) y) (w w) z) s) (t (v v) (u u) t)
 ```
@@ -2873,19 +2876,25 @@ Maze
 ### R14 - Depth-First Search (DFS)
 [vid](https://www.youtube.com/watch?v=C5SPsY72_CM&t=810s) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec14.pdf) ~ 
-Code:
+Code:[dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) ~ 
 Reading: 
 
 #### **Vid contents - **  
  time			| notes	
 | - | - |
-**0m** 			| Example
+**0-2m** 		| What to cover?
+**2m-3m** 		| Graphs, dict of adjacency lists
+**3m-6m** 		| Going over graph DS implementation
+**6m** 			| Going over DFS code
+**23m** 		| Edges
+**32m** 		| Undirected graph walk through
+**35m** 		| Edges in directed vs undirected graphs
+**39m** 		| Topological Sort - Directed Acyclic graphs only (DAGS only)
 
 
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+**39m - Topological Sort - Directed Acyclic graphs only DAGS only**  
+A > B - forward edge means B depends on A < this doesnt sound right to me . .    
+If B follows A then sure B depends on A!?? CHECK - CONFIRM
 
 
 
@@ -2894,11 +2903,11 @@ Any equation identities / topics for this lecture include context and uses for l
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 6: Shortest Paths
-### L15 - Single-source shortest paths problem	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading:
+### L15 - Single-Source Shortest Paths Problem  
+[vid](https://www.youtube.com/watch?v=Aa2sqUhIn-E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=15) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture15.pdf) ~ 
+Code: []() ~ 
+Reading: CLRS C24 p643-683
 
 #### **DATA STRUCTURE**  
 type:  
@@ -2918,9 +2927,10 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-### R15 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R15 - Shortest Paths
+[vid](https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39) ~ 
+[lect notes 1](https://courses.csail.mit.edu/6.006/fall11/rec/rec15.pdf) ~ 
+[lect notes 2](https://courses.csail.mit.edu/6.006/fall11/rec/rec15alt.pdf) ~ 
 Code:
 Reading: 
 
