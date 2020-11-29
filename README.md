@@ -2920,6 +2920,32 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0-4m** 		| Intro Motivation  
+**4m** 			| Dijkstra (non negative edges) O(VlgV + E)
+**6m** 			| Bellman Ford (+ve -ve negative edges) O(VE) = O(V^3)
+**8m**			| Notation
+
+
+**Graph G(V, E, W)**  
+V - vertices  
+E - Edges  
+W - Weights  
+
+**4m - Dijkstra (non negative edges) dominating factor is E (edges)**  
+O(VlgV + E)   
+E = O(V^2)  
+
+**6m - Bellman Ford (+ve -ve negative edges)**  
+O(VE) = O(V^3)  
+IE
+prefer Dijkstra . .    
+
+**8m - Notation**  
+Definition of path and its weight
+<p align="center"><img src="./tex/20a80fd8c7d2ce34ec514d8d4eb764e9.svg?invert_in_darkmode" align=middle width=447.2482641pt height=107.11198409999999pt/></p>
+1. Path p is the set of vertices 0 to k  
+2. (vertex i to vertex i+1) and edge is a member of E - set of edges where **i** is between 0 and k  
+3. the weight of the path w(p) is the sum of the weights w(vertex i to vertex i+1) of paths it contains  
 
 
 #### Example problem
