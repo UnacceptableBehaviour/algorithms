@@ -191,12 +191,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L15 - Single-Source Shortest Paths Problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
 	2. [R15 - Shortest Paths](#r15---shortest-paths)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
 	3. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
@@ -211,17 +207,29 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	6. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
+	6. [R17 - name](#r17---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	7. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	8. [R18 - name](#r18---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	2. [R19 - name](#r19---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 21. [Problem set 7 out](#problem-set-7-out)  
 	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
@@ -2923,7 +2931,16 @@ properties:
 **0-4m** 		| Intro Motivation  
 **4m** 			| Dijkstra (non negative edges) O(VlgV + E)
 **6m** 			| Bellman Ford (+ve -ve negative edges) O(VE) = O(V^3)
-**8m**			| Notation
+**8m**			| Notation 1
+**14m-18m**	| Notation 2 
+**18m**			| Example notes p3
+**24m**			| Predecessor relationship PI ∏ shorted current path d(V)
+**27m**			| -ve weights - 
+**32m**			| -ve cycles
+**37m**			| Relaxation - resolving to shortest paths
+**38m**			| Structure of shortest path algorithms (Single source / Brute force)
+**45m**			| Exponential graph example - notes p5
+**50m**			| Optimum substructure
 
 
 **Graph G(V, E, W)**  
@@ -2932,7 +2949,7 @@ E - Edges
 W - Weights  
 
 **4m - Dijkstra (non negative edges) dominating factor is E (edges)**  
-O(VlgV + E)   
+O(VlgV + E) - R15 18m49 you need a fancy DS for this running time O(ElgV) more practical running time.   
 E = O(V^2)  
 
 **6m - Bellman Ford (+ve -ve negative edges)**  
@@ -2943,15 +2960,29 @@ prefer Dijkstra . .
 **8m - Notation**  
 Definition of path and its weight
 <p align="center"><img src="./tex/20a80fd8c7d2ce34ec514d8d4eb764e9.svg?invert_in_darkmode" align=middle width=447.2482641pt height=107.11198409999999pt/></p>
-1. Path p is the set of vertices 0 to k  
-2. (vertex i to vertex i+1) and edge is a member of E - set of edges where **i** is between 0 and k  
-3. the weight of the path w(p) is the sum of the weights w(vertex i to vertex i+1) of paths it contains  
+
+1. Path p is the set of vertices 0 to k   
+2. (vertex i to vertex i+1) and edge is a member of E - set of edges where **i** is between 0 and k   
+3. the weight of the path w(p) is the sum of the weights w(vertex i to vertex i+1) of paths it contains   
+
+**14m-17m - Notation 2**   
 
 
-#### Example problem
+**18m - Example notes p3**  
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+
+**24m**			| Predecessor relationship**   
+d(V) - value inside the circle - current best path weight
+∏[V]  - Predecessor on the (current ) best path to V - ∏[S] = NIL
+
+**32m - Structure of shortest path algorithms**   
+
+
+
+**45m - Exponential graph example - notes p5**  
+
+
+
 
 ### R15 - Shortest Paths
 [vid](https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39) ~ 
@@ -2963,20 +2994,51 @@ Reading:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-16m**		| Adapting BFS to solve undirected graph w/ weighted nodes
+**16m**			| Running time of adapted BFS
+**20m**			| Exam Q - transforming a problem - graph layers to represent state odd/ even in this case
+**40m**			| Mulitlayered state representation - highway network - travel time different at time t
 
 
-#### Example problem
+**0m-16m - Adapting BFS to solve undirected graph w/ weighted nodes**  
+For a path of length 4 insert 3 fake nodes to simulate a distance of 4 w/ 4 edges.
+Do the same for all the paths then run BFS on the new graph.
+Take the output and reverse the process - remove fake nodes leaving the original nodes forming the path.
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+
+**16m - Running time of adapted BFS**  
+Dijkstra - O(VlgV + E) or O(ElgV) - R15 18m49  
+BF - O(V.E)  
+Adapted BFS - O(v)  
+
+
+**20m - Exam Q - transforming a problem - graph layers to represent state odd/ even in this case**  
+Tim & Jim traveling from A to E.  
+Constraints, they must taking it in turns driving and Tim must start and end the journey.  
+So shortest path starts with Tim and ends with Tim so must have an odd number of steps.  
+  
+Duplicate the graph labelling one set ODD & the other EVEN.  
+Use Dijkstra to find shortest path between A_even and E_odd  
+  
+Code this   
+
+
+
+**40m - Mulitlayered state representation - highway network - travel time different at time t**  
+Problem: Least amount of fuel to get from a to b. (Most ecological)  
+Fuel used to get from path a to be is a also a function of t (integer in minutes)  
+F(a,b,t) = fuel used. going from node a to b leaving at time t
+Also introduces the concept of waiting which uses no fuel
 
 
 
 ### L16 - Dijkstra	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=2E7MmKv0Y24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=16) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture16.pdf) ~ 
+[Dijkstra Shortest path Computerphile](https://www.youtube.com/watch?v=GazC3A4OQTE) ~ 
+[A* A star Search Algorithm](https://www.youtube.com/watch?v=ySN5Wnu88nE) ~ 
 Code:
-Reading:
+Reading: CLRS, Sections 24.2-24.3  
 
 #### **DATA STRUCTURE**  
 type:  
@@ -2989,6 +3051,45 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**2m-6m**	 	| Review - Shortest Paths in DAGs - Directed Acyclic Graphs
+**6m**		 	| Relaxation & its being SAFE
+**6m-17**		| Relaxation & its being SAFE proof - dubious 
+**17m-21m**	| DAGs (-ve edges OK cant have cycles) - SPECIAL CASE SHORTEST PATH
+**21m**			| DAG graph visual example
+**28m-41**	 	| Dijkstras Algorithm
+**41**		 	| Dijkstras Algorithm - walking example
+
+
+
+**2m - Review - Shortest Paths in DAGs - Directed Acyclic Graphs**  
+d[V] - shortest path to V from source S - number in the centre of the node in diagram!!  
+d[V] at S is 0, rest are initialised to infinity and are then relaxed AFAP (< Far)  
+∂(S,V) delta(S,V) - length of A shortest path from S to V  
+∏[V]  pi[V] - Predecessor on the (current ) best path to V - ∏[S] = NIL  
+w(u,v) - weight of path from u to v
+
+
+**7m - Relaxation step**   
+Relaxation step involves updating a d[V] with the value of a newly found shorter route.   
+AND  
+Updating its predecessor ∏[V] w/ the new predecessor nodes  
+  
+**7m10-17m - Relaxation SAFETY**   
+Converging on the delta value from the top and stopping at the minimum delta.
+Lemma: The relaxation algorithm maintains the invariant that d[v] ≥ ∂(s, v) for all v ∈ V
+
+**17m - DAGs (-ve edges OK - CANT have cycles) **   
+SPECIAL CASE (Graph w/o cycles -ve edges OK) SHORTEST PATH - O(V+E)
+1. Topologically sort the DAG
+2. Then relax in sorted order - Note a path from u to v in the sorted graph implies u preceeds v.
+Process O(V+E)
+What is this used for?? Getting shortest paths of DAG weighted graph w/o cycles -ve edges OK!
+
+**28m-41 - Dijkstras Algorithm**   
+Watch for an uncomplicated accurate walkthrough [Dijkstra Shortest path Computerphile](https://www.youtube.com/watch?v=GazC3A4OQTE) ~ developed into [A* A star Search Algorithm](https://www.youtube.com/watch?v=ySN5Wnu88nE)   
+
+Next iteration of processing is taken from the PRIORITY QUEUE (MinHeap) where nodes are inserted when found ordered by their d[node] from S
+
 
 
 #### Example problem
@@ -2997,7 +3098,6 @@ properties:
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 ### R16 - name
-COPY RECITATION TEMPLATE into further lectures
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
@@ -3006,6 +3106,9 @@ Reading:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-30m**	 	| Rubiks cube walk through
+**22m44**	 	| Inverse of permutation
+**29m**		 	| Starcraft
 
 
 #### Example problem
@@ -3039,6 +3142,23 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R17 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 ### L18 - Speeding up Dijkstra
@@ -3058,6 +3178,23 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R18 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
 
 
 #### Example problem
@@ -3096,6 +3233,24 @@ properties:
 19m30-23m - DP generalisation, running cost
 23m-29m Bottom-up DP algorithm (topological sort)
 29m-51m shortest paths, converting cyclic paths to acyclic & bellman-ford
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R19 - name
+COPY RECITATION TEMPLATE into further lectures
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
+
 
 #### Example problem
 
