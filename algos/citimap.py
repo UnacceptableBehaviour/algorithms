@@ -21,8 +21,8 @@ import pygame.freetype
 pygame.freetype.init()
 FONT = pygame.freetype.SysFont('Monaco', 10)
 
-window_size_X = 800 #640
-window_size_Y = 600 #480
+window_size_X = 1200
+window_size_Y = 900
 
 screen = pygame.display.set_mode((window_size_X,window_size_Y))
 pygame.display.set_caption("Random Map Generator")
@@ -118,26 +118,22 @@ def generate_graph(num_nodes, connections):
 	for n in range(num_nodes):
 		x = randint(window_size_X)
 		y = randint(window_size_Y)
-		nodes.append(Node(f"{x}_{y}",x,y))
-	
-	q = PriorityQueue()
+		p = randint(10000000)
+		nodes.append(Node(f"{x}_{y}",x,y,p))
+		
 	for from_node in nodes:
+		q = PriorityQueue()
 		for to_node in nodes:
 			if from_node == to_node: continue	
 			d = from_node.distance(to_node)
-			#print(f"d:{d}{d.__class__} - node:{to_node}{to_node.__class__}")
 			q.put( (d, to_node) )
-		print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S-0")
-		pprint(q)		
+		# links = int(math.ceil(math.log(from_node.population)))
+		# print(f"pop:{from_node.population} - lnk:{links}")
+		# for c in range(links):		# get nearest connections
 		for c in range(connections):		# get 6 nearest connections
 			a_node = q.get()
-			print(f"a_node: {a_node}")
 			from_node.adj.append(a_node)
-		while not q.empty():
-			print(f"r_node: {q.get()}")
-		print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - E-0")
 
-	#pprint(nodes)
 	return(nodes)	
 	
 	
