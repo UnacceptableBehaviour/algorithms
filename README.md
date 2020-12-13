@@ -179,43 +179,37 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - L13**](#vid-contents---l13)  
 		3. [Maths notes](#maths-notes)  
 	2. [R13 - Breadth-First Search (BFS)](#r13---breadth-first-search-bfs)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R13**](#vid-contents---r13)  
 	3. [L14 - Depth-first search (DFS), topological sorting](#l14---depth-first-search-dfs-topological-sorting)  
 		1. [**ADT - Algo - DFS - Θ(V+E)**](#adt---algo---dfs---ve)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L14**](#vid-contents---l14)  
 	4. [R14 - Depth-First Search (DFS)](#r14---depth-first-search-dfs)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R14**](#vid-contents---r14)  
 17. [Problem set 5 due](#problem-set-5-due)  
 18. [Problem set 6 out](#problem-set-6-out)  
 19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [L15 - Single-Source Shortest Paths Problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L15**](#vid-contents---l15)  
 	2. [R15 - Shortest Paths](#r15---shortest-paths)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R15**](#vid-contents---r15)  
 	3. [L16 - Dijkstra](#l16---dijkstra)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
+		1. [**ALGO - Dijkstra**](#algo---dijkstra)  
+		2. [**Vid contents - L16**](#vid-contents---l16)  
 		3. [Maths notes](#maths-notes)  
 	4. [R16 - name](#r16---name)  
-		1. [**Vid contents - **](#vid-contents---)  
+		1. [**Vid contents - R16**](#vid-contents---r16)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
 	5. [L17 - Bellman-Ford](#l17---bellman-ford)  
+		1. [**ALGO - Bellma-Ford**](#algo---bellma-ford)  
+		2. [**Vid contents - L17**](#vid-contents---l17)  
+	6. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	6. [R17 - name](#r17---name)  
-		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
-	7. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
-		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	8. [R18 - name](#r18---name)  
+	7. [R18 - name](#r18---name)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -2589,7 +2583,7 @@ Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/
 [bfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs_maze.py)  
 Reading: CLRS C22 p589-602 
 
-#### **Vid contents - **  
+#### **Vid contents - R13**  
  time			| notes	
 | - | - |
 **0-17m**		| PS5 help
@@ -2742,7 +2736,7 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L14**  
  time			| notes	
 | - | - |
 **1m-m**		| DFS using recursion to leave trail
@@ -2830,6 +2824,7 @@ Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/
 > cd algos
 > ./maze.py        # display random maze
 > ./dfs_maze.py    # create random maze & graph of maze run DFS on it label components
+                   # A component being each complete distinct subgraph
 Maze
    .123456789.123456789.123456789.123456789.123456789
  0 @@@@@@@@@@@@@   @   @   @@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@
@@ -2886,7 +2881,7 @@ Maze
 Code:[dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) ~ 
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R14**  
  time			| notes	
 | - | - |
 **0-2m** 		| What to cover?
@@ -2924,7 +2919,7 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L15**  
  time			| notes	
 | - | - |
 **0-4m** 		| Intro Motivation  
@@ -2990,7 +2985,7 @@ d(V) - value inside the circle - current best path weight
 Code:
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R15**  
  time			| notes	
 | - | - |
 **0m-16m**		| Adapting BFS to solve undirected graph w/ weighted nodes
@@ -3039,7 +3034,7 @@ Also introduces the concept of waiting which uses no fuel
 Code:
 Reading: CLRS, Sections 24.2-24.3  
 
-#### **DATA STRUCTURE**  
+#### **ALGO - Dijkstra**  
 type:  
 use cases: good for bla  
 queries:  
@@ -3047,7 +3042,7 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L16**  
  time			| notes	
 | - | - |
 **2m-6m**	 	| Review - Shortest Paths in DAGs - Directed Acyclic Graphs
@@ -3100,7 +3095,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R16**  
  time			| notes	
 | - | - |
 **0m-30m**	 	| Rubiks cube walk through
@@ -3121,7 +3116,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Code:
 Reading:
 
-#### **DATA STRUCTURE**  
+#### **ALGO - Bellma-Ford**  
 type:  
 use cases: good for bla  
 queries:  
@@ -3129,32 +3124,20 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L17**  
  time			| notes	
 | - | - |
+**0m-2m**	 	| Intro
+**2m-4m40**	| Summary of graph w/ -ve cycle & expectations of Bellman-Ford algo
+**4m40-10m**	| Summary generic shortest path algo & problems
+**10m50**		| Polynomial Time vs Exponential time top p3 in notes - CRITICAL - top p4 too!
+**11m50-15m**	| Bellman-Ford algo pseudocode - bottom p3 in notes
+**16m-18m**	| Bellman-Ford complexity O(VE + E) = O(VE)  
+**18m-30m**	| Proof part 1
+**30m-34m**	| Proof part 2 - corollary
+**34m-40m**	| Couple queries answered
+**40m-end**		| Finding longest paths in a graph / problems w/ cycles
 
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
-### R17 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading: 
-
-#### **Vid contents - **  
- time			| notes	
-| - | - |
-**40m**			| 
-
-
-#### Example problem
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
 
 
 
