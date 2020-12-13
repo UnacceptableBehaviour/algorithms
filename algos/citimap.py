@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 # 3.7
 
+from dijkstra import dijkstra, Node, Graph
+
 import sys
 import traceback			# traceback.print_stack(file=sys.stdout) to dump stack trace
 import time
@@ -22,120 +24,51 @@ pygame.freetype.init()
 FONT = pygame.freetype.SysFont('Monaco', 10)
 
 window_size_X = 1200
-window_size_Y = 900
+window_size_Y = 700
 
 screen = pygame.display.set_mode((window_size_X,window_size_Y))
 pygame.display.set_caption("Random Map Generator")
 
 animation_timer = pygame.time.Clock()
 
-
+# build citymap
 from queue import PriorityQueue
-from collections.abc import Iterable, Iterator
-from pprint import pprint
 
-class NodeIter(Iterator):
-	'''
-	Iterator to go through ALL graph vertices for DFS
-	'''
-	def __init__(self, vertices):
-		self._index = 0
-		self.vertices = vertices
 
-	def __iter__(self):				# use?
-		return self
-	
-	def __next__(self):
-		try:
-			return_item = self.vertices[self._index]
-			self._index += 1
-	
-		except IndexError:
-			raise StopIteration()
-
-		return return_item
-	
-
-class Graph(Iterable):
-	def __init__(self):
-		self.adj = {}
-
-	def add_edge(self, u, v):
-		#if self.adj[u] is None:
-		if u not in self.adj:
-			self.adj[u] = []
-			
-		if v not in self.adj[u]:
-			self.adj[u].append(v)
-	
-	def neighbors(self, v):
-		return self.adj[v]
-		
-	def __iter__(self) -> NodeIter:			#  -> NodeIter is optional guide to coder & toolchain
-		return NodeIter(list(self.adj.keys()))
-	
-	def __repr__(self):
-		node_str = f'{self.__class__.__name__}		  nodes - adjacency lists\n'
-		for n in self.adj.keys():
-			node_str += f"{n.name} ".rjust(22)
-			node_str += ','.join([item.name for item in self.adj[n]])
-			node_str += "\n"
-		return node_str
-
-class Node:
-	def __init__(self, name, x, y, population=1):
-		self.name = name
-		self.pos = (x, y)
-		self.adj = []
-		self.population = population
-
-	def distance(self, node):
-		x, y = self.pos
-		x1, y1 = node.pos
-		dx,dy = abs(x-x1), abs(y-y1)
-		return( int(math.sqrt((dx*dx)+(dy*dy))) )
-	
-	def __str__(self):
-		return(self.name)
-	
-	def __lt__(self, n):
-		return(self.population < n.population)
-
-	def __gt__(self, n):
-		return(self.population > n.population)
-	
-	def __le__(self, n):
-		return(self.population <= n.population)
-
-	def __ge__(self, n):
-		return(self.population >= n.population)
-
-	def __repr__(self):					# so networkx displays meaningful name on the node!
-		return self.name
-
-def generate_graph(num_nodes, connections):
+def generate_list_of_connected_nodes(num_nodes, connections):
 	nodes = []
 	for n in range(num_nodes):
 		x = randint(window_size_X)
 		y = randint(window_size_Y)
 		p = randint(10000000)
 		nodes.append(Node(f"{x}_{y}",x,y,p))
-		
+	# 					# O(V**2) - but we're jsut building test data.
+	# 					# could divide into regions for bigger data
 	for from_node in nodes:
 		q = PriorityQueue()
+		#print(f"outer {(from_node)}")		
 		for to_node in nodes:
-			if from_node == to_node: continue	
+			#print(f"inner A {from_node}-{to_node}")
+			if id(from_node) == id(to_node): continue
 			d = from_node.distance(to_node)
 			q.put( (d, to_node) )
+			#print(f"inner B {(d, to_node)}")
 		# links = int(math.ceil(math.log(from_node.population)))
 		# print(f"pop:{from_node.population} - lnk:{links}")
 		# for c in range(links):		# get nearest connections
 		for c in range(connections):		# get 6 nearest connections
-			a_node = q.get()
-			from_node.adj.append(a_node)
+			a_node_tuple = q.get()
+			from_node.adj.append(a_node_tuple[1])
 
 	return(nodes)	
-	
+
+def generate_graph_from_node_list(g, nodes):
+	for node in nodes:
+		for n in node.adj:
+			#distance, path_node = n
+			#g.add_edge(node, path_node, distance)
+			g.add_edge(node, n)
+			
 	
 def recentre(xy, n):
 	return (xy[0]+n/2,xy[1]+n/2)
@@ -143,11 +76,17 @@ def recentre(xy, n):
 def label_pos(xy,dx,dy):
 	return (xy[0]+dx,xy[1]+dy)
 
+def nearest_node(nodes, pos):
+	x,y = pos[0],pos[1]
+	mouse_node = Node(f"{x}_{y}",x,y)
+	q = PriorityQueue()
+	for to_node in nodes:		
+		d = mouse_node.distance(to_node)
+		q.put( (d, to_node) )
+		
+	return q.get()[1]
 
-def draw_window(win):
-	citi_dot = 6
-	
-	nodes = generate_graph(260, 5)
+def draw_node_list(win, nodes, citi_dot = 6):
 
 	# print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S-1")	
 	# for i in range(len(nodes)):		# get 6 nearest connections
@@ -160,11 +99,11 @@ def draw_window(win):
 	win.fill((0,0,0))
 	
 	for node in nodes:
-		for adj_tup in node.adj:
+		for adj_node in node.adj:
 			#print(f"adj_tup: {adj_tup.__class__}")
 			#pprint(adj_tup)
 			#                      COLOUR                 FROM                         TO
-			pygame.draw.line(win, (255,255,255), recentre(node.pos,citi_dot), recentre(adj_tup[1].pos,citi_dot))
+			pygame.draw.line(win, (255,255,255), recentre(node.pos,citi_dot), recentre(adj_node.pos,citi_dot))
 						
 		#               surface  colour        posision        size
 		pygame.draw.ellipse(win, (190,10,10), (node.pos,(citi_dot,citi_dot)) )			# render node
@@ -174,8 +113,23 @@ def draw_window(win):
 		FONT.render_to(win, label_pos(node.pos, 10,-2), node.name, (200, 50, 255))     	# render label
 		
 
+def draw_window(win):
+		
+	draw_node_list(win, nodes)
+
 
 endLoop = False
+start_node = None
+end_node = None
+end_next = False
+#nodes = generate_list_of_connected_nodes(260, 5)
+nodes = generate_list_of_connected_nodes(60, 5)
+g = Graph()
+generate_graph_from_node_list(g, nodes)
+print("GRAPH CREATED - S")
+pprint(g)
+print("GRAPH CREATED - E")
+#sys.exit(0)
 
 while not endLoop:
 		
@@ -185,7 +139,19 @@ while not endLoop:
 		
 		if e.type == pygame.MOUSEBUTTONUP:
 			pos = pygame.mouse.get_pos()
-			bla = input("Check graph - GOOD?")
+			mouse_node = nearest_node(nodes, pos)
+			print(f"pos: {pos} - {mouse_node}")
+			if end_next == False:
+				start_node = mouse_node
+				end_next = True
+				print(f"START NODE SELECTED: {start_node}")
+			else:
+				end_node = mouse_node 
+				end_next = False
+				print(f"END NODE SELECTED: {end_node}")
+				route = dijkstra(g, start_node, end_node)
+				
+			
 		
 		if e.type == pygame.QUIT:
 			endLoop = True
@@ -195,7 +161,8 @@ while not endLoop:
 			window_size_Y = e.h
 		
 	# draw scene
-	draw_window(screen)
+	#draw_window(screen)
+	draw_node_list(screen, nodes)
 
 	# limit to 10 FPS
 	animation_timer.tick(10) # ~ a_timer.wait(100ms)

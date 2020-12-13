@@ -9,23 +9,160 @@
 # https://snap.stanford.edu/data/
 
 from collections import deque	# simple queue no t prioritised
-from Queue import PriorityQueue
+from queue import PriorityQueue
+from collections.abc import Iterable, Iterator
+import math
+
+from pprint import pprint
+
+class NodeIter(Iterator):
+	'''
+	Iterator to go through ALL graph vertices for DFS
+	'''
+	def __init__(self, vertices):
+		self._index = 0
+		self.vertices = vertices
+
+	def __iter__(self):				# use?
+		return self
+	
+	def __next__(self):
+		try:
+			return_item = self.vertices[self._index]
+			self._index += 1
+	
+		except IndexError:
+			raise StopIteration()
+
+		return return_item
+	
+
+class Graph(Iterable):
+	def __init__(self):
+		self.adj = {}
+
+	#def add_edge(self, u, v, distance):
+	def add_edge(self, u, v):
+		if u not in self.adj:
+			self.adj[u] = []
+			
+		if v not in self.adj[u]:
+			#self.adj[u].append((distance,v)) #TODO-49 comment in
+			self.adj[u].append(v)
+	
+	def neighbors(self, u):
+		return self.adj[u]
+		
+	def __iter__(self) -> NodeIter:			#  -> NodeIter is optional guide to coder & toolchain
+		return NodeIter(list(self.adj.keys()))
+	
+	def __repr__(self):
+		node_str = f'{self.__class__.__name__}		  nodes - adjacency lists\n'
+		for n in self.adj.keys():
+			node_str += f"{n.name} ".rjust(22)
+			#node_str += ','.join([item[1].name for item in self.adj[n]]) #TODO-49 comment in
+			node_str += "\n"
+		return node_str
+
+class Node:
+	def __init__(self, name, x, y, population=1):
+		self.name = name
+		self.pos = (x, y)
+		self.adj = []
+		self.population = population
+		self.pi = None						# predecessor node - refered to as symbol PI in notes
+		self.dist_S_to_node = math.inf		# delta - shortest route - relaxation data
+
+	def distance(self, node):
+		pprint(node)
+		x, y = self.pos
+		x1, y1 = node.pos
+		dx,dy = abs(x-x1), abs(y-y1)
+		return( int(math.sqrt((dx*dx)+(dy*dy))) )
+	
+	def __str__(self):
+		return f"{self.name} - {self.dist_S_to_node}"
+	
+	def __lt__(self, n):
+		return(self.dist_S_to_node < n.dist_S_to_node)
+
+	def __gt__(self, n):
+		return(self.dist_S_to_node > n.dist_S_to_node)
+	
+	def __le__(self, n):
+		return(self.dist_S_to_node <= n.dist_S_to_node)
+
+	def __ge__(self, n):
+		return(self.dist_S_to_node >= n.dist_S_to_node)
+
+	# def __eq__(self, n):
+	# 	return(self.dist_S_to_node == n.dist_S_to_node)
+
+	def __repr__(self):					# so networkx displays meaningful name on the node!
+		return f"{self.name} - {self.dist_S_to_node}"
+
 
 # dijsktra pseudo code
-# from S0
-# enque addacent nodes input min heap (riority Q bytearray distance)
-# for node in Q - Q changes use get min
-# while nextNode = getmin != None:
-# 	for node in nextNode[adjacent]:
-# 		d = Compute distance
-# 		enque node by distance if
-# 			node isinstance not input queue ord distance is less than node input queue
+# data structures
+# graph - hold the vertices w/ edge weights
+# PriorityQueue - holds all nodes to be processed prioritising by distance from S
+# dict - holds vertices already visited
+
+
+
+# g - graph
+# q - processing priorityQ
+# S - new source -in path
+# parent - dict of parent paths
+# def djk_processQ(g,q,S,parent):
+# 	distanceS, nodeS = S
+# 	for adj_node in g.neighbors(nodeS):					# start w/ immediate neighbours
+# 		distanceAdj, nodeAdj = adj_node
+# 		q.put((distanceS+distanceAdj, nodeAdj))			# reQue node with added distance
+# 		if nodeS not in parent:
+# 			parent[nodeAdj] = nodeS
+# 		
 
 # g - graph 
 # S - source node
 # T - Target node
-def dka(g,S,T):
-	pass
+def dijkstra(g,S,T):
+	print(f"dijkstra from:{S} to:{T}")	
+	path = []
+	visited = {}
+	
+	q = PriorityQueue()
+	S.dist_S_to_node = 0					# set start node distance to self
+	q.put(S)
+	visited[S] = S.dist_S_to_node	
+	
+	while T not in visited:
+		node = q.get()		
+		for adj_node in node.adj:			
+			# calc delta from source to adjacent
+			path_weight = node.dist_S_to_node + node.distance(adj_node)
+			
+			# if its smaller update - relax
+			if path_weight < adj_node.dist_S_to_node:
+				adj_node.dist_S_to_node = path_weight
+				adj_node.pi = node
+				q.put(adj_node)
+		
+			visited[adj_node] = adj_node.dist_S_to_node
+		
+	
+	path.append(T)
+	parent = T.pi
+	while S not in path:
+		path.append(parent)
+		parent = parent.pi
+	
+	
+	print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - S-D1")	
+	print(path)
+	print("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - E-D1")	
+	
+	return path
 			
 # 			
 
@@ -58,7 +195,7 @@ if __name__ == '__main__':
 	q.put(("mixed chips", 469))
 	
 	print("\n\nPriorityQueue() - alphabetical\n")
-	while not  q.empty():
+	while not q.empty():
 		print(q.get())
 		
 			
@@ -73,5 +210,27 @@ if __name__ == '__main__':
 	q.put((469, "mixed chips"))
 	
 	print("\n\nPriorityQueue() - by cals\n")
-	while not  q.empty():
-		print(q.get())		
+	while not q.empty():
+		print(q.get())
+		
+	q = PriorityQueue()
+	n = Node("a", 20,30)
+	n.dist_S_to_node = 10
+	q.put(n)
+	n = Node("b", 20,30)
+	n.dist_S_to_node = 1
+	q.put(n)
+	n = Node("c", 20,30)
+	n.dist_S_to_node = 100
+	q.put(n)
+	n = Node("d", 20,30)
+	n.dist_S_to_node = 19
+	q.put(n)
+	n = Node("e", 20,30)
+	n.dist_S_to_node = 99
+	q.put(n)
+	n = Node("i", 20,30)
+	q.put(n)
+	print("\n\nPriorityQueue() - node distand from source\n")
+	while not q.empty():
+		print(q.get())	
