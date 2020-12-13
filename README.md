@@ -196,8 +196,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		3. [Maths notes](#maths-notes)  
 	4. [R16 - name](#r16---name)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
@@ -3079,11 +3078,11 @@ Converging on the delta value from the top and stopping at the minimum delta.
 Lemma: The relaxation algorithm maintains the invariant that d[v] ≥ ∂(s, v) for all v ∈ V
 
 **17m - DAGs (-ve edges OK - CANT have cycles) **   
-SPECIAL CASE (Graph w/o cycles -ve edges OK) SHORTEST PATH - O(V+E)
-1. Topologically sort the DAG
-2. Then relax in sorted order - Note a path from u to v in the sorted graph implies u preceeds v.
-Process O(V+E)
-What is this used for?? Getting shortest paths of DAG weighted graph w/o cycles -ve edges OK!
+SPECIAL CASE (Graph w/o cycles -ve edges OK) SHORTEST PATH - O(V+E)  
+1. Topologically sort the DAG  
+2. Then relax in sorted order - Note a path from u to v in the sorted graph implies u preceeds v.  
+Process O(V+E)  
+What is this used for?? Getting shortest paths of DAG weighted graph w/o cycles -ve edges OK!  
 
 **28m-41 - Dijkstras Algorithm**   
 Watch for an uncomplicated accurate walkthrough [Dijkstra Shortest path Computerphile](https://www.youtube.com/watch?v=GazC3A4OQTE) ~ developed into [A* A star Search Algorithm](https://www.youtube.com/watch?v=ySN5Wnu88nE)   
@@ -3092,14 +3091,12 @@ Next iteration of processing is taken from the PRIORITY QUEUE (MinHeap) where no
 
 
 
-#### Example problem
-
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 ### R16 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=oRpERQA4Vik&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=40) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec16.pdf) ~ 
 Code:
 Reading: 
 
@@ -3119,8 +3116,8 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ### L17 - Bellman-Ford	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture17.pdf) ~ 
 Code:
 Reading:
 
