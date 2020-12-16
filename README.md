@@ -3142,8 +3142,8 @@ properties:
 
 
 ### L18 - Speeding up Dijkstra
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=CHvQ3q_gJ7E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=18) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture18.pdf) ~ 
 Code:
 Reading:
 
@@ -3158,9 +3158,50 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-4m**	 	| Intro, **ps6, bidirectional search** 
+**4m-6m**	 	| basic Dijkstra pseudo code review 
+**7m30**	 	| Bi-directional search
+**11m40**	 	| df[u] & db[u] terminology - distance forward & backward
+**11m50**	 	| Qf[u] & Qb[u] terminology - PriortyQ forward & backward
+**28m**		 	| Constructing SHORTEST path problems notes p5 for diagram
+**42m**		 	| Constructing SHORTEST path SOLUTION
+**46m**		 	| Goal directed search & A*
 
 
-#### Example problem
+
+**7m30 - Bi-directional search**  
+Essentially:  
+searching from S > t (source to target)  
+and from t > S and look for frontier collision  
+Requires Π[v] (predecessor node) from **S** and from **t** for traversal in both directions,   
+and obviously shortest path info too.  
+for each node  
+df[u] & db[u] - distance forward & backward  
+fer each search  
+Qf[u] & Qb[u]  - PriortyQ forward & backward  
+Then detecting the collision of the frontier by looking for a node that has bean extracted from both PriorityQs  
+  
+**NOTE**  
+Concatenate subpaths to that node from each direction:  
+S > node + node > t  
+is NOT the way to get the shortest path!  
+
+**28m - Constructing SHORTEST path:**  
+**42m - Constructing SHORTEST path SOLUTION**  
+S > node + node > t gives a starting point for comparison  
+Then you need to Look in the PriQs for nodes that appear in both and check to see if an paths are shorter.
+Check this, doesnt seem particularly rigorous!?
+
+**46m -  Goal directed search & A* **  
+Used combination of path weight and a guiding metric to prefer paths going towards the goal.
+EG in a map route, could be weight + distance to goal: [Computerphile A* - 14m vid](https://www.youtube.com/watch?v=ySN5Wnu88nE&t=3s)  
+Very
+
+#### Example problem  
+Add code.
+
+
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
