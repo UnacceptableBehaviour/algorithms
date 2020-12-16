@@ -50,6 +50,10 @@ class Graph(Iterable):
 			#self.adj[u].append((distance,v)) #TODO-49 comment in
 			self.adj[u].append(v)
 	
+	def reset_all_nodes_distance_from_source_to_inf(self):
+		for node,adj_list in self.adj.items():
+			node.dist_S_to_node = math.inf					
+	
 	def neighbors(self, u):
 		return self.adj[u]
 		
@@ -126,7 +130,8 @@ class Node:
 # g - graph 
 # S - source node
 # T - Target node
-def dijkstra(g,S,T):
+# vertex_list - debug / show search
+def dijkstra(g,S,T,vertex_list):
 	print(f"dijkstra from:{S} to:{T}")	
 	path = []
 	visited = {}
@@ -138,15 +143,18 @@ def dijkstra(g,S,T):
 	
 	while T not in visited:
 		node = q.get()		
-		for adj_node in node.adj:			
+		for adj_node in node.adj:
 			# calc delta from source to adjacent
 			path_weight = node.dist_S_to_node + node.distance(adj_node)
+			
+			print(f"f:{node}-[{node.dist_S_to_node}] > t:{adj_node}-[{adj_node.dist_S_to_node}] PW:{path_weight} < ADJ_S:{adj_node.dist_S_to_node} = {path_weight < adj_node.dist_S_to_node}")
 			
 			# if its smaller update - relax
 			if path_weight < adj_node.dist_S_to_node:
 				adj_node.dist_S_to_node = path_weight
 				adj_node.pi = node
 				q.put(adj_node)
+				vertex_list.append([node, adj_node])
 		
 			visited[adj_node] = adj_node.dist_S_to_node
 		
@@ -233,4 +241,19 @@ if __name__ == '__main__':
 	q.put(n)
 	print("\n\nPriorityQueue() - node distand from source\n")
 	while not q.empty():
-		print(q.get())	
+		print(q.get())
+		
+	pairs = [1,2,3,4,5,6,7,8,9]
+	print("\n\nIterating a list as consecutive pairs. . .")
+	print(f"list = {pairs}")
+	
+	def pairwise(iterable):		# function: generator
+		it = iter(iterable)
+		a = next(it, None)		# retrieve next item in iterable - or a = next(it) raises StopIteration 
+	
+		for b in it:			# continue iterating
+			yield (a, b)        # yield a tuple 
+			a = b
+	
+	for tup in pairwise(pairs):
+		print(tup)
