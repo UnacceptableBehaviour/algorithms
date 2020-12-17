@@ -218,8 +218,6 @@ while not endLoop:
 				end_next = False
 				print(f"END NODE SELECTED: {end_node}")
 				route = dijkstra(g, start_node, end_node, checked_edges)
-				#draw_node_list(screen, nodes)
-				#draw_node_list(screen, route, 12, route_cols)
 			
 		
 		if e.type == pygame.QUIT:
@@ -237,6 +235,9 @@ while not endLoop:
 		draw_node_list(screen, nodes)
 		for edge in checked_edges:
 			plot_route_from_node_list(screen, edge, 1, edge_list_cols)
+		# TODO the first distance is 0 means WRONG PATH length info used
+		# the path length should match (and exactly over write the yellow path)
+		# but they mistmatch
 		plot_route_from_node_list(screen, route, 12, route_cols)
 		route = None
 		g.reset_all_nodes_distance_from_source_to_inf()
