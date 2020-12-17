@@ -196,8 +196,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**ALGO - Dijkstra**](#algo---dijkstra)  
 		2. [**Vid contents - L16**](#vid-contents---l16)  
-		3. [Maths notes](#maths-notes)  
-	4. [R16 - name](#r16---name)  
+		3. [Example problem - autogen map data to feed dijkstra](#example-problem---autogen-map-data-to-feed-dijkstra)  
+		4. [Maths notes](#maths-notes)  
+	4. [R16 - Rubiks Cube, StarCraft Zero](#r16---rubiks-cube-starcraft-zero)  
 		1. [**Vid contents - R16**](#vid-contents---r16)  
 		2. [Example problem](#example-problem)  
 		3. [Maths notes](#maths-notes)  
@@ -209,10 +210,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	7. [R18 - name](#r18---name)  
-		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+	7. [R18 - Quiz 2 Review](#r18---quiz-2-review)  
+		1. [**Vid contents - Q2 review**](#vid-contents---q2-review)  
+		2. [Maths notes](#maths-notes)  
 20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
@@ -2336,7 +2336,7 @@ Reading:
 2. Simplify the problem - break into sub problems, do some pre processing on data, set one of the inputs to be contant, including some assumptions about the data to minimise special cases.  
 3. Look for similar problems - leverage elements or approaches used in those problems.  
 4. Delegate the work - use recursion, dividing the problem delegating the subproblems to recursive function calls. If you cant figure out how to solve a problem, see if you can figure out how to solve only the last bit of it. Then see if you can use recursion to solve the rest of it.
-5. Design according to the runtime - to be able to do this we need a list of algo vs runtime & recurrence relations - crib sheet
+5. Design according to the runtime - to be able to do this we need a list of algo vs runtime & recurrence relations - CHEAT SHEET
 
 
 Exersize
@@ -3085,11 +3085,42 @@ Watch for an uncomplicated accurate walkthrough [Dijkstra Shortest path Computer
 Next iteration of processing is taken from the PRIORITY QUEUE (MinHeap) where nodes are inserted when found ordered by their d[node] from S
 
 
+#### Example problem - autogen map data to feed dijkstra
+```
+From:
+./citimap.py		# create a random set out cities connect by routes to present to ./dijkstra.py
+
+S = source node
+Π[v] = predecessor node
+w(v1,v2) = sum of edge weights from v1 to v2
+
+Somethings up Relaxation Step not properly implemented.
+Paths being overwritten creating loops
+See generic pseudo code L17 top p2
+	Each node should start w/ distance from S set to math.inf
+	Predecessor node Π[v] (pi = symbol for predecessor) set to NIL / None
+
+Distance from S at S is obviously 0!	Since its the source node
+
+Iterate through all outbound nodes and only update the vertex if this route is shorter than the a previous routes update.
+	Note nodes / vertices may have been reached by another route and may already have a bette path
+	in which case dont update!
+
+Only on and update(shorter path found) add/update the node to/in the priorityQ - - - I think? this the bit Im hazy on
+	PriorityQ no support update? < CHECK if this will 
+
+Once working - What are transformers in AI?
+```
+Here there is clearly a shorter path. Path length 86 only requires one more step to **t.**
+PriorityQ issue - SB expanding path length 86
+
+![dijkstra - autogen map - bug hunt](/Users/simon/a_syllabus/lang/algorithms/algorithms/formulae/dijkstra_Relaxation_bug.png)
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-### R16 - name
+### R16 - Rubiks Cube, StarCraft Zero
 [vid](https://www.youtube.com/watch?v=oRpERQA4Vik&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=40) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec16.pdf) ~ 
 Code:
@@ -3206,19 +3237,57 @@ Add code.
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-### R18 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R18 - Quiz 2 Review
+[vid](https://www.youtube.com/watch?v=sPuazUPiV1k&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=41) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec18.pdf) ~ 
 Code:
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - Q2 review**  
  time			| notes	
 | - | - |
-**40m**			| 
+**0m-5m**		| Covering: Numerics . . see below
+**5m-8m**		| Why you might get different shortest routes bast on relaxation order
+**8m **			| Numerics: Newtons method NM, choosing good start function  
+**19m **		| Numerics: NM, avoiding fraction, shifting, 
+**23m **		| Numerics: NM, estimating initial guess, order of magnitude 
+**25m **		| Numerics: NM, using binary search to generate first guess - home in on approximation
+**27m **		| Numerics: NM, stop when approximation match - CONVERGED
+**30m **		| Numerics: NM, speed of convergence.
+**30m-35m**	| Numerics: NM, student Q&A - good summary
+**35m- **		| Graph tranformation - 2d graphs, layers R15
+**45m- **		| Graph tranformation - running complexity
+**47m- **		| Graph tranformation - expressing constraints
+**51m- **		| BFS & DFS use case summary L13, R13, L14
+**57m- **		| DFS edge types L14
 
 
-#### Example problem
+**0m-5m - Covering:**   
+Why you might get different shortest routes bast on relaxation order
+Graph transformation - converting and complicated problem into a shortest route problem to solve it.
+Numerics: Karatsuba  
+Numerics: Newtons method - FORMULA SB on CHEAT SHEET
+DFS Edge types  
+Transformations & Layers  
+
+**8m **		| Numerics: Newtons method, choosing good start function  
+
+Add formula for Newtons method & step summary, rationale behind each step
+
+B - base
+d - digits of precision
+
+**23m - estimating initial guess, order of magnitude**  
+
+
+**35m - Graph tranformation**  
+Path from S > t
+Coloured edges have associate cost (5) for switching for on to the other
+
+
+**51m - BFS & DFS use case summary**  
+CHEAT SHEET
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
