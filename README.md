@@ -219,26 +219,37 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [R19 - name](#r19---name)  
-		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+	2. [R19 - Dynamic Programming: Crazy Eights, Shortest Path](#r19---dynamic-programming-crazy-eights-shortest-path)  
+		1. [**Vid contents - R19**](#vid-contents---r19)  
+		2. [Maths notes](#maths-notes)  
 21. [Problem set 7 out](#problem-set-7-out)  
 	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
+	2. [R20 - name](#r20---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	3. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	3. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
+	4. [R21 - name](#r21---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	5. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	6. [R22 - name](#r22---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 22. [Problem set 7 due](#problem-set-7-due)  
 23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
@@ -246,11 +257,19 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
-	2. [24 - Algorithms research topics](#24---algorithms-research-topics)  
+	2. [R23 - name](#r23---name)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
+	3. [24 - Algorithms research topics](#24---algorithms-research-topics)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
+	4. [R24 - Final Exam review](#r24---final-exam-review)  
+		1. [**Vid contents - **](#vid-contents---)  
+		2. [Example problem](#example-problem)  
+		3. [Maths notes](#maths-notes)  
 24. [Glossary of terms](#glossary-of-terms)  
 25. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
@@ -3261,6 +3280,7 @@ Reading:
 **51m- **		| BFS & DFS use case summary L13, R13, L14
 **57m- **		| DFS edge types L14
 
+COMPLETE EXs in Notes
 
 **0m-5m - Covering:**   
 Why you might get different shortest routes bast on relaxation order
@@ -3299,8 +3319,9 @@ Any equation identities / topics for this lecture include context and uses for l
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 7: Dynamic Programming
 ### L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=OQ5jsbhAv_M&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=19) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture19.pdf) ~ 
+[dynamic prog lect18 spring 2011 - fibonacci](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
 Code:
 Reading:
 
@@ -3315,34 +3336,113 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0-5m**			| Introduction to Dynamic Programming (DP) recursion + memoization + guessing
+**5m-11m20**		| Solving Fibonacci w/ Memoization - naive version
+**11m20-15m40**	| Memoized version - running cost Θ(n)
+**15m40**			| running cost Θ(n) - **rule 30m49 flashback** for acyclic sub problems
+**19m30-23m**		| DP generalisation, running cost
+**23m-29m**		| Bottom-up DP algorithm (topological sort)
+**29m-51m**		| shortest paths, converting cyclic paths to acyclic & bellman-ford
+**35m**				| shortest paths - GUESSING 
 
-0-5m - Introduction to Dynamic Programming (DP) recursion + memoization + guessing
-5m-11m20 - Solving Fibonacci w/ Memoization - naive version
-11m20-15m40 - Memoized version
-15m40- running cost Θ(n) - **rule 30m49 flashback** for acyclic sub problems
-19m30-23m - DP generalisation, running cost
-23m-29m Bottom-up DP algorithm (topological sort)
-29m-51m shortest paths, converting cyclic paths to acyclic & bellman-ford
+
+**0-5m** - Introduction to Dynamic Programming (DP) recursion + memoization + guessing**  
+Wikipedia definition:  
+**Dynamic programming** is both a  method and a computer programming method. The method was developed by  in the 1950s and has found applications in numerous fields, from  to .
+In both contexts it refers to simplifying a complicated problem by breaking it down into simpler sub-problems in a  manner. While some decision problems cannot be taken apart this way, decisions that span several points in time do often break apart recursively. Likewise, in computer science, if a problem can be solved optimally by breaking it into sub-problems and then recursively finding the optimal solutions to the sub-problems, then it is said to have .
+If sub-problems can be nested recursively inside larger problems, so that dynamic programming methods are applicable, then there is a relation between the value of the larger problem and the values of the sub-problems. In the optimization literature this relationship is called the **[Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation).**
+
+
+**5m-11m20 - Solving Fibonacci w/ Memoization - naive version**  
+8m15 Recurrence p2 notes - revises Fibonacci recurrence
+
+
+**11m20-15m40 - Memoized version**  
+Main takeaway here is that running cost described as a tree once a particular value has been calculated it can be retrieved from a dict.
+Resulting a in the main cost being the first time the memoization table is filled with data.
+The rest of the calls are essentially dict lookups. so for fib(n) the runing time O(n) - linear
+```
+add code from dyn_00_fib.py
+```
+
+**15m40 - running cost Θ(n) - **rule 30m49 flashback** for acyclic sub problems**  
+
+
+**19m30-23m - DP generalisation, running cost**  
+**CORE CONCEPT**  
+RECURSION + MEMOIZATION + GUESSING
+Split the problem into memoized subproblems . .   
+and then if you need the solution to that problem again **you dont need to recompute the solution!**  
+**COST**  
+time  = # of subproblems x time per subproblem
+Recursions are **NOT** counted because memoization removes the cost of repeat computation.
+
+ONLY WORKS ON DAGS? ACYCLIC GRAPHS
+To fix this create layered graph - graph transform - 48m
+
+
+**23m-29m - Bottom-up DP algorithm (topological sort)**  
+Dont get it - its a for loop?
+Add timing info from dyn_00_fib.py
+Notes on Space - see p3 notes
+
+**29m-51m - shortest paths, converting cyclic paths to acyclic & bellman-ford**  
+Using graph transform - code example - code example in R19
+See R19 notes too
+
+**35m - shortest paths - GUESSING**   
+
 
 #### Example problem
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
-### R19 - name
-COPY RECITATION TEMPLATE into further lectures
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=42
+
+### R19 - Dynamic Programming: Crazy Eights, Shortest Path
+[vid](https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=42) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec19.pdf) ~ 
+[dynamic prog lect18 spring 2011 - crazy eights](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
 Code:
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R19**  
  time			| notes	
 | - | - |
-**40m**			| 
+**0m-9m30**		| Crazy Eights [crazy eights - L18 ](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf)
+**9m30-20m40**		| Computing shortest paths on a DAG
+**19m**				| Computing shortest paths on a DAG - complexity + Crzy8 complexity
+**19m30**			| Crzy8 complexity
+**20m**				| Options: Generalised Pseudocode, Memoization, Dealing w// cycles, another DP
+**22m-28m**		| Manhatten lattice
+**28m**				| Q&A - develop Manhatten lattice solution, topologically sorted so no memoization
+**32m**				| Q: what is dynamic programming - Optimal substructure
+**37m-48m**		| Cycles - graph transforms used to remove cycle + complexity
+**48m**				| Q&A about cycles
+
+**9m30 - Computing shortest paths on a DAG
+Break the graph into subgraphs and work out their weights.
+For each node it has a number of incoming nodes each with and associated weight.
+Shortest path looks at their weights and chooses the minimum weight.
+For the target node this DEPENDS on the PRECEDING nodes and the same for them until you reach the source.
+The dependency requires the the nodes be processed in the order the edges progress so a topological sort is required before processing starts.
+(Missing info will cause the recursion to fail)
+Every node & edge must be processed giving O(V + E) + topological sort which he appears to gloss over!!
 
 
-#### Example problem
+
+**22m**				| Manhatten lattice
+Nodes labelled col,row (n * m) so top left 00, top right 5,1, bottom left 1,4, bottom right 5,4
+
+31m you dont need memoization if you know the topoplogical order of the graph - explain.
+
+
+**32m - what is dynamic programming - Optimal substructure**  
+Optimal substructure
+
+51m - devils in the detail question - exmplain
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3375,6 +3475,24 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R20 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 
 
 
@@ -3402,6 +3520,24 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R21 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 
 
 ### L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
@@ -3427,6 +3563,25 @@ properties:
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
+
+
+### R22 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
 
 
 
@@ -3458,6 +3613,24 @@ properties:
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
+### R23 - name
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+
 
 
 ### 24 - Algorithms research topics
@@ -3477,6 +3650,23 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+
+
+#### Example problem
+
+#### Maths notes  
+Any equation identities / topics for this lecture include context and uses for later reference  
+
+### R24 - Final Exam review
+[vid]()  
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+Code:
+Reading: 
+
+#### **Vid contents - **  
+ time			| notes	
+| - | - |
+**40m**			| 
 
 
 #### Example problem
