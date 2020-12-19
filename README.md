@@ -217,17 +217,19 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		3. [Example problem - Fibonacci](#example-problem---fibonacci)  
+		4. [Example problem - Shortest Path](#example-problem---shortest-path)  
+		5. [Maths notes](#maths-notes)  
 	2. [R19 - Dynamic Programming: Crazy Eights, Shortest Path](#r19---dynamic-programming-crazy-eights-shortest-path)  
 		1. [**Vid contents - R19**](#vid-contents---r19)  
-		2. [Maths notes](#maths-notes)  
 21. [Problem set 7 out](#problem-set-7-out)  
-	1. [L20 - Parent pointers; text justification, perfect-information blackjack](#l20---parent-pointers-text-justification-perfect-information-blackjack)  
+	1. [L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers](#l20---dynamic-programming-ii-text-justification-perfect-information-blackjack-parent-pointers)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		2. [**Vid contents - L20**](#vid-contents---l20)  
+		3. [Example problem - Fibonacci](#example-problem---fibonacci)  
+		4. [Example problem - Shortest Path](#example-problem---shortest-path)  
+		5. [Example problem - Text Justification 17m-35m](#example-problem---text-justification-17m-35m)  
+		6. [Example problem - perfect information Blackjack](#example-problem---perfect-information-blackjack)  
 	2. [R20 - name](#r20---name)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
@@ -3393,7 +3395,14 @@ See R19 notes too
 **35m - shortest paths - GUESSING**   
 
 
-#### Example problem
+#### Example problem - Fibonacci 
+dyn_00_fib.py
+
+#### Example problem - Shortest Path 
+
+
+
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3435,25 +3444,22 @@ Every node & edge must be processed giving O(V + E) + topological sort which he 
 **22m**				| Manhatten lattice
 Nodes labelled col,row (n * m) so top left 00, top right 5,1, bottom left 1,4, bottom right 5,4
 
-31m you dont need memoization if you know the topoplogical order of the graph - explain.
+31m you dont need memoization if you know the topological order of the graph - explain.
 
 
 **32m - what is dynamic programming - Optimal substructure**  
 Optimal substructure
+Technique to solve optimisation problems maximise or minimise something.
+Also see L20
 
-51m - devils in the detail question - exmplain
-
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
+51m - devils in the detail question - explain
 
 
 ## Problem set 7 out
 
-### L20 - Parent pointers; text justification, perfect-information blackjack	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers  
+[vid](https://www.youtube.com/watch?v=ENyox7kNKeY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=20) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture20.pdf) ~ 
 Code:
 Reading:
 
@@ -3465,15 +3471,58 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L20**  
  time			| notes	
 | - | - |
+**0-6m**		| Lecture overview
+**6m-17m**		| 6m Dynamic programming overview - 5 steps - Fibonacci / Shortest Path 
+**17m-35m**	| Text justification
+**35m**		| Parent Pointer -  remember which guess was best
 
 
-#### Example problem
+**6m Dynamic programming overview - 5 steps (not necessarily sequential!)**  
+1. define sub problems 			- [count # subproblems]  
+2. guess (part of the solution)		- [count # choices]  
+3. relate sub problem solutions	- [compute time/subproblem]  
+4. recurse & memoize			- [time = time/subproblem * # subproblems]  
+or build DP table BOTTOM-UP  
+ - check subproblems acyclic / topological order  
+5. Solve original problem = subproblem  
+OR by combining sub problem solutions.	- [extra time]  
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+3. this 
+5 is about expressing the problem as a directed acyclic graph DAG, compute the shortest path w/ bell-ford.   
+Here the skill is in expressing the problem as a DAG.  
+  
+Note: R19 - 31m you dont need memoization if you know the topological order of the graph - explain.  
+
+
+#### Example problem - Fibonacci  
+dyn_00_fib.py  
+Goes over the steps 6m-17m
+
+#### Example problem - Shortest Path  
+dyn_01_shortest_paths.py  
+Goes over the steps 6m-17m  
+15m for k on the outside / for loop over V on the inside reverse does not work!   
+
+#### Example problem - Text Justification 17m-35m 
+Use DP rather than greedy.(Whole page strategy rather than line by line)
+badness of line = (width page - width words)^3   < the more space really highlighted by the cubedness!
+badness of line = math.inf if teh words dont fit
+Problem is to **minimise the sum of the badnesses of the lines.** (Whole page strategy rather than line by line)
+1.
+2.
+3
+4.
+5.  
+Code: dyn_02_text_just.py  
+
+
+#### Example problem - perfect information Blackjack
+
+
+
 
 ### R20 - name
 [vid]()  
