@@ -229,11 +229,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		3. [Example problem - Fibonacci](#example-problem---fibonacci)  
 		4. [Example problem - Shortest Path](#example-problem---shortest-path)  
 		5. [Example problem - Text Justification 17m-35m](#example-problem---text-justification-17m-35m)  
-		6. [Example problem - perfect information Blackjack](#example-problem---perfect-information-blackjack)  
-	2. [R20 - name](#r20---name)  
+		6. [Example problem - perfect information Blackjack 39m](#example-problem---perfect-information-blackjack-39m)  
+	2. [R20 - Dynamic Programming: Blackjack](#r20---dynamic-programming-blackjack)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
 	3. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
@@ -3477,7 +3475,8 @@ properties:
 **0-6m**		| Lecture overview
 **6m-17m**		| 6m Dynamic programming overview - 5 steps - Fibonacci / Shortest Path 
 **17m-35m**	| Text justification
-**35m**		| Parent Pointer -  remember which guess was best
+**35m-39m**	| Parent Pointer -  remember which guess was best - track the solution
+**39m-52**		| Blackjack - fires though at high speed
 
 
 **6m Dynamic programming overview - 5 steps (not necessarily sequential!)**  
@@ -3490,7 +3489,7 @@ or build DP table BOTTOM-UP
 5. Solve original problem = subproblem  
 OR by combining sub problem solutions.	- [extra time]  
 
-3. this 
+3. this is identifying the recursive part
 5 is about expressing the problem as a directed acyclic graph DAG, compute the shortest path w/ bell-ford.   
 Here the skill is in expressing the problem as a DAG.  
   
@@ -3509,39 +3508,111 @@ Goes over the steps 6m-17m
 #### Example problem - Text Justification 17m-35m 
 Use DP rather than greedy.(Whole page strategy rather than line by line)
 badness of line = (width page - width words)^3   < the more space really highlighted by the cubedness!
-badness of line = math.inf if teh words dont fit
+badness of line = math.inf if the words dont fit
 Problem is to **minimise the sum of the badnesses of the lines.** (Whole page strategy rather than line by line)
-1.
+```
+1. Copy steps to code and implement in python
 2.
 3
 4.
 5.  
 Code: dyn_02_text_just.py  
+```
+
+#### Example problem - perfect information Blackjack 39m
+```
+1. Copy steps to code and implement in python
+2. guess - how many hits?
+3. recurence outcome member { -1, 0, 1}  lose, draw, win
+4.
+5.  
+Code: dyn_03_blackjack.py  
+```
 
 
-#### Example problem - perfect information Blackjack
-
-
-
-
-### R20 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
+### R20 - Dynamic Programming: Blackjack
+[vid](https://www.youtube.com/watch?v=jZbkToeNK2g&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=43) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec20.pdf) ~ 
+Code:[Black]
 Reading: 
 
 #### **Vid contents - **  
  time			| notes	
 | - | - |
-**40m**			| 
+**39m-end**		| **L20** 39m-end refresh BlackJack DP solution
+**0m-6m**		| R20 introduce the problem
+**6m-18m**		| Encoding into a GRAPH solution
+**15m15**		| Choose TOPOLOGICAL SORT +DFS O(V+E) over Dijkstra O(E + VlogV)
+**18m-37m**	| Dynamic Programming solution
+**37m-end**		| Longest Increasing Subsequence
+
+Ace can be 1 or 11.
+Dealer stick 17 or higher
+$1 per win 
+Cards consumed each round 2 + 2 + player hits + dealer hits
+
+**4m - macro - round_outcome(i, h)**
+for each game the only important info is how many cards player hits - **h**
+
+After that is chosen:
+	player gets 2 cards
+	dealer gets 2 cards
+	each player hits some cards		number of cards played - #cp
+									result {1,0,-1}
+
+macro:
+	round_outcome(i, h) i - start point, h - number of cards to hit
+return:
+	(number of cards played this round #cp, winnings{1,0,-1} )
 
 
-#### Example problem
+**6m - Encoding into a GRAPH solution**
+The game starts with a deck of cards and after each round #cp cards have been used up resulting in an outcome{1,0,-1}.
+**Setup:**
+52 nodes each representing card played in the deck.
+Each edge represents a result, and will go from the start position (i) to start position (i) + #cp 
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+This results in a DAG since all the edges move forward (by at least 4 cards) for each game.
+
+Next step is to find the most profitable (highest score) path through the graph. 
+
+Topological Sort + DFS O(V+E) will give the shortest path. 
+
+**15m15 - Choose TOPOLOGICAL SORT + DFS O(V+E) over Dijkstra O(E + VlogV)**  
+[C++ implementation findinh longest path](https://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/)  
 
 
+**18m-m - Dynamic Programming solution**  
+Fro DP the graph is implicit and no nodes are used the solutions are stored directly.
+Here cards are stored in a 52 element array. named dp[]
+
+
+**37m-endLongest Increasing Subsequence**  
+Brute force but solutions to sub problems already computed as you progress!
+
+Solutions (length of largest sequence of rising number) are store in an array same size as the sequence. 1 slot per number n the problem space. EG 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15
+```
+index:	          0  1  2   3  4   5  6   7  8  9 10  11 12  13 14  15
+Problem space:    0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15
+Solutions array   6  4  5   3  5   3  4   2  4  3  3   2  3   2  2   1
+parent_index      2  3  6   7  6   7  9  15  9 11 11  15 13  15 15  nil
+```
+Start at last element end of sequence the solution to longest increasing sequence is 1 store it in same location in solution array.  
+  
+Go left 1 and calculate from there solution is 2, [7,15]  
+Repeat index 12 both index 13 & 14 provide acceptable (precalc) routes to increasing sequence. Store 3, parents 13,14  
+Repeat index 11 only i=15 provides acceptable (precalc) route to increasing sequence. Store 2, parent=15  
+Repeat index 10 only i=15 provides acceptable (precalc) route to increasing sequence.  
+Repeat index 9 both index 11 & 13 provide acceptable (precalc) routes to increasing sequence. Store 3, parents 11,13 
+Repeat index 8 all index higher 9,10,12 provide acceptable (precalc) routes to increasing sequence. Store 4, parents 9,10,12
+Repeat index 7 only i=15 provides acceptable (precalc) route to increasing sequence. Store 2, parent=15  
+Repeat index 6 only i=9 provides acceptable (precalc) route to increasing sequence. Store 4, parent=9   
+etc etc until whole array processed.
+
+Keep track of the highest stored number and its index. Use parents to reconstruct sequence.
+
+
+Note depending on requirements only one parent may be necessary.
 
 
 
