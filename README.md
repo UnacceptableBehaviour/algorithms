@@ -216,7 +216,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L19**](#vid-contents---l19)  
 		3. [Example problem - Fibonacci](#example-problem---fibonacci)  
 		4. [Example problem - Shortest Path](#example-problem---shortest-path)  
 		5. [Maths notes](#maths-notes)  
@@ -234,9 +234,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		1. [**Vid contents - **](#vid-contents---)  
 	3. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
+		2. [**Vid contents - L21**](#vid-contents---l21)  
 	4. [R21 - name](#r21---name)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [Example problem](#example-problem)  
@@ -3323,6 +3321,9 @@ Any equation identities / topics for this lecture include context and uses for l
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture19.pdf) ~ 
 [dynamic prog lect18 spring 2011 - fibonacci](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
 Code:
+dyn_00_fib.py
+dyn_01_shortest_paths.py
+good side by side review L20 - 6m-17m
 Reading:
 
 #### **DATA STRUCTURE**  
@@ -3333,8 +3334,8 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
- time			| notes	
+#### **Vid contents - L19**  
+ time				| notes	
 | - | - |
 **0-5m**			| Introduction to Dynamic Programming (DP) recursion + memoization + guessing
 **5m-11m20**		| Solving Fibonacci w/ Memoization - naive version
@@ -3351,7 +3352,9 @@ Wikipedia definition:
 **Dynamic programming** is both a  method and a computer programming method. The method was developed by  in the 1950s and has found applications in numerous fields, from  to .
 In both contexts it refers to simplifying a complicated problem by breaking it down into simpler sub-problems in a  manner. While some decision problems cannot be taken apart this way, decisions that span several points in time do often break apart recursively. Likewise, in computer science, if a problem can be solved optimally by breaking it into sub-problems and then recursively finding the optimal solutions to the sub-problems, then it is said to have .
 If sub-problems can be nested recursively inside larger problems, so that dynamic programming methods are applicable, then there is a relation between the value of the larger problem and the values of the sub-problems. In the optimization literature this relationship is called the **[Bellman equation](https://en.wikipedia.org/wiki/Bellman_equation).**
-
+  
+**SEE L20 6m - for 5 steps!**
+  
 
 **5m-11m20 - Solving Fibonacci w/ Memoization - naive version**  
 8m15 Recurrence p2 notes - revises Fibonacci recurrence
@@ -3412,6 +3415,8 @@ https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec19.pdf) ~ 
 [dynamic prog lect18 spring 2011 - crazy eights](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
 Code:
+dyn_01_shortest_paths.py
+dyn_02_crazy8s.py
 Reading: 
 
 #### **Vid contents - R19**  
@@ -3459,6 +3464,8 @@ Also see L20
 [vid](https://www.youtube.com/watch?v=ENyox7kNKeY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=20) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture20.pdf) ~ 
 Code:
+dyn_02_text_just.py
+dyn_04_blackjack.py
 Reading:
 
 #### **DATA STRUCTURE**  
@@ -3483,9 +3490,9 @@ properties:
 1. define sub problems 			- [count # subproblems]  
 2. guess (part of the solution)		- [count # choices]  
 3. relate sub problem solutions	- [compute time/subproblem]  
-4. recurse & memoize			- [time = time/subproblem * # subproblems]  
-or build DP table BOTTOM-UP  
- - check subproblems acyclic / topological order  
+4. **recurse & memoize**		- [time = time/subproblem * # subproblems]  
+OR build **DP table BOTTOM-UP**  
+For DP table BOTTOM-UP - check subproblems acyclic & in  topological order!!  
 5. Solve original problem = subproblem  
 OR by combining sub problem solutions.	- [extra time]  
 
@@ -3534,6 +3541,8 @@ Code: dyn_03_blackjack.py
 [vid](https://www.youtube.com/watch?v=jZbkToeNK2g&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=43) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec20.pdf) ~ 
 Code:[Black]
+dyn_03_blackjack.py
+dyn_04_longest_subsequence.py
 Reading: 
 
 #### **Vid contents - **  
@@ -3610,16 +3619,18 @@ Repeat index 6 only i=9 provides acceptable (precalc) route to increasing sequen
 etc etc until whole array processed.
 
 Keep track of the highest stored number and its index. Use parents to reconstruct sequence.
-
-
+  
 Note depending on requirements only one parent may be necessary.
 
 
 
 ### L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=ocZMDMZwhCY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=21) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture21.pdf) ~ 
 Code:
+dyn_06_parenthesization.py
+dyn_07_edit_distance.py
+dyn_08_knapsack.py
 Reading:
 
 #### **DATA STRUCTURE**  
@@ -3630,19 +3641,33 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L21**  
  time			| notes	
 | - | - |
+**0m-3m15**		| Intro - 5 steps revision
+**3m15m-6m**		| Choosing sub-problems - string or sequences - suffixes
+**6m**		| Parenthesization
 
 
-#### Example problem
+  
+**3m15m - Choosing subproblems -  string or sequences - suffixes**  
+type 		| complexity		| 	notation
+| - | - | - |
+suffixes		| O(n) linear		|	x[i:] ∀i
+prefixes		| O(n) linear		|	x[:i] ∀i
+substrings	| O(n**2) quatratic |	x[i:j] ∀ i<=j 
+  
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+**6m - Parenthesization**  
+**Associative expression:** re-arranging parenthesis wont change result: (2 + 3) + 4 = 2 + (3 + 4) = 9  
+Example is matrix multiplication. Where computational cost depends on order of parenthesis.  
+![matrix computation cost](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_L21_8m50_matrix_mult_example_DP.png)  
+
+
 
 ### R21 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=wFP5VHGHFdk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=45) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf) ~ 
 Code:
 Reading: 
 
