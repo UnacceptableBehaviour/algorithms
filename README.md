@@ -240,7 +240,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [EG - Knapsack problem - 1m](#eg---knapsack-problem---1m)  
 	5. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
-		2. [**Vid contents - **](#vid-contents---)  
+		2. [**Vid contents - L22**](#vid-contents---l22)  
 		3. [Example problem](#example-problem)  
 		4. [Maths notes](#maths-notes)  
 	6. [R22 - name](#r22---name)  
@@ -3768,18 +3768,19 @@ updates:
 representation invariant (RI):   
 properties:  
 
-#### **Vid contents - **  
+#### **Vid contents - L22**  
  time			| notes	
 | - | - |
 **1m**			| Intro, Piano, guitar, tetris & super mario brothers, 2ND KIND OF GUESSING!
 **2m**			| 2ND KIND OF GUESSING!
-**5m40-**		| Piano & Guitar fingering
+**5m40-35m**	| Piano & Guitar fingering
 **13m-16m**	| P&G f: sub-problems - first INCORRECT attempt
 **16m-21m**	| P&G f: sub-problems - CORRECT approach
 **21m-23m30**	| P&G f: topological order
-**23m30-**	| P&G f: DAG form
-**1m**			| Tetris 
-**1m**			| Super Mario Brothers
+**23m30-27m**	| P&G f: DAG form
+**27m**			| P&G f: multiple notes
+**35m30**		| Tetris (w/ contraints!)
+**43m30**		| Super Mario Brothers
 
 
 #### Example problem
