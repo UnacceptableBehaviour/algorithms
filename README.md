@@ -235,10 +235,9 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L21**](#vid-contents---l21)  
-	4. [R21 - name](#r21---name)  
-		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
-		3. [Maths notes](#maths-notes)  
+	4. [R21 - Dynamic Programming: Knapsack Problem](#r21---dynamic-programming-knapsack-problem)  
+		1. [**Vid contents - R21**](#vid-contents---r21)  
+		2. [EG - Knapsack problem - 1m](#eg---knapsack-problem---1m)  
 	5. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
@@ -3644,10 +3643,12 @@ properties:
 #### **Vid contents - L21**  
  time			| notes	
 | - | - |
-**0m-3m15**		| Intro - 5 steps revision
-**3m15m-6m**		| Choosing sub-problems - string or sequences - suffixes
-**6m**		| Parenthesization
-
+**0m-3m15**	| Intro - 5 steps revision
+**3m15m-6m**	| Choosing sub-problems - string or sequences - suffixes
+**6m-24m**		| Parenthesization
+**24m-43m**	| Edit Distance
+**31m**			| Breaking down Edit Distance: Common subsequence - HIEROGLYPHOLOGY ex?
+**43m-53m**	| Knap sack
 
   
 **3m15m - Choosing subproblems -  string or sequences - suffixes**  
@@ -3658,36 +3659,104 @@ prefixes		| O(n) linear		|	x[:i] ∀i
 substrings	| O(n**2) quatratic |	x[i:j] ∀ i<=j 
   
 
-**6m - Parenthesization**  
+**6m-24m - Parenthesization**  
 **Associative expression:** re-arranging parenthesis wont change result: (2 + 3) + 4 = 2 + (3 + 4) = 9  
 Example is matrix multiplication. Where computational cost depends on order of parenthesis.  
 ![matrix computation cost](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/_L21_8m50_matrix_mult_example_DP.png)  
+Initial analysis looks like the solution approaches from both ends, IE using prefixes & suffixes!  
+In this case use substrings!  
+Draw out this recurrence / DAG, get better understanding.  
+  
+
+**24m - Edit Distance**  
+Cost of creating one string from another. Can be used to build a list of likely words from a typo word.  
+Cost / Distance calculated in character edits w/ each edit having an associated cost.   
+(keys next to each other might have low cost since typo more likely)  
+operations:  
+insert c  
+del c  
+replace c > c`  
+
+Also spelling correction, DNA sequencing, likely mutation progression.
+
+Longest common subsequence
+
+**31m - Breaking down Edit Distance**  
+Understand how the matrix representation on of the graph maps to a graph.  
+What he data in each cell represents, helpful to visuailse  
+
+31m subset / recursion  
+
+
+**43m-53m - Knap sack**  
+Optimising the content of a container of constant volume based on volume & value of a set of items.  
+
+48m subset / recursion
 
 
 
-### R21 - name
+
+
+### R21 - Dynamic Programming: Knapsack Problem
 [vid](https://www.youtube.com/watch?v=wFP5VHGHFdk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=45) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf) ~ 
-Code:
+[a lot DENSE lect notes READ](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf) ~ 
+Code: dyn_08_knapsack.py
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R21**  
  time			| notes	
 | - | - |
-**40m**			| 
+**1m**			| Knapsack problem
+**1m**			| Graph version
+**25m**			| Graph version - running time
+**26m-59m**	| DP version
+**42m**			| DP version - fills in matrix
+**45-47m**		| DP version - pick matrix apart
+**48m**			| Pseudo polnomial time
+**59m**			| Dijkstra - data representation impact on running time - WRT pseudo polynomial time
 
 
-#### Example problem
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+#### EG - Knapsack problem - 1m
+n items, 
+each item:
+s_i  - weight
+v_i - value
+
+Knapsack can carry **s** lbs
+
+**Problem:** Fill the knapsack w/ the most valuable loot!
+**Answer:** list of items!
+
+Guess:  
+As a graph each node is an item. 
+Each edge represents adding item to sack. (value of items added to sack so far. room left in the sack)
+Nope!
+
+Weight is an integer create a layer for each weight in Eg 5lb is the limit so 5 layer 1 for each lb.
+Edge represent the value change.
+**items**  
+0 - gold statue - $10 - 4lb  
+1 - crystal ball - $4 - 2lb  
+2 - fountain pen - $7 - 3lb  
+
+
+
+**42m - DP version - fills in matrix**
+Understand arrows / matrix - depends on changing bag capacity??
+45-47m DP version - pick matrix apart - try [notes - p1!](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf)  
+quick rehash of knapsack L22 2m-5m
+
+
+
+**59m - Dijkstra - data representation impact on running time**  
 
 
 
 
 ### L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=tp4_UXaVyx8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=22) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture22.pdf) ~ 
 Code:
 Reading:
 
@@ -3702,16 +3771,39 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**1m**			| Intro, Piano, guitar, tetris & super mario brothers, 2ND KIND OF GUESSING!
+**2m**			| 2ND KIND OF GUESSING!
+**5m40-**		| Piano & Guitar fingering
+**13m-16m**	| P&G f: sub-problems - first INCORRECT attempt
+**16m-21m**	| P&G f: sub-problems - CORRECT approach
+**21m-23m30**	| P&G f: topological order
+**23m30-**	| P&G f: DAG form
+**1m**			| Tetris 
+**1m**			| Super Mario Brothers
 
 
 #### Example problem
+**5m40 - Piano & Guitar fingering**  
+note > single note  
+10 fingerss  
+difficulty measure - d(p, f, q, g)  
+p - note on   
+f - finger f & transition to   
+q - note q using   
+g - finger g  
+
+**13m - P&G f: sub-problems**   
+How to play note for i onwards - notes[i:]  
+
+**23m30 - P&G f: DAG form**   
+5 rows - five fingers  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 
 ### R22 - name
-[vid]()  
+[vid](https://www.youtube.com/watch?v=PptQgy89cN8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=44)  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading: 
