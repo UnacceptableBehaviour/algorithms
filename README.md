@@ -245,14 +245,11 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	6. [R22 - Dynamic Programming: Dance Dance Revolution](#r22---dynamic-programming-dance-dance-revolution)  
 		1. [**Vid contents - R22**](#vid-contents---r22)  
 		2. [EG - DDR - Dance Dance Revolution](#eg---ddr---dance-dance-revolution)  
-		3. [Maths notes](#maths-notes)  
 22. [Problem set 7 due](#problem-set-7-due)  
 23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [EG prob:](#eg-prob)  
-		4. [Maths notes](#maths-notes)  
 	2. [R23 - name](#r23---name)  
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [EG prob:](#eg-prob)  
@@ -3809,7 +3806,9 @@ Reading:
 #### **Vid contents - R22**  
  time			| notes	
 | - | - |
-**40m**			| Intro to DDR rules, what to maximise
+**1m-6m**		| Intro to DDR rules, what to maximise
+**6m-11m**		| Turning prduct into sums using logs, Concept: NUMERICAL INSTABILITY
+**11m-end**		| Modelling using a graph
 
 
 #### EG - DDR - Dance Dance Revolution
@@ -3817,15 +3816,36 @@ Reading:
 Maximise score  
 Minimise effort  
 Best appearance to MAXIMISE entertainment (for TV)  
-Minimise probability of failure = maximise probability of success!  
+Minimise probability of failure = maximise probability of success! 
+ 	(Use logs - doing sums instead of products? 6m45?)  
+	(see L44m43 min product - PS6 I can haz moor frendz - friendbook)
 Probability of succeeding on each move, eventually sums up to the total probability of success!   
 How turn products into sums I assume he means 
 <p align="center"><img src="./tex/261a91ae0d1244a9945822c697617279.svg?invert_in_darkmode" align=middle width=428.02517339999997pt height=26.301595649999996pt/></p>
 
 
+**6m - Turning prduct into sums using logs, Concept: NUMERICAL INSTABILITY 7m14**  
+Multiplying lots on numbers that are close to 1 (IE probabilities that are high/likely) creates NUMERICAL INSTABILITY.  
+So use logs (of probabilities) and add them up instead of the actual probabilities and multiplying them.  
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
+Quick game summary: [trochadero dance arcade](https://www.youtube.com/watch?v=jD7q-_nJNPQ)  
+
+Hit all the nodes minimise the effort
+
+delta(from, to) > results in number 0 > 1 0=easy to 1=hard   
+Moves coded L / R foot position U D L R arrow  
+EG: LU RD > LL RR -    
+So delta(LU RD, LL RR) produces a difficulty  
+
+**11m - Modelling using a graph**  
+node = state  
+edge = move
+
+What doe the State mean?
+Move difficulty independant
+Sum of difficulties up to   
+
+44m59 - state summary on board
 
 
 
@@ -3835,9 +3855,8 @@ Any equation identities / topics for this lecture include context and uses for l
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 8: Advanced Topics
 ### L23 - Computational complexity	 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
+[vid](https://www.youtube.com/watch?v=moPtwq_cVH8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture23.pdf/) ~  
 Reading:
 
 #### **DATA STRUCTURE**  
@@ -3851,16 +3870,28 @@ properties:
 #### **Vid contents - **  
  time			| notes	
 | - | - |
+**0m-1m**		| Intro: polynomial time algos  
+**1m-5m**		| Complexity classes: P, Exp, R
+**5m-11m**		| Examples: cycle detect, n*n chess, tetris, halting problem
+**12m-18m**	| most problems uncomputable - set theory - walk the PROOF
+**19m-**		| NP - non deterministic polynomial - lucky algorithm
+**24m-**		| NP - tetris
+**26m-**		| NP - alt view
+**26m-34m**	| P __ne__ NP or P vs NP - YOU CANT ENGINEER LUCK
+**36m**			| hardness & completeness
+**41m-end**			| reductions
+  
+[see lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture23.pdf/)
+  
+Complexity classes: P - { Set of all problems solvable in Polynomial Time }  
+Complexity classes: Exp - { Set of all problems solvable in Exponential Time }  
+Complexity classes: R - { Set of all problems solvable in Finite time }   
 
 
-#### EG prob:  
-
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
 
 ### R23 - name
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+[vid](https://www.youtube.com/watch?v=t5Wxk96QjUk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=46) ~ 
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
 Code:
 Reading: 
 
