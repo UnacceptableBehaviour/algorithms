@@ -252,8 +252,6 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 		2. [**Vid contents - **](#vid-contents---)  
 	2. [R23 - name](#r23---name)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [EG prob:](#eg-prob)  
-		3. [Maths notes](#maths-notes)  
 	3. [24 - Algorithms research topics](#24---algorithms-research-topics)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
@@ -3891,21 +3889,20 @@ Complexity classes: R - { Set of all problems solvable in Finite time }
 
 ### R23 - name
 [vid](https://www.youtube.com/watch?v=t5Wxk96QjUk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=46) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
-Code:
-Reading: 
-
+[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)   
+Reading: 34.1-34.3 p1053 34.1 Polynomial time, 34.2 Polynomial time verification,  34.3 NP-completeness and reducibility   
+  
 #### **Vid contents - **  
  time			| notes	
 | - | - |
-**40m**			| 
+**28m**			| Solution approaches - know what to avoid
+**32m**			| k-SAT (2-SAT, 3-SAT) - satisfiability, CNF
 
 
-#### EG prob:  
+28m - summarises solution approaches from the course. Smiley faces - one approach per face. 
+Talking about reductions, 
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
-
+READ THE NP COMPLETE CHAPTER IN CLRS - C34 p1048-1105 - BIG!! 57 pages!
 
 
 
