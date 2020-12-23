@@ -103,7 +103,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	5. [L6 - AVL trees, AVL sort](#l6---avl-trees-avl-sort)  
 		1. [**DATA STRUCTURE - AVL tree - R6 50m**](#data-structure---avl-tree---r6-50m)  
 		2. [**Vid contents - L6**](#vid-contents---l6)  
-		3. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
 		4. [TERMS](#terms)  
 		5. [Maths notes - AVL tree (19-25m) - height analysis v1](#maths-notes---avl-tree-19-25m---height-analysis-v1)  
 		6. [Maths notes - AVL tree (26m) - height analysis v2](#maths-notes---avl-tree-26m---height-analysis-v2)  
@@ -148,18 +148,18 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L10 - Open addressing, cryptographic hashing](#l10---open-addressing-cryptographic-hashing)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L10**](#vid-contents---l10)  
-		3. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
 		4. [Maths notes](#maths-notes)  
 	4. [R10 - Quiz 1 review](#r10---quiz-1-review)  
 		1. [**Vid contents - R10**](#vid-contents---r10)  
-		2. [Example problems](#example-problems)  
+		2. [EG prob:  s](#eg-prob--s)  
 		3. [Maths notes](#maths-notes)  
 12. [Problem set 4](#problem-set-4)  
 13. [Quiz 1](#quiz-1)  
 14. [Unit 4: Numerics](#unit-4-numerics)  
 	1. [L11 - Integer arithmetic, Karatsuba multiplication](#l11---integer-arithmetic-karatsuba-multiplication)  
 		1. [**Vid contents - L11**](#vid-contents---l11)  
-		2. [Example problem](#example-problem)  
+		2. [EG prob:](#eg-prob)  
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [**Vid contents - R11**](#vid-contents---r11)  
 		2. [Principle of practical algorithm design](#principle-of-practical-algorithm-design)  
@@ -167,7 +167,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L12**](#vid-contents---l12)  
-		3. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
 		4. [Maths notes](#maths-notes)  
 	2. [R12 - Karatsuba Multiplication, Newtons Method](#r12---karatsuba-multiplication-newtons-method)  
 		1. [**Vid contents - R12**](#vid-contents---r12)  
@@ -196,11 +196,11 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	3. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**ALGO - Dijkstra**](#algo---dijkstra)  
 		2. [**Vid contents - L16**](#vid-contents---l16)  
-		3. [Example problem - autogen map data to feed dijkstra](#example-problem---autogen-map-data-to-feed-dijkstra)  
+		3. [EG prob:   - autogen map data to feed dijkstra](#eg-prob-----autogen-map-data-to-feed-dijkstra)  
 		4. [Maths notes](#maths-notes)  
 	4. [R16 - Rubiks Cube, StarCraft Zero](#r16---rubiks-cube-starcraft-zero)  
 		1. [**Vid contents - R16**](#vid-contents---r16)  
-		2. [Example problem](#example-problem)  
+		2. [EG prob:](#eg-prob)  
 		3. [Maths notes](#maths-notes)  
 	5. [L17 - Bellman-Ford](#l17---bellman-ford)  
 		1. [**ALGO - Bellma-Ford**](#algo---bellma-ford)  
@@ -208,7 +208,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	6. [L18 - Speeding up Dijkstra](#l18---speeding-up-dijkstra)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
 		4. [Maths notes](#maths-notes)  
 	7. [R18 - Quiz 2 Review](#r18---quiz-2-review)  
 		1. [**Vid contents - Q2 review**](#vid-contents---q2-review)  
@@ -217,8 +217,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L19**](#vid-contents---l19)  
-		3. [Example problem - Fibonacci](#example-problem---fibonacci)  
-		4. [Example problem - Shortest Path](#example-problem---shortest-path)  
+		3. [EG prob:   - Fibonacci](#eg-prob-----fibonacci)  
+		4. [EG prob:   - Shortest Path](#eg-prob-----shortest-path)  
 		5. [Maths notes](#maths-notes)  
 	2. [R19 - Dynamic Programming: Crazy Eights, Shortest Path](#r19---dynamic-programming-crazy-eights-shortest-path)  
 		1. [**Vid contents - R19**](#vid-contents---r19)  
@@ -226,10 +226,10 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	1. [L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers](#l20---dynamic-programming-ii-text-justification-perfect-information-blackjack-parent-pointers)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L20**](#vid-contents---l20)  
-		3. [Example problem - Fibonacci](#example-problem---fibonacci)  
-		4. [Example problem - Shortest Path](#example-problem---shortest-path)  
-		5. [Example problem - Text Justification 17m-35m](#example-problem---text-justification-17m-35m)  
-		6. [Example problem - perfect information Blackjack 39m](#example-problem---perfect-information-blackjack-39m)  
+		3. [EG prob:   - Fibonacci](#eg-prob-----fibonacci)  
+		4. [EG prob:   - Shortest Path](#eg-prob-----shortest-path)  
+		5. [EG prob:   - Text Justification 17m-35m](#eg-prob-----text-justification-17m-35m)  
+		6. [EG prob:   - perfect information Blackjack 39m](#eg-prob-----perfect-information-blackjack-39m)  
 	2. [R20 - Dynamic Programming: Blackjack](#r20---dynamic-programming-blackjack)  
 		1. [**Vid contents - **](#vid-contents---)  
 	3. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
@@ -241,31 +241,30 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 	5. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L22**](#vid-contents---l22)  
-		3. [Example problem](#example-problem)  
-		4. [Maths notes](#maths-notes)  
-	6. [R22 - name](#r22---name)  
-		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
+	6. [R22 - Dynamic Programming: Dance Dance Revolution](#r22---dynamic-programming-dance-dance-revolution)  
+		1. [**Vid contents - R22**](#vid-contents---r22)  
+		2. [EG - DDR - Dance Dance Revolution](#eg---ddr---dance-dance-revolution)  
 		3. [Maths notes](#maths-notes)  
 22. [Problem set 7 due](#problem-set-7-due)  
 23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
 		4. [Maths notes](#maths-notes)  
 	2. [R23 - name](#r23---name)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
+		2. [EG prob:](#eg-prob)  
 		3. [Maths notes](#maths-notes)  
 	3. [24 - Algorithms research topics](#24---algorithms-research-topics)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-		3. [Example problem](#example-problem)  
+		3. [EG prob:](#eg-prob)  
 		4. [Maths notes](#maths-notes)  
 	4. [R24 - Final Exam review](#r24---final-exam-review)  
 		1. [**Vid contents - **](#vid-contents---)  
-		2. [Example problem](#example-problem)  
+		2. [EG prob:](#eg-prob)  
 		3. [Maths notes](#maths-notes)  
 24. [Glossary of terms](#glossary-of-terms)  
 25. [How To s](#how-to-s)  
@@ -1100,7 +1099,7 @@ RI - representation invariant
 **48m-52 **		| AVL sort  
 **50m**			| summary of heap / bst AVL reasons for use  
 
-#### Example problem
+#### EG prob:  
 
 
 #### TERMS  
@@ -2121,7 +2120,7 @@ Talks about one way cryptographic hashing for password.
 So only meet to store
 
 
-#### Example problem
+#### EG prob:  
 
 
 #### Maths notes  
@@ -2224,7 +2223,7 @@ If comparing to complicated time complexities take logs - because they are monot
 <p align="center"><img src="./tex/e7e1fce898b1583cb28cc71db94ffdd5.svg?invert_in_darkmode" align=middle width=0.0pt height=0.0pt/></p>
 
 
-#### Example problems
+#### EG prob:  s
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -2325,7 +2324,7 @@ T(n) = 3T(n/2) + O(n)	complexity O(n^log3)
 See 37m26:  
 Quiz 2 ps - O(n^2) - worse than Karatsuba
 
-#### Example problem
+#### EG prob:  
 Ex Code Karatsuba multiplication in python.  
 Take 2 input s multiply them together using recursive Karatsuba call.  
 [wikipedia pseudo code](https://en.m.wikipedia.org/wiki/Karatsuba_algorithm#Pseudocode)  
@@ -2487,7 +2486,7 @@ properties:
 **47m30-**		| Complexity of computing square toots - SPOILER SAME AS MULTIPLICATION!
 
 
-#### Example problem
+#### EG prob:  
 
 #### Maths notes  
 29m33
@@ -3101,7 +3100,7 @@ Watch for an uncomplicated accurate walkthrough [Dijkstra Shortest path Computer
 Next iteration of processing is taken from the PRIORITY QUEUE (MinHeap) where nodes are inserted when found ordered by their d[node] from S
 
 
-#### Example problem - autogen map data to feed dijkstra
+#### EG prob:   - autogen map data to feed dijkstra
 ```
 From:
 ./citimap.py		# create a random set out cities connect by routes to present to ./dijkstra.py
@@ -3150,7 +3149,7 @@ Reading:
 **29m**		 	| Starcraft
 
 
-#### Example problem
+#### EG prob:  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3244,7 +3243,7 @@ Used combination of path weight and a guiding metric to prefer paths going towar
 EG in a map route, could be weight + distance to goal: [Computerphile A* - 14m vid](https://www.youtube.com/watch?v=ySN5Wnu88nE&t=3s)  
 Very
 
-#### Example problem  
+#### EG prob:    
 Add code.
 
 
@@ -3395,10 +3394,10 @@ See R19 notes too
 **35m - shortest paths - GUESSING**   
 
 
-#### Example problem - Fibonacci 
+#### EG prob:   - Fibonacci 
 dyn_00_fib.py
 
-#### Example problem - Shortest Path 
+#### EG prob:   - Shortest Path 
 
 
 
@@ -3502,16 +3501,16 @@ Here the skill is in expressing the problem as a DAG.
 Note: R19 - 31m you dont need memoization if you know the topological order of the graph - explain.  
 
 
-#### Example problem - Fibonacci  
+#### EG prob:   - Fibonacci  
 dyn_00_fib.py  
 Goes over the steps 6m-17m
 
-#### Example problem - Shortest Path  
+#### EG prob:   - Shortest Path  
 dyn_01_shortest_paths.py  
 Goes over the steps 6m-17m  
 15m for k on the outside / for loop over V on the inside reverse does not work!   
 
-#### Example problem - Text Justification 17m-35m 
+#### EG prob:   - Text Justification 17m-35m 
 Use DP rather than greedy.(Whole page strategy rather than line by line)
 badness of line = (width page - width words)^3   < the more space really highlighted by the cubedness!
 badness of line = math.inf if the words dont fit
@@ -3525,7 +3524,7 @@ Problem is to **minimise the sum of the badnesses of the lines.** (Whole page st
 Code: dyn_02_text_just.py  
 ```
 
-#### Example problem - perfect information Blackjack 39m
+#### EG prob:   - perfect information Blackjack 39m
 ```
 1. Copy steps to code and implement in python
 2. guess - how many hits?
@@ -3783,7 +3782,7 @@ properties:
 **43m30**		| Super Mario Brothers
 
 
-#### Example problem
+#### EG prob:  
 **5m40 - Piano & Guitar fingering**  
 note > single note  
 10 fingerss  
@@ -3799,23 +3798,31 @@ How to play note for i onwards - notes[i:]
 **23m30 - P&G f: DAG form**   
 5 rows - five fingers  
 
-#### Maths notes  
-Any equation identities / topics for this lecture include context and uses for later reference  
 
 
-### R22 - name
-[vid](https://www.youtube.com/watch?v=PptQgy89cN8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=44)  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
+### R22 - Dynamic Programming: Dance Dance Revolution
+[vid](https://www.youtube.com/watch?v=PptQgy89cN8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=44) ~ 
+[no lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
 Reading: 
 
-#### **Vid contents - **  
+#### **Vid contents - R22**  
  time			| notes	
 | - | - |
-**40m**			| 
+**40m**			| Intro to DDR rules, what to maximise
 
 
-#### Example problem
+#### EG - DDR - Dance Dance Revolution
+**Bouncing ideas about - what to minimise/ maximise:**  
+Maximise score  
+Minimise effort  
+Best appearance to MAXIMISE entertainment (for TV)  
+Minimise probability of failure = maximise probability of success!  
+Probability of succeeding on each move, eventually sums up to the total probability of success!   
+How turn products into sums I assume he means 
+<p align="center"><img src="./tex/261a91ae0d1244a9945822c697617279.svg?invert_in_darkmode" align=middle width=428.02517339999997pt height=26.301595649999996pt/></p>
+
+
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3846,7 +3853,7 @@ properties:
 | - | - |
 
 
-#### Example problem
+#### EG prob:  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3863,7 +3870,7 @@ Reading:
 **40m**			| 
 
 
-#### Example problem
+#### EG prob:  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3890,7 +3897,7 @@ properties:
 | - | - |
 
 
-#### Example problem
+#### EG prob:  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
@@ -3907,7 +3914,7 @@ Reading:
 **40m**			| 
 
 
-#### Example problem
+#### EG prob:  
 
 #### Maths notes  
 Any equation identities / topics for this lecture include context and uses for later reference  
