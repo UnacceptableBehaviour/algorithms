@@ -78,7 +78,7 @@ class Node:
 		self.dist_S_to_node = math.inf		# delta - shortest route - relaxation data
 
 	def distance(self, node):
-		pprint(node)
+		#pprint(node)
 		x, y = self.pos
 		x1, y1 = node.pos
 		dx,dy = abs(x-x1), abs(y-y1)

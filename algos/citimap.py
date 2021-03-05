@@ -16,6 +16,18 @@ from numpy.random import randint
 from pprint import pprint
 import math
 
+welcome_msg ='''
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+  Right click to REGENERATE GRAPH
+
+  Left click on 2 different nodes to run Dijkstra on the network
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+'''
+
+print(welcome_msg)
+
 # REF: https://www.pygame.org/docs/ref/pygame.html
 import pygame
 pygame.init()		  # initialize all imported pygame modules
@@ -23,6 +35,22 @@ import pygame.freetype
 pygame.freetype.init()
 NODE_FONT = pygame.freetype.SysFont('Monaco', 10)
 PATH_FONT = pygame.freetype.SysFont('Monaco', 14)
+LEFT_MB = 1
+MIDDLE_MB = 2
+RIGHT_MB = 3
+SCROLL_UP_MB = 4
+SCROLL_DN_MB = 5
+ROUTE_COLS = {
+		'line': (255, 0, 0),
+		'dot':  (190, 10, 10),
+		'font': (150, 210, 50),
+	}
+
+EDGE_LIST_COLS = {
+		'line': (255, 235, 75),
+		'dot':  (0, 0, 0),
+		'font': (255, 235, 175),
+	}
 
 window_size_X = 1200
 window_size_Y = 700
@@ -75,7 +103,7 @@ def recentre(xy, n):
 	return (xy[0]-n/2,xy[1]-n/2)
 
 def node_label_pos(xy,dx,dy):
-	return (xy[0]+dx,xy[1]+dy)
+	return (max(xy[0]+dx,0), max(xy[1]+dy,0))  # was return (xy[0]+dx,xy[1]+dy) but FONT NO cope with negative numbers
 
 def line_label_pos(n1,n2,dx=0,dy=0):
 	x1,y1 = n1.pos
@@ -120,8 +148,8 @@ def draw_node_list(win, nodes, citi_dot = 6, colors={}):
 		#               surface  colour                 posision              size
 		pygame.draw.ellipse(win, cols['dot'], (recentre(node.pos,citi_dot),(citi_dot,citi_dot)) )			# render node
 	
-	for node in nodes:	
-		#           surface  posision          offset    text        colour
+	for node in nodes:
+		#               surface  position(dest)          offset    text        colour
 		NODE_FONT.render_to(win, node_label_pos(node.pos, 10,-2), node.name, cols['font'])     	# render label
 
 
@@ -160,43 +188,37 @@ def plot_route_from_node_list(win, nodes, citi_dot = 6, colors={}):
 		pygame.draw.ellipse(win, cols['dot'], (recentre(to_node.pos,citi_dot),(citi_dot,citi_dot)) )			# render node
 		
 		# distance
-		#           surface  posision                         offset    text                       colour
+		#                 surface  posision                         offset    text                       colour
 		PATH_FONT.render_to(win, line_label_pos(from_node, to_node, 0,0), str(to_node.dist_S_to_node), cols['font'])     	# render label		
 
 
 
-def draw_window(win):
-	
-	win.fill((0,0,0))
-	
-	draw_node_list(win, nodes)
+nodes = None
+g = None
+number_of_nodes = 20
+connections_each = 5
 
+def create_new_nodeset_graph_and_paint(screen, num_of_nodes, connections_per_node):
+	global nodes, g
+	#nodes = generate_list_of_connected_nodes(260, 5)
+	nodes = generate_list_of_connected_nodes(num_of_nodes, connections_per_node)
+	#nodes = generate_list_of_connected_nodes(160, 2)
+	g = Graph()
+	generate_graph_from_node_list(g, nodes)
+	
+	screen.fill((0,0,0))
+	
+	draw_node_list(screen, nodes)
+
+	return g
+
+# build network to run dijkstra on 
+create_new_nodeset_graph_and_paint(screen, number_of_nodes, connections_each)
 
 endLoop = False
 start_node = None
 end_node = None
 end_next = False
-#nodes = generate_list_of_connected_nodes(260, 5)
-nodes = generate_list_of_connected_nodes(60, 5)
-#nodes = generate_list_of_connected_nodes(160, 2)
-g = Graph()
-generate_graph_from_node_list(g, nodes)
-print("GRAPH CREATED - S")
-pprint(g)
-print("GRAPH CREATED - E")
-#sys.exit(0)
-draw_node_list(screen, nodes)
-route_cols = {
-		'line': (255, 0, 0),
-		'dot':  (190, 10, 10),
-		'font': (150, 210, 50),
-	}
-
-edge_list_cols = {
-		'line': (255, 235, 75),
-		'dot':  (0, 0, 0),
-		'font': (255, 235, 175),
-	}
 
 while not endLoop:
 	route = None
@@ -205,10 +227,11 @@ while not endLoop:
 	for e in pygame.event.get():
 		print(e)
 		
-		if e.type == pygame.MOUSEBUTTONUP:
+		if (e.type == pygame.MOUSEBUTTONUP) and (e.button == LEFT_MB):
 			pos = pygame.mouse.get_pos()
 			mouse_node = nearest_node(nodes, pos)
 			print(f"pos: {pos} - {mouse_node}")
+			
 			if end_next == False:
 				start_node = mouse_node
 				end_next = True
@@ -218,7 +241,13 @@ while not endLoop:
 				end_next = False
 				print(f"END NODE SELECTED: {end_node}")
 				route = dijkstra(g, start_node, end_node, checked_edges)
-			
+		
+		if e.type == pygame.MOUSEBUTTONUP and (e.button == RIGHT_MB):
+			print("CREATING NEW GRAPH:")
+			number_of_nodes = number_of_nodes + 20
+			connections_each = connections_each + 1
+			create_new_nodeset_graph_and_paint(screen, number_of_nodes, connections_each)
+
 		
 		if e.type == pygame.QUIT:
 			endLoop = True
@@ -228,17 +257,15 @@ while not endLoop:
 			window_size_Y = e.h
 		
 	# draw scene
-	#draw_window(screen)
-	#draw_node_list(screen, nodes)	
 	if route:
 		screen.fill((0,0,0))
 		draw_node_list(screen, nodes)
 		for edge in checked_edges:
-			plot_route_from_node_list(screen, edge, 1, edge_list_cols)
+			plot_route_from_node_list(screen, edge, 1, EDGE_LIST_COLS)
 		# TODO the first distance is 0 means WRONG PATH length info used
 		# the path length should match (and exactly over write the yellow path)
 		# but they mistmatch
-		plot_route_from_node_list(screen, route, 12, route_cols)
+		plot_route_from_node_list(screen, route, 12, ROUTE_COLS)
 		route = None
 		g.reset_all_nodes_distance_from_source_to_inf()
 				
