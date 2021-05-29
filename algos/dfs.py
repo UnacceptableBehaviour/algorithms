@@ -64,10 +64,10 @@ class DFSResult:
 		self.parent = {}
 		self.start_time = {}
 		self.finish_time = {}
-		self.edges = {} # Edge classification for directed graph.
+		self.edges = {} 				# Edge classification for directed graph.
 		self.order = []
 		self.t = 0
-		self.components = []
+		self.components = []			# tracking seprate components / sub graphs
 		self.component = 1
 
 	def __repr__(self):
@@ -87,8 +87,8 @@ class DFSResult:
 def dfs(g):
 	results = DFSResult()
 	for vertex in g:
-		if vertex not in results.parent:
-			dfs_visit(g, vertex, results)
+		if vertex not in results.parent:		# visited?
+			dfs_visit(g, vertex, results)		# no - lets explore 
 			results.components.append(vertex)	# label maze components
 			results.component += 1 	 			# w/ numbers
 	return results

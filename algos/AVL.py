@@ -10,23 +10,26 @@ import math
 
 from binary_search_tree import Node, BST
 
+
+
 class AVL_Node(Node):
     
     def __init__(self, parent=None, lc=None, rc=None, key=None, val=None):
         super().__init__(parent, lc, rc, key, val)
     
-    def rotate_root_left(self):
-        new_root =  self.rc            
-        move_node_to_left_tree = self.rc.lc
-        
-        move_node_to_left_tree.parent = self
+    def rotate_root_left(self):                  
+        new_root =  self.rc                      #        1     
+        move_node_to_left_tree = self.rc.lc      #   
+                                                 #     -     2  
+        if move_node_to_left_tree != None:       #   
+            move_node_to_left_tree.parent = self #    -  -  -  3    
         self.rc = move_node_to_left_tree
         
-        # make rc new root
-        self.parent = new_root
-        new_root.lc = self          
-        new_root.parent = None
-        
+        # make rc new root                       #        2     
+        self.parent = new_root                   #   
+        new_root.lc = self                       #     1     3  
+        new_root.parent = None                   #   
+                                                 #    -  -  -  -
         return new_root
 
 
@@ -34,7 +37,8 @@ class AVL_Node(Node):
         new_root =  self.lc            
         move_node_to_right_tree = self.lc.rc
         
-        move_node_to_right_tree.parent = self
+        if move_node_to_right_tree != None:
+            move_node_to_right_tree.parent = self
         self.lc = move_node_to_right_tree
         
         # make rc new root
@@ -254,7 +258,29 @@ if __name__ == '__main__':
     
     print(a_node)
     pprint(a_node)
+
+    build_data = [0, 5, 10, 15, 20] #, requires 2 rotations
+    avl = AVL( AVL_Node(key=build_data.pop(0)) )    
+    pprint(build_data)
     
+    for i in build_data:                
+        print( avl.add_node(AVL_Node(key=i)) )
+        
+    pprint(avl)
+    
+    diagram_bst = AVL( AVL_Node(key=0) )
+    for i in range(5, 65,5):        
+        new_node = AVL_Node(key=i)
+        diagram_bst.add_node(new_node)
+
+    print(diagram_bst) 
+
+    diagram_bst = AVL( AVL_Node(key=63) )
+    for i in range(62, 0,-1):        
+        new_node = AVL_Node(key=i)
+        diagram_bst.add_node(new_node)
+
+    print(diagram_bst)    
     sys.exit(0)   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - EXIT < <
 
 

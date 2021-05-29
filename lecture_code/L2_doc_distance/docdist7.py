@@ -6,7 +6,7 @@
 #
 # Usage:
 #    docdist7.py filename1 filename2
-#     
+#
 # This program computes the "distance" between two text files
 # as the angle between their word frequency vectors (in radians).
 #
@@ -40,7 +40,7 @@ import sys
 # Operation 1: read a text file ##
 ##################################
 def read_file(filename):
-    """ 
+    """
     Read the text file with the given filename;
     return a list of the lines of text in the file.
     """
@@ -48,7 +48,7 @@ def read_file(filename):
         f = open(filename, 'r')
         return f.readlines()
     except IOError:
-        print "Error opening or reading input file: ",filename
+        print("Error opening or reading input file: ",filename)
         sys.exit()
 
 #################################################
@@ -78,7 +78,7 @@ def get_words_from_string(line):
     converting each word to lower-case.
 
     Input:  line (a string)
-    Output: a list of strings 
+    Output: a list of strings
               (each string is a sequence of alphanumeric characters)
     """
     line = line.translate(translation_table)
@@ -112,10 +112,7 @@ def word_frequencies_for_file(filename):
     word_list = get_words_from_line_list(line_list)
     freq_mapping = count_frequency(word_list)
 
-    print "File",filename,":",
-    print len(line_list),"lines,",
-    print len(word_list),"words,",
-    print len(freq_mapping),"distinct words"
+    print("File",filename,":",len(line_list),"lines,",len(word_list),"words,",len(freq_mapping),"distinct words")
 
     return freq_mapping
 
@@ -125,7 +122,7 @@ def inner_product(D1,D2):
     are represented as dictionaries of (word,freq) pairs.
 
     Example: inner_product({"and":3,"of":2,"the":5},
-                           {"and":4,"in":1,"of":1,"this":2}) = 14.0 
+                           {"and":4,"in":1,"of":1,"this":2}) = 14.0
     """
     sum = 0.0
     for key in D1:
@@ -145,21 +142,15 @@ def vector_angle(D1,D2):
 
 def main():
     if len(sys.argv) != 3:
-        print "Usage: docdist7.py filename_1 filename_2"
+        print("Usage: docdist7.py filename_1 filename_2")
     else:
         filename_1 = sys.argv[1]
         filename_2 = sys.argv[2]
         sorted_word_list_1 = word_frequencies_for_file(filename_1)
         sorted_word_list_2 = word_frequencies_for_file(filename_2)
         distance = vector_angle(sorted_word_list_1,sorted_word_list_2)
-        print "The distance between the documents is: %0.6f (radians)"%distance
+        print("The distance between the documents is: %0.6f (radians)"%distance)
 
 if __name__ == "__main__":
     import profile
     profile.run("main()")
-
-    
-    
-
-
-

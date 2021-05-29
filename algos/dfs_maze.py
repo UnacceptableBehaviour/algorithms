@@ -34,3 +34,6 @@ if __name__ == '__main__':
 	print(m)
 	
 	pprint(dfs_result.components)
+	
+	# pprint(topological_sort(g)) - meaning less w/ maze - not acyclic
+	# use otehr data

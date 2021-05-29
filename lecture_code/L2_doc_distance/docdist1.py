@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # docdist1.py - initial version of document distance
 #
 # Original version by Ronald L. Rivest on February 14, 2007
@@ -6,7 +6,7 @@
 #
 # Usage:
 #    docdist1.py filename1 filename2
-#     
+#
 # This program computes the "distance" between two text files
 # as the angle between their word frequency vectors (in radians).
 #
@@ -38,7 +38,7 @@ import sys
 # Operation 1: read a text file ##
 ##################################
 def read_file(filename):
-    """ 
+    """
     Read the text file with the given filename;
     return a list of the lines of text in the file.
     """
@@ -70,7 +70,7 @@ def get_words_from_string(line):
     converting each word to lower-case.
 
     Input:  line (a string)
-    Output: a list of strings 
+    Output: a list of strings
               (each string is a sequence of alphanumeric characters)
     """
     word_list = []          # accumulates words in line
@@ -115,7 +115,7 @@ def insertion_sort(A):
 
     From Cormen/Leiserson/Rivest/Stein,
     Introduction to Algorithms (second edition), page 17,
-    modified to adjust for fact that Python arrays use 
+    modified to adjust for fact that Python arrays use
     0-indexing.
     """
     for j in range(len(A)):
@@ -127,13 +127,13 @@ def insertion_sort(A):
             i = i-1
         A[i+1] = key
     return A
-    
+
 #############################################
 ## compute word frequencies for input file ##
 #############################################
 def word_frequencies_for_file(filename):
     """
-    Return alphabetically sorted list of (word,frequency) pairs 
+    Return alphabetically sorted list of (word,frequency) pairs
     for the given file.
     """
 
@@ -155,7 +155,7 @@ def inner_product(L1,L2):
     are represented as lists of (word,freq) pairs.
 
     Example: inner_product([["and",3],["of",2],["the",5]],
-                           [["and",4],["in",1],["of",1],["this",2]]) = 14.0 
+                           [["and",4],["in",1],["of",1],["this",2]]) = 14.0
     """
     sum = 0.0
     for word1, count1 in L1:
@@ -173,7 +173,7 @@ def vector_angle(L1,L2):
     numerator = inner_product(L1,L2)
     denominator = math.sqrt(inner_product(L1,L1)*inner_product(L2,L2))
     return math.acos(numerator/denominator)
-     
+
 
 def main():
     if len(sys.argv) != 3:
@@ -191,9 +191,3 @@ def main():
 if __name__ == "__main__":
     import profile
     profile.run("main()")
-
-    
-    
-
-
-

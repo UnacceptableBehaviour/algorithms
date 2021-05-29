@@ -90,8 +90,9 @@ class BSTNode(object):
             return self.right.find_min()
         current = self
         while current.parent is not None and current is current.parent.right:
-            current = current.parent
-        return current.parent
+            current = current.parent      #          root       
+        return current.parent             #        lc     rc    <
+        # this will return root when passed highesty value in BST?
 
     def insert(self, node):
         """Inserts a node into the subtree rooted at this node.
@@ -116,20 +117,20 @@ class BSTNode(object):
   
     def delete(self):
         """Deletes and returns this node from the BST."""
-        if self.left is None or self.right is None:
-            if self is self.parent.left:
-                self.parent.left = self.left or self.right
-                if self.parent.left is not None:
+        if self.left is None or self.right is None:         # at least one is None
+            if self is self.parent.left:                    # this node is the left child
+                self.parent.left = self.left or self.right  # assign the non-None reference to LEFT
+                if self.parent.left is not None:            # cant operate on None so check
                     self.parent.left.parent = self.parent
             else:
                 self.parent.right = self.left or self.right
                 if self.parent.right is not None:
                     self.parent.right.parent = self.parent
             return self
-        else:
+        else:                                               # 2 branches
             s = self.next_larger()
-            self.key, s.key = s.key, self.key
-            return s.delete()
+            self.key, s.key = s.key, self.key               # move key from 'leaf' - may recurse
+            return s.delete()                               # delete leaf
     
     def check_ri(self):
         """Checks the BST representation invariant around this node.

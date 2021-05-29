@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+
 # docdist8.py - treat whole file as a single "line"
 #
 # Original version by Erik D. Demaine on January 31, 2011,
