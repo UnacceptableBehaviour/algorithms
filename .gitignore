@@ -13,13 +13,14 @@
 #*.pyo
 
 # file or folder ending in .pyc or .pyo. However, it doesn’t match .py!
-*.py[co]    
+*.py[co]
 matplotlib/covid_cases.py
 
 # ignore directory and contents
 # directory at any level / at end
 __pycache__/
 venv/
+
 
 # root directory
 /scratch
