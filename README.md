@@ -3258,18 +3258,18 @@ Reading:
 | - | - |
 **0m-5m**		| Covering: Numerics . . see below
 **5m-8m**		| Why you might get different shortest routes bast on relaxation order
-**8m **			| Numerics: Newtons method NM, choosing good start function  
-**19m **		| Numerics: NM, avoiding fraction, shifting, 
-**23m **		| Numerics: NM, estimating initial guess, order of magnitude 
-**25m **		| Numerics: NM, using binary search to generate first guess - home in on approximation
-**27m **		| Numerics: NM, stop when approximation match - CONVERGED
-**30m **		| Numerics: NM, speed of convergence.
+**8m**			| Numerics: Newtons method NM, choosing good start function  
+**19m**		| Numerics: NM, avoiding fraction, shifting, 
+**23m**		| Numerics: NM, estimating initial guess, order of magnitude 
+**25m**		| Numerics: NM, using binary search to generate first guess - home in on approximation
+**27m**		| Numerics: NM, stop when approximation match - CONVERGED
+**30m**		| Numerics: NM, speed of convergence.
 **30m-35m**	| Numerics: NM, student Q&A - good summary
-**35m- **		| Graph tranformation - 2d graphs, layers R15
-**45m- **		| Graph tranformation - running complexity
-**47m- **		| Graph tranformation - expressing constraints
-**51m- **		| BFS & DFS use case summary L13, R13, L14
-**57m- **		| DFS edge types L14
+**35m-**		| Graph tranformation - 2d graphs, layers R15
+**45m-**		| Graph tranformation - running complexity
+**47m-**		| Graph tranformation - expressing constraints
+**51m-**		| BFS & DFS use case summary L13, R13, L14
+**57m-**		| DFS edge types L14
 
 COMPLETE EXs in Notes
 
@@ -3281,7 +3281,7 @@ Numerics: Newtons method - FORMULA SB on CHEAT SHEET
 DFS Edge types  
 Transformations & Layers  
 
-**8m **		| Numerics: Newtons method, choosing good start function  
+**8m**		| Numerics: Newtons method, choosing good start function  
 
 Add formula for Newtons method & step summary, rationale behind each step
 
@@ -3896,7 +3896,7 @@ Reading: 34.1-34.3 p1053 34.1 Polynomial time, 34.2 Polynomial time verification
  time			| notes	
 | - | - |
 **28m**			| Solution approaches - know what to avoid
-**32m**			| k-SAT (2-SAT, 3-SAT) - satisfiability, CNF
+**32m**			| k-SAT (2R-SAT, 3-SAT) - satisfiability, CNF
 
 
 28m - summarises solution approaches from the course. Smiley faces - one approach per face. 
