@@ -296,6 +296,7 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 
 ## Unit 1: Introduction
 ### L1 - Algorithmic thinking, peak finding	
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=HtSuA80QTyo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2&t=423s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec01.pdf)  
 
@@ -399,6 +400,7 @@ Fundamental to binary tree algorithms:
 
 
 ### R1 - maths & code
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=P7frcB_-g4w&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
@@ -439,10 +441,11 @@ Finish R1 notes from - Recurrence Traps & 2-D Peak Finding: Algorithm 5
 
 
 ### L2 - Models of computation, Python cost model, document distance	   
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=Zc54gFhdpLA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=2) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec02.pdf) ~ 
 DocDistance 8 versions Code see R2 ~ 
-[DocDistance 8 versions R2 notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf)  
+[DocDistance 8 versions R2 notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec02.pdf)  
 
 #### **Vid contents - L2**
  time			| notes	
@@ -550,6 +553,7 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 
 
 ### R2 - doc distance optimisation - python cost model
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=j0upQLUrpM8) ~ 
 [lect notes - CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf) ~ 
 [python cost model 8 sources compared](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf) ~ 
@@ -719,6 +723,7 @@ REFERENCES:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 2: Sorting and Trees
 ### L3 - Insertion sort, merge sort
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=Kg4bqzAqRBM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=3)
 [recitation]()  
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec03.pdf)  
@@ -836,6 +841,7 @@ Note for array of **any** size: element A[n/2+1 . . n] are ALL leaves!
 
 
 ### L5 - Binary search trees, BST sort	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=9Jry5-82I68&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=5) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec05.pdf) ~ 
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
@@ -941,6 +947,7 @@ Return total
 ```
 
 ### R5 - Recursion Trees, Binary Search Trees
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec05.pdf) ~ 
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
@@ -1063,6 +1070,7 @@ case 2: deleting a node that has 2 subtrees
 
 
 ### L6 - AVL trees, AVL sort	
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=FNeL18KsWPc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=6) - 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec06.pdf) - 
 [MIT EG code](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/avl.py) - 
@@ -1201,6 +1209,7 @@ Rotation Cases (@ 32m)
 
 
 ### R6 - AVL trees
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
 [Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
@@ -1249,6 +1258,7 @@ Any equation identities / topics for this lecture include context and uses for l
   
 
 ### L7 - Counting sort, radix sort, lower bounds for sorting and searching
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=Nz1KZXbghj8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=8&t=0s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec07.pdf) ~ 
 [radix_sort](https://www.youtube.com/watch?v=kPRA0W1kECg) MSB 1m56 - LSB 2m11
@@ -1334,6 +1344,7 @@ Conceptually simple - sort by each digit starting from LSB or MSB
 
 
 ### R7 - Algos so far summary - 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec07.pdf) ~ 
 Code:
@@ -1499,6 +1510,7 @@ e) Re-write the data structure using the most efficient method from class (no li
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 3: Hashing
 ### L8 - Hashing with chaining - (dictionary / associative array)	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=0M_kIqhwbFo&t=758s) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec08.pdf) ~ 
 [succinct vid on hashing, open addressing & chaining](https://www.youtube.com/watch?v=KyUTuwz_b7Q) ~ 
@@ -1601,6 +1613,7 @@ universal hashing
 
 
 ### R8 - Simulation Algorithms
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
 [lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
@@ -1699,6 +1712,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ### L9 - Table doubling, Karp-Rabin
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=BRO7mVIFt08) ~ 
 [lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec09.pdf)  
 Code:
@@ -1761,6 +1775,7 @@ build instruction in file
 
 
 ### R9 - Rolling Hashes, Amortized Analysis
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf) ~ 
 Code:
@@ -1832,6 +1847,7 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 
 
 ### R9b - 9b: DNA Sequence Matching  
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09b.pdf) ~ 
 [Code Zip](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
@@ -2032,6 +2048,7 @@ Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube
 
 
 ### L10 - Open addressing, cryptographic hashing  
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture10.pdf)  
 Code:
@@ -2142,6 +2159,7 @@ Why do we care?
 
 
 ### R10 - Quiz 1 review
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec10_review1.pdf) ~ 
 Code:
@@ -2327,6 +2345,7 @@ Take 2 input s multiply them together using recursive Karatsuba call.
 
 
 ### R11 - Principles of Algorithm Design
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=a_otxyu0mSQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=35) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf) ~ 
 Code: 
@@ -2452,6 +2471,7 @@ IMPLEMENT THIS SOLUTION
 ## Problem set 5 out
 
 ### L12 - Square roots, Newton's method	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=2YeJ-5UAke8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=12)  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture12.pdf)  
 Code:
@@ -2490,6 +2510,7 @@ properties:
 
 
 ### R12 - Karatsuba Multiplication, Newtons Method
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=JRgIXyEPnbA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=36) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec12_newton.pdf)  
 Code:
@@ -2548,6 +2569,7 @@ CODE this up - requires Karatsuba Coded. .
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 5: Graphs
 ### L13 - Breadth-first search (BFS)	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=s-CYnVz-uh4&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=13) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture13.pdf) ~ 
 Code: [BFS EG w/ visualisation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py)
@@ -2586,6 +2608,7 @@ Any equation identities / topics for this lecture include context and uses for l
 Graphs appendix in text book!
 
 ### R13 - Breadth-First Search (BFS)
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=5JxShDZ_ylo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=37) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf) ~ 
 Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
@@ -2731,6 +2754,7 @@ Maze
 
 
 ### L14 - Depth-first search (DFS), topological sorting
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture14.pdf) ~ 
 Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
@@ -2886,6 +2910,7 @@ Maze
 
 
 ### R14 - Depth-First Search (DFS)
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=C5SPsY72_CM&t=810s) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec14.pdf) ~ 
 Code:[dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) ~ 
@@ -2916,6 +2941,7 @@ If B follows A then sure B depends on A!?? CHECK - CONFIRM
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 6: Shortest Paths
 ### L15 - Single-Source Shortest Paths Problem  
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=Aa2sqUhIn-E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=15) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture15.pdf) ~ 
 Code: []() ~ 
@@ -2989,6 +3015,7 @@ d(V) - value inside the circle - current best path weight
 
 
 ### R15 - Shortest Paths
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39) ~ 
 [lect notes 1](https://courses.csail.mit.edu/6.006/fall11/rec/rec15.pdf) ~ 
 [lect notes 2](https://courses.csail.mit.edu/6.006/fall11/rec/rec15alt.pdf) ~ 
@@ -3037,6 +3064,7 @@ Also introduces the concept of waiting which uses no fuel
 
 
 ### L16 - Dijkstra	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=2E7MmKv0Y24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=16) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture16.pdf) ~ 
 [Dijkstra Shortest path Computerphile](https://www.youtube.com/watch?v=GazC3A4OQTE) ~ 
@@ -3096,6 +3124,7 @@ Next iteration of processing is taken from the PRIORITY QUEUE (MinHeap) where no
 
 
 #### EG prob:   - autogen map data to feed dijkstra
+
 ```
 From:
 ./citimap.py		# create a random set out cities connect by routes to present to ./dijkstra.py
@@ -3131,6 +3160,7 @@ PriorityQ issue - SB expanding path length 86
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 ### R16 - Rubiks Cube, StarCraft Zero
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=oRpERQA4Vik&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=40) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec16.pdf) ~ 
 Code:
@@ -3152,6 +3182,7 @@ Any equation identities / topics for this lecture include context and uses for l
 
 
 ### L17 - Bellman-Ford	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture17.pdf) ~ 
 Code:
@@ -3183,6 +3214,7 @@ properties:
 
 
 ### L18 - Speeding up Dijkstra
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=CHvQ3q_gJ7E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=18) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture18.pdf) ~ 
 Code:
@@ -3248,6 +3280,7 @@ Add code.
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 ### R18 - Quiz 2 Review
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=sPuazUPiV1k&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=41) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec18.pdf) ~ 
 Code:
@@ -3310,6 +3343,7 @@ Any equation identities / topics for this lecture include context and uses for l
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 7: Dynamic Programming
 ### L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=OQ5jsbhAv_M&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=19) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture19.pdf) ~ 
 [dynamic prog lect18 spring 2011 - fibonacci](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
@@ -3404,6 +3438,7 @@ Any equation identities / topics for this lecture include context and uses for l
 https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=42
 
 ### R19 - Dynamic Programming: Crazy Eights, Shortest Path
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=42) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec19.pdf) ~ 
 [dynamic prog lect18 spring 2011 - crazy eights](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
@@ -3454,6 +3489,7 @@ Also see L20
 ## Problem set 7 out
 
 ### L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers  
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=ENyox7kNKeY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=20) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture20.pdf) ~ 
 Code:
@@ -3531,6 +3567,7 @@ Code: dyn_03_blackjack.py
 
 
 ### R20 - Dynamic Programming: Blackjack
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=jZbkToeNK2g&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=43) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec20.pdf) ~ 
 Code:[Black]
@@ -3618,6 +3655,7 @@ Note depending on requirements only one parent may be necessary.
 
 
 ### L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=ocZMDMZwhCY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=21) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture21.pdf) ~ 
 Code:
@@ -3692,6 +3730,7 @@ Optimising the content of a container of constant volume based on volume & value
 
 
 ### R21 - Dynamic Programming: Knapsack Problem
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=wFP5VHGHFdk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=45) ~ 
 [a lot DENSE lect notes READ](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf) ~ 
 Code: dyn_08_knapsack.py
@@ -3749,6 +3788,7 @@ quick rehash of knapsack L22 2m-5m
 
 
 ### L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=tp4_UXaVyx8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=22) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture22.pdf) ~ 
 Code:
@@ -3796,6 +3836,7 @@ How to play note for i onwards - notes[i:]
 
 
 ### R22 - Dynamic Programming: Dance Dance Revolution
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=PptQgy89cN8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=44) ~ 
 [no lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
@@ -3853,6 +3894,7 @@ Sum of difficulties up to
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 8: Advanced Topics
 ### L23 - Computational complexity	 
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=moPtwq_cVH8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture23.pdf/) ~  
 Reading:
@@ -3888,6 +3930,7 @@ Complexity classes: R - { Set of all problems solvable in Finite time }
 
 
 ### R23 - name
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=t5Wxk96QjUk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=46) ~ 
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)   
 Reading: 34.1-34.3 p1053 34.1 Polynomial time, 34.2 Polynomial time verification,  34.3 NP-completeness and reducibility   
@@ -3931,6 +3974,7 @@ properties:
 Any equation identities / topics for this lecture include context and uses for later reference  
 
 ### R24 - Final Exam review
+[contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid]()  
 [lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
 Code:
