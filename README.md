@@ -28,7 +28,7 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 | :white_check_mark: [09. Table Doubling, Karp](https://www.youtube.com/watch?v=BRO7mVIFt08&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10&t=0s)                                 | :white_check_mark: [R09. Rolling Hashes, Amortized Analysis](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32)                                                                                           | [Set 4 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps4.pdf)   |                                                                                                                                                                  | [PS4 - Problem Code](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz)                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                              |
 | No lecture 9b                                                                                                                                                                    | :white_check_mark: [R09b - DNA Sequence Matching](https://www.youtube.com/watch?v=-DwGrJ8JxDc)                                                                                                                                                       |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :flashlight: [10. Open Addressing, Cryptographic Hashing](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10)                          | :white_check_mark: [R10. Quiz 1 Review](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34)                                                                                                                | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1.pdf)          | [Quiz 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_quiz1_sol.pdf)     |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
-| :mag: [11. Integer Arithmetic, Karatsuba Multiplication](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture11.pdf)                                                      | :mag: [R11. Principles of Algorithm Design](https://www.youtube.com/watch?v=a_otxyu0mSQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=35)                                                                                                            | [Set 5 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps5.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
+| :mag: [11. Integer Arithmetic, Karatsuba Multiplication](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec11.pdf)                                                      | :mag: [R11. Principles of Algorithm Design](https://www.youtube.com/watch?v=a_otxyu0mSQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=35)                                                                                                            | [Set 5 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps5.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :mag: [12. Square Roots, Newton's Method](https://www.youtube.com/watch?v=2YeJ-5UAke8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=12)                                          | :mag: [R12. Karatsuba Multiplication, Newton's Method](https://www.youtube.com/watch?v=JRgIXyEPnbA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=36)                                                                                                 |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :mag: [13. Breadth First Search](https://www.youtube.com/watch?v=s-CYnVz-uh4&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=13)                                                   | :mag: [R13. Breadth First Search - BFS](https://www.youtube.com/watch?v=5JxShDZ_ylo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=37)                                                                                                                |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :mag: [14. Depth First Search](https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14)                                                     | :mag: [R14. Depth First Search](https://www.youtube.com/watch?v=C5SPsY72_CM&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=38)                                                                                                                        | [Set 6 PDF](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/assignments/MIT6_006F11_ps6.pdf)   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
@@ -58,7 +58,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 		3. [**Symbols:**](#symbols)  
 		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
 		5. [Useful maths equations](#useful-maths-equations)  
-	2. [R1 - maths & code](#r1---maths--code)  
+	2. [R1 - Asymtotic Complexity](#r1---asymtotic-complexity)  
 		1. [**Vid contents - R1**](#vid-contents---r1)  
 		2. [Maths notes](#maths-notes)  
 	3. [L2 - Models of computation, Python cost model, document distance](#l2---models-of-computation-python-cost-model-document-distance)  
@@ -192,7 +192,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 	1. [L15 - Single-Source Shortest Paths Problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L15**](#vid-contents---l15)  
-	2. [R15 - Shortest Paths](#r15---shortest-paths)  
+	2. [R15 - BFS - Shortest Paths](#r15---bfs---shortest-paths)  
 		1. [**Vid contents - R15**](#vid-contents---r15)  
 	3. [L16 - Dijkstra](#l16---dijkstra)  
 		1. [**ALGO - Dijkstra**](#algo---dijkstra)  
@@ -400,11 +400,11 @@ Fundamental to binary tree algorithms:
 
 
 
-### R1 - maths & code
+### R1 - Asymtotic Complexity
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=P7frcB_-g4w&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=25) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/) ~ 
-[Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec01.pdf) ~ 
+[Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/10_MIT6_006F11_ps1)  
 Reading: 
 
 #### **Vid contents - R1**
@@ -418,16 +418,16 @@ Reading:
 **31m**			| 43m peak finding 1d - running time T(n)
 **43m - 53m**	| peak finding - running time T(n)
 
-NOTE
-g(x) = O(f(x)) - UPPER bound - O - big O
-g(x) = Θ(f(x)) - UPPER & LOWER bound - Θ - big Theta
-g(x) = Ω(f(x)) - LOWER bound - Ω - big Omega
-
-but in this course where big O is written it usually mean big Θ 13m - thanks for the confusion
-
+NOTE  
+g(x) = O(f(x)) - UPPER bound - O - big O  
+g(x) = Θ(f(x)) - UPPER & LOWER bound - Θ - big Theta  
+g(x) = Ω(f(x)) - LOWER bound - Ω - big Omega  
+  
+But in this course where big O is written it usually mean big Θ 13m - thanks for the confusion
+  
 31m 1d Peak finding - running timeT(n)
 WRITE OUT - in hand written notes L1
-
+  
 43m 2d Peak finding - running timeT(n)
 WRITE OUT - in hand written notes L1
 
@@ -455,7 +455,7 @@ DocDistance 8 versions Code see R2 ~
 **6m**			| model of computation  
 **7m50**		| Random access machine (model of computation)  
 **13m40**		| Pointer machine (model of computation)  
-**19m-32m		| Python model
+**19m-32m**	| Python model
 **32m-44m**	| Document distance
 **44m**			| 8 version of doc distance and optimisations
 
@@ -556,8 +556,8 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 ### R2 - doc distance optimisation - python cost model
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=j0upQLUrpM8) ~ 
-[lect notes - CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf) ~ 
-[python cost model 8 sources compared](https://courses.csail.mit.edu/6.006/fall11/rec/rec02.pdf) ~ 
+[lect notes - CODE handout](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec02_code_handout.pdf) ~ 
+[python cost model 8 sources compared](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec02.pdf) ~ 
 [Doc Distance 7 stages optimisation local code](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) ~ 
 [Code - PSet 1](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps1)  
 
@@ -566,7 +566,7 @@ Or [readme2tex](https://github.com/leegao/readme2tex)
 | - | - |
 **0-7m**	| inner product  
 7m**		| go through docdist1  
-13m**		| cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec02_code_handout.pdf)  
+13m**		| cost of code by line - docdist1: get_words_from_string() - [CODE handout](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec02_code_handout.pdf)  
  One line, N = characters, w = word size, number of word = N / w + 1 (1 for each space)  
  
 
@@ -950,7 +950,7 @@ Return total
 ### R5 - Recursion Trees, Binary Search Trees
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=r5pXu1PAUkI&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=28) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec05.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec05.pdf) ~ 
 [Code 1st guess](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/binary_search_tree.py) ~ 
 [Code MIT](https://github.com/UnacceptableBehaviour/algorithms/blob/master/lecture_code/L6_BST_AVL_trees/bst.py) ~ 
 
@@ -1212,8 +1212,8 @@ Rotation Cases (@ 32m)
 ### R6 - AVL trees
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=IWzYoXKaRIc&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=29) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec06.pdf) ~ 
-[Code Handout](https://courses.csail.mit.edu/6.006/fall11/rec/rec06_code_handout.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec06.pdf) ~ 
+[Code Handout](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec06_code_handout.pdf) ~ 
 Reading: none listed  
 
 #### **Vid contents - **
@@ -1347,7 +1347,7 @@ Conceptually simple - sort by each digit starting from LSB or MSB
 ### R7 - Algos so far summary - 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=9bkvws_vqLU&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=30) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec07.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec07.pdf) ~ 
 Code:
 Reading: none listed  
 
@@ -1359,7 +1359,7 @@ Reading: none listed
 **7m-35m**		| implementing COUNTING sort in place?
 **35m**			| implementing RADIX sort
 **42m-47m**	| RADIX sort running time justification - REDO this when awake - ps2 or ps3
-**47m-52m**	| Stability, implications & summary of algos
+**47m-52m**	| **STABILITY**, implications & summary of algos
 
 #### Summary Sorting Algos So far:
 Note for sorting you have to output the data set size n for optimal run time(Ω) is Ω(n)
@@ -1616,8 +1616,8 @@ universal hashing
 ### R8 - Simulation Algorithms
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=eGSXsaJ-BlY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=31) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec08.pdf) ~ 
-[lect notes code](https://courses.csail.mit.edu/6.006/fall11/rec/rec08_code_handout.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec08.pdf) ~ 
+[lect notes code](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec08_code_handout.pdf) ~ 
 Code: 
 Reading: none listed  
 
@@ -1778,7 +1778,7 @@ build instruction in file
 ### R9 - Rolling Hashes, Amortized Analysis
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec09.pdf) ~ 
 Code:
 Reading: none listed  
 
@@ -1850,7 +1850,7 @@ So pow(x,m-2,m) is the inverse of x (mod m)
 ### R9b - 9b: DNA Sequence Matching  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=w6nuXg0BISo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=32) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec09b.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec09b.pdf) ~ 
 [Code Zip](http://ocw.mit.edu/ans7870/6/6.006/f11/ps4.tar.gz) ~ 
 [Code git](https://github.com/UnacceptableBehaviour/algorithms/tree/master/problems/MIT6_006F11_ps4) ~ 
 Reading: none listed  
@@ -2051,7 +2051,7 @@ Sweep line algorithm 3/5 correctness proof (by induction)  - https://www.youtube
 ### L10 - Open addressing, cryptographic hashing  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=rvdJDijO2Ro&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=10) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture10.pdf)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec10.pdf)  
 Code:
 Reading: CLRS Chapter 11.4 (and 11.3.3 and 11.5 if interested)
 [Collisions 6m refresh](https://www.youtube.com/watch?v=KyUTuwz_b7Q&t=720s) 5m open addressing: linear probing - 9m load factor & chaining: closed addressing
@@ -2162,7 +2162,7 @@ Why do we care?
 ### R10 - Quiz 1 review
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=-FElVPKykgw&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=34) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec10_review1.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec10.pdf) ~ 
 Code:
 Reading: none listed  
 
@@ -2259,7 +2259,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ## Unit 4: Numerics
 ### L11 - Integer arithmetic, Karatsuba multiplication	
 [vid](https://www.youtube.com/watch?v=eCaXlAaN2uE&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=11) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture11.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec11.pdf) ~ 
 [R12 Karatsuba Multiplication](https://www.youtube.com/watch?v=JRgIXyEPnbA)
 
 
@@ -2348,7 +2348,7 @@ Take 2 input s multiply them together using recursive Karatsuba call.
 ### R11 - Principles of Algorithm Design
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=a_otxyu0mSQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=35) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec11.pdf) ~ 
 Code: 
 Reading: 
 
@@ -2361,7 +2361,7 @@ Reading:
 
 
 #### Principle of practical algorithm design
-[More details in lecture notes p1](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf)  
+[More details in lecture notes p1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec11.pdf)  
 1. Experiment w/ examples - generate inputs to test ideas on  
 2. Simplify the problem - break into sub problems, do some pre processing on data, set one of the inputs to be contant, including some assumptions about the data to minimise special cases.  
 3. Look for similar problems - leverage elements or approaches used in those problems.  
@@ -2465,7 +2465,7 @@ c) Solution  - 52m
 IMPLEMENT THIS SOLUTION  
 
 
-[Maintining medians](https://courses.csail.mit.edu/6.006/fall11/rec/rec11.pdf) not covered in the recitation.  
+[Maintining medians](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec11.pdf) not covered in the recitation.  
 
 
 
@@ -2474,7 +2474,7 @@ IMPLEMENT THIS SOLUTION
 ### L12 - Square roots, Newton's method	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=2YeJ-5UAke8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=12)  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture12.pdf)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec12.pdf)  
 Code:
 Reading:
 
@@ -2513,7 +2513,7 @@ properties:
 ### R12 - Karatsuba Multiplication, Newtons Method
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=JRgIXyEPnbA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=36) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec12_newton.pdf)  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec12.pdf)  
 Code:
 Reading: 
 
@@ -2572,7 +2572,7 @@ CODE this up - requires Karatsuba Coded. .
 ### L13 - Breadth-first search (BFS)	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=s-CYnVz-uh4&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=13) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture13.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec13.pdf) ~ 
 Code: [BFS EG w/ visualisation](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py)
 Reading:
 
@@ -2611,7 +2611,7 @@ Graphs appendix in text book!
 ### R13 - Breadth-First Search (BFS)
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=5JxShDZ_ylo&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=37) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec12.pdf) ~ 
 Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
 [bfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs.py) & 
 [bfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/bfs_maze.py)  
@@ -2648,7 +2648,7 @@ The length of the adjacency list is the degree of the node (number of other node
 Space = O(V+E) assuming empty lists 33m40
 
 **34m30 - Representing graphs in python, adjacency matrix**   
-See [lect notes p2](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf)  
+See [lect notes p2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec13.pdf)  
 Square matrix of nodes using a bit per node.  
 If nodes are connected a 1 is placed in the cross section.  
 If nodes are NOT connected a 0 is placed in the cross section.  
@@ -2676,7 +2676,7 @@ for each node O(degree) - number of edges connected - stored in list
 Matrix - O(V^2)
 Adjacency list - O(V + E) or O(E) - 47m40
 
-See [lect notes p2](https://courses.csail.mit.edu/6.006/fall11/rec/rec13.pdf)  
+See [lect notes p2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec13.pdf)  
 type 			| matrix 		| adjacency list
 | - | - | - |
 space			| Θ(V^2) bits	| Θ(Ew) bits or Θ(V + E) nodes
@@ -2757,7 +2757,7 @@ Maze
 ### L14 - Depth-first search (DFS), topological sorting
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=AfSk24UTFS8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=14) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture14.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec14.pdf) ~ 
 Code: [maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/maze.py) & 
 [dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) & 
 [dfs_maze.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs_maze.py)  
@@ -2913,7 +2913,7 @@ Maze
 ### R14 - Depth-First Search (DFS)
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=C5SPsY72_CM&t=810s) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec14.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec14.pdf) ~ 
 Code:[dfs.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/dfs.py) ~ 
 Reading: 
 
@@ -2944,7 +2944,7 @@ If B follows A then sure B depends on A!?? CHECK - CONFIRM
 ### L15 - Single-Source Shortest Paths Problem  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=Aa2sqUhIn-E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=15) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture15.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec15.pdf) ~ 
 Code: []() ~ 
 Reading: CLRS C24 p643-683
 
@@ -3015,11 +3015,11 @@ d(V) - value inside the circle - current best path weight
 
 
 
-### R15 - Shortest Paths
+### R15 - BFS - Shortest Paths
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39) ~ 
-[lect notes 1](https://courses.csail.mit.edu/6.006/fall11/rec/rec15.pdf) ~ 
-[lect notes 2](https://courses.csail.mit.edu/6.006/fall11/rec/rec15alt.pdf) ~ 
+[lect notes 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec15.pdf) ~ 
+[lect notes 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec15alt.pdf) ~ 
 Code:
 Reading: 
 
@@ -3067,7 +3067,7 @@ Also introduces the concept of waiting which uses no fuel
 ### L16 - Dijkstra	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=2E7MmKv0Y24&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=16) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture16.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec16.pdf) ~ 
 [Dijkstra Shortest path Computerphile](https://www.youtube.com/watch?v=GazC3A4OQTE) ~ 
 [A* A star Search Algorithm](https://www.youtube.com/watch?v=ySN5Wnu88nE) ~ 
 Code:
@@ -3163,7 +3163,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ### R16 - Rubiks Cube, StarCraft Zero
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=oRpERQA4Vik&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=40) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec16.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec16.pdf) ~ 
 Code:
 Reading: 
 
@@ -3185,7 +3185,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ### L17 - Bellman-Ford	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=ozsuci5pIso&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=17) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture17.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec17.pdf) ~ 
 Code:
 Reading:
 
@@ -3217,7 +3217,7 @@ properties:
 ### L18 - Speeding up Dijkstra
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=CHvQ3q_gJ7E&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=18) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture18.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec18.pdf) ~ 
 Code:
 Reading:
 
@@ -3283,7 +3283,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ### R18 - Quiz 2 Review
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=sPuazUPiV1k&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=41) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec18.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec18.pdf) ~ 
 Code:
 Reading: 
 
@@ -3293,11 +3293,11 @@ Reading:
 **0m-5m**		| Covering: Numerics . . see below
 **5m-8m**		| Why you might get different shortest routes bast on relaxation order
 **8m**			| Numerics: Newtons method NM, choosing good start function  
-**19m**		| Numerics: NM, avoiding fraction, shifting, 
-**23m**		| Numerics: NM, estimating initial guess, order of magnitude 
-**25m**		| Numerics: NM, using binary search to generate first guess - home in on approximation
-**27m**		| Numerics: NM, stop when approximation match - CONVERGED
-**30m**		| Numerics: NM, speed of convergence.
+**19m**			| Numerics: NM, avoiding fraction, shifting, 
+**23m**			| Numerics: NM, estimating initial guess, order of magnitude 
+**25m**			| Numerics: NM, using binary search to generate first guess - home in on approximation
+**27m**			| Numerics: NM, stop when approximation match - CONVERGED
+**30m**			| Numerics: NM, speed of convergence.
 **30m-35m**	| Numerics: NM, student Q&A - good summary
 **35m-**		| Graph tranformation - 2d graphs, layers R15
 **45m-**		| Graph tranformation - running complexity
@@ -3346,7 +3346,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ### L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=OQ5jsbhAv_M&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=19) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture19.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec19.pdf) ~ 
 [dynamic prog lect18 spring 2011 - fibonacci](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
 Code:
 dyn_00_fib.py
@@ -3441,7 +3441,7 @@ https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2
 ### R19 - Dynamic Programming: Crazy Eights, Shortest Path
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=IFrvgSvZA0I&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=42) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec19.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec19.pdf) ~ 
 [dynamic prog lect18 spring 2011 - crazy eights](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
 Code:
 dyn_01_shortest_paths.py
@@ -3492,7 +3492,7 @@ Also see L20
 ### L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=ENyox7kNKeY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=20) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture20.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec20.pdf) ~ 
 Code:
 dyn_02_text_just.py
 dyn_04_blackjack.py
@@ -3570,7 +3570,7 @@ Code: dyn_03_blackjack.py
 ### R20 - Dynamic Programming: Blackjack
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=jZbkToeNK2g&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=43) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/rec20.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec20.pdf) ~ 
 Code:[Black]
 dyn_03_blackjack.py
 dyn_04_longest_subsequence.py
@@ -3658,7 +3658,7 @@ Note depending on requirements only one parent may be necessary.
 ### L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=ocZMDMZwhCY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=21) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture21.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec21.pdf) ~ 
 Code:
 dyn_06_parenthesization.py
 dyn_07_edit_distance.py
@@ -3733,7 +3733,7 @@ Optimising the content of a container of constant volume based on volume & value
 ### R21 - Dynamic Programming: Knapsack Problem
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=wFP5VHGHFdk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=45) ~ 
-[a lot DENSE lect notes READ](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf) ~ 
+[a lot DENSE lect notes READ](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec21_knapsack.pdf) ~ 
 Code: dyn_08_knapsack.py
 Reading: 
 
@@ -3778,7 +3778,7 @@ Edge represent the value change.
 
 **42m - DP version - fills in matrix**
 Understand arrows / matrix - depends on changing bag capacity??
-45-47m DP version - pick matrix apart - try [notes - p1!](https://courses.csail.mit.edu/6.006/fall11/rec/rec21_knapsack.pdf)  
+45-47m DP version - pick matrix apart - try [notes - p1!](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec21_knapsack.pdf)  
 quick rehash of knapsack L22 2m-5m
 
 
@@ -3791,7 +3791,7 @@ quick rehash of knapsack L22 2m-5m
 ### L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=tp4_UXaVyx8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=22) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture22.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec22.pdf) ~ 
 Code:
 Reading:
 
@@ -3897,7 +3897,7 @@ Sum of difficulties up to
 ### L23 - Computational complexity	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=moPtwq_cVH8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture23.pdf/) ~  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec23.pdf/) ~  
 Reading:
 
 #### **DATA STRUCTURE**  
@@ -3922,7 +3922,7 @@ properties:
 **36m**			| hardness & completeness
 **41m-end**			| reductions
   
-[see lect notes](https://courses.csail.mit.edu/6.006/fall11/lectures/lecture23.pdf/)
+[see lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec23.pdf/)
   
 Complexity classes: P - { Set of all problems solvable in Polynomial Time }  
 Complexity classes: Exp - { Set of all problems solvable in Exponential Time }  
