@@ -5,12 +5,12 @@ See [References](#references) for links to course content
 
 ## Abstract
 Work notes from Introduction to [Algorithms MIT 6.006](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/syllabus/) course [lectures on ytube](https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)   
-[MIT 6.006 course info]() ~ 
-[Lectures & Recitations](http://courses.csail.mit.edu/6.006/fall11/notes.shtml) ~ 
-[Resources - Python / Latex](http://courses.csail.mit.edu/6.006/fall11/resources.shtml) ~ 
-[Quizzes/Exams](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/)  
-
-
+[MIT 6.006 course info](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) ~ 
+[Lecture & Problem Schedule](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/calendar/) ~ 
+[Lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-notes/) ~ 
+[Resources - Python / Latex](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/related-resources/) ~ 
+[Quizzes / Exams](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/)  
+  
 ## Progress
 KEY: (:white_check_mark:) watched, (:mag:) rewatch, (:flashlight:) unseen / to watch, (:question:) problem / open question  
 CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) not happy / code smells,  
@@ -43,8 +43,8 @@ CODE: (:seedling:) code complete, (:cactus:) incomplete / needs work, (:lemon:) 
 | :mag: [23. Computational Complexity](https://www.youtube.com/watch?v=ENyox7kNKeY&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23)                                               | :mag: [R23. Computational Complexity](https://www.youtube.com/watch?v=t5Wxk96QjUk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=46)                                                                                                                  | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final.pdf)      | [Final Exam](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/exams/MIT6_006F11_final_sol.pdf) |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 | :white_check_mark: [24. Topics in Algorithms Research](https://www.youtube.com/watch?v=dU40AvBURDQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=24)                             | :mag: [R24. Final Exam Review](https://www.youtube.com/watch?v=hkAONP0aC9w&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=47)                                                                                                                         |                                                                                                                                                                   |                                                                                                                                                                  |                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                              |
 
-TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_tables)
-
+TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_tables) - load table from [here](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/algos_2011.tgn)
+  
 ## Contents  
 1. [Abstract](#abstract)  
 2. [Progress](#progress)  
@@ -251,7 +251,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
-	2. [R23 - name](#r23---name)  
+	2. [R23 - Computational Compelexity](#r23---computational-compelexity)  
 		1. [**Vid contents - **](#vid-contents---)  
 	3. [24 - Algorithms research topics](#24---algorithms-research-topics)  
 		1. [**DATA STRUCTURE**](#data-structure)  
@@ -3733,7 +3733,7 @@ Optimising the content of a container of constant volume based on volume & value
 ### R21 - Dynamic Programming: Knapsack Problem
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=wFP5VHGHFdk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=45) ~ 
-[a lot DENSE lect notes READ](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec21_knapsack.pdf) ~ 
+[a lot DENSE lect notes READ](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec21.pdf) ~ 
 Code: dyn_08_knapsack.py
 Reading: 
 
@@ -3821,7 +3821,7 @@ properties:
 #### EG prob:  
 **5m40 - Piano & Guitar fingering**  
 note > single note  
-10 fingerss  
+10 fingers  
 difficulty measure - d(p, f, q, g)  
 p - note on   
 f - finger f & transition to   
@@ -3839,10 +3839,10 @@ How to play note for i onwards - notes[i:]
 ### R22 - Dynamic Programming: Dance Dance Revolution
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=PptQgy89cN8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=44) ~ 
-[no lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading: 
-
+[NO lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2008/recitations/)  
+Code:  
+Reading: Strassen's algorithm for fast matrix multiplication is covered in CRLS, chapter 28, pp. 735-742.  
+  
 #### **Vid contents - R22**  
  time			| notes	
 | - | - |
@@ -3897,7 +3897,7 @@ Sum of difficulties up to
 ### L23 - Computational complexity	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=moPtwq_cVH8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=23) ~ 
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec23.pdf/) ~  
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec23.pdf/)   
 Reading:
 
 #### **DATA STRUCTURE**  
@@ -3930,10 +3930,10 @@ Complexity classes: R - { Set of all problems solvable in Finite time }
 
 
 
-### R23 - name
+### R23 - Computational Compelexity
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=t5Wxk96QjUk&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=46) ~ 
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)   
+[NO lect notes]()   
 Reading: 34.1-34.3 p1053 34.1 Polynomial time, 34.2 Polynomial time verification,  34.3 NP-completeness and reducibility   
   
 #### **Vid contents - **  
@@ -3951,10 +3951,10 @@ READ THE NP COMPLETE CHAPTER IN CLRS - C34 p1048-1105 - BIG!! 57 pages!
 
 
 ### 24 - Algorithms research topics
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading:
+[vid](https://www.youtube.com/watch?v=dU40AvBURDQ&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=24&t=729s) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec24.pdf)  
+Code:  
+Reading:  
 
 #### **DATA STRUCTURE**  
 type:  
@@ -3976,10 +3976,10 @@ Any equation identities / topics for this lecture include context and uses for l
 
 ### R24 - Final Exam review
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
-[vid]()  
-[lect notes](https://courses.csail.mit.edu/6.006/fall11/rec/)  
-Code:
-Reading: 
+[vid](https://www.youtube.com/watch?v=hkAONP0aC9w&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=47&t=50s) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec24.pdf)  
+Code:  
+Reading:  
 
 #### **Vid contents - **  
  time			| notes	
