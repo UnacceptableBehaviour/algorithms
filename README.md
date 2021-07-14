@@ -349,13 +349,14 @@ Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf
 Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
 
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
-O - big O - describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
-Θ - big Theta - describes the asymptotic behaviour of functions AVERAGE case - LOWER BOUND & UPPER BOUND (common in **CompSci**)  
-(note the upper and lower bounds are the same function that only differs by a constant)
-Ω - big Omega - BEST case or LOWER bound (common in **CompSci**)  
-o - little O - loose upper bound (common in Maths rare in CompSci)  
-ω - little omega - rough estimate of the order of the growth (rarely used)  
-T(n) - function defining the exact Time or number of steps to complete an algorithm for n items  
+symbol 		| 	reads	| 	description
+| - | - | - |
+O	|	big O		 describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
+Θ	|	big Theta		| describes the asymptotic behaviour of functions AVERAGE case - LOWER BOUND & UPPER BOUND (common in **CompSci**)  (note the upper and lower bounds are the same function that only differs by a constant)
+Ω	|	big Omega		| BEST case or LOWER bound (common in **CompSci**)  
+o	|	little O			| loose upper bound (common in Maths rare in CompSci)  
+ω	|	little omega		| rough estimate of the order of the growth (rarely used)  
+T(n)	|	time function? 	| function defining the exact Time or number of steps to complete an algorithm for n items  
 
 The rate of growth of a function is also known as its **order**.  
 
