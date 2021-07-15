@@ -341,7 +341,7 @@ The rate of growth of a function is also known as its **order**.
 Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
 
 #### **Time Complexity - Order Severity w/ Examples**
-![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
+![Big O graphs](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg)  
 Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
  
