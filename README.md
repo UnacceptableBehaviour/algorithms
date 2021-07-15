@@ -54,10 +54,9 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 6. [Unit 1: Introduction](#unit-1-introduction)  
 	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
 		1. [**Vid contents - L1**](#vid-contents---l1)  
-		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
-		3. [**Symbols:**](#symbols)  
-		4. [**Time Complexity - Order Severity w/ Examples**](#time-complexity---order-severity-w-examples)  
-		5. [Useful maths equations](#useful-maths-equations)  
+		2. [**Symbols:**](#symbols)  
+		3. [**Time Complexity - Order Severity w/ Examples**](#time-complexity---order-severity-w-examples)  
+		4. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - Asymtotic Complexity](#r1---asymtotic-complexity)  
 		1. [**Vid contents - R1**](#vid-contents---r1)  
 		2. [Maths notes](#maths-notes)  
@@ -319,30 +318,9 @@ Open data structures: [http://opendatastructures.org/](http://opendatastructures
 **51m25**			|  Recurrence for 2D algorithm  
 **54m15**			|  Note on PS1 - Prove one algorithm is correct & find counter examples for the rest (which are not)  
   
-Peak finding: assuming **single peak**, and   
-Initial look at 1d peak finding (an single index array)
-a) linear
-b) search by halves - height of a binary tree is logn (log base 2)
-
-34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(logn)  
-Binary search tree is formed by the search by halves algorithm and the number of **steps to find the target is the height of the tree.**  
-See R1 31m & 43m
-
-Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
-
-51m48  
-<p align="center"><img src="./tex/345071e71619869b5189c43f93597997.svg?invert_in_darkmode" align=middle width=546.9241338pt height=114.95363879999998pt/></p>
-m = columns  
-n = rows  
-**That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.**  
-Swapping 14 & 20 would result in a fail, maybe itll make sense later!  
-
-
-#### Notes on time complexity (always worst case complexity)
-aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
-
+Time complexity (always worst case complexity) aka: Big O notation / Bachmann-Landau notation / asymptotic notation.  
 See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/) great summary of array sorting algorithm complexity and data structure operations   
-
+  
 #### **Symbols:**  
 Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of Bachmann-Landau notations    
 Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf) p3 - from wikipedia?  
@@ -351,7 +329,7 @@ Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_sy
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
 symbol 		| 	reads	| 	description
 | - | - | - |
-O	|	big O		 describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
+O	|	big O			| describes the asymptotic behaviour of functions WORST case or UPPER bound (common in **CompSci**)  
 Θ	|	big Theta		| describes the asymptotic behaviour of functions AVERAGE case - LOWER BOUND & UPPER BOUND (common in **CompSci**)  (note the upper and lower bounds are the same function that only differs by a constant)
 Ω	|	big Omega		| BEST case or LOWER bound (common in **CompSci**)  
 o	|	little O			| loose upper bound (common in Maths rare in CompSci)  
@@ -382,27 +360,42 @@ exponential time		| O(2^n)						| Various brute force searches
 factorial time		| O(n!)						| Brute force travelling salesman
 **HIGH**  | - | [many more here - wikipedia](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)
   
-The above list is useful because of the following fact:  
-if a function f(n) is a sum of functions, one of which grows faster than the others, then the faster growing one determines the order of f(n).
-
-
-
 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
 Egs
 <p align="center"><img src="./tex/f1ebe4d3468c6d3f2f6243ce83e00dad.svg?invert_in_darkmode" align=middle width=474.77859989999996pt height=18.312383099999998pt/></p>
+That is to say if a function f(n) is a sum of functions, one of which grows faster than the others, then **the faster growing one determines the order of f(n)**.  
+  
+Simplified set theory? . . .   
+Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the **sloppier equality notation is more common at present**.  
+  
+Peak finding: assuming **single peak**, and   
+Initial look at 1d peak finding (an single index array)
+a) linear
+b) search by halves - height of a binary tree is logn (log base 2)
 
-Simplified set theory? Some people (mostly mathematicians, as opposed to computer scientists) prefer to define O(g(x)) as a set-valued function, whose value is all functions that do not grow faster then g(x), and use set membership notation to indicate that a specific function is a member of the set thus defined. Both forms are in common use, but the sloppier equality notation is more common at present.  
+34m50	T(n) = Θ(1) + . . . Θ(1) = Θ(logn)  
+Binary search tree is formed by the search by halves algorithm and the number of **steps to find the target is the height of the tree.**  
+See R1 31m & 43m
+
+Question: What comprises work due to n and what can be counted as constant time Θ(1) and disregarded!  
+
+51m48  
+<p align="center"><img src="./tex/345071e71619869b5189c43f93597997.svg?invert_in_darkmode" align=middle width=546.9241338pt height=114.95363879999998pt/></p>
+m = columns  
+n = rows  
+**That all makes sense but binary search relies on sorted data and the data in the example is NOT sorted.**  
+Swapping 14 & 20 would result in a fail, maybe itll make sense later!  
+
+
+
 		
-[Time Complexity Graph](https://en.wikipedia.org/wiki/Time_complexity)  
-[Python matplotlib chart browser](https://python-graph-gallery.com/122-multiple-lines-chart/)  
-[Python matplotlib multiple line simple](https://stackoverflow.com/questions/4805048/how-to-get-different-colored-lines-for-different-plots-in-a-single-figure)  
-[Setting yAxis logarithmic](https://matplotlib.org/3.1.1/gallery/scales/scales.html)  
 
 #### Useful maths equations
 Fundamental to binary tree algorithms:
 <p align="center"><img src="./tex/4cd8fa5dbdeb7a9567601dd345719d75.svg?invert_in_darkmode" align=middle width=450.19701375pt height=16.438356pt/></p>
+
 
 
 
