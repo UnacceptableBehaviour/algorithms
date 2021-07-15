@@ -342,6 +342,7 @@ Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Ti
 
 #### **Time Complexity - Order Severity w/ Examples**
 ![Big O graphs](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg | width=350)  
+<img src="https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg" alt="alt text" width="350" height="495">
 Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
  
