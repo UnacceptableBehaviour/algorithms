@@ -56,7 +56,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 		1. [**Vid contents - L1**](#vid-contents---l1)  
 		2. [Notes on time complexity (always worst case complexity)](#notes-on-time-complexity-always-worst-case-complexity)  
 		3. [**Symbols:**](#symbols)  
-		4. [**Time Complexity - Order Severity**](#time-complexity---order-severity)  
+		4. [**Time Complexity - Order Severity w/ Examples**](#time-complexity---order-severity-w-examples)  
 		5. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - Asymtotic Complexity](#r1---asymtotic-complexity)  
 		1. [**Vid contents - R1**](#vid-contents---r1)  
@@ -362,25 +362,31 @@ The rate of growth of a function is also known as its **order**.
 
 Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
 
-#### **Time Complexity - Order Severity**
-Where c is a constant and n is the number of steps:  
-**LOW**  
-constant time - O(1)  
-logarithmic time - O(log n)  
-linear time - O(n)  
-quasilinear time  - O(n log n)  
-polylogarithmic time  - O((log n) ^ c)  
-quadratic time - O(n^2)  
-polynomial time - O(n^c) where constant c > 1  
-exponential time - O(2^n)  
-factorial time - O(n!)  
-**HIGH**  
-
+#### **Time Complexity - Order Severity w/ Examples**
 ![Big O graphs](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg)  
 Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
+ 
+Where c is a constant and n is the size of data - number of elements to process:  
+name | notation | example
+| - | - | - | 
+**LOW** | - | -
+constant time		| O(1)						| Simple calculations, array lookups
+logarithmic time		| O(log n)					| Binary search
+linear time			| O(n)						| Finding smallest / large item in unsorted list
+linearithmic time 		| O(n log n)					| [comparison sort](https://www.youtube.com/watch?v=ZZuD6iUe3Pc), Fast Fourier Transform
+polylogarithmic time 	| O((log n) ^ c)				| 
+quadratic time		| O(n^2)						| Bubble sort
+polynomial time		| O(n^c) where constant c > 1	| [AKS Primality Test](https://en.wikipedia.org/wiki/AKS_primality_test)
+exponential time		| O(2^n)						| Various brute force searches
+factorial time		| O(n!)						| Brute force travelling salesman
+**HIGH**  | - | [many more here - wikipedia](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)
+  
+The above list is useful because of the following fact:  
+if a function f(n) is a sum of functions, one of which grows faster than the others, then the faster growing one determines the order of f(n).
 
-The above list is useful because of the following fact: if a function f(n) is a sum of functions, one of which grows faster than the others, then the faster growing one determines the order of f(n).
+
+
 
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
