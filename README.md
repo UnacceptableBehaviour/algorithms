@@ -55,8 +55,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 	1. [L1 - Algorithmic thinking, peak finding](#l1---algorithmic-thinking-peak-finding)  
 		1. [**Vid contents - L1**](#vid-contents---l1)  
 		2. [**Symbols:**](#symbols)  
-		3. [**Time Complexity - Order Severity w/ Examples**](#time-complexity---order-severity-w-examples)  
-		4. [Useful maths equations](#useful-maths-equations)  
+		3. [Useful maths equations](#useful-maths-equations)  
 	2. [R1 - Asymtotic Complexity](#r1---asymtotic-complexity)  
 		1. [**Vid contents - R1**](#vid-contents---r1)  
 		2. [Maths notes](#maths-notes)  
@@ -322,10 +321,6 @@ Time complexity (always worst case complexity) aka: Big O notation / Bachmann-La
 See [Time Complexity of Common Data Structures](https://www.bigocheatsheet.com/) great summary of array sorting algorithm complexity and data structure operations   
   
 #### **Symbols:**  
-Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of Bachmann-Landau notations    
-Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf) p3 - from wikipedia?  
-Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
-
 The following symbols o, Ω, ω, and Θ, are used to describe differing kinds of bounds on asymptotic growth rates.  
 symbol 		| 	reads	| 	description
 | - | - | - |
@@ -335,18 +330,19 @@ O	|	big O			| describes the asymptotic behaviour of functions WORST case or UPPE
 o	|	little O			| loose upper bound (common in Maths rare in CompSci)  
 ω	|	little omega		| rough estimate of the order of the growth (rarely used)  
 T(n)	|	time function? 	| function defining the exact Time or number of steps to complete an algorithm for n items  
-
-The rate of growth of a function is also known as its **order**.  
-
-Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
-
-#### **Time Complexity - Order Severity w/ Examples**
-![Big O graphs](https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg | width=350)  
-<img src="https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg" alt="alt text" width="350" height="495">
+  
+Big O Notation [wikipedia](https://en.wikipedia.org/wiki/Big_O_notation) Family of Bachmann-Landau notations    
+Big O Notation [notes from MIT](https://web.mit.edu/16.070/www/lecture/big_o.pdf) p3 - from wikipedia?  
+Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_symbols_by_subject) Asymptotic behaviour   
+  
+**Time Complexity - Order Severity w/ Examples**  
 <img src="https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg" alt="alt text" width="600">
 Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
- 
+
+The rate of growth of a function is also known as its **order**.  
+Great resource about [Common Time Complexities](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)  
+  
 Where c is a constant and n is the size of data - number of elements to process:  
 name | notation | example
 | - | - | - | 
@@ -362,7 +358,6 @@ exponential time		| O(2^n)						| Various brute force searches
 factorial time		| O(n!)						| Brute force travelling salesman
 **HIGH**  | - | [many more here - wikipedia](https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities)
   
-
 If a function is made up of multiple components, (nearly always) the highest order is used:
 (this is because big O is the upper bound (worst case) and highest order will be fastest growing and eventually dwarf the other terms)  
 Egs
