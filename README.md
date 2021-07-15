@@ -337,6 +337,7 @@ Maths [Symbols by subject](https://en.wikipedia.org/wiki/List_of_mathematical_sy
   
 **Time Complexity - Order Severity w/ Examples**  
 <img src="https://github.com/UnacceptableBehaviour/algorithms/blob/master/formulae/time_complexity_graph_sml.svg" alt="alt text" width="600">
+  
 Image source: [wikipedia](https://upload.wikimedia.org/wikipedia/commons/7/7e/Comparison_computational_complexity.svg) 
 Licence: [Attribution-Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/deed.en)  
 
