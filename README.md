@@ -532,7 +532,7 @@ Sum them up to give a value.
 The larger the value the more correlated they are.  
 Obviously bigger documents will naturally give bigger numbers do the value is normalised by dividing by the size of the original vectors.  
 
-<p align="center"><img src="./tex/a5a3fa25cf152acc801491db474d6460.svg?invert_in_darkmode" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
+<p align="center"><img src="./tex/f7d06e377292a8ff50981b20d5f35c1a.svg?invert_in_darkmode" align=middle width=407.98942304999997pt height=64.10978970000001pt/></p>
 
 #### Examples Document distance code:
 [this repo](https://github.com/UnacceptableBehaviour/algorithms/tree/master/lecture_code/L2_doc_distance) 
