@@ -162,17 +162,16 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 	2. [R11 - Principles of Algorithm Design](#r11---principles-of-algorithm-design)  
 		1. [**Vid contents - R11**](#vid-contents---r11)  
 		2. [Principle of practical algorithm design](#principle-of-practical-algorithm-design)  
-15. [Problem set 5 out](#problem-set-5-out)  
-	1. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
+	3. [L12 - Square roots, Newton's method](#l12---square-roots-newtons-method)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L12**](#vid-contents---l12)  
 		3. [EG prob:](#eg-prob)  
 		4. [Maths notes](#maths-notes)  
-	2. [R12 - Karatsuba Multiplication, Newtons Method](#r12---karatsuba-multiplication-newtons-method)  
+	4. [R12 - Karatsuba Multiplication, Newtons Method](#r12---karatsuba-multiplication-newtons-method)  
 		1. [**Vid contents - R12**](#vid-contents---r12)  
 		2. [Example of finding cubed root](#example-of-finding-cubed-root)  
 		3. [Maths notes](#maths-notes)  
-16. [Unit 5: Graphs](#unit-5-graphs)  
+15. [Unit 5: Graphs](#unit-5-graphs)  
 	1. [L13 - Breadth-first search (BFS)](#l13---breadth-first-search-bfs)  
 		1. [**ADT - Algo - BFS**](#adt---algo---bfs)  
 		2. [**Vid contents - L13**](#vid-contents---l13)  
@@ -184,9 +183,8 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 		2. [**Vid contents - L14**](#vid-contents---l14)  
 	4. [R14 - Depth-First Search (DFS)](#r14---depth-first-search-dfs)  
 		1. [**Vid contents - R14**](#vid-contents---r14)  
-17. [Problem set 5 due](#problem-set-5-due)  
-18. [Problem set 6 out](#problem-set-6-out)  
-19. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
+16. [Problem set 5 due](#problem-set-5-due)  
+17. [Unit 6: Shortest Paths](#unit-6-shortest-paths)  
 	1. [L15 - Single-Source Shortest Paths Problem](#l15---single-source-shortest-paths-problem)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L15**](#vid-contents---l15)  
@@ -212,7 +210,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 	7. [R18 - Quiz 2 Review](#r18---quiz-2-review)  
 		1. [**Vid contents - Q2 review**](#vid-contents---q2-review)  
 		2. [Maths notes](#maths-notes)  
-20. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
+18. [Unit 7: Dynamic Programming](#unit-7-dynamic-programming)  
 	1. [L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths](#l19---memoization-subproblems-guessing-bottom-up-fibonacci-shortest-paths)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L19**](#vid-contents---l19)  
@@ -221,31 +219,30 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 		5. [Maths notes](#maths-notes)  
 	2. [R19 - Dynamic Programming: Crazy Eights, Shortest Path](#r19---dynamic-programming-crazy-eights-shortest-path)  
 		1. [**Vid contents - R19**](#vid-contents---r19)  
-21. [Problem set 7 out](#problem-set-7-out)  
-	1. [L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers](#l20---dynamic-programming-ii-text-justification-perfect-information-blackjack-parent-pointers)  
+	3. [L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers](#l20---dynamic-programming-ii-text-justification-perfect-information-blackjack-parent-pointers)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L20**](#vid-contents---l20)  
 		3. [EG prob:   - Fibonacci](#eg-prob-----fibonacci)  
 		4. [EG prob:   - Shortest Path](#eg-prob-----shortest-path)  
 		5. [EG prob:   - Text Justification 17m-35m](#eg-prob-----text-justification-17m-35m)  
 		6. [EG prob:   - perfect information Blackjack 39m](#eg-prob-----perfect-information-blackjack-39m)  
-	2. [R20 - Dynamic Programming: Blackjack](#r20---dynamic-programming-blackjack)  
+	4. [R20 - Dynamic Programming: Blackjack](#r20---dynamic-programming-blackjack)  
 		1. [**Vid contents - **](#vid-contents---)  
-	3. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
+	5. [L21 - String subproblems, psuedopolynomial time; parenthesization, edit distance, knapsack](#l21---string-subproblems-psuedopolynomial-time-parenthesization-edit-distance-knapsack)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L21**](#vid-contents---l21)  
-	4. [R21 - Dynamic Programming: Knapsack Problem](#r21---dynamic-programming-knapsack-problem)  
+	6. [R21 - Dynamic Programming: Knapsack Problem](#r21---dynamic-programming-knapsack-problem)  
 		1. [**Vid contents - R21**](#vid-contents---r21)  
 		2. [EG - Knapsack problem - 1m](#eg---knapsack-problem---1m)  
-	5. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
+	7. [L22 - Two kinds of guessing; piano/guitar fingering, Tetris training, Super Mario Bros.[vid]()](#l22---two-kinds-of-guessing-pianoguitar-fingering-tetris-training-super-mario-brosvid)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - L22**](#vid-contents---l22)  
 		3. [EG prob:](#eg-prob)  
-	6. [R22 - Dynamic Programming: Dance Dance Revolution](#r22---dynamic-programming-dance-dance-revolution)  
+	8. [R22 - Dynamic Programming: Dance Dance Revolution](#r22---dynamic-programming-dance-dance-revolution)  
 		1. [**Vid contents - R22**](#vid-contents---r22)  
 		2. [EG - DDR - Dance Dance Revolution](#eg---ddr---dance-dance-revolution)  
-22. [Problem set 7 due](#problem-set-7-due)  
-23. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
+19. [Problem set 7 due](#problem-set-7-due)  
+20. [Unit 8: Advanced Topics](#unit-8-advanced-topics)  
 	1. [L23 - Computational complexity](#l23---computational-complexity)  
 		1. [**DATA STRUCTURE**](#data-structure)  
 		2. [**Vid contents - **](#vid-contents---)  
@@ -260,8 +257,8 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 		1. [**Vid contents - **](#vid-contents---)  
 		2. [EG prob:](#eg-prob)  
 		3. [Maths notes](#maths-notes)  
-24. [Glossary of terms](#glossary-of-terms)  
-25. [How To s](#how-to-s)  
+21. [Glossary of terms](#glossary-of-terms)  
+22. [How To s](#how-to-s)  
 	1. [How so I plot a chart with python?](#how-so-i-plot-a-chart-with-python)  
 	2. [How to setup autogenerate README.md file from RTF notes?](#how-to-setup-autogenerate-readmemd-file-from-rtf-notes)  
 	3. [How do I autogenerate README.md file from RTF?](#how-do-i-autogenerate-readmemd-file-from-rtf)  
@@ -269,7 +266,7 @@ TABLE created with [Table Generator](https://www.tablesgenerator.com/markdown_ta
 		1. [Manually: Generate math image and embed it.](#manually-generate-math-image-and-embed-it)  
 		2. [Automagically:  Install texify.](#automagically--install-texify)  
 		3. [How can I get rid of ref numbers, or get them to increment at least?](#how-can-i-get-rid-of-ref-numbers-or-get-them-to-increment-at-least)  
-26. [References](#references)  
+23. [References](#references)  
 	1. [Intoduction to algorithms MIT (part 1 / 3):](#intoduction-to-algorithms-mit-part-1--3)  
 	2. [LaTex example setup and doc repo: https://github.com/UnacceptableBehaviour/latex_maths](#latex-example-setup-and-doc-repo-httpsgithubcomunacceptablebehaviourlatexmaths)  
 	3. [Design & Analysis of Algorithms (part 2 / 3)](#design--analysis-of-algorithms-part-2--3)  
@@ -766,8 +763,6 @@ Instrument the merge sort code - s
 
 [Difference between theta, omega complexity and big O](https://www.youtube.com/watch?v=6Ol2JbwoJp0)  
   
-
-		Problem set 2 out - Event simulation
 
 ### L4 - Heaps and heap sort  
 [vid](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/lecture-4-heaps-and-heap-sort)
@@ -2467,8 +2462,6 @@ IMPLEMENT THIS SOLUTION
 
 
 
-## Problem set 5 out
-
 ### L12 - Square roots, Newton's method	 
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=2YeJ-5UAke8&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=12)  
@@ -2935,7 +2928,6 @@ If B follows A then sure B depends on A!?? CHECK - CONFIRM
 
 
 ## Problem set 5 due
-## Problem set 6 out
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ## Unit 6: Shortest Paths
@@ -3485,7 +3477,6 @@ Also see L20
 51m - devils in the detail question - explain
 
 
-## Problem set 7 out
 
 ### L20 - Dynamic Programming II: Text Justification, perfect information Blackjack. parent pointers  
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
