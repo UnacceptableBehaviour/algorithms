@@ -3183,8 +3183,6 @@ S = source node
 Π[v] = predecessor node
 w(v1,v2) = sum of edge weights from v1 to v2
 
-Somethings up Relaxation Step not properly implemented.
-Paths being overwritten creating loops
 See generic pseudo code L17 top p2
 	Each node should start w/ distance from S set to math.inf
 	Predecessor node Π[v] (pi = symbol for predecessor) set to NIL / None
@@ -3197,13 +3195,10 @@ Iterate through all outbound nodes and only update the vertex if this route is s
 
 Only on and update(shorter path found) add/update the node to/in the priorityQ - - - I think? this the bit Im hazy on
 	PriorityQ no support update? < CHECK if this will 
-
-Once working - What are transformers in AI?
 ```
-Here there is clearly a shorter path. Path length 86 only requires one more step to **t.**
-PriorityQ issue - SB expanding path length 86
 
-![dijkstra - autogen map - bug hunt](/Users/simon/a_syllabus/lang/algorithms/algorithms/formulae/dijkstra_Relaxation_bug.png)
+
+
 
 
 #### Maths notes  
