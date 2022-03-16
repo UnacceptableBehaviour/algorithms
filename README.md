@@ -3009,7 +3009,7 @@ d(V) - value inside the circle - current best path weight
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=mQSp6VmfakA&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=39) ~ 
 [lect notes 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec15.pdf) ~ 
-[lect notes 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec15alt.pdf) ~ 
+[lect notes 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/recitation-videos/MIT6_006F11_rec15_alt.pdf) ~ 
 Code:
 Reading: 
 
@@ -3061,15 +3061,62 @@ Also introduces the concept of waiting which uses no fuel
 [Dijkstra Shortest path Computerphile](https://www.youtube.com/watch?v=GazC3A4OQTE) ~ 
 [A* A star Search Algorithm](https://www.youtube.com/watch?v=ySN5Wnu88nE) ~ 
 Code:
-Reading: CLRS, Sections 24.2-24.3  
+Reading: CLRS, Sections 24.2-24.3 p648
 
 #### **ALGO - Dijkstra**  
-type:  
-use cases: good for bla  
-queries:  
-updates:  
-representation invariant (RI):   
-properties:  
+type: greedy BFS to find shortest path  
+use cases: routing tables (networks), route finding (maps)  
+queries: find(graph, start, target)  
+updates: none  
+  
+**Basics to understand Dijkstra algorithm.**  
+  
+**DFS vs BFS**  
+With DFS the search uses a **stack** to store new nodes as the graph is searched, this also lends itself to using recursion since it has an implicit stack in the call stack.  
+  
+With BFS a queue structure is used to store an process nodes, this is what is used by Dijkstra  
+  
+Dijkstra is a greedy algorithm (it makes the locally optimal choice at each stage).  
+  
+The first step is to process all the nodes adjacent to the **start node** and queue them up in order of shortest distance first. (Shortest distance is the optimal - greedy - next choice).  
+
+The algorithm then repeats this step with each element in the Q:   
+It pulls a node off the Q, goes through each adjacent node, calculates the distance of the adjacent node from the start and  places that adjacent node back in the Q according to its distance from the start.  
+  
+Note if an early node (processing wise) is a long distance away from the start, a multistep route with a smaller distance will be processed first because it will appear earlier in the queue. This ensures the shortest route requirement.  
+  
+The algorithm also maintains a set of **visited_nodes** to detect when the target node has been found.  
+  
+  
+  
+Relaxation operation:  
+```
+RELAX(u, v, w)
+	if d[v] > d[u] + w(u, v) 		if dist from S to u + dist from u to v is < dist from S to v
+		then d[v] = d[u] + w(u, v) 	then update v with new shortest path
+			∏[v] = u			and update its predecessor with u
+```
+**It is basically saying:** if we have found a shorter route to v via u, update the details in v to reflect this.
+  
+Keep going until T is in the **visited_nodes**.  
+  
+| Abr | **TERMS** |
+| - | - | 
+S	|	Source
+T	|	Target
+SP	|	Shortest Path
+DAG |	Directed Acyclic Graph
+
+| 1 | 2 | 3 | 4 |
+| - | - | - | - |
+| ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.44.54.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.45.21.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.45.57.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.46.20.png) |
+| Code @ [citimap.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/citimap.py) | More nodes | More nodes |  More nodes | 
+| ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.55.17.png) | ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.31.46.png) | ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.32.50.png) | ![sk]() |
+| Code @ [u9_fp_random_target.js](https://github.com/UnacceptableBehaviour/js_canvas/blob/b06198baa8ad26ff6bed0ed5eb69aad1f8cb5b8f/test_pages/u9_fp_random_target/u9_fp_random_target.js)  | More nodes | More nodes |  More nodes | 
+
+  
+To see short animation navigate [here](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/anim/2022.03.15-19.28.22.mov) and click DOWNLOAD for mp4. 
+  
 
 #### **Vid contents - L16**  
  time			| notes	
@@ -3336,8 +3383,7 @@ Any equation identities / topics for this lecture include context and uses for l
 ### L19 - Memoization, subproblems, guessing, bottom-up; Fibonacci, shortest paths
 [contents](https://github.com/UnacceptableBehaviour/algorithms/blob/master/README.md#contents) ~ 
 [vid](https://www.youtube.com/watch?v=OQ5jsbhAv_M&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&index=19) ~ 
-[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec19.pdf) ~ 
-[dynamic prog lect18 spring 2011 - fibonacci](https://courses.csail.mit.edu/6.006/spring11/lectures/lec18.pdf) ~ 
+[lect notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/MIT6_006F11_lec19.pdf)  
 Code:
 dyn_00_fib.py
 dyn_01_shortest_paths.py
