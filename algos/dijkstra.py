@@ -53,6 +53,14 @@ class Graph(Iterable):
 			self.adj[v] = [u]
 		else:
 			self.adj[v].append(u)
+
+	def add_edge_unidirectional(self, u, v):
+		if u not in self.adj:
+			self.adj[u] = []
+			
+		if v not in self.adj[u]:
+			#self.adj[u].append((distance,v)) #TODO-49 comment in
+			self.adj[u].append(v)
 	
 	def reset_all_nodes_distance_from_source_to_inf(self):
 		for node,adj_list in self.adj.items():
