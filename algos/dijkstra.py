@@ -41,14 +41,18 @@ class Graph(Iterable):
 	def __init__(self):
 		self.adj = {}
 
+	# nodes connected in BOTH directions
 	#def add_edge(self, u, v, distance):
 	def add_edge(self, u, v):
 		if u not in self.adj:
-			self.adj[u] = []
-			
-		if v not in self.adj[u]:
-			#self.adj[u].append((distance,v)) #TODO-49 comment in
+			self.adj[u] = [v]
+		else:
 			self.adj[u].append(v)
+			
+		if v not in self.adj:
+			self.adj[v] = [u]
+		else:
+			self.adj[v].append(u)
 	
 	def reset_all_nodes_distance_from_source_to_inf(self):
 		for node,adj_list in self.adj.items():
@@ -155,6 +159,7 @@ def dijkstra(g,S,T,vertex_list):
 				adj_node.pi = node
 				q.put(adj_node)
 				vertex_list.append([node, adj_node])
+				print(f"\tf:{adj_node}-[{adj_node.dist_S_to_node}] > p:{adj_node.pi}")
 		
 			visited[adj_node] = adj_node.dist_S_to_node
 		

@@ -44,6 +44,8 @@ ROUTE_COLS = {
 		'line': (255, 0, 0),
 		'dot':  (190, 10, 10),
 		'font': (150, 210, 50),
+		'of_x': 0,
+		'of_y': 20,
 	}
 
 EDGE_LIST_COLS = {
@@ -88,6 +90,7 @@ def generate_list_of_connected_nodes(num_nodes, connections):
 		for c in range(connections):		# get 6 nearest connections
 			a_node_tuple = q.get()
 			from_node.adj.append(a_node_tuple[1])
+			a_node_tuple[1].adj.append(from_node)
 
 	return(nodes)	
 
@@ -167,6 +170,8 @@ def plot_route_from_node_list(win, nodes, citi_dot = 6, colors={}):
 		'line': (255, 255, 255),
 		'dot':  (190, 10, 10),
 		'font': (200, 50, 255),
+		'of_x': 0,
+		'of_y': 0,
 	}
 	cols.update(colors)
 	
@@ -189,7 +194,7 @@ def plot_route_from_node_list(win, nodes, citi_dot = 6, colors={}):
 		
 		# distance
 		#                 surface  posision                         offset    text                       colour
-		PATH_FONT.render_to(win, line_label_pos(from_node, to_node, 0,0), str(to_node.dist_S_to_node), cols['font'])     	# render label		
+		PATH_FONT.render_to(win, line_label_pos(from_node, to_node, cols['of_x'],cols['of_y']), str(to_node.dist_S_to_node), cols['font'])     	# render label		
 
 
 
