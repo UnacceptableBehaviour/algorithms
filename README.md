@@ -3087,6 +3087,18 @@ Note if an early node (processing wise) is a long distance away from the start, 
   
 The algorithm also maintains a set of **visited_nodes** to detect when the target node has been found.  
   
+
+**Relaxation - fundamental concept:**  
+d[v] length current SP from source (blue) to v   
+-	(d[v] updates for each node as algorithm runs - set to ∞ to start)  
+-	except for S which is 0 these all start at infinity until they are deduced  
+   
+ delta(s,v) length of *a* shortest path between s & v  
+    
+∏[v] predecessor of v in the SP from s to v (used to reconstruct the SP)  
+	∏[S] = NIL  
+  
+w(u,v) distance from u to v  
   
   
 Relaxation operation:  
@@ -3107,12 +3119,12 @@ T	|	Target
 SP	|	Shortest Path
 DAG |	Directed Acyclic Graph
 
-| 1 | 2 | 3 | 4 |
-| - | - | - | - |
-| ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.44.54.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.45.21.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.45.57.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.46.20.png) |
+| 1 | 2 | 3 | 
+| - | - | - | 
+| ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.44.54.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.45.21.png) | ![sk](https://github.com/UnacceptableBehaviour/algorithms/blob/master/images/Screenshot%202022-03-16%20at%2018.45.57.png) |
 | Code @ [citimap.py](https://github.com/UnacceptableBehaviour/algorithms/blob/master/algos/citimap.py) | More nodes | More nodes |  More nodes | 
-| ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.55.17.png) | ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.31.46.png) | ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.32.50.png) | ![sk]() |
-| Code @ [u9_fp_random_target.js](https://github.com/UnacceptableBehaviour/js_canvas/blob/b06198baa8ad26ff6bed0ed5eb69aad1f8cb5b8f/test_pages/u9_fp_random_target/u9_fp_random_target.js)  | More nodes | More nodes |  More nodes | 
+| ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.55.17.png) | ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.31.46.png) | ![sk](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/images/2022.03.13-19.32.50.png) | 
+| Code @ [u9_fp_random_target.js](https://github.com/UnacceptableBehaviour/js_canvas/blob/b06198baa8ad26ff6bed0ed5eb69aad1f8cb5b8f/test_pages/u9_fp_random_target/u9_fp_random_target.js)  | More nodes | More nodes |  
 
   
 To see short animation navigate [here](https://github.com/UnacceptableBehaviour/js_canvas/blob/master/test_pages/u9_fp_random_target/anim/2022.03.15-19.28.22.mov) and click DOWNLOAD for mp4. 
